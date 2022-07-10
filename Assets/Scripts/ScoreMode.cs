@@ -13,8 +13,9 @@ public class ScoreMode : MonoBehaviour {
 	public GameObject ScoreValue;
 	public GameObject PositionDisplay;
 	public static int CurrentScore;
+    public GameObject LapRequireDisplay;
 
-	void Start () {
+    void Start () {
 		CurrentScore = 0;
 		ModeSelection = CarChoose.RaceMode;
 		if (ModeSelection == 2) {
@@ -23,14 +24,16 @@ public class ScoreMode : MonoBehaviour {
 			ScoreModeObject.SetActive (true);
 			AIcar.SetActive (false);
 			PositionDisplay.SetActive (false);
-		}
-		if (ModeSelection == 1) {
+            LapRequireDisplay.GetComponent<Text>().text = "1" ;
+        }
+		else{
 			TimeModeUI.SetActive (true);
 			ScoreModeUI.SetActive (false);
 			ScoreModeObject.SetActive (false);
 			AIcar.SetActive (true);
 			PositionDisplay.SetActive (true);
-		}
+            LapRequireDisplay.GetComponent<Text>().text = "2";
+        }
 	}
 	
 

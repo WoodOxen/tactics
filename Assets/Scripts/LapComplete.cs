@@ -17,9 +17,9 @@ public class LapComplete : MonoBehaviour {
 	public GameObject LapCountDisplay;
 
 	public GameObject RaceFinish;
+    private int ModeSelection;
 
-
-	public int modeType;
+    public int modeType;
 	public int flag_firstlyEnter;
 	public int LapCount=0;
 	public float rawTime;
@@ -27,7 +27,8 @@ public class LapComplete : MonoBehaviour {
 	void Start () {
 		flag_firstlyEnter = 1;
 		modeType = CarChoose.RaceMode;
-	}
+        ModeSelection = CarChoose.RaceMode;
+    }
 		
 	void OnTriggerEnter(Collider collision){
 		if (collision.gameObject.tag == "DreamCar01" || collision.gameObject.tag == "CarPosJudge") {
@@ -36,7 +37,7 @@ public class LapComplete : MonoBehaviour {
 
 		LapCount += 1;
 
-		if (LapCount == 2) {
+		if ((ModeSelection == 2 && LapCount == 1)|| LapCount == 2) {
 			RaceFinish.SetActive (true);
 		}
 		/*if (LapTimeManager.SecondCount <= 9) {

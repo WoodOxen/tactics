@@ -6,68 +6,19 @@ Direct3D:
     Vendor:   NVIDIA
     VRAM:     1983 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: D:\Unity\Projects\RacingDemo\RacingDemo_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading D:\Unity\Projects\RacingDemo\RacingDemo_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: D:\Unity\Projects\RacingDemo\RacingDemo_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading D:\Unity\Projects\RacingDemo\RacingDemo_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: D:\Unity\Projects\RacingDemo\RacingDemo_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading D:\Unity\Projects\RacingDemo\RacingDemo_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: D:\Unity\Projects\RacingDemo\RacingDemo_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading D:\Unity\Projects\RacingDemo\RacingDemo_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: D:\Unity\Projects\RacingDemo\RacingDemo_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading D:\Unity\Projects\RacingDemo\RacingDemo_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.059 seconds
-Platform assembly: D:\Unity\Projects\RacingDemo\RacingDemo_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: D:\Unity\Projects\RacingDemo\RacingDemo_Data\Managed\System.dll (this message is harmless)
+Platform assembly: D:\Unity2018\Project\Tactic\RacingDemo_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\Unity2018\Project\Tactic\RacingDemo_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\Unity2018\Project\Tactic\RacingDemo_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading D:\Unity2018\Project\Tactic\RacingDemo_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: D:\Unity2018\Project\Tactic\RacingDemo_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\Unity2018\Project\Tactic\RacingDemo_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\Unity2018\Project\Tactic\RacingDemo_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\Unity2018\Project\Tactic\RacingDemo_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\Unity2018\Project\Tactic\RacingDemo_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\Unity2018\Project\Tactic\RacingDemo_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.047 seconds
+Platform assembly: D:\Unity2018\Project\Tactic\RacingDemo_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: D:\Unity2018\Project\Tactic\RacingDemo_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
-<RI> Initialized touch support.
-UnloadTime: 0.747000 ms
-Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1388 -> priority: 1 
-  Thread -> id: 1504 -> priority: 1 
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.506700 ms
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 426.
-Total: 0.322500 ms (FindLiveObjects: 0.022200 ms CreateObjectMapping: 0.021700 ms MarkObjects: 0.268100 ms  DeleteObjects: 0.007700 ms)
-
-The referenced script on this Behaviour (Game Object 'CarWaypointBased') is missing!
- 
-(Filename:  Line: 1656)
-
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.535600 ms
-
-Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 1236.
-Total: 3.043000 ms (FindLiveObjects: 0.057300 ms CreateObjectMapping: 0.025200 ms MarkObjects: 0.307700 ms  DeleteObjects: 2.652000 ms)
-
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 4.421300 ms
-
-Unloading 128 unused Assets to reduce memory usage. Loaded Objects now: 314.
-Total: 2.910400 ms (FindLiveObjects: 0.015900 ms CreateObjectMapping: 0.012300 ms MarkObjects: 0.167100 ms  DeleteObjects: 2.714700 ms)
-
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.652400 ms
-
-Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 432.
-Total: 0.378400 ms (FindLiveObjects: 0.022100 ms CreateObjectMapping: 0.011100 ms MarkObjects: 0.270000 ms  DeleteObjects: 0.074500 ms)
-
-The referenced script on this Behaviour (Game Object 'CarWaypointBased') is missing!
- 
-(Filename:  Line: 1656)
-
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.455800 ms
-
-Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 1238.
-Total: 2.512400 ms (FindLiveObjects: 0.053400 ms CreateObjectMapping: 0.019500 ms MarkObjects: 0.268200 ms  DeleteObjects: 2.170500 ms)
-
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 4.677900 ms
-
-Unloading 128 unused Assets to reduce memory usage. Loaded Objects now: 314.
-Total: 3.176200 ms (FindLiveObjects: 0.021100 ms CreateObjectMapping: 0.014100 ms MarkObjects: 0.206600 ms  DeleteObjects: 2.933800 ms)
-

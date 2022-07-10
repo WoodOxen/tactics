@@ -12,41 +12,48 @@ public class CarChoose : MonoBehaviour {
 	// Use this for initialization
 	public void RedCar(){
 		CarType = 1;
-		Modewindow.SetActive(true);
+        PlayerPrefs.SetInt("SavedCarType", CarType);
+        Modewindow.SetActive(true);
 		Carwindow.SetActive (false);
 	}
 
 	public void BlueCar(){
 		CarType = 2;
-		Modewindow.SetActive(true);
+        PlayerPrefs.SetInt("SavedCarType", CarType);
+        Modewindow.SetActive(true);
 		Carwindow.SetActive (false);
 	}
 
 	public void YellowCar(){
 		CarType = 3;
-		Modewindow.SetActive(true);
+        PlayerPrefs.SetInt("SavedCarType", CarType);
+        Modewindow.SetActive(true);
 		Carwindow.SetActive (false);
 	}
 
 	public void GreenCar(){
 		CarType = 4;
-		Modewindow.SetActive(true);
+        PlayerPrefs.SetInt("SavedCarType", CarType);
+        Modewindow.SetActive(true);
 		Carwindow.SetActive (false);
 	}
 
 	public void TimeMode(){
 		RaceMode = 1;
-		Trackwindow.SetActive(true);
+        PlayerPrefs.SetInt("SavedRaceMode", RaceMode);
+        Trackwindow.SetActive(true);
 		Modewindow.SetActive (false);
 	}
 	public void ScoreMode(){
 		RaceMode = 2;
-		Trackwindow.SetActive(true);
+        PlayerPrefs.SetInt("SavedRaceMode", RaceMode);
+        Trackwindow.SetActive(true);
 		Modewindow.SetActive (false);
 	}
 
 	public void ReSet(){
-		Trackwindow.SetActive(false);
+        PlayerPrefs.SetInt("SavedCarType", 0);
+        Trackwindow.SetActive(false);
 		Modewindow.SetActive (false);
 		Carwindow.SetActive (true);
 	}

@@ -2,6 +2,10 @@
 using System.Collections;
 
 public class BlueScore : MonoBehaviour {
+	void Update()
+	{
+		this.transform.Rotate(0, 1, 0, Space.Self);
+	}
 
 	void OnTriggerEnter(){
 		ScoreMode.CurrentScore += 50;

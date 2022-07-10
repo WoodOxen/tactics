@@ -4,15 +4,26 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour {
 
+    private int trackNum;
+
 	public void PlayGame(){
 		SceneManager.LoadScene (1);
 	}
 
 	public void Random(){
-		CarChoose.RaceMode = 1;
-		CarChoose.CarType = 1;
-		SceneManager.LoadScene (2);
-	}
+        CarChoose.RaceMode = PlayerPrefs.GetInt("SavedRaceMode");
+		CarChoose.CarType = PlayerPrefs.GetInt("SavedCarType");
+        trackNum = PlayerPrefs.GetInt("SavedTrackNum");
+        if (trackNum == 1)
+            SceneManager.LoadScene(2);
+        else if (trackNum == 2)
+            SceneManager.LoadScene(3);
+        else if (trackNum == 3)
+            SceneManager.LoadScene(5);
+        else
+            SceneManager.LoadScene(5);
+
+    }
 
 	public void MainMenu(){
 		SceneManager.LoadScene (0);
@@ -29,10 +40,16 @@ public class ButtonManager : MonoBehaviour {
 
 	//buttons in track selection
 	public void Track01(){
-		SceneManager.LoadScene (2);
+        PlayerPrefs.SetInt("SavedTrackNum", 1);
+        SceneManager.LoadScene (2);
 	}
 	public void Track02(){
-		SceneManager.LoadScene (3);
+        PlayerPrefs.SetInt("SavedTrackNum", 2);
+        SceneManager.LoadScene (3);
+	}
+	public void Track03(){
+        PlayerPrefs.SetInt("SavedTrackNum", 3);
+        SceneManager.LoadScene(5);
 	}
 	public void NeverTouch(){
 		CashDisplay.TotalCash += 100;
