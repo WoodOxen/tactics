@@ -9,7 +9,7 @@ public class RedScore : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(){
-		ScoreMode.CurrentScore += 100;
+		GameModeManager.CurrentScore += 100;
 		gameObject.SetActive (false);
 	}
 }

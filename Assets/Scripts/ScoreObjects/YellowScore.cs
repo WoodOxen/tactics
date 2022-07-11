@@ -10,7 +10,7 @@ public class YellowScore : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(){
-		ScoreMode.CurrentScore += 25;
+		GameModeManager.CurrentScore += 25;
 		gameObject.SetActive (false);
 	}
 }
