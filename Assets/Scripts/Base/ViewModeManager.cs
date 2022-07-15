@@ -6,7 +6,7 @@ public class ViewModeManager : MonoBehaviour {
 	public GameObject NormalCam;
 	public GameObject FarCam;
 	public GameObject FPCam;
-	public int CamMode;
+	public static int CamMode = 0;
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetButtonDown ("ViewMode")) {

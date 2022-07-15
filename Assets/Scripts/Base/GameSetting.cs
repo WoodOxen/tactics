@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class GameSetting : MonoBehaviour {
 
@@ -8,53 +9,76 @@ public class GameSetting : MonoBehaviour {
 	public GameObject Trackwindow;
 	public GameObject Carwindow;
 	public GameObject Modewindow;
+    private int trackNum;
+    
 
-	// Use this for initialization
-	public void RedCar(){
+    // Use this for initialization
+    public void RedCar(){
 		CarType = 1;
         PlayerPrefs.SetInt("SavedCarType", CarType);
-        Modewindow.SetActive(true);
-		Carwindow.SetActive (false);
+        //Modewindow.SetActive(true);
+		//Carwindow.SetActive (false);
 	}
 
 	public void BlueCar(){
 		CarType = 2;
         PlayerPrefs.SetInt("SavedCarType", CarType);
-        Modewindow.SetActive(true);
-		Carwindow.SetActive (false);
+        //Modewindow.SetActive(true);
+		//Carwindow.SetActive (false);
 	}
 
 	public void YellowCar(){
 		CarType = 3;
         PlayerPrefs.SetInt("SavedCarType", CarType);
-        Modewindow.SetActive(true);
-		Carwindow.SetActive (false);
+        //Modewindow.SetActive(true);
+		//Carwindow.SetActive (false);
 	}
 
 	public void GreenCar(){
 		CarType = 4;
         PlayerPrefs.SetInt("SavedCarType", CarType);
-        Modewindow.SetActive(true);
-		Carwindow.SetActive (false);
+        //Modewindow.SetActive(true);
+		//Carwindow.SetActive (false);
 	}
 
 	public void TimeMode(){
 		RaceMode = 1;
         PlayerPrefs.SetInt("SavedRaceMode", RaceMode);
-        Trackwindow.SetActive(true);
-		Modewindow.SetActive (false);
+        //Trackwindow.SetActive(true);
+		//Modewindow.SetActive (false);
 	}
 	public void ScoreMode(){
 		RaceMode = 2;
         PlayerPrefs.SetInt("SavedRaceMode", RaceMode);
-        Trackwindow.SetActive(true);
-		Modewindow.SetActive (false);
+        //Trackwindow.SetActive(true);
+		//Modewindow.SetActive (false);
 	}
 
-	public void ReSet(){
-        PlayerPrefs.SetInt("SavedCarType", 0);
-        Trackwindow.SetActive(false);
-		Modewindow.SetActive (false);
-		Carwindow.SetActive (true);
-	}
+    public void High()
+    {
+        QualitySettings.SetQualityLevel(5, true);
+    }
+    public void Medium()
+    {
+        QualitySettings.SetQualityLevel(3, true);
+    }
+    public void Low()
+    {
+        QualitySettings.SetQualityLevel(0, true);
+    }
+
+    public void Play(){
+        trackNum = PlayerPrefs.GetInt("SavedTrackNum");
+        if (trackNum == 1)
+            SceneManager.LoadScene(2);
+        else if (trackNum == 2)
+            SceneManager.LoadScene(3);
+        else if (trackNum == 3)
+            SceneManager.LoadScene(5);
+        else
+            SceneManager.LoadScene(5);
+        //Trackwindow.SetActive(false);
+        //Modewindow.SetActive (false);
+        //Carwindow.SetActive (true);
+    }
 }

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using TMPro;
 
 public class GameModeManager : MonoBehaviour {
 
@@ -14,33 +15,36 @@ public class GameModeManager : MonoBehaviour {
 	//public GameObject PositionDisplay;
 	public static int CurrentScore;
     public GameObject LapRequireDisplay;
+    public GameObject MinimapAIcarMark;
 
     void Start () {
         DamageDisplay.ExtentOfDamage = 0f;
         DamageDisplay.CollisionNum = 0;
 		CurrentScore = 0;
 		ModeSelection = GameSetting.RaceMode;
-		if (ModeSelection == 2) {
+		if (ModeSelection == 2) { //Score Mode
 			TimeModeUI.SetActive (false);
 			ScoreModeUI.SetActive (true);
 			ScoreModeObject.SetActive (true);
 			AIcar.SetActive (false);
+            MinimapAIcarMark.SetActive(false);
 			//PositionDisplay.SetActive (false);
-            LapRequireDisplay.GetComponent<Text>().text = "1" ;
+            LapRequireDisplay.GetComponent<TextMeshProUGUI>().text = "1" ;
         }
-		else{
+		else{ // Time Mode
 			TimeModeUI.SetActive (true);
 			ScoreModeUI.SetActive (false);
 			ScoreModeObject.SetActive (false);
-			AIcar.SetActive (true);
+            MinimapAIcarMark.SetActive(true);
+            AIcar.SetActive (true);
 			//PositionDisplay.SetActive (true);
-            LapRequireDisplay.GetComponent<Text>().text = "2";
+            LapRequireDisplay.GetComponent<TextMeshProUGUI>().text = "2";
         }
 	}
 	
 
 	void Update () {
 		InternalScore = CurrentScore;
-		ScoreValue.GetComponent<Text> ().text = "" + InternalScore;
+		ScoreValue.GetComponent<TextMeshProUGUI> ().text = "" + InternalScore;
 	}
 }

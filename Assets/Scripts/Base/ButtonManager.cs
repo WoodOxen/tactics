@@ -53,16 +53,17 @@ public class ButtonManager : MonoBehaviour {
 	//buttons in track selection
 	public void Track01(){
         PlayerPrefs.SetInt("SavedTrackNum", 1);
-        SceneManager.LoadScene (2);
+        //SceneManager.LoadScene (2);
 	}
 	public void Track02(){
         PlayerPrefs.SetInt("SavedTrackNum", 2);
-        SceneManager.LoadScene (3);
+        //SceneManager.LoadScene (3);
 	}
 	public void Track03(){
         PlayerPrefs.SetInt("SavedTrackNum", 3);
-        SceneManager.LoadScene(5);
+        //SceneManager.LoadScene(5);
 	}
+    /*
 	public void NeverTouch(){
 		CashDisplay.TotalCash += 100;
 		PlayerPrefs.SetInt ("SavedCash", CashDisplay.TotalCash);
@@ -72,4 +73,5 @@ public class ButtonManager : MonoBehaviour {
 		PlayerPrefs.SetInt ("YellowBought", 0);
 		PlayerPrefs.SetInt ("Track02Bought", 0);
 	}
+    */
 }

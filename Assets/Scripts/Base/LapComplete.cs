@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using TMPro;
 
 public class LapComplete : MonoBehaviour {
 
@@ -40,7 +41,7 @@ public class LapComplete : MonoBehaviour {
         }
 
 		LapCount += 1;
-        LapCountDisplay.GetComponent<Text>().text = "" + LapCount;
+        LapCountDisplay.GetComponent<TextMeshProUGUI>().text = "" + LapCount;
         if ((ModeSelection == 2 && LapCount == 1)|| LapCount == 2) {
             RaceFinish.SetActive (true);
 		}

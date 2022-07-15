@@ -73,7 +73,7 @@ public class RaceFinish : MonoBehaviour {
         {
             TimeModeLabel.SetActive(true);
             TimeDisplay.SetActive(true);
-            TimeDisplay.GetComponent<TextMeshProUGUI>().text = "" + MinuteBox.GetComponent<Text>().text + SecondBox.GetComponent<Text>().text + MilliBox.GetComponent<Text>().text;
+            TimeDisplay.GetComponent<TextMeshProUGUI>().text = "" + MinuteBox.GetComponent<TextMeshProUGUI>().text + SecondBox.GetComponent<TextMeshProUGUI>().text + MilliBox.GetComponent<TextMeshProUGUI>().text;
             //+ ":" + LapTimeManager.SecondCount + "." + LapTimeManager.MilliCount;
             LapTimeManager.rawtime = 0;
             LapTimeManager.MinuteCount = 0;
