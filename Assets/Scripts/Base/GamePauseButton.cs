@@ -9,6 +9,7 @@ public class GamePauseButton : MonoBehaviour
     public GameObject NormalCam;
     public GameObject FarCam;
     public GameObject FPCam;
+    public GameObject SavePanel;
     private int CamMode;
     private int trackNum;
 
@@ -37,8 +38,8 @@ public class GamePauseButton : MonoBehaviour
     }
     public void SaveGame()
     {
-        Time.timeScale = 1;
-        SceneManager.LoadScene(0);
+        SavePanel.SetActive(true);
+        pausePanel.SetActive(false);
     }
     public void Retry()
     {

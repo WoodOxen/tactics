@@ -7,10 +7,12 @@ public class ButtonManager : MonoBehaviour {
     private int trackNum;
 
 	public void PlayGame(){
-		SceneManager.LoadScene (1);
+        LoadButton.LoadNum = 0;
+        SceneManager.LoadScene (1);
 	}
 
 	public void QuickStart(){
+        LoadButton.LoadNum = 0;
         GameSetting.RaceMode = PlayerPrefs.GetInt("SavedRaceMode");
         GameSetting.CarType = PlayerPrefs.GetInt("SavedCarType");
         trackNum = PlayerPrefs.GetInt("SavedTrackNum");
@@ -24,6 +26,7 @@ public class ButtonManager : MonoBehaviour {
             SceneManager.LoadScene(5);
 
     }
+
     public void Retry()
     {
         trackNum = PlayerPrefs.GetInt("SavedTrackNum");
@@ -52,14 +55,17 @@ public class ButtonManager : MonoBehaviour {
 
 	//buttons in track selection
 	public void Track01(){
+        GameSetting.trackNum = 1;
         PlayerPrefs.SetInt("SavedTrackNum", 1);
         //SceneManager.LoadScene (2);
 	}
 	public void Track02(){
+        GameSetting.trackNum = 2;
         PlayerPrefs.SetInt("SavedTrackNum", 2);
         //SceneManager.LoadScene (3);
 	}
 	public void Track03(){
+        GameSetting.trackNum = 3;
         PlayerPrefs.SetInt("SavedTrackNum", 3);
         //SceneManager.LoadScene(5);
 	}

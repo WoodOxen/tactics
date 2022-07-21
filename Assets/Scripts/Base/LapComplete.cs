@@ -15,14 +15,14 @@ public class LapComplete : MonoBehaviour {
 	public GameObject MinuteDisplay;
 	public GameObject SecondDisplay;
 	public GameObject MilliDisplay;
-	public GameObject LapCountDisplay;
+	//public GameObject LapCountDisplay;
 
 	public GameObject RaceFinish;
     private int ModeSelection;
 
     public int modeType;
 	public int flag_firstlyEnter;
-	public int LapCount=0;
+	public static int LapCount = 0;
 	public float rawTime;
 
 	void Start () {
@@ -41,7 +41,7 @@ public class LapComplete : MonoBehaviour {
         }
 
 		LapCount += 1;
-        LapCountDisplay.GetComponent<TextMeshProUGUI>().text = "" + LapCount;
+        //LapCountDisplay.GetComponent<TextMeshProUGUI>().text = "" + LapCount;
         if ((ModeSelection == 2 && LapCount == 1)|| LapCount == 2) {
             RaceFinish.SetActive (true);
 		}

@@ -20,7 +20,7 @@ public class GameModeManager : MonoBehaviour {
     void Start () {
         DamageDisplay.ExtentOfDamage = 0f;
         DamageDisplay.CollisionNum = 0;
-		CurrentScore = 0;
+		//CurrentScore = 0;
 		ModeSelection = GameSetting.RaceMode;
 		if (ModeSelection == 2) { //Score Mode
 			TimeModeUI.SetActive (false);

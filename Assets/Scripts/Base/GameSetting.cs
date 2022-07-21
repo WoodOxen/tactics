@@ -9,7 +9,7 @@ public class GameSetting : MonoBehaviour {
 	public GameObject Trackwindow;
 	public GameObject Carwindow;
 	public GameObject Modewindow;
-    private int trackNum;
+    public static int trackNum;
     
 
     // Use this for initialization

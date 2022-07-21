@@ -12,11 +12,14 @@ public class LoadLapTime : MonoBehaviour {
 	public GameObject MilliDisplay;
 
 	void Start () {
-		MinCount = PlayerPrefs.GetInt ("MinSave");
-		SecCount = PlayerPrefs.GetInt ("SecSave");
-		MilliCount = PlayerPrefs.GetFloat ("MilliSave");
+        //MinCount = PlayerPrefs.GetInt ("MinSave");
+        //SecCount = PlayerPrefs.GetInt ("SecSave");
+        //MilliCount = PlayerPrefs.GetFloat ("MilliSave");
+        MinCount = LapTimeManager.MinuteCount;
+        SecCount = LapTimeManager.SecondCount;
+        MilliCount = LapTimeManager.MilliCount;
 
-		if (MinCount <= 9) {
+        if (MinCount <= 9) {
 			MinDisplay.GetComponent<Text> ().text = "0" + MinCount + ":";
 		} else {
 			MinDisplay.GetComponent<Text> ().text = "" + MinCount + ":";
