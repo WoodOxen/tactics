@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - DreamCar01
+  - CarPosJudge
+  - CarPos
+  - Map_ground
   layers:
   - Default
   - TransparentFX

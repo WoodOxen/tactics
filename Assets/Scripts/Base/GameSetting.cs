@@ -10,6 +10,7 @@ public class GameSetting : MonoBehaviour {
 	public GameObject Carwindow;
 	public GameObject Modewindow;
     public static int trackNum;
+    public static int ControlMethod;
     
 
     // Use this for initialization
@@ -65,6 +66,18 @@ public class GameSetting : MonoBehaviour {
     public void Low()
     {
         QualitySettings.SetQualityLevel(0, true);
+    }
+
+    public void Keyboard()
+    {
+        ControlMethod = 1;
+        PlayerPrefs.SetInt("SavedContorlMethod", ControlMethod);
+    }
+
+    public void Script()
+    {
+        ControlMethod = 2;
+        PlayerPrefs.SetInt("SavedContorlMethod", ControlMethod);
     }
 
     public void Play(){

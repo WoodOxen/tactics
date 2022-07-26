@@ -7,6 +7,7 @@ public class SaveTactic
 {
     public int GameMode = 0;
     public int TrackNum = 0;
+    public int ControlMethod = 0;
     public float PositionX = 0f ;
     public float PositionY = 0f;
     public float PositionZ = 0f;
