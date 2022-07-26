@@ -1,0 +1,8 @@
+﻿  CppCarControl.cpp
+D:\Unity2021\Unity 2021.3.6f1c1\Project\CppControl\CppControl\CppCarControl.cpp(26,12): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+D:\Unity2021\Unity 2021.3.6f1c1\Project\CppControl\CppControl\CppCarControl.cpp(39,62): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\Unity2021\Unity 2021.3.6f1c1\Project\CppControl\CppControl\CppCarControl.cpp(40,16): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\Unity2021\Unity 2021.3.6f1c1\Project\CppControl\CppControl\CppCarControl.cpp(41,21): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+  LINK : 没有找到 D:\Unity2021\Unity 2021.3.6f1c1\Project\CppControl\CppControl\x64\Debug\CppControl.dll 或上一个增量链接没有生成它；正在执行完全链接
+    正在创建库 D:\Unity2021\Unity 2021.3.6f1c1\Project\CppControl\CppControl\x64\Debug\CppControl.lib 和对象 D:\Unity2021\Unity 2021.3.6f1c1\Project\CppControl\CppControl\x64\Debug\CppControl.exp
+  CppControl.vcxproj -> D:\Unity2021\Unity 2021.3.6f1c1\Project\CppControl\CppControl\x64\Debug\CppControl.dll

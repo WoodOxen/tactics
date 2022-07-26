@@ -5,7 +5,7 @@ using UnityEngine;
 public class MiniMap2 : MonoBehaviour
 {
     public GameObject TheCar;
-    private Vector3 CarPosition;
+    public static Vector3 CarPosition;
     private float MarkX;
     private float MarkY;
     

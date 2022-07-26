@@ -35,8 +35,8 @@ public class GameModeManager : MonoBehaviour {
 			TimeModeUI.SetActive (true);
 			ScoreModeUI.SetActive (false);
 			ScoreModeObject.SetActive (false);
-            MinimapAIcarMark.SetActive(true);
-            AIcar.SetActive (true);
+            //MinimapAIcarMark.SetActive(true);
+            //AIcar.SetActive (true);
 			//PositionDisplay.SetActive (true);
             LapRequireDisplay.GetComponent<TextMeshProUGUI>().text = "2";
         }

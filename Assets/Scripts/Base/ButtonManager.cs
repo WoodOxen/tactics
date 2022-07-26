@@ -15,6 +15,7 @@ public class ButtonManager : MonoBehaviour {
         LoadButton.LoadNum = 0;
         GameSetting.RaceMode = PlayerPrefs.GetInt("SavedRaceMode");
         GameSetting.CarType = PlayerPrefs.GetInt("SavedCarType");
+        GameSetting.ControlMethod = PlayerPrefs.GetInt("SavedContorlMethod");
         trackNum = PlayerPrefs.GetInt("SavedTrackNum");
         if (trackNum == 1)
             SceneManager.LoadScene(2);

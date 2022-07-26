@@ -36,6 +36,7 @@ public class SaveButton : MonoBehaviour
         save.lapNum = LapComplete.LapCount;
         save.ExtentOfDamage = DamageDisplay.ExtentOfDamage;
         save.CollisionNum = DamageDisplay.CollisionNum;
+        save.ControlMethod = GameSetting.ControlMethod;
         
         if (save.GameMode == 2)
         {

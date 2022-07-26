@@ -1,0 +1,7 @@
+﻿  pch.cpp
+  dllmain.cpp
+  CppCarControl.cpp
+D:\Unity2021\Unity 2021.3.6f1c1\Project\CppControl\CppControl\CppCarControl.cpp(11,27): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+  正在生成代码...
+    正在创建库 D:\Unity2021\Unity 2021.3.6f1c1\Project\CppControl\CppControl\Debug\CppControl.lib 和对象 D:\Unity2021\Unity 2021.3.6f1c1\Project\CppControl\CppControl\Debug\CppControl.exp
+  CppControl.vcxproj -> D:\Unity2021\Unity 2021.3.6f1c1\Project\CppControl\CppControl\Debug\CppControl.dll
