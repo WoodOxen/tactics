@@ -7,20 +7,17 @@ public class SaveTactic
 {
     public int GameMode = 0;
     public int TrackNum = 0;
-    public int ControlMethod = 0;
-    public float PositionX = 0f ;
-    public float PositionY = 0f;
-    public float PositionZ = 0f;
 
-    public float SpeedX = 0f;
-    public float SpeedY = 0f;
-    public float SpeedZ = 0f;
+    public int[] ControlMethod = new int[4] { 0, 0, 0, 0 };
 
-    public float AngleX = 0f;
-    public float AngleY = 0f;
-    public float AngleZ = 0f;
+    public float[,] Position = new float[4, 3] { { 0, 0, 0},{ 0, 0, 0}, { 0, 0, 0 }, { 0, 0, 0 } };
 
-    public int CarColor = 0;
+    public float[,] Speed = new float[4,3] { { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 } };
+
+    public float[,] Angle = new float[4,3] { { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 } };
+
+    public int[] CarColor = new int[4] { 0,0,0,0};
+
     public float steer = 0f;
     public float accel = 0f;
     public float footbrake = 0f;
@@ -30,11 +27,13 @@ public class SaveTactic
     public int sec = 0;
     public float milli = 0f;
     public int score = 0;
-    public int lapNum = 0;
+    public int[] lapNum = new int[4] { 0, 0, 0, 0 };
 
     public float ExtentOfDamage = 0f;
     public int CollisionNum = 0;
 
-    public bool HalfFlag = false;
+    public bool[] HalfFlag = new bool[4] { false, false, false, false};
+
+    public int PlayNum = 1;
 }
 

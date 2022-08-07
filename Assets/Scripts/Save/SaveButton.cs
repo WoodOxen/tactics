@@ -16,6 +16,8 @@ public class SaveButton : MonoBehaviour
 
     public void SaveGame(ref SaveTactic save)
     {
+        /*
+        save.PlayNum = GameSetting.NumofPlayer;
         save.AngleX = TheCar.GetComponent<Transform>().eulerAngles.x;
         save.AngleY = TheCar.GetComponent<Transform>().eulerAngles.y;
         save.AngleZ = TheCar.GetComponent<Transform>().eulerAngles.z;
@@ -25,7 +27,10 @@ public class SaveButton : MonoBehaviour
         save.SpeedX = TheCar.GetComponent<Rigidbody>().velocity.x;
         save.SpeedY = TheCar.GetComponent<Rigidbody>().velocity.y;
         save.SpeedZ = TheCar.GetComponent<Rigidbody>().velocity.z;
-        save.CarColor = GameSetting.CarType;
+        save.CarColor1 = GameSetting.CarType[0];
+        save.CarColor2 = GameSetting.CarType[1];
+        save.CarColor3 = GameSetting.CarType[2];
+        save.CarColor4 = GameSetting.CarType[3];
         save.GameMode = GameSetting.RaceMode;
         save.TrackNum = GameSetting.trackNum;
         save.steer = CarUserControl.h;
@@ -36,11 +41,14 @@ public class SaveButton : MonoBehaviour
         save.lapNum = LapComplete.LapCount;
         save.ExtentOfDamage = DamageDisplay.ExtentOfDamage;
         save.CollisionNum = DamageDisplay.CollisionNum;
-        save.ControlMethod = GameSetting.ControlMethod;
-        
+        save.ControlMethod1 = GameSetting.ControlMethod[0];
+        save.ControlMethod2 = GameSetting.ControlMethod[1];
+        save.ControlMethod3 = GameSetting.ControlMethod[2];
+        save.ControlMethod4 = GameSetting.ControlMethod[3];
+        */
         if (save.GameMode == 2)
         {
-            save.score = GameModeManager.CurrentScore;
+            //save.score = GameModeManager.CurrentScore;
         }
         else
         {

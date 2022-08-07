@@ -22,10 +22,18 @@ public class LapComplete : MonoBehaviour {
 
     public int modeType;
 	public int flag_firstlyEnter;
-	public static int LapCount = 0;
-	public float rawTime;
+	public static int LapCount1 = 0;
+    public static int LapCount2 = 0;
+    public static int LapCount3 = 0;
+    public static int LapCount4 = 0;
+    public float rawTime;
 
-	void Start () {
+    public static bool LapFlag1 = false;
+    public static bool LapFlag2 = false;
+    public static bool LapFlag3 = false;
+    public static bool LapFlag4 = false;
+
+    void Start () {
 		flag_firstlyEnter = 1;
 		modeType = GameSetting.RaceMode;
         ModeSelection = GameSetting.RaceMode;
@@ -35,21 +43,43 @@ public class LapComplete : MonoBehaviour {
 		/*if (collision.gameObject.tag == "DreamCar01" || collision.gameObject.tag == "CarPosJudge") {
 			return;
 		}*/
-        if(collision.gameObject.tag != "Player")
+        //记录四辆人工控制车通过终点线的情况
+        if(collision.gameObject.tag == "Player2" && HalfPointTrigger.HalfFlag2)
+        {
+            LapFlag2 = true;
+            HalfPointTrigger.HalfFlag2 = false;
+            LapCount2 += 1;
+        }
+        else if (collision.gameObject.tag == "Player3" && HalfPointTrigger.HalfFlag3)
+        {
+            LapFlag3 = true;
+            HalfPointTrigger.HalfFlag3 = false;
+            LapCount3 += 1;
+        }
+        else if (collision.gameObject.tag == "Player4" && HalfPointTrigger.HalfFlag4)
+        {
+            LapFlag4 = true;
+            HalfPointTrigger.HalfFlag4 = false;
+            LapCount4 += 1;
+        }
+        else if (collision.gameObject.tag == "Player" && HalfPointTrigger.HalfFlag1)
+        {
+            LapFlag1 = true;
+            HalfPointTrigger.HalfFlag1 = false;
+            LapCount1 += 1;
+        }
+        else//其他AI车通过重点线，不做记录
         {
             return;
         }
 
-		LapCount += 1;
         //LapCountDisplay.GetComponent<TextMeshProUGUI>().text = "" + LapCount;
-        if ((ModeSelection == 2 && LapCount == 1)|| LapCount == 2) {
+        if ((ModeSelection == 2 && LapCount1 == 1)|| LapCount1 == 2) {
             RaceFinish.SetActive (true);
 		}
 
-        HalfLapTrig.SetActive(true);
-        LapCompleteTrig.SetActive(false);
-
         /*
+         * 历史代码残留，用于显示Best Lap Time
 		rawTime = PlayerPrefs.GetFloat ("RAWTIME");
 		if (LapTimeManager.rawtime <= rawTime || flag_firstlyEnter == 1) {
 			MinuteDisplay.GetComponent<Text> ().text = MinuteNow.GetComponent<Text> ().text;
@@ -62,7 +92,6 @@ public class LapComplete : MonoBehaviour {
 			flag_firstlyEnter = 0;
 		}
         */
-
 
     }
 }

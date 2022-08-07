@@ -12,6 +12,7 @@ public class quitRace : MonoBehaviour {
     void Update () {
 		if (Input.GetButtonDown ("Cancel")) {
             pausePanel.SetActive(true);
+            /*
             CamMode = ViewModeManager.CamMode;
             if (CamMode == 0)
             {
@@ -25,6 +26,7 @@ public class quitRace : MonoBehaviour {
             {
                 FPCam.GetComponent<AudioListener>().enabled = false;
             }
+            */
             Time.timeScale = 0;
         }
 	}

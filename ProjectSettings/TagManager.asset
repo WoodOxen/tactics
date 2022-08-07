@@ -8,6 +8,9 @@ TagManager:
   - CarPosJudge
   - CarPos
   - Map_ground
+  - Player2
+  - Player3
+  - Player4
   layers:
   - Default
   - TransparentFX

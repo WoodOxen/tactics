@@ -21,27 +21,33 @@ std::queue<float> q;
 //接口定义见CppCarControl.h文件
 DLLForUnity_API void __stdcall CarControlCpp()
 {
+    //speed control
     double DreamSpeed;
-    CruiseError = TacticAPI::CruiseError();
-    q.push(CruiseError);
-    Addup_CruiseError += CruiseError *0.01;
-    if (q.size() == 10) {
-        double tmp = q.front();
-        q.pop();
-        Addup_CruiseError -= tmp * 0.01;
-    }
+    
     if (TacticAPI::Curvature() == 0) DreamSpeed = 25;
     else DreamSpeed = 3.5 / TacticAPI::Curvature();
 
     if (DreamSpeed > 25) DreamSpeed = 25;
     if (DreamSpeed <10) DreamSpeed = 10;
 
-    steering = CruiseError * 0.06 + Addup_CruiseError*0.0015 + (CruiseError - Last_CruiseError)*2;
-    accel = 0.1*(DreamSpeed - double(TacticAPI::Speed()));
+    accel = 0.1 * (DreamSpeed - double(TacticAPI::Speed()));
     footbrake = 0.1 * (DreamSpeed - double(TacticAPI::Speed()));
+
+    //steering control
+    CruiseError = TacticAPI::CruiseError();
+    q.push(CruiseError);
+    Addup_CruiseError += CruiseError * 0.01;
+    if (q.size() == 10) {
+        double tmp = q.front();
+        q.pop();
+        Addup_CruiseError -= tmp * 0.01;
+    }
+    steering = CruiseError * 0.06 + Addup_CruiseError*0.0015 + (CruiseError - Last_CruiseError)*2;
+    
     handbrake = 0;
 
     Last_CruiseError = CruiseError;
+
     TacticAPI::CarMove(steering, accel, footbrake, handbrake);
 }
 

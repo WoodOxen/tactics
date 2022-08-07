@@ -57,8 +57,8 @@ public class RaceFinish : MonoBehaviour {
 
         CompletePanel.SetActive(true);
         RaceMode = GameSetting.RaceMode;
-        CollisionNumDisplay.GetComponent<TextMeshProUGUI>().text = "" + DamageDisplay.CollisionNum;
-        TotalDamageDisplay.GetComponent<TextMeshProUGUI>().text = "" + DamageDisplay.ExtentOfDamage;
+        CollisionNumDisplay.GetComponent<TextMeshProUGUI>().text = "" + DamageDisplay1.CollisionNum;
+        TotalDamageDisplay.GetComponent<TextMeshProUGUI>().text = "" + DamageDisplay1.ExtentOfDamage;
 
         //we need a algorithm to calculate the grade
         GradeDisplay.GetComponent<TextMeshProUGUI>().text = "coming soon";
@@ -67,7 +67,7 @@ public class RaceFinish : MonoBehaviour {
         {
             ScoreModeLabel.SetActive(true);
             ScoreDisplay.SetActive(true);
-            ScoreDisplay.GetComponent<TextMeshProUGUI>().text = "" + GameModeManager.CurrentScore;
+            ScoreDisplay.GetComponent<TextMeshProUGUI>().text = "" + GameModeManager.CurrentScore1;
         }
         else
         {
