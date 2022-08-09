@@ -28,16 +28,20 @@ public class LapComplete : MonoBehaviour {
     public static int LapCount4 = 0;
     public float rawTime;
 
-    public static bool LapFlag1 = false;
-    public static bool LapFlag2 = false;
-    public static bool LapFlag3 = false;
-    public static bool LapFlag4 = false;
+    public static bool LapFlag1 = true;
+    public static bool LapFlag2 = true;
+    public static bool LapFlag3 = true;
+    public static bool LapFlag4 = true;
 
     void Start () {
 		flag_firstlyEnter = 1;
 		modeType = GameSetting.RaceMode;
         ModeSelection = GameSetting.RaceMode;
-    }
+        LapFlag1 = true;
+        LapFlag2 = true;
+        LapFlag3 = true;
+        LapFlag4 = true;
+}
 		
 	void OnTriggerEnter(Collider collision){
 		/*if (collision.gameObject.tag == "DreamCar01" || collision.gameObject.tag == "CarPosJudge") {
@@ -46,24 +50,28 @@ public class LapComplete : MonoBehaviour {
         //记录四辆人工控制车通过终点线的情况
         if(collision.gameObject.tag == "Player2" && HalfPointTrigger.HalfFlag2)
         {
+            Debug.Log(2);
             LapFlag2 = true;
             HalfPointTrigger.HalfFlag2 = false;
             LapCount2 += 1;
         }
         else if (collision.gameObject.tag == "Player3" && HalfPointTrigger.HalfFlag3)
         {
+            Debug.Log(3);
             LapFlag3 = true;
             HalfPointTrigger.HalfFlag3 = false;
             LapCount3 += 1;
         }
         else if (collision.gameObject.tag == "Player4" && HalfPointTrigger.HalfFlag4)
         {
+            Debug.Log(4);
             LapFlag4 = true;
             HalfPointTrigger.HalfFlag4 = false;
             LapCount4 += 1;
         }
         else if (collision.gameObject.tag == "Player" && HalfPointTrigger.HalfFlag1)
         {
+            Debug.Log(1);
             LapFlag1 = true;
             HalfPointTrigger.HalfFlag1 = false;
             LapCount1 += 1;

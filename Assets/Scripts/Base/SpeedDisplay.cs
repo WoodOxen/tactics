@@ -6,7 +6,7 @@ using UnityEngine;
 public class SpeedDisplay : MonoBehaviour
 {
     public GameObject[] TheCar;
-    public static float speed;
+    public static float[] speed = new float[4];
     private Vector3 velocity;
     private int PlayerNum;
     public GameObject speedDisplaybox;
@@ -14,8 +14,11 @@ public class SpeedDisplay : MonoBehaviour
     void Update()
     {
         PlayerNum = ViewModeManager.CamNum;
-        velocity = TheCar[PlayerNum].GetComponent<Rigidbody>().velocity;
-        speed = Mathf.Sqrt(Mathf.Pow(velocity.x, 2) + Mathf.Pow(velocity.y, 2) + Mathf.Pow(velocity.z, 2));
-        speedDisplaybox.GetComponent<TextMeshProUGUI>().text = "" + speed.ToString("#0.00");
+        for(int i = 0; i < 4; i++)
+        {
+            velocity = TheCar[i].GetComponent<Rigidbody>().velocity;
+            speed[i] = Mathf.Sqrt(Mathf.Pow(velocity.x, 2) + Mathf.Pow(velocity.y, 2) + Mathf.Pow(velocity.z, 2));
+        }
+        speedDisplaybox.GetComponent<TextMeshProUGUI>().text = "" + speed[PlayerNum].ToString("#0.00");
     }
 }

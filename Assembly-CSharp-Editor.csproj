@@ -53,11 +53,11 @@
     <UnityVersion>2021.3.6f1c1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Editor\CarWaypoints\Scripts\WaypointMessage.cs" />
+    <Compile Include="Assets\Editor\CarWaypoints\Scripts\Scripts\WaypointMessage.cs" />
     <Compile Include="Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
-    <Compile Include="Assets\Editor\CarWaypoints\Scripts\WPCarController.cs" />
+    <Compile Include="Assets\Editor\CarWaypoints\Scripts\Scripts\WPCarController.cs" />
     <Compile Include="Assets\Editor\CarWaypoints\Scripts\Editor\WaypointsEditor.cs" />
-    <Compile Include="Assets\Editor\CarWaypoints\Scripts\WaypointMenu.cs" />
+    <Compile Include="Assets\Editor\CarWaypoints\Scripts\Scripts\WaypointMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

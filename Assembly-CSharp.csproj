@@ -60,11 +60,13 @@
     <Compile Include="Assets\Scripts\Collision\DamageDisplay2.cs" />
     <Compile Include="Assets\Scripts\MultiPlayer\CarUserControl3.cs" />
     <Compile Include="Assets\Scripts\Base\LapTimeManager.cs" />
+    <Compile Include="Assets\Scripts\CarControlCpp\CruiseData2.cs" />
     <Compile Include="Assets\Scripts\Save\SaveCondition.cs" />
     <Compile Include="Assets\Scripts\MultiPlayer\PlayerNumCarSelect.cs" />
     <Compile Include="Assets\Scripts\Base\StartManager.cs" />
     <Compile Include="Assets\Scripts\Base\finishRotate.cs" />
     <Compile Include="Assets\Scripts\Base\Unlockable.cs" />
+    <Compile Include="Assets\Scripts\CarControlCpp\CruiseData3.cs" />
     <Compile Include="Assets\Scripts\Save\SaveConditionManager.cs" />
     <Compile Include="Assets\Scripts\CarControlCpp\CppControl.cs" />
     <Compile Include="Assets\Scripts\Save\SaveTactic.cs" />
@@ -79,16 +81,20 @@
     <Compile Include="Assets\Scripts\Base\LoadLapTime.cs" />
     <Compile Include="Assets\Scripts\CameraManage\ViewModeManager.cs" />
     <Compile Include="Assets\Scripts\Base\EscGameSetting.cs" />
+    <Compile Include="Assets\Scripts\CameraManage\MonitorManager.cs" />
     <Compile Include="Assets\Scripts\Base\LapNumDisplay.cs" />
     <Compile Include="Assets\Scripts\Base\TrackerCar03.cs" />
+    <Compile Include="Assets\Scripts\CarControlCpp\CallCppControl.cs" />
     <Compile Include="Assets\Scripts\Base\SpeedDisplay.cs" />
     <Compile Include="Assets\Scripts\CarControlCpp\CruiseData.cs" />
+    <Compile Include="Assets\Scripts\CarControlCpp\ErrorDisplayManager.cs" />
     <Compile Include="Assets\Scripts\Base\carControllActive.cs" />
     <Compile Include="Assets\Scripts\Base\MainMenuLoadButton.cs" />
     <Compile Include="Assets\Scripts\ScoreObjects\RedScore.cs" />
     <Compile Include="Assets\Scripts\Collision\CollisionDamage2.cs" />
     <Compile Include="Assets\Scripts\Base\UnlockedObjects.cs" />
     <Compile Include="Assets\Scripts\ScoreObjects\ScoreDisplay3.cs" />
+    <Compile Include="Assets\Scripts\CameraManage\MonitorSetting.cs" />
     <Compile Include="Assets\Scripts\ButtonManager\GamePauseButton.cs" />
     <Compile Include="Assets\Scripts\Collision\CollisionDamage1.cs" />
     <Compile Include="Assets\Scripts\Collision\DamageDisplay1.cs" />
@@ -97,6 +103,7 @@
     <Compile Include="Assets\Scripts\Base\CreditDisplay.cs" />
     <Compile Include="Assets\Scripts\Collision\CollisionDamage4.cs" />
     <Compile Include="Assets\Scripts\Base\quitGame.cs" />
+    <Compile Include="Assets\Scripts\CarControlCpp\CruiseData4.cs" />
     <Compile Include="Assets\Scripts\ButtonManager\ButtonManager.cs" />
     <Compile Include="Assets\Scripts\CarControlCpp\CallbackFunction.cs" />
     <Compile Include="Assets\Scripts\ScoreObjects\ScoreDisplay4.cs" />
@@ -116,13 +123,12 @@
     <Compile Include="Assets\Scripts\Base\CashDisplay.cs" />
     <Compile Include="Assets\Scripts\Base\CarColorSetting.cs" />
     <Compile Include="Assets\Scripts\Base\Positioning\PosDown.cs" />
-    <Compile Include="Assets\Scripts\CameraManage\MonitorSetting.cs" />
-    <Compile Include="Assets\Scripts\CameraManage\MonitorManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Textures\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\Textures\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\Scripts\TrackData\Track03.xml" />
+    <None Include="Assets\Save3.txt" />
     <None Include="Assets\Textures\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\Quiet Morning Hours Skybox\QuietMorningHoursSkybox_Info.txt" />
     <None Include="Assets\Textures\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />

@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-using UnityEngine;
 using UnityStandardAssets.Vehicles.Car;
 
 public class StartManager : MonoBehaviour {
@@ -14,19 +13,17 @@ public class StartManager : MonoBehaviour {
 	public GameObject LapTimer;
     
     public GameObject ModeManager;
+    public GameObject ViewModeManager;
     public GameObject LapCompleteTrigger;
     public GameObject LapHalf;
     public GameObject CarColor;
 
-    public GameObject TheCar1;
-    public GameObject TheCar2;
-    public GameObject TheCar3;
-    public GameObject TheCar4;
+    public GameObject[] TheCar;
 
     private int LoadNum;
 
     void Start () {
-        //接口初始化
+        //cpp接口初始化
         CppControl.InitSpeedDelegate(CppControl.CallbackSpeedFromCpp);
         CppControl.InitPositionXDelegate(CppControl.CallbackPositionXFromCpp);
         CppControl.InitPositionYDelegate(CppControl.CallbackPositionYFromCpp);
@@ -38,7 +35,7 @@ public class StartManager : MonoBehaviour {
         CppControl.InitCarMoveDelegate(CppControl.GetCarMoveFromCpp);
 
         LoadNum = LoadButton.LoadNum;
-        if (LoadNum != 0)
+        if (LoadNum != 0)//需要读取LoadNum号存档
         {
             loadBefore();
         }
@@ -51,59 +48,99 @@ public class StartManager : MonoBehaviour {
         }
         CarColor.SetActive(true);
         ModeManager.SetActive(true);
-		StartCoroutine (CountdownStart ());
+        ViewModeManager.SetActive(true);
+
+        StartCoroutine (CountdownStart ());
     }
      private void loadBefore()
     {
-        /*
+        //初始化+获取存档
         GameSetting.ControlMethod = new int[5];
         GameSetting.CarType = new int[5];
         SaveTactic save = LoadButton.save;
-        GameSetting.ControlMethod[0] = save.ControlMethod1;
-        GameSetting.ControlMethod[1] = save.ControlMethod2;
-        GameSetting.ControlMethod[2] = save.ControlMethod3;
-        GameSetting.ControlMethod[3] = save.ControlMethod4;
-        TheCar1.GetComponent<Transform>().eulerAngles = new Vector3(save.AngleX[0], save.AngleY[0], save.AngleZ[0]);
-        TheCar1.GetComponent<Transform>().position = new Vector3(save.PositionX[0], save.PositionY[0], save.PositionZ[0]);
-        GameSetting.CarType[0] = save.CarColor1;
-        GameSetting.CarType[1] = save.CarColor2;
-        GameSetting.CarType[2] = save.CarColor3;
-        GameSetting.CarType[3] = save.CarColor4;
+        //设置参数
+        for(int i = 0; i < 4; i++)
+        {
+            GameSetting.ControlMethod[i] = save.ControlMethod[i];
+            TheCar[i].GetComponent<Transform>().eulerAngles = new Vector3(save.Angle[i,0], save.Angle[i,1], save.Angle[i,2]);
+            TheCar[i].GetComponent<Transform>().position = new Vector3(save.Position[i,0], save.Position[i,1], save.Position[i,2]);
+            GameSetting.CarType[i] = save.CarColor[i];
+        }
+
+        GameSetting.NumofPlayer = save.PlayNum;
         GameSetting.RaceMode = save.GameMode;
         GameSetting.trackNum = save.TrackNum;
-        DamageDisplay.ExtentOfDamage = save.ExtentOfDamage;
-        DamageDisplay.CollisionNum = save.CollisionNum;
-        LapCompleteTrigger.SetActive(save.HalfFlag);
-        LapHalf.SetActive(!save.HalfFlag);
-        LapComplete.LapCount = save.lapNum;
-        
+        DamageDisplay1.ExtentOfDamage = save.ExtentOfDamage[0];
+        DamageDisplay1.CollisionNum = save.CollisionNum[0];
+        DamageDisplay2.ExtentOfDamage = save.ExtentOfDamage[1];
+        DamageDisplay2.CollisionNum = save.CollisionNum[1];
+        DamageDisplay3.ExtentOfDamage = save.ExtentOfDamage[2];
+        DamageDisplay3.CollisionNum = save.CollisionNum[2];
+        DamageDisplay4.ExtentOfDamage = save.ExtentOfDamage[3];
+        DamageDisplay4.CollisionNum = save.CollisionNum[3];
+
+        HalfPointTrigger.HalfFlag1 = save.HalfFlag[0];
+        LapComplete.LapFlag1 = !save.HalfFlag[0];
+        HalfPointTrigger.HalfFlag2 = save.HalfFlag[1];
+        LapComplete.LapFlag2 = !save.HalfFlag[1];
+        HalfPointTrigger.HalfFlag3 = save.HalfFlag[2];
+        LapComplete.LapFlag3 = !save.HalfFlag[2];
+        HalfPointTrigger.HalfFlag4 = save.HalfFlag[3];
+        LapComplete.LapFlag4 = !save.HalfFlag[3];
+
+        LapComplete.LapCount1 = save.lapNum[0];
+        LapComplete.LapCount2 = save.lapNum[1];
+        LapComplete.LapCount3 = save.lapNum[2];
+        LapComplete.LapCount4 = save.lapNum[3];
+
         if (save.GameMode == 2)
         {
-            GameModeManager.CurrentScore = save.score;
+            GameModeManager.CurrentScore1 = save.score[0];
+            GameModeManager.CurrentScore2 = save.score[1];
+            GameModeManager.CurrentScore3 = save.score[2];
+            GameModeManager.CurrentScore4 = save.score[3];
         }
         else
         {
             LapTimeManager.MinuteCount = save.min;
             LapTimeManager.SecondCount = save.sec;
             LapTimeManager.MilliCount = save.milli;
-        }*/
+        }
     }
 
     private void loadAfter()
     {
         if (LoadNum != 0)
         {
-            /*
             SaveTactic save = LoadButton.save;
-            TheCar.GetComponent<Rigidbody>().velocity = new Vector3(save.SpeedX, save.SpeedY, save.SpeedZ);
-            CarUserControl.h = save.steer;
-            CarUserControl.v = save.accel;
-            CarUserControl.v = save.footbrake;
-            CarUserControl.handbrake = save.handbrake;
-            */
+            for(int i = 0; i < 4; i++)
+            {
+                TheCar[i].GetComponent<Rigidbody>().velocity = new Vector3(save.Speed[i,0], save.Speed[i,1], save.Speed[i,2]);
+            }
+            CarUserControl.h = save.steer[0];
+            CarUserControl.v = save.accel[0];
+            CarUserControl.v = save.footbrake[0];
+            CarUserControl.handbrake = save.handbrake[0];
+
+            CarUserControl2.h = save.steer[1];
+            CarUserControl2.v = save.accel[1];
+            CarUserControl2.v = save.footbrake[1];
+            CarUserControl2.handbrake = save.handbrake[1];
+
+            CarUserControl3.h = save.steer[2];
+            CarUserControl3.v = save.accel[2];
+            CarUserControl3.v = save.footbrake[2];
+            CarUserControl3.handbrake = save.handbrake[2];
+
+            CarUserControl4.h = save.steer[3];
+            CarUserControl4.v = save.accel[3];
+            CarUserControl4.v = save.footbrake[3];
+            CarUserControl4.handbrake = save.handbrake[3];
+
         }
     }
 
+    //倒数321
     IEnumerator CountdownStart(){
 		yield return new WaitForSeconds (0.5f);
 		CountDown.GetComponent<Text> ().text = "3";

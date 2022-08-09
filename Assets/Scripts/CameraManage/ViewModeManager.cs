@@ -21,6 +21,9 @@ public class ViewModeManager : MonoBehaviour {
     void Start()
     {
         PlayerNum = GameSetting.NumofPlayer;
+        ViewMode = 0;
+        CamNum = 0;
+        CamNum_last = 0;
     }
     void Update () {
 		if (Input.GetButtonDown ("ViewMode")) {
@@ -32,10 +35,10 @@ public class ViewModeManager : MonoBehaviour {
         {
             CamNum_last = CamNum;
             CamNum += 1;
-            CamNumDisplay.GetComponent<TextMeshProUGUI>().text = "P" + (CamNum+1).ToString();
-            //TheCar[CamNum_last].GetComponent<AudioListener>().enabled = false;
-            //TheCar[CamNum].GetComponent<AudioListener>().enabled = true;
             CamNum = CamNum % PlayerNum;
+
+            CamNumDisplay.GetComponent<TextMeshProUGUI>().text = "P" + (CamNum + 1).ToString();
+
             StartCoroutine(CamChange());
         }
     }

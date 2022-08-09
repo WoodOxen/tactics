@@ -18,19 +18,19 @@ public class SaveTactic
 
     public int[] CarColor = new int[4] { 0,0,0,0};
 
-    public float steer = 0f;
-    public float accel = 0f;
-    public float footbrake = 0f;
-    public float handbrake = 0f;
+    public float[] steer = new float[4] { 0, 0, 0, 0 };
+    public float[] accel = new float[4] { 0, 0, 0, 0 };
+    public float[] footbrake = new float[4] { 0, 0, 0, 0 };
+    public float[] handbrake = new float[4] { 0, 0, 0, 0 };
 
     public int min = 0;
     public int sec = 0;
     public float milli = 0f;
-    public int score = 0;
+    public int[] score = new int[4] { 0, 0, 0, 0 };
     public int[] lapNum = new int[4] { 0, 0, 0, 0 };
 
-    public float ExtentOfDamage = 0f;
-    public int CollisionNum = 0;
+    public float[] ExtentOfDamage = new float[4] { 0, 0, 0, 0 };
+    public int[] CollisionNum = new int[4] { 0, 0, 0, 0 };
 
     public bool[] HalfFlag = new bool[4] { false, false, false, false};
 

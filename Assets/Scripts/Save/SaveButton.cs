@@ -8,47 +8,78 @@ using UnityStandardAssets.Vehicles.Car;
 
 public class SaveButton : MonoBehaviour
 {
-    public GameObject TheCar;
-    public GameObject LapCompleteTrigger;
+    public GameObject[] TheCar;
+    //public GameObject LapCompleteTrigger;
 
     public GameObject pausePanel;
     public GameObject SavePanel;
 
     public void SaveGame(ref SaveTactic save)
     {
-        /*
+        
         save.PlayNum = GameSetting.NumofPlayer;
-        save.AngleX = TheCar.GetComponent<Transform>().eulerAngles.x;
-        save.AngleY = TheCar.GetComponent<Transform>().eulerAngles.y;
-        save.AngleZ = TheCar.GetComponent<Transform>().eulerAngles.z;
-        save.PositionX = TheCar.GetComponent<Transform>().position.x;
-        save.PositionY = TheCar.GetComponent<Transform>().position.y;
-        save.PositionZ = TheCar.GetComponent<Transform>().position.z;
-        save.SpeedX = TheCar.GetComponent<Rigidbody>().velocity.x;
-        save.SpeedY = TheCar.GetComponent<Rigidbody>().velocity.y;
-        save.SpeedZ = TheCar.GetComponent<Rigidbody>().velocity.z;
-        save.CarColor1 = GameSetting.CarType[0];
-        save.CarColor2 = GameSetting.CarType[1];
-        save.CarColor3 = GameSetting.CarType[2];
-        save.CarColor4 = GameSetting.CarType[3];
+        for(int i = 0; i < 4; i++)
+        {
+            save.Angle[i, 0] = TheCar[i].GetComponent<Transform>().eulerAngles.x;
+            save.Angle[i, 1] = TheCar[i].GetComponent<Transform>().eulerAngles.y;
+            save.Angle[i, 2] = TheCar[i].GetComponent<Transform>().eulerAngles.z;
+            save.Position[i, 0] = TheCar[i].GetComponent<Transform>().position.x;
+            save.Position[i, 1] = TheCar[i].GetComponent<Transform>().position.y;
+            save.Position[i, 2] = TheCar[i].GetComponent<Transform>().position.z;
+            save.Speed[i, 0] = TheCar[i].GetComponent<Rigidbody>().velocity.x;
+            save.Speed[i, 1] = TheCar[i].GetComponent<Rigidbody>().velocity.y;
+            save.Speed[i, 2] = TheCar[i].GetComponent<Rigidbody>().velocity.z;
+
+            save.CarColor[i] = GameSetting.CarType[i];
+
+            save.ControlMethod[i] = GameSetting.ControlMethod[i];
+        }
+
         save.GameMode = GameSetting.RaceMode;
         save.TrackNum = GameSetting.trackNum;
-        save.steer = CarUserControl.h;
-        save.accel = CarUserControl.v;
-        save.footbrake = CarUserControl.v;
-        save.handbrake = CarUserControl.handbrake;
-        save.HalfFlag = LapCompleteTrigger.activeSelf;
-        save.lapNum = LapComplete.LapCount;
-        save.ExtentOfDamage = DamageDisplay.ExtentOfDamage;
-        save.CollisionNum = DamageDisplay.CollisionNum;
-        save.ControlMethod1 = GameSetting.ControlMethod[0];
-        save.ControlMethod2 = GameSetting.ControlMethod[1];
-        save.ControlMethod3 = GameSetting.ControlMethod[2];
-        save.ControlMethod4 = GameSetting.ControlMethod[3];
-        */
+
+        save.steer[0] = CarUserControl.h;
+        save.accel[0] = CarUserControl.v;
+        save.footbrake[0] = CarUserControl.v;
+        save.handbrake[0] = CarUserControl.handbrake;
+        save.steer[1] = CarUserControl2.h;
+        save.accel[1] = CarUserControl2.v;
+        save.footbrake[1] = CarUserControl2.v;
+        save.handbrake[1] = CarUserControl2.handbrake;
+        save.steer[2] = CarUserControl3.h;
+        save.accel[2] = CarUserControl3.v;
+        save.footbrake[2] = CarUserControl3.v;
+        save.handbrake[2] = CarUserControl3.handbrake;
+        save.steer[3] = CarUserControl4.h;
+        save.accel[3] = CarUserControl4.v;
+        save.footbrake[3] = CarUserControl4.v;
+        save.handbrake[3] = CarUserControl4.handbrake;
+
+        save.HalfFlag[0] = HalfPointTrigger.HalfFlag1;
+        save.HalfFlag[1] = HalfPointTrigger.HalfFlag2;
+        save.HalfFlag[2] = HalfPointTrigger.HalfFlag3;
+        save.HalfFlag[3] = HalfPointTrigger.HalfFlag4;
+
+        save.lapNum[0] = LapComplete.LapCount1;
+        save.lapNum[1] = LapComplete.LapCount2;
+        save.lapNum[2] = LapComplete.LapCount3;
+        save.lapNum[3] = LapComplete.LapCount4;
+
+        save.ExtentOfDamage[0] = DamageDisplay1.ExtentOfDamage;
+        save.CollisionNum[0] = DamageDisplay1.CollisionNum;
+        save.ExtentOfDamage[1] = DamageDisplay2.ExtentOfDamage;
+        save.CollisionNum[1] = DamageDisplay2.CollisionNum;
+        save.ExtentOfDamage[2] = DamageDisplay3.ExtentOfDamage;
+        save.CollisionNum[2] = DamageDisplay3.CollisionNum;
+        save.ExtentOfDamage[3] = DamageDisplay4.ExtentOfDamage;
+        save.CollisionNum[3] = DamageDisplay4.CollisionNum;
+        
         if (save.GameMode == 2)
         {
-            //save.score = GameModeManager.CurrentScore;
+            save.score[0] = GameModeManager.CurrentScore1;
+            save.score[1] = GameModeManager.CurrentScore2;
+            save.score[2] = GameModeManager.CurrentScore3;
+            save.score[3] = GameModeManager.CurrentScore4;
         }
         else
         {

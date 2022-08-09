@@ -63,7 +63,7 @@ public class GameModeManager : MonoBehaviour {
         ModeSelection = GameSetting.RaceMode;
 		if (ModeSelection == 2) { //Score Mode
             //关闭TimeMode的一切UI(如果一开始就是关闭的，这部分即注释掉）
-            /*
+            
 			TimeModeUIP1.SetActive (false);
             TimeModeUIP2.SetActive(false);
             TimeModeUIP3.SetActive(false);
@@ -75,7 +75,7 @@ public class GameModeManager : MonoBehaviour {
             TimeModePanelP4.SetActive(false);
 
             TimeDisplayUI.SetActive(false);
-            */
+            
 
             //开启部分SocreMode的物体
             ScoreModeObject.SetActive (true);
@@ -85,10 +85,10 @@ public class GameModeManager : MonoBehaviour {
             LapRequireDisplay.GetComponent<TextMeshProUGUI>().text = "1" ;
             if (PlayerNum == 2)//2Players
             {
-                //ScoreModeUI1.SetActive(false);
+                ScoreModeUI1.SetActive(false);
                 ScoreModeUI2.SetActive(true);
-                //ScoreModeUI3.SetActive(false);
-                //ScoreModeUI4.SetActive(false);
+                ScoreModeUI3.SetActive(false);
+                ScoreModeUI4.SetActive(false);
 
                 ScoreModePanel2.SetActive(true);
 
@@ -102,10 +102,10 @@ public class GameModeManager : MonoBehaviour {
             }
             else if(PlayerNum == 3)
             {
-                //ScoreModeUI1.SetActive(false);
+                ScoreModeUI1.SetActive(false);
                 ScoreModeUI2.SetActive(true);
                 ScoreModeUI3.SetActive(true);
-                //ScoreModeUI4.SetActive(false);
+                ScoreModeUI4.SetActive(false);
 
                 ScoreModePanel3.SetActive(true);
 
@@ -119,7 +119,7 @@ public class GameModeManager : MonoBehaviour {
             }
             else if (PlayerNum == 4)
             {
-                //ScoreModeUI1.SetActive(false);
+                ScoreModeUI1.SetActive(false);
                 ScoreModeUI2.SetActive(true);
                 ScoreModeUI3.SetActive(true);
                 ScoreModeUI4.SetActive(true);
@@ -137,9 +137,9 @@ public class GameModeManager : MonoBehaviour {
             else
             {
                 ScoreModeUI1.SetActive(true);
-                //ScoreModeUI2.SetActive(false);
-                //ScoreModeUI3.SetActive(false);
-                //ScoreModeUI4.SetActive(false);
+                ScoreModeUI2.SetActive(false);
+                ScoreModeUI3.SetActive(false);
+                ScoreModeUI4.SetActive(false);
 
                 ScoreModePanel1.SetActive(true);
 
@@ -153,13 +153,17 @@ public class GameModeManager : MonoBehaviour {
             }
         }
 		else{ // Time Mode
-            //关闭ScoreMode的一切UI，同上，可省略
-            /*
+            //关闭ScoreMode的一切UI
+            
             ScoreModeUI1.SetActive(false);
             ScoreModeUI2.SetActive(false);
             ScoreModeUI3.SetActive(false);
             ScoreModeUI4.SetActive(false);
-            */
+
+            ScoreModePanel1.SetActive(false);
+            ScoreModePanel2.SetActive(false);
+            ScoreModePanel3.SetActive(false);
+            ScoreModePanel4.SetActive(false);
 
             //开启部分RaceMode的UI
             TimeDisplayUI.SetActive(true);
@@ -167,10 +171,10 @@ public class GameModeManager : MonoBehaviour {
             LapRequireDisplay.GetComponent<TextMeshProUGUI>().text = "2";
             if(PlayerNum == 2)
             {
-                //TimeModeUIP1.SetActive(false);
+                TimeModeUIP1.SetActive(false);
                 TimeModeUIP2.SetActive(true);
-                //TimeModeUIP3.SetActive(false);
-                //TimeModeUIP4.SetActive(false);
+                TimeModeUIP3.SetActive(false);
+                TimeModeUIP4.SetActive(false);
 
                 TimeModePanelP2.SetActive(true);
 
@@ -184,10 +188,10 @@ public class GameModeManager : MonoBehaviour {
             }
             else if (PlayerNum == 3)
             {
-                //TimeModeUIP1.SetActive(false);
+                TimeModeUIP1.SetActive(false);
                 TimeModeUIP2.SetActive(true);
                 TimeModeUIP3.SetActive(true);
-                //TimeModeUIP4.SetActive(false);
+                TimeModeUIP4.SetActive(false);
 
                 TimeModePanelP3.SetActive(true);
 
@@ -201,7 +205,7 @@ public class GameModeManager : MonoBehaviour {
             }
             else if (PlayerNum == 4)
             {
-                //TimeModeUIP1.SetActive(false);
+                TimeModeUIP1.SetActive(false);
                 TimeModeUIP2.SetActive(true);
                 TimeModeUIP3.SetActive(true);
                 TimeModeUIP4.SetActive(true);
@@ -219,9 +223,9 @@ public class GameModeManager : MonoBehaviour {
             else
             {
                 TimeModeUIP1.SetActive(true);
-                //TimeModeUIP2.SetActive(false);
-                //TimeModeUIP3.SetActive(false);
-                //TimeModeUIP4.SetActive(false);
+                TimeModeUIP2.SetActive(false);
+                TimeModeUIP3.SetActive(false);
+                TimeModeUIP4.SetActive(false);
 
                 TimeModePanelP1.SetActive(true);
 

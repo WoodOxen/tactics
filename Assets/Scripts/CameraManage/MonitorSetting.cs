@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class MonitorSetting : MonoBehaviour
 {
@@ -12,9 +14,17 @@ public class MonitorSetting : MonoBehaviour
     public static int Monitor2Perspective = 0;
     public static int Monitor3Perspective = 0;
 
+    public GameObject dropdown1;
+    public GameObject dropdown2;
+    public GameObject dropdown3;
+    public GameObject dropdown4;
+    public GameObject dropdown5;
+    public GameObject dropdown6;
+    public GameObject dropdown7;
+
     void Start()
     {
-        if (PlayerPrefs.HasKey("NumofMonitor"))NumofMonitor = PlayerPrefs.GetInt("NumofMonitor");
+        if (PlayerPrefs.HasKey("NumofMonitor")) NumofMonitor = PlayerPrefs.GetInt("NumofMonitor");
         else NumofMonitor = 0;
 
         if (PlayerPrefs.HasKey("Monitor1Object")) Monitor1Object = PlayerPrefs.GetInt("Monitor1Object");
@@ -34,6 +44,14 @@ public class MonitorSetting : MonoBehaviour
 
         if (PlayerPrefs.HasKey("Monitor3Perspective")) Monitor3Perspective = PlayerPrefs.GetInt("Monitor3Perspective");
         else Monitor3Perspective = 0;
+
+        dropdown1.GetComponent<TMP_Dropdown>().value = NumofMonitor;
+        dropdown2.GetComponent<TMP_Dropdown>().value = Monitor1Object;
+        dropdown3.GetComponent<TMP_Dropdown>().value = Monitor2Object;
+        dropdown4.GetComponent<TMP_Dropdown>().value = Monitor3Object;
+        dropdown5.GetComponent<TMP_Dropdown>().value = Monitor1Perspective;
+        dropdown6.GetComponent<TMP_Dropdown>().value = Monitor2Perspective;
+        dropdown7.GetComponent<TMP_Dropdown>().value = Monitor3Perspective;
     }
 
     public void SetNumofMonitor(int value)

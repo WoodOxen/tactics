@@ -35,19 +35,31 @@ public class GameSetting : MonoBehaviour {
         PlayerNumofCarSelect = 0;
         PlayerNumofControlMethod = 0;
 
-        NumofPlayer = PlayerPrefs.GetInt("NumofPlayer");
+        if (PlayerPrefs.HasKey("NumofPlayer")) NumofPlayer = PlayerPrefs.GetInt("NumofPlayer");
+        else NumofPlayer = 1;
 
-        CarType[0] = PlayerPrefs.GetInt("SavedCarType0");
-        CarType[1] = PlayerPrefs.GetInt("SavedCarType1");
-        CarType[2] = PlayerPrefs.GetInt("SavedCarType2");
-        CarType[3] = PlayerPrefs.GetInt("SavedCarType3");
+        if (PlayerPrefs.HasKey("SavedCarType0")) CarType[0] = PlayerPrefs.GetInt("SavedCarType0");
+        else CarType[0] = 0;
+        if (PlayerPrefs.HasKey("SavedCarType1")) CarType[1] = PlayerPrefs.GetInt("SavedCarType1");
+        else CarType[1] = 0;
+        if (PlayerPrefs.HasKey("SavedCarType2")) CarType[2] = PlayerPrefs.GetInt("SavedCarType2");
+        else CarType[2] = 0;
+        if (PlayerPrefs.HasKey("SavedCarType3")) CarType[3] = PlayerPrefs.GetInt("SavedCarType3");
+        else CarType[3] = 0;
 
-        ControlMethod[0] = PlayerPrefs.GetInt("SavedContorlMethod0");
-        ControlMethod[1] = PlayerPrefs.GetInt("SavedContorlMethod1");
-        ControlMethod[2] = PlayerPrefs.GetInt("SavedContorlMethod2");
-        ControlMethod[3] = PlayerPrefs.GetInt("SavedContorlMethod3");
+        if (PlayerPrefs.HasKey("SavedContorlMethod0")) ControlMethod[0] = PlayerPrefs.GetInt("SavedContorlMethod0");
+        else ControlMethod[0] = 1;
+        if (PlayerPrefs.HasKey("SavedContorlMethod1")) ControlMethod[1] = PlayerPrefs.GetInt("SavedContorlMethod1");
+        else ControlMethod[1] = 1;
+        if (PlayerPrefs.HasKey("SavedContorlMethod2")) ControlMethod[2] = PlayerPrefs.GetInt("SavedContorlMethod2");
+        else ControlMethod[2] = 1;
+        if (PlayerPrefs.HasKey("SavedContorlMethod3")) ControlMethod[3] = PlayerPrefs.GetInt("SavedContorlMethod3");
+        else ControlMethod[3] = 1;
 
-        if (NumofPlayer != 2 && NumofPlayer != 3 && NumofPlayer != 4) NumofPlayer = 1;
+        if (PlayerPrefs.HasKey("SavedRaceMode")) RaceMode = PlayerPrefs.GetInt("SavedRaceMode");
+        else RaceMode = 1;
+        if (PlayerPrefs.HasKey("SavedTrackNum")) trackNum = PlayerPrefs.GetInt("SavedTrackNum");
+        else trackNum = 3;
     }
     void Update()
     {
@@ -109,7 +121,22 @@ public class GameSetting : MonoBehaviour {
         }
     }
 
-    // Use this for initialization
+    public void Track01()
+    {
+        GameSetting.trackNum = 1;
+        PlayerPrefs.SetInt("SavedTrackNum", 1);
+    }
+    public void Track02()
+    {
+        GameSetting.trackNum = 2;
+        PlayerPrefs.SetInt("SavedTrackNum", 2);
+    }
+    public void Track03()
+    {
+        GameSetting.trackNum = 3;
+        PlayerPrefs.SetInt("SavedTrackNum", 3);
+    }
+
     public void RedCar(){
         Debug.Log(PlayerNumofCarSelect.ToString() + ":1");
         CarType[PlayerNumofCarSelect] = 1;
