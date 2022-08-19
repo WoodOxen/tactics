@@ -32,6 +32,7 @@ public class CppControl
     //定义callback类型
     public delegate float FloatDelegate(int CarNum);
     public delegate double doubleDelegate(int CarNum);
+    public delegate int intDelegate();
 
     [DllImport("CppControl")]
     public static extern void InitSpeedDelegate(FloatDelegate callbackFloat);
@@ -47,6 +48,8 @@ public class CppControl
     public static extern void InitCurvatureDelegate(doubleDelegate callbackdouble);
     [DllImport("CppControl")]
     public static extern void InitAngleErrorDelegate(FloatDelegate callbackFloat);
+    [DllImport("CppControl")]
+    public static extern void InitPlayerNumDelegate(intDelegate callbackint);
 
     //定义callback类型
     public delegate void CarMoveDelegate(float steering, float accel, float footbrake, float handbrake, int CarNum);
@@ -55,6 +58,12 @@ public class CppControl
     public static extern void InitCarMoveDelegate(CarMoveDelegate GetCarMove);
 
     //C# Function for C++'s call
+    [MonoPInvokeCallback(typeof(FloatDelegate))]
+    public static int CallbackPlayerNumFromCpp()
+    {
+        return GameSetting.NumofPlayer;
+    }
+
     [MonoPInvokeCallback(typeof(FloatDelegate))]
     public static float CallbackSpeedFromCpp(int CarNum)
     {

@@ -33,6 +33,9 @@ public class StartManager : MonoBehaviour {
         CppControl.InitCurvatureDelegate(CppControl.CallbackCurvatureFromCpp);
         //CppControl.InitCSharpDelegate(CppControl.LogMessageFromCpp);
         CppControl.InitCarMoveDelegate(CppControl.GetCarMoveFromCpp);
+        CppControl.InitPlayerNumDelegate(CppControl.CallbackPlayerNumFromCpp);
+
+
 
         LoadNum = LoadButton.LoadNum;
         if (LoadNum != 0)//需要读取LoadNum号存档
@@ -46,6 +49,16 @@ public class StartManager : MonoBehaviour {
             GameModeManager.CurrentScore3 = 0;
             GameModeManager.CurrentScore4 = 0;
         }
+
+        for(int i = 0; i < 4; i++)
+        {
+            CallCppControl.steering[i] = 0;
+            CallCppControl.accel[i] = 0;
+            CallCppControl.footbrake[i] = 0;
+            CallCppControl.handbrake[i] = 0;
+        }
+
+        //SimulationSetting.SetActive(true);
         CarColor.SetActive(true);
         ModeManager.SetActive(true);
         ViewModeManager.SetActive(true);

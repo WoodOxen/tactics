@@ -41,6 +41,10 @@ public class LapComplete : MonoBehaviour {
         LapFlag2 = true;
         LapFlag3 = true;
         LapFlag4 = true;
+        LapCount1 = 0;
+        LapCount2 = 0;
+        LapCount3 = 0;
+        LapCount4 = 0;
 }
 		
 	void OnTriggerEnter(Collider collision){
@@ -50,28 +54,28 @@ public class LapComplete : MonoBehaviour {
         //记录四辆人工控制车通过终点线的情况
         if(collision.gameObject.tag == "Player2" && HalfPointTrigger.HalfFlag2)
         {
-            Debug.Log(2);
+            //Debug.Log(2);
             LapFlag2 = true;
             HalfPointTrigger.HalfFlag2 = false;
             LapCount2 += 1;
         }
         else if (collision.gameObject.tag == "Player3" && HalfPointTrigger.HalfFlag3)
         {
-            Debug.Log(3);
+            //Debug.Log(3);
             LapFlag3 = true;
             HalfPointTrigger.HalfFlag3 = false;
             LapCount3 += 1;
         }
         else if (collision.gameObject.tag == "Player4" && HalfPointTrigger.HalfFlag4)
         {
-            Debug.Log(4);
+            //Debug.Log(4);
             LapFlag4 = true;
             HalfPointTrigger.HalfFlag4 = false;
             LapCount4 += 1;
         }
         else if (collision.gameObject.tag == "Player" && HalfPointTrigger.HalfFlag1)
         {
-            Debug.Log(1);
+            //Debug.Log(1);
             LapFlag1 = true;
             HalfPointTrigger.HalfFlag1 = false;
             LapCount1 += 1;
@@ -82,7 +86,7 @@ public class LapComplete : MonoBehaviour {
         }
 
         //LapCountDisplay.GetComponent<TextMeshProUGUI>().text = "" + LapCount;
-        if ((ModeSelection == 2 && LapCount1 == 1)|| LapCount1 == 2) {
+        if ((ModeSelection == 2 && LapCount1 == 1)|| LapCount1 == 1) {
             RaceFinish.SetActive (true);
 		}
 

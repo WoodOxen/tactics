@@ -14,6 +14,8 @@ public class CallCppControl : MonoBehaviour
     private CarController[] m_Car = new CarController[4];
     private int[] ControlMethod = new int[4] { 0, 0, 0, 0 };
 
+
+
     void Start()
     {
         CppControl.InitializeCppControl();
@@ -22,11 +24,15 @@ public class CallCppControl : MonoBehaviour
         {
             m_Car[i] = TheCar[i].GetComponent<CarController>();
             ControlMethod[i] = GameSetting.ControlMethod[i];
+            steering[i] = 0;
+            accel[i] = 0;
+            footbrake[i] = 0;
+            handbrake[i] = 0;
         }
         
     }
 
-    void Update()
+    void FixedUpdate()
     {
         CppControl.CarControlCpp();
         for (int i = 0; i < playNum; i++)
@@ -34,5 +40,6 @@ public class CallCppControl : MonoBehaviour
             if(ControlMethod[i] == 2)
                 m_Car[i].Move(steering[i], accel[i], footbrake[i], handbrake[i]);
         }
+
     }
 }

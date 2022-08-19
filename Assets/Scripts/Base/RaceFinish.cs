@@ -7,13 +7,13 @@ using TMPro;
 
 public class RaceFinish : MonoBehaviour {
 
-	public GameObject PlayerCar;
+	public GameObject[] PlayerCar;
 	public GameObject CompleteTrig;
 	public AudioSource FinishBGM;
 	public GameObject FinishCam;
 	public GameObject DrivingCam;
 	public GameObject levelBGM;
-	public GameObject CarOthers;
+	//public GameObject CarOthers;
     public GameObject TimeManager;
 
     public GameObject CompletePanel;
@@ -24,36 +24,61 @@ public class RaceFinish : MonoBehaviour {
     public GameObject CollisionNumDisplay;
     public GameObject TotalDamageDisplay;
     public GameObject GradeDisplay;
+    public GameObject CppControlGO;
 
     public GameObject MinuteBox;
     public GameObject SecondBox;
     public GameObject MilliBox;
 
     private int RaceMode;
+    private int PlayerNum;
 
     // Use this for initialization
     void Start() {
-        PlayerCar.SetActive (false);
+        PlayerNum = GameSetting.NumofPlayer;
+        for(int i = 0;i < PlayerNum; i++)
+        {
+            PlayerCar[i].SetActive(false);
+        }
+        
 		CompleteTrig.SetActive (false);
-		CarOthers.SetActive (false);
-		//CarController.m_Topspeed = 0.0f;
-		PlayerCar.GetComponent<CarAudio> ().enabled = false;
-		PlayerCar.GetComponent<CarController> ().enabled = false;
-		PlayerCar.GetComponent<CarUserControl> ().enabled = false;
+
+        //CarOthers.SetActive (false);
+        //CarController.m_Topspeed = 0.0f;
+        for (int i = 0; i < PlayerNum; i++)
+        {
+            PlayerCar[i].GetComponent<CarAudio>().enabled = false;
+            PlayerCar[i].GetComponent<CarController>().enabled = false;
+            PlayerCar[i].GetComponent<CppCarControl>().enabled = false;
+            switch (i)
+            {
+                case 0:
+                    PlayerCar[0].GetComponent<CarUserControl>().enabled = false;
+                    break;
+                case 1:
+                    PlayerCar[1].GetComponent<CarUserControl2>().enabled = false;
+                    break;
+                case 2:
+                    PlayerCar[2].GetComponent<CarUserControl3>().enabled = false;
+                    break;
+                case 3:
+                    PlayerCar[3].GetComponent<CarUserControl4>().enabled = false;
+                    break;
+            }
+        }
+        CppControlGO.SetActive(false);
 
 
-
-		CashDisplay.TotalCash += 100;
-		PlayerPrefs.SetInt ("SavedCash", CashDisplay.TotalCash);
-
-		//DrivingCam.SetActive (false);
-		PlayerCar.SetActive (true);
+        //DrivingCam.SetActive (false);
+        for (int i = 0; i < PlayerNum; i++)
+        {
+            PlayerCar[i].SetActive(true);
+        }
 		//FinishCam.SetActive (true);
 		levelBGM.SetActive (false);
        
 
         FinishBGM.Play ();
-
 
         CompletePanel.SetActive(true);
         RaceMode = GameSetting.RaceMode;

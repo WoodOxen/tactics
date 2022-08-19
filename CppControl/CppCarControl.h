@@ -16,6 +16,7 @@ public:
 	static void (*CarMove)(float steering, float accel, float footbrake, float handbrake, int CarNum); //传递四个参数(steering、accel、footbrake，handbrake)控制小车移动
 	static double (*Curvature)(int CarNum); //返回前方赛道中心线的曲率
 	static float (*AngleError)(int CarNum); //返回小车方向和赛道中心线方向的偏差
+	static int (*PlayerNum)(); //返回小车方向和赛道中心线方向的偏差
 };
 
 void CarControl0();
@@ -33,6 +34,7 @@ EXTERN_C void DLLForUnity_API InitPositionZDelegate(float (*callbackFloat)(int C
 EXTERN_C void DLLForUnity_API InitCruiseErrorDelegate(double (*callbackdouble)(int CarNum));
 EXTERN_C void DLLForUnity_API InitCurvatureDelegate(double (*callbackdouble)(int CarNum));
 EXTERN_C void DLLForUnity_API InitAngleErrorDelegate(float (*callbackFloat)(int CarNum));
+EXTERN_C void DLLForUnity_API InitPlayerNumDelegate(int (*callbackint)());
 
 EXTERN_C void DLLForUnity_API InitCarMoveDelegate(void (*GetCarMove)(float steering, float accel, float footbrake, float handbrake,int CarNum));
 

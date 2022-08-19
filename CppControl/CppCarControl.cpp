@@ -19,8 +19,11 @@ std::queue<float> q2;
 std::queue<float> q3;
 std::queue<float> q4;
 
+int PlayerNum;
+
 //Tactic在Race开始时会调用InitializeCppControl()函数，可以自此处做一些Cpp代码的初始化工作
 DLLForUnity_API void __stdcall InitializeCppControl() {
+    PlayerNum = TacticAPI::PlayerNum();
     while (!q1.empty()) q1.pop();
     while (!q2.empty()) q2.pop();
     while (!q3.empty()) q3.pop();
@@ -41,9 +44,10 @@ DLLForUnity_API void __stdcall InitializeCppControl() {
 DLLForUnity_API void __stdcall CarControlCpp()
 {
     CarControl0();
-    CarControl1();
-    CarControl2();
-    CarControl3();
+    if (PlayerNum > 1) CarControl1();
+    if (PlayerNum > 2) CarControl2();
+    if (PlayerNum > 3) CarControl3();
+
 }
 
 void CarControl0() {
@@ -162,6 +166,7 @@ void CarControl3() {
 }
 
 
+
 //下为接口定义相关代码，无需阅读
 void(*TacticAPI::CarMove)(float steering, float accel, float footbrake, float handbrake,int CarNum);
 
@@ -172,6 +177,7 @@ float(*TacticAPI::PositionZ)(int CarNum);
 double(*TacticAPI::CruiseError)(int CarNum);
 double(*TacticAPI::Curvature)(int CarNum);
 float(*TacticAPI::AngleError)(int CarNum);
+int(*TacticAPI::PlayerNum)();
 
 void DLLForUnity_API InitCarMoveDelegate(void (*GetCarMove)(float steering, float accel, float footbrake, float handbrake,int CarNum))
 {
@@ -205,6 +211,11 @@ void DLLForUnity_API InitCurvatureDelegate(double (*callbackdouble)(int CarNum))
 void DLLForUnity_API InitAngleErrorDelegate(float (*callbackFloat)(int CarNum))
 {
     TacticAPI::AngleError = callbackFloat;
+}
+
+void DLLForUnity_API InitPlayerNumDelegate(int (*callbackint)())
+{
+    TacticAPI::PlayerNum = callbackint;
 }
 
 /*

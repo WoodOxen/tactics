@@ -55,6 +55,7 @@ namespace UnityStandardAssets.Vehicles.Car
         public float Revs { get; private set; }
         public float AccelInput { get; private set; }
 
+
         // Use this for initialization
         private void Start()
         {
@@ -111,6 +112,8 @@ namespace UnityStandardAssets.Vehicles.Car
             // We smooth towards the 'target' gear factor, so that revs don't instantly snap up or down when changing gear.
             var targetGearFactor = Mathf.InverseLerp(f*m_GearNum, f*(m_GearNum + 1), Mathf.Abs(CurrentSpeed/MaxSpeed));
             m_GearFactor = Mathf.Lerp(m_GearFactor, targetGearFactor, Time.deltaTime*5f);
+            //m_GearFactor = Mathf.Lerp(m_GearFactor, targetGearFactor, 0.1f);
+            //Debug.Log(Time.deltaTime);
         }
 
 

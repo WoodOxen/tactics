@@ -37,7 +37,7 @@ public class CruiseData2 : MonoBehaviour
         WaypointsModel ClosestWP = GetClosestWP(WaypointsModelAll, transform.position);
     }
 
-    void Update()
+    void FixedUpdate()
     {
         WaypointsModel ClosestWP = GetClosestWP(WaypointsModelAll, transform.position);
         int tmpNum1 = lastClosestWP + 1;

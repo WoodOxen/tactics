@@ -9,25 +9,25 @@ public class ErrorDisplayManager : MonoBehaviour
     private int PlayerNum;
     private double CruiseError;
 
+    //public GameObject ErrorDisplaybox2;
+    //public GameObject ErrorDisplaybox3;
+    //public GameObject ErrorDisplaybox4;
+
     void Update()
     {
         PlayerNum = ViewModeManager.CamNum;
         CruiseError = CruiseData.DistanceError[PlayerNum];
-        /*switch (PlayerNum)
-        {
-            case 0:
-                CruiseError = CruiseData.DistanceError;
-                break;
-            case 1:
-                CruiseError = CruiseData2.DistanceError;
-                break;
-            case 2:
-                CruiseError = CruiseData3.DistanceError;
-                break;
-            case 3:
-                CruiseError = CruiseData4.DistanceError;
-                break;
-        }*/
         ErrorDisplaybox.GetComponent<TextMeshProUGUI>().text = "" + CruiseError.ToString("#0.00");
+        /*
+        //debug”√
+        CruiseError = CruiseData.DistanceError[0];
+        ErrorDisplaybox.GetComponent<TextMeshProUGUI>().text = "" + CruiseError.ToString("#0.00");
+        CruiseError = CruiseData.DistanceError[1];
+        ErrorDisplaybox2.GetComponent<TextMeshProUGUI>().text = "" + CruiseError.ToString("#0.00");
+        CruiseError = CruiseData.DistanceError[2];
+        ErrorDisplaybox3.GetComponent<TextMeshProUGUI>().text = "" + CruiseError.ToString("#0.00");
+        CruiseError = CruiseData.DistanceError[3];
+        ErrorDisplaybox4.GetComponent<TextMeshProUGUI>().text = "" + CruiseError.ToString("#0.00");
+        */
     }
 }
