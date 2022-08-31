@@ -23,6 +23,7 @@ public class StartManager : MonoBehaviour {
     private int LoadNum;
 
     void Start () {
+        
         //cpp接口初始化
         CppControl.InitSpeedDelegate(CppControl.CallbackSpeedFromCpp);
         CppControl.InitPositionXDelegate(CppControl.CallbackPositionXFromCpp);

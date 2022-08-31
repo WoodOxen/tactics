@@ -10,7 +10,7 @@ public class RaceFinish : MonoBehaviour {
 	public GameObject[] PlayerCar;
 	public GameObject CompleteTrig;
 	public AudioSource FinishBGM;
-	public GameObject FinishCam;
+	//public GameObject FinishCam;
 	public GameObject DrivingCam;
 	public GameObject levelBGM;
 	//public GameObject CarOthers;
@@ -49,7 +49,7 @@ public class RaceFinish : MonoBehaviour {
         {
             PlayerCar[i].GetComponent<CarAudio>().enabled = false;
             PlayerCar[i].GetComponent<CarController>().enabled = false;
-            PlayerCar[i].GetComponent<CppCarControl>().enabled = false;
+            PlayerCar[i].GetComponent<CppCarMove>().enabled = false;
             switch (i)
             {
                 case 0:

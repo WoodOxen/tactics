@@ -52,16 +52,5 @@ public class SteerDisplay : MonoBehaviour
         
         SteerWheel.transform.GetComponent<RectTransform>().eulerAngles = new Vector3(0, 0, Steer*-90);
         steerDisplaybox.GetComponent<TextMeshProUGUI>().text = "" + Steer.ToString("#0.00");
-        //*/
-        /*
-        Steer = CallCppControl.steering[0];
-        steerDisplaybox.GetComponent<TextMeshProUGUI>().text = "" + Steer.ToString("#0.00");
-        Steer2 = CallCppControl.steering[1];
-        steerDisplaybox2.GetComponent<TextMeshProUGUI>().text = "" + Steer2.ToString("#0.00");
-        Steer3 = CallCppControl.steering[2];
-        steerDisplaybox3.GetComponent<TextMeshProUGUI>().text = "" + Steer3.ToString("#0.00");
-        Steer4 = CallCppControl.steering[3];
-        steerDisplaybox4.GetComponent<TextMeshProUGUI>().text = "" + Steer4.ToString("#0.00");
-        */
     }
 }

@@ -12,9 +12,9 @@ public:
 	static float (*PositionX)(int CarNum); //返回小车X坐标
 	static float (*PositionY)(int CarNum); //返回小车Y坐标
 	static float (*PositionZ)(int CarNum); //返回小车Z坐标
-	static double (*CruiseError)(int CarNum); //返回小车距离赛道中心线的距离
+	static float (*CruiseError)(int CarNum); //返回小车距离赛道中心线的距离
 	static void (*CarMove)(float steering, float accel, float footbrake, float handbrake, int CarNum); //传递四个参数(steering、accel、footbrake，handbrake)控制小车移动
-	static double (*Curvature)(int CarNum); //返回前方赛道中心线的曲率
+	static float (*Curvature)(int CarNum); //返回前方赛道中心线的曲率
 	static float (*AngleError)(int CarNum); //返回小车方向和赛道中心线方向的偏差
 	static int (*PlayerNum)(); //返回小车方向和赛道中心线方向的偏差
 };
@@ -31,8 +31,8 @@ EXTERN_C void DLLForUnity_API InitSpeedDelegate(float (*callbackFloat)(int CarNu
 EXTERN_C void DLLForUnity_API InitPositionXDelegate(float (*callbackFloat)(int CarNum));
 EXTERN_C void DLLForUnity_API InitPositionYDelegate(float (*callbackFloat)(int CarNum));
 EXTERN_C void DLLForUnity_API InitPositionZDelegate(float (*callbackFloat)(int CarNum));
-EXTERN_C void DLLForUnity_API InitCruiseErrorDelegate(double (*callbackdouble)(int CarNum));
-EXTERN_C void DLLForUnity_API InitCurvatureDelegate(double (*callbackdouble)(int CarNum));
+EXTERN_C void DLLForUnity_API InitCruiseErrorDelegate(float (*callbackFloat)(int CarNum));
+EXTERN_C void DLLForUnity_API InitCurvatureDelegate(float (*callbackFloat)(int CarNum));
 EXTERN_C void DLLForUnity_API InitAngleErrorDelegate(float (*callbackFloat)(int CarNum));
 EXTERN_C void DLLForUnity_API InitPlayerNumDelegate(int (*callbackint)());
 

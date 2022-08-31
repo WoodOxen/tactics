@@ -1,18 +1,30 @@
-﻿  CppCarControl.cpp
+﻿  pch.cpp
+  dllmain.cpp
+  CppCarControl.cpp
+D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\CppCarControl.cpp(60,27): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
 D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\CppCarControl.cpp(63,25): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
 D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\CppCarControl.cpp(64,29): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\CppCarControl.cpp(68,31): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\CppCarControl.cpp(69,60): warning C4244: “+=”: 从“double”转换到“float”，可能丢失数据
+D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\CppCarControl.cpp(73,48): warning C4244: “-=”: 从“double”转换到“float”，可能丢失数据
 D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\CppCarControl.cpp(75,88): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\CppCarControl.cpp(92,25): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\CppCarControl.cpp(93,29): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\CppCarControl.cpp(97,31): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\CppCarControl.cpp(104,88): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\CppCarControl.cpp(120,25): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\CppCarControl.cpp(121,29): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\CppCarControl.cpp(125,31): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\CppCarControl.cpp(132,88): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\CppCarControl.cpp(148,25): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\CppCarControl.cpp(149,29): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\CppCarControl.cpp(153,31): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\CppCarControl.cpp(160,88): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\CppCarControl.cpp(90,27): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\CppCarControl.cpp(93,25): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\CppCarControl.cpp(94,29): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\CppCarControl.cpp(99,60): warning C4244: “+=”: 从“double”转换到“float”，可能丢失数据
+D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\CppCarControl.cpp(103,48): warning C4244: “-=”: 从“double”转换到“float”，可能丢失数据
+D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\CppCarControl.cpp(105,88): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\CppCarControl.cpp(119,27): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\CppCarControl.cpp(122,25): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\CppCarControl.cpp(123,29): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\CppCarControl.cpp(128,60): warning C4244: “+=”: 从“double”转换到“float”，可能丢失数据
+D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\CppCarControl.cpp(132,48): warning C4244: “-=”: 从“double”转换到“float”，可能丢失数据
+D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\CppCarControl.cpp(134,88): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\CppCarControl.cpp(148,27): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\CppCarControl.cpp(151,25): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\CppCarControl.cpp(152,29): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\CppCarControl.cpp(157,60): warning C4244: “+=”: 从“double”转换到“float”，可能丢失数据
+D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\CppCarControl.cpp(161,48): warning C4244: “-=”: 从“double”转换到“float”，可能丢失数据
+D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\CppCarControl.cpp(163,88): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+  正在生成代码...
+    正在创建库 D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\x64\Debug\CppControl.lib 和对象 D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\x64\Debug\CppControl.exp
   CppControl.vcxproj -> D:\Unity2021\Unity 2021.3.6f1c1\Project\Tactic\CppControl\x64\Debug\CppControl.dll

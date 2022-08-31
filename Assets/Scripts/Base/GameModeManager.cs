@@ -168,7 +168,7 @@ public class GameModeManager : MonoBehaviour {
             //开启部分RaceMode的UI
             TimeDisplayUI.SetActive(true);
             ScoreModeObject.SetActive(false);
-            LapRequireDisplay.GetComponent<TextMeshProUGUI>().text = "2";
+            LapRequireDisplay.GetComponent<TextMeshProUGUI>().text = "1";
             if(PlayerNum == 2)
             {
                 TimeModeUIP1.SetActive(false);

@@ -34,6 +34,7 @@ public class SpeedDisplay : MonoBehaviour
         {
             velocity = TheCar[i].GetComponent<Rigidbody>().velocity;
             speed[i] = Mathf.Sqrt(Mathf.Pow(velocity.x, 2) + Mathf.Pow(velocity.y, 2) + Mathf.Pow(velocity.z, 2));
+            Debug.Log(string.Format("Speed {0} {1}: {2}", CallCppControl.a, i,speed[i]));
         }
 
         speedDisplaybox.GetComponent<TextMeshProUGUI>().text = "" + speed[PlayerNum].ToString("#0.00");

@@ -43,9 +43,9 @@ public class CppControl
     [DllImport("CppControl")]
     public static extern void InitPositionZDelegate(FloatDelegate callbackFloat);
     [DllImport("CppControl")]
-    public static extern void InitCruiseErrorDelegate(doubleDelegate callbackdouble);
+    public static extern void InitCruiseErrorDelegate(FloatDelegate callbackFloat);
     [DllImport("CppControl")]
-    public static extern void InitCurvatureDelegate(doubleDelegate callbackdouble);
+    public static extern void InitCurvatureDelegate(FloatDelegate callbackFloat);
     [DllImport("CppControl")]
     public static extern void InitAngleErrorDelegate(FloatDelegate callbackFloat);
     [DllImport("CppControl")]
@@ -89,13 +89,13 @@ public class CppControl
     }
 
     [MonoPInvokeCallback(typeof(FloatDelegate))]
-    public static double CallbackCruiseErrorFromCpp(int CarNum)
+    public static float CallbackCruiseErrorFromCpp(int CarNum)
     {
         return CruiseData.DistanceError[CarNum];
     }
 
     [MonoPInvokeCallback(typeof(FloatDelegate))]
-    public static double CallbackCurvatureFromCpp(int CarNum)
+    public static float CallbackCurvatureFromCpp(int CarNum)
     {
         return CruiseData.Curvature[CarNum];
     }
@@ -113,5 +113,11 @@ public class CppControl
         CallCppControl.accel[CarNum] = accel;
         CallCppControl.footbrake[CarNum] = footbrake;
         CallCppControl.handbrake[CarNum] = handbrake;
+        /*
+        CallCppControl.steering[CarNum] = float.Parse(steering.ToString("#0.0000"));
+        CallCppControl.accel[CarNum] = float.Parse(accel.ToString("#0.0000"));
+        CallCppControl.footbrake[CarNum] = float.Parse(footbrake.ToString("#0.0000"));
+        CallCppControl.handbrake[CarNum] = float.Parse(handbrake.ToString("#0.0000"));
+        */
     }
 }

@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class CruiseData : MonoBehaviour
 {
-    static int[] lastClosestWP = new int[4] { 0, 0, 0, 0 };
+    private int lastClosestWP = -1;
     private int NumofWP;
-    public static double[] DistanceError = new double[4] { 0, 0, 0, 0 };
-    public static double[] Curvature = new double[4] { 0, 0, 0, 0 };
+    public static float[] DistanceError = new float[4] { 0, 0, 0, 0 };
+    public static float[] Curvature = new float[4] { 0, 0, 0, 0 };
     public static float[] AngleError = new float[4] { 0, 0, 0, 0 };
 
     [SerializeField] public int CarNum;
@@ -33,57 +33,55 @@ public class CruiseData : MonoBehaviour
     {
         //获取路标点数据
         _WaypointsXML.GetXmlData(WaypointsModelAll, null, waypointsData.text);
-        lastClosestWP[0] = -1;
-        lastClosestWP[1] = -1;
-        lastClosestWP[2] = -1;
-        lastClosestWP[3] = -1;
+        lastClosestWP = -1;
         NumofWP = WaypointsModelAll.Count;
         //获取距离最近的路标点
-        WaypointsModel ClosestWP = GetClosestWP(WaypointsModelAll, transform.position);
+        //WaypointsModel ClosestWP = GetClosestWP(WaypointsModelAll, transform.position);
     }
 
     void FixedUpdate()
     {
+        //获取距离最近的路标点
         WaypointsModel ClosestWP = GetClosestWP(WaypointsModelAll, transform.position);
-        int tmpNum1 = lastClosestWP[CarNum] + 1;
-        int tmpNum2 = lastClosestWP[CarNum] - 1;
+        int tmpNum1 = lastClosestWP + 1;
+        int tmpNum2 = lastClosestWP - 1;
         if (tmpNum1 >= NumofWP) tmpNum1 = 0;
         if (tmpNum2 < 0) tmpNum2 = NumofWP - 1;
         float dist1 = Mathf.Pow(WaypointsModelAll[tmpNum1].Position.x - transform.position.x, 2)+ Mathf.Pow(WaypointsModelAll[tmpNum1].Position.z - transform.position.z, 2);
         float dist2 = Mathf.Pow(WaypointsModelAll[tmpNum2].Position.x - transform.position.x, 2)+ Mathf.Pow(WaypointsModelAll[tmpNum2].Position.z - transform.position.z, 2);
         if (dist1 <= dist2)//即lastClosestWP和lastClosestWP+1号路标点是离车最近的两点  
         {
-            DistanceError[CarNum] = GetCruiseError(WaypointsModelAll[lastClosestWP[CarNum]].Position, WaypointsModelAll[tmpNum1].Position, transform.position);
+            DistanceError[CarNum] = GetCruiseError(WaypointsModelAll[lastClosestWP].Position, WaypointsModelAll[tmpNum1].Position, transform.position);
         }
         else//即lastClosestWP-1和lastClosestWP号路标点是离车最近的两点  
         {
-            DistanceError[CarNum] = GetCruiseError(WaypointsModelAll[tmpNum2].Position, WaypointsModelAll[lastClosestWP[CarNum]].Position, transform.position);
+            DistanceError[CarNum] = GetCruiseError(WaypointsModelAll[tmpNum2].Position, WaypointsModelAll[lastClosestWP].Position, transform.position);
         }
 
         //取出后两个坐标点，用于计算曲率
-        tmpNum1 = lastClosestWP[CarNum];
-        tmpNum2 = lastClosestWP[CarNum] + 1;
-        int tmpNum3 = lastClosestWP[CarNum] + 3;
+        tmpNum1 = lastClosestWP;
+        tmpNum2 = lastClosestWP + 1;
+        int tmpNum3 = lastClosestWP + 3;
         //if (tmpNum1 < 0) tmpNum1 += NumofWP;
         if (tmpNum2 >= NumofWP) tmpNum2 -= NumofWP;
         if (tmpNum3 >= NumofWP) tmpNum3 -= NumofWP;
         Curvature[CarNum] = GetCurvature(tmpNum1, tmpNum2, tmpNum3);
         //RadiusDisplay.GetComponent<TextMeshProUGUI>().text = "" + Curvature.ToString("#0.00");
-        AngleError[CarNum] = WaypointsModelAll[lastClosestWP[CarNum]].Rotation.y - transform.eulerAngles.y;
-
+        AngleError[CarNum] = WaypointsModelAll[lastClosestWP].Rotation.y - transform.eulerAngles.y;
+        Debug.Log(string.Format("CruiseData{0} {1}:{2}", CallCppControl.a,CarNum, DistanceError[CarNum]));
         //ErrorDisplay.GetComponent<TextMeshProUGUI>().text = "" + DistanceError.ToString("#0.00");
 
     }
 
-    private double GetCurvature(int WP1, int WP2, int WP3)
+    private float GetCurvature(int WP1, int WP2, int WP3)
     {
         Vector2 pos1 = new Vector2(WaypointsModelAll[WP1].Position.x, WaypointsModelAll[WP1].Position.z);
         Vector2 pos2 = new Vector2(WaypointsModelAll[WP2].Position.x, WaypointsModelAll[WP2].Position.z);
         Vector2 pos3 = new Vector2(WaypointsModelAll[WP3].Position.x, WaypointsModelAll[WP3].Position.z);
         //判断共线
-        if (Mathf.Abs(WaypointsModelAll[lastClosestWP[CarNum]].Rotation.y - WaypointsModelAll[WP2].Rotation.y)<0.01) return 0;
+        if (Mathf.Abs(WaypointsModelAll[lastClosestWP].Rotation.y - WaypointsModelAll[WP2].Rotation.y)<0.01) return 0;
         //不共线：
-        double radius;//曲率半径
+        float radius;//曲率半径
         float dis, dis1, dis2, dis3;//距离
         float cosA;//ab确定的边所对应的角A的cos值
         dis1 = Vector2.Distance(pos1, pos2);
@@ -92,13 +90,13 @@ public class CruiseData : MonoBehaviour
         dis = dis1 * dis1 + dis3 * dis3 - dis2 * dis2;
         cosA = dis / (2 * dis1 * dis3);//余弦定理
         radius = dis2 / (Mathf.Sqrt(1-cosA*cosA)*2);
-        
-        double cur = 10 / radius;
+
+        float cur = 10 / radius;
         return cur;
     }
 
     //计算myPositon到直线pos1-pos2的距离，方法参考https://zhuanlan.zhihu.com/p/176996694
-    private double GetCruiseError(Vector3 pos1, Vector3 pos2, Vector3 myPosition)
+    private float GetCruiseError(Vector3 pos1, Vector3 pos2, Vector3 myPosition)
     {
         //y分量统一设为0
         Vector3 vec1 = new Vector3(pos2.x - pos1.x,0,pos2.z - pos1.z);
@@ -106,7 +104,7 @@ public class CruiseData : MonoBehaviour
         //向量叉乘后y分量的正负性可以判断myposition在向量pos1~pos2的哪侧
         Vector3 tmp1 = Vector3.Cross(vec1, vec2);
         float WhichSide = Mathf.Sign(Vector3.Cross(vec1, vec2).y);
-        float Area = Vector3.Cross(vec1, vec2).magnitude;
+        float Area = tmp1.magnitude;
         float tmp2 = vec1.magnitude;
         float CruiseError = -WhichSide * Area / tmp2;//偏左为正，偏右为负；
         return CruiseError;
@@ -125,7 +123,7 @@ public class CruiseData : MonoBehaviour
         float minDist = Mathf.Infinity;//正无穷
         int thisClosestWPN = -1;
 
-        if (lastClosestWP[CarNum] == -1)//没有上一次调用的数据
+        if (lastClosestWP == -1)//没有上一次调用的数据
         {
             for (int i = 0; i < NumofWP; i++)
             {
@@ -143,7 +141,7 @@ public class CruiseData : MonoBehaviour
         else//有上一次调用的数据,只处理最近的10个路标点
         {
             int j;
-            for(int i = lastClosestWP[CarNum] - 5; i < lastClosestWP[CarNum] + 5; i++)
+            for(int i = lastClosestWP - 3; i < lastClosestWP + 3; i++)
             {
                 if (i < 0) j = i + NumofWP;
                 else if (i >= NumofWP) j = i - NumofWP;
@@ -158,7 +156,7 @@ public class CruiseData : MonoBehaviour
                 }
             }
         }
-        lastClosestWP[CarNum] = thisClosestWPN;
+        lastClosestWP = thisClosestWPN;
         return tMin;
     }
 }
