@@ -8,15 +8,17 @@ EXTERN_C class TacticAPI
 {
 //接口定义
 public:
+	//传递四个参数(steering、accel、footbrake，handbrake)控制小车移动
+	static void (*CarMove)(float steering, float accel, float footbrake, float handbrake, int CarNum);
+
 	static float (*Speed)(int CarNum); //返回小车速度
 	static float (*PositionX)(int CarNum); //返回小车X坐标
 	static float (*PositionY)(int CarNum); //返回小车Y坐标
 	static float (*PositionZ)(int CarNum); //返回小车Z坐标
 	static float (*CruiseError)(int CarNum); //返回小车距离赛道中心线的距离
-	static void (*CarMove)(float steering, float accel, float footbrake, float handbrake, int CarNum); //传递四个参数(steering、accel、footbrake，handbrake)控制小车移动
 	static float (*Curvature)(int CarNum); //返回前方赛道中心线的曲率
 	static float (*AngleError)(int CarNum); //返回小车方向和赛道中心线方向的偏差
-	static int (*PlayerNum)(); //返回小车方向和赛道中心线方向的偏差
+	static int (*PlayerNum)(); //返回小车数量
 };
 
 void CarControl0();

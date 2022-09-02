@@ -24,10 +24,10 @@ int PlayerNum;
 //Tactic在Race开始时会调用InitializeCppControl()函数，可以自此处做一些Cpp代码的初始化工作
 DLLForUnity_API void __stdcall InitializeCppControl() {
     PlayerNum = TacticAPI::PlayerNum();
-    while (!q1.empty()) q1.pop();
-    while (!q2.empty()) q2.pop();
-    while (!q3.empty()) q3.pop();
-    while (!q4.empty()) q4.pop();
+    //while (!q1.empty()) q1.pop();
+    //while (!q2.empty()) q2.pop();
+    //while (!q3.empty()) q3.pop();
+    //while (!q4.empty()) q4.pop();
     for (int i = 0; i < 4; i++) {
         CruiseError[i] = 0;
         Addup_CruiseError[i] = 0;
@@ -65,14 +65,16 @@ void CarControl0() {
 
     //steering control
     CruiseError[CarNum] = TacticAPI::CruiseError(CarNum);
-    q1.push(CruiseError[CarNum]);
+    //q1.push(CruiseError[CarNum]);
     Addup_CruiseError[CarNum] += CruiseError[CarNum] * 0.01;
-    if (q1.size() == 10) {
-        float tmp = q1.front();
-        q1.pop();
-        Addup_CruiseError[CarNum] -= tmp * 0.01;
-    }
-    steering[CarNum] = CruiseError[CarNum] * 0.06 + Addup_CruiseError[CarNum] * 0.0015 + (CruiseError[CarNum] - Last_CruiseError[CarNum]) * 2;
+    if (Addup_CruiseError[CarNum] > 200) Addup_CruiseError[CarNum] = 200;
+    else if(Addup_CruiseError[CarNum] < -200) Addup_CruiseError[CarNum] = -200;
+    //if (q1.size() == 10) {
+    //    float tmp = q1.front();
+    //    q1.pop();
+    //    Addup_CruiseError[CarNum] -= tmp * 0.01;
+    //}
+    steering[CarNum] = CruiseError[CarNum] * 0.06 + Addup_CruiseError[CarNum] * 0.0015 + (CruiseError[CarNum] - Last_CruiseError[CarNum]) * 3;
     handbrake[CarNum] = 0;
 
     Last_CruiseError[CarNum] = CruiseError[CarNum];
@@ -95,14 +97,16 @@ void CarControl1() {
 
     //steering control
     CruiseError[CarNum] = TacticAPI::CruiseError(CarNum);
-    q2.push(CruiseError[CarNum]);
+    //q2.push(CruiseError[CarNum]);
     Addup_CruiseError[CarNum] += CruiseError[CarNum] * 0.01;
-    if (q2.size() == 10) {
-        float tmp = q2.front();
-        q2.pop();
-        Addup_CruiseError[CarNum] -= tmp * 0.01;
-    }
-    steering[CarNum] = CruiseError[CarNum] * 0.06 + Addup_CruiseError[CarNum] * 0.0015 + (CruiseError[CarNum] - Last_CruiseError[CarNum]) * 2;
+    if (Addup_CruiseError[CarNum] > 200) Addup_CruiseError[CarNum] = 200;
+    else if (Addup_CruiseError[CarNum] < -200) Addup_CruiseError[CarNum] = -200;
+    //if (q2.size() == 10) {
+    //    float tmp = q2.front();
+    //    q2.pop();
+    //    Addup_CruiseError[CarNum] -= tmp * 0.01;
+    //}
+    steering[CarNum] = CruiseError[CarNum] * 0.06 + Addup_CruiseError[CarNum] * 0.0015 + (CruiseError[CarNum] - Last_CruiseError[CarNum]) * 3;
     handbrake[CarNum] = 0;
 
     Last_CruiseError[CarNum] = CruiseError[CarNum];
@@ -124,14 +128,16 @@ void CarControl2() {
 
     //steering control
     CruiseError[CarNum] = TacticAPI::CruiseError(CarNum);
-    q3.push(CruiseError[CarNum]);
+    //q3.push(CruiseError[CarNum]);
     Addup_CruiseError[CarNum] += CruiseError[CarNum] * 0.01;
-    if (q3.size() == 10) {
-        float tmp = q3.front();
-        q3.pop();
-        Addup_CruiseError[CarNum] -= tmp * 0.01;
-    }
-    steering[CarNum] = CruiseError[CarNum] * 0.06 + Addup_CruiseError[CarNum] * 0.0015 + (CruiseError[CarNum] - Last_CruiseError[CarNum]) * 2;
+    if (Addup_CruiseError[CarNum] > 200) Addup_CruiseError[CarNum] = 200;
+    else if (Addup_CruiseError[CarNum] < -200) Addup_CruiseError[CarNum] = -200;
+    //if (q3.size() == 10) {
+    //    float tmp = q3.front();
+    //    q3.pop();
+    //    Addup_CruiseError[CarNum] -= tmp * 0.01;
+    //}
+    steering[CarNum] = CruiseError[CarNum] * 0.06 + Addup_CruiseError[CarNum] * 0.0015 + (CruiseError[CarNum] - Last_CruiseError[CarNum]) * 3;
     handbrake[CarNum] = 0;
 
     Last_CruiseError[CarNum] = CruiseError[CarNum];
@@ -153,14 +159,16 @@ void CarControl3() {
 
     //steering control
     CruiseError[CarNum] = TacticAPI::CruiseError(CarNum);
-    q4.push(CruiseError[CarNum]);
+    //q4.push(CruiseError[CarNum]);
     Addup_CruiseError[CarNum] += CruiseError[CarNum] * 0.01;
-    if (q4.size() == 10) {
-        float tmp = q4.front();
-        q4.pop();
-        Addup_CruiseError[CarNum] -= tmp * 0.01;
-    }
-    steering[CarNum] = CruiseError[CarNum] * 0.06 + Addup_CruiseError[CarNum] * 0.0015 + (CruiseError[CarNum] - Last_CruiseError[CarNum]) * 2;
+    if (Addup_CruiseError[CarNum] > 200) Addup_CruiseError[CarNum] = 200;
+    else if (Addup_CruiseError[CarNum] < -200) Addup_CruiseError[CarNum] = -200;
+    //if (q4.size() == 10) {
+    //    float tmp = q4.front();
+    //    q4.pop();
+    //    Addup_CruiseError[CarNum] -= tmp * 0.01;
+    //}
+    steering[CarNum] = CruiseError[CarNum] * 0.06 + Addup_CruiseError[CarNum] * 0.0015 + (CruiseError[CarNum] - Last_CruiseError[CarNum]) * 3;
     handbrake[CarNum] = 0;
 
     Last_CruiseError[CarNum] = CruiseError[CarNum];

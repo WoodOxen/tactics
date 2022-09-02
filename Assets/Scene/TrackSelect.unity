@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.38608098, g: 0.44526792, b: 0.47098678, a: 1}
+  m_IndirectSpecularColor: {r: 0.3245935, g: 0.37682524, b: 0.40347564, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6382,7 +6382,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Highlighted
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 510718786}
   m_OnClick:
     m_PersistentCalls:
@@ -15250,8 +15250,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1589070009}
   m_HandleRect: {fileID: 1589070007}
   m_Direction: 0
-  m_Value: 0.00000046049928
-  m_Size: 0.914969
+  m_Value: 0
+  m_Size: 0.91399807
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -15664,7 +15664,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Highlighted
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1153637380}
   m_OnClick:
     m_PersistentCalls:
@@ -24544,7 +24544,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1710432111
 AudioSource:
   m_ObjectHideFlags: 0
@@ -26986,7 +26986,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1982904855}
   m_Direction: 2
   m_Value: 0.99954623
-  m_Size: 0.24914645
+  m_Size: 0.22141725
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -28175,7 +28175,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -533.3696}
+  m_AnchoredPosition: {x: 0, y: -533.35614}
   m_SizeDelta: {x: 0, y: 1067.4666}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1977238995

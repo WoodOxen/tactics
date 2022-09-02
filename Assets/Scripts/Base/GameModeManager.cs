@@ -25,7 +25,7 @@ public class GameModeManager : MonoBehaviour {
     public GameObject ScoreModePanel3;
     public GameObject ScoreModePanel4;
 
-    public GameObject AIcar;
+    //public GameObject AIcar;
 	public GameObject ScoreModeObject;
 	public int ModeSelection;
 	//public GameObject ScoreValue;
@@ -79,7 +79,7 @@ public class GameModeManager : MonoBehaviour {
 
             //开启部分SocreMode的物体
             ScoreModeObject.SetActive (true);
-			AIcar.SetActive (false);
+			//AIcar.SetActive (false);
             //MinimapAIcarMark.SetActive(false);
 			//PositionDisplay.SetActive (false);
             LapRequireDisplay.GetComponent<TextMeshProUGUI>().text = "1" ;
