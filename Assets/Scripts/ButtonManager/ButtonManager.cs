@@ -6,7 +6,7 @@ public class ButtonManager : MonoBehaviour {
 
     private int trackNum;
 
-	public void PlayGame(){
+	public void GameSet(){
         LoadButton.LoadNum = 0;
         SceneManager.LoadScene (1);
 	}
@@ -69,19 +69,6 @@ public class ButtonManager : MonoBehaviour {
             SceneManager.LoadScene(5);
     }
 
-    public void Retry()
-    {
-        trackNum = PlayerPrefs.GetInt("SavedTrackNum");
-        if (trackNum == 1)
-            SceneManager.LoadScene(2);
-        else if (trackNum == 2)
-            SceneManager.LoadScene(3);
-        else if (trackNum == 3)
-            SceneManager.LoadScene(5);
-        else
-            SceneManager.LoadScene(5);
-    }
-
 	public void MainMenu(){
 		SceneManager.LoadScene (0);
 	}
@@ -94,15 +81,4 @@ public class ButtonManager : MonoBehaviour {
 		SceneManager.LoadScene (4);
 	}
 
-    /*
-	public void NeverTouch(){
-		CashDisplay.TotalCash += 100;
-		PlayerPrefs.SetInt ("SavedCash", CashDisplay.TotalCash);
-	}
-	public void ResetBuy(){
-		PlayerPrefs.SetInt ("GreenBought", 0);
-		PlayerPrefs.SetInt ("YellowBought", 0);
-		PlayerPrefs.SetInt ("Track02Bought", 0);
-	}
-    */
 }

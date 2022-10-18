@@ -15,20 +15,6 @@ public class CppControl
     [DllImport("CppControl")]
     public static extern void InitializeCppControl();
 
-    /*
-    //定义callback类型
-    public delegate void LogDelegate(IntPtr message, int iSize);
-
-    [DllImport("CppControl")]
-    public static extern void InitCSharpDelegate(LogDelegate log);
-
-    //C# Function for C++'s call
-    [MonoPInvokeCallback(typeof(LogDelegate))]
-    public static void LogMessageFromCpp(IntPtr message, int iSize)
-    {
-        Debug.Log(Marshal.PtrToStringAnsi(message, iSize));
-    }
-    */
     //定义callback类型
     public delegate float FloatDelegate(int CarNum);
     public delegate double doubleDelegate(int CarNum);
@@ -73,19 +59,19 @@ public class CppControl
     [MonoPInvokeCallback(typeof(FloatDelegate))]
     public static float CallbackPositionXFromCpp(int CarNum)
     {
-        return MiniMap2.CarPosition[CarNum].x;
+        return MiniMap.CarPosition[CarNum].x;
     }
 
     [MonoPInvokeCallback(typeof(FloatDelegate))]
     public static float CallbackPositionYFromCpp(int CarNum)
     {
-        return MiniMap2.CarPosition[CarNum].y;
+        return MiniMap.CarPosition[CarNum].y;
     }
 
     [MonoPInvokeCallback(typeof(FloatDelegate))]
     public static float CallbackPositionZFromCpp(int CarNum)
     {
-        return MiniMap2.CarPosition[CarNum].z;
+        return MiniMap.CarPosition[CarNum].z;
     }
 
     [MonoPInvokeCallback(typeof(FloatDelegate))]
@@ -113,11 +99,5 @@ public class CppControl
         CallCppControl.accel[CarNum] = accel;
         CallCppControl.footbrake[CarNum] = footbrake;
         CallCppControl.handbrake[CarNum] = handbrake;
-        /*
-        CallCppControl.steering[CarNum] = float.Parse(steering.ToString("#0.0000"));
-        CallCppControl.accel[CarNum] = float.Parse(accel.ToString("#0.0000"));
-        CallCppControl.footbrake[CarNum] = float.Parse(footbrake.ToString("#0.0000"));
-        CallCppControl.handbrake[CarNum] = float.Parse(handbrake.ToString("#0.0000"));
-        */
     }
 }

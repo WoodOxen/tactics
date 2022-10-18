@@ -6,9 +6,6 @@ using UnityEngine.SceneManagement;
 public class GamePauseButton : MonoBehaviour
 {
     public GameObject pausePanel;
-    public GameObject NormalCam;
-    public GameObject FarCam;
-    public GameObject FPCam;
     public GameObject SavePanel;
     private int CamMode;
     private int trackNum;
@@ -21,21 +18,6 @@ public class GamePauseButton : MonoBehaviour
     public void ContinueRace()
     {
         Time.timeScale = 1;
-        /*
-        CamMode = ViewModeManager.ViewMode;
-        if (CamMode == 0)
-        {
-            NormalCam.GetComponent<AudioListener>().enabled = true;
-        }
-        else if (CamMode == 1)
-        {
-            FarCam.GetComponent<AudioListener>().enabled = true;
-        }
-        else if (CamMode == 2)
-        {
-            FPCam.GetComponent<AudioListener>().enabled = true;
-        }
-        */
         pausePanel.SetActive(false);
     }
     public void SaveGame()

@@ -30,56 +30,31 @@ public class SaveButton : MonoBehaviour
             save.Speed[i, 1] = TheCar[i].GetComponent<Rigidbody>().velocity.y;
             save.Speed[i, 2] = TheCar[i].GetComponent<Rigidbody>().velocity.z;
 
+            save.ExtentOfDamage[i] = DamageDisplay.ExtentOfDamage[i];
+            save.CollisionNum[i] = DamageDisplay.CollisionNum[i];
+
             save.CarColor[i] = GameSetting.CarType[i];
 
             save.ControlMethod[i] = GameSetting.ControlMethod[i];
+
+            save.HalfFlag[i] = HalfPointTrigger.HalfFlag[i];
+            save.lapNum[i] = LapComplete.LapCount[i];
+
+            save.steer[i] = CarUserControl.h[i];
+            save.accel[i] = CarUserControl.v[i];
+            save.footbrake[i] = CarUserControl.v[i];
+            save.handbrake[i] = CarUserControl.handbrake[i];
         }
 
         save.GameMode = GameSetting.RaceMode;
         save.TrackNum = GameSetting.trackNum;
-
-        save.steer[0] = CarUserControl.h;
-        save.accel[0] = CarUserControl.v;
-        save.footbrake[0] = CarUserControl.v;
-        save.handbrake[0] = CarUserControl.handbrake;
-        save.steer[1] = CarUserControl2.h;
-        save.accel[1] = CarUserControl2.v;
-        save.footbrake[1] = CarUserControl2.v;
-        save.handbrake[1] = CarUserControl2.handbrake;
-        save.steer[2] = CarUserControl3.h;
-        save.accel[2] = CarUserControl3.v;
-        save.footbrake[2] = CarUserControl3.v;
-        save.handbrake[2] = CarUserControl3.handbrake;
-        save.steer[3] = CarUserControl4.h;
-        save.accel[3] = CarUserControl4.v;
-        save.footbrake[3] = CarUserControl4.v;
-        save.handbrake[3] = CarUserControl4.handbrake;
-
-        save.HalfFlag[0] = HalfPointTrigger.HalfFlag1;
-        save.HalfFlag[1] = HalfPointTrigger.HalfFlag2;
-        save.HalfFlag[2] = HalfPointTrigger.HalfFlag3;
-        save.HalfFlag[3] = HalfPointTrigger.HalfFlag4;
-
-        save.lapNum[0] = LapComplete.LapCount1;
-        save.lapNum[1] = LapComplete.LapCount2;
-        save.lapNum[2] = LapComplete.LapCount3;
-        save.lapNum[3] = LapComplete.LapCount4;
-
-        save.ExtentOfDamage[0] = DamageDisplay1.ExtentOfDamage;
-        save.CollisionNum[0] = DamageDisplay1.CollisionNum;
-        save.ExtentOfDamage[1] = DamageDisplay2.ExtentOfDamage;
-        save.CollisionNum[1] = DamageDisplay2.CollisionNum;
-        save.ExtentOfDamage[2] = DamageDisplay3.ExtentOfDamage;
-        save.CollisionNum[2] = DamageDisplay3.CollisionNum;
-        save.ExtentOfDamage[3] = DamageDisplay4.ExtentOfDamage;
-        save.CollisionNum[3] = DamageDisplay4.CollisionNum;
         
         if (save.GameMode == 2)
         {
-            save.score[0] = GameModeManager.CurrentScore1;
-            save.score[1] = GameModeManager.CurrentScore2;
-            save.score[2] = GameModeManager.CurrentScore3;
-            save.score[3] = GameModeManager.CurrentScore4;
+            save.score[0] = CurrentScore.Score[0];
+            save.score[1] = CurrentScore.Score[1];
+            save.score[2] = CurrentScore.Score[2];
+            save.score[3] = CurrentScore.Score[3];
         }
         else
         {

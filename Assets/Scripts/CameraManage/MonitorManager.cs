@@ -13,6 +13,16 @@ public class MonitorManager : MonoBehaviour
     public GameObject Monitor2Image;
     public GameObject Monitor3Image;
 
+    private GameObject[,] MonitorCam;
+    public GameObject MonitorCam1_1;
+    public GameObject MonitorCam1_2;
+    public GameObject MonitorCam2_1;
+    public GameObject MonitorCam2_2;
+    public GameObject MonitorCam3_1;
+    public GameObject MonitorCam3_2;
+    public GameObject MonitorCam4_1;
+    public GameObject MonitorCam4_2;
+
     private Material[,] Cam;
     public Material Cam1_1;
     public Material Cam1_2;
@@ -55,22 +65,35 @@ public class MonitorManager : MonoBehaviour
         Cam[3, 0] = Cam4_1;
         Cam[3, 1] = Cam4_2;
 
+        MonitorCam = new GameObject[4, 2];
+        MonitorCam[0, 0] = MonitorCam1_1;
+        MonitorCam[0, 1] = MonitorCam1_2;
+        MonitorCam[1, 0] = MonitorCam2_1;
+        MonitorCam[1, 1] = MonitorCam2_2;
+        MonitorCam[2, 0] = MonitorCam3_1;
+        MonitorCam[2, 1] = MonitorCam3_2;
+        MonitorCam[3, 0] = MonitorCam4_1;
+        MonitorCam[3, 1] = MonitorCam4_2;
+
         display1.GetComponent<TextMeshProUGUI>().text = "P" + (Monitor1Object + 1).ToString();
         display2.GetComponent<TextMeshProUGUI>().text = "P" + (Monitor2Object + 1).ToString();
         display3.GetComponent<TextMeshProUGUI>().text = "P" + (Monitor3Object + 1).ToString();
 
         if (NumofMonitor > 0)
         {
+            MonitorCam[Monitor1Object, Monitor1Perspective].SetActive(true);
             Monitor1Panel.SetActive(true);
             Monitor1Image.GetComponent<Image>().material = Cam[Monitor1Object, Monitor1Perspective];
         }
         if (NumofMonitor > 1)
         {
+            MonitorCam[Monitor2Object, Monitor2Perspective].SetActive(true);
             Monitor2Panel.SetActive(true);
             Monitor2Image.GetComponent<Image>().material = Cam[Monitor2Object, Monitor2Perspective];
         }
         if (NumofMonitor > 2)
         {
+            MonitorCam[Monitor3Object, Monitor3Perspective].SetActive(true);
             Monitor3Panel.SetActive(true);
             Monitor3Image.GetComponent<Image>().material = Cam[Monitor3Object, Monitor3Perspective];
         }     

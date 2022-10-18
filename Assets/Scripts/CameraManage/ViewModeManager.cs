@@ -3,8 +3,6 @@ using System.Collections;
 using TMPro;
 
 public class ViewModeManager : MonoBehaviour {
-    //public GameObject[] TheCar;
-
     public GameObject[] NormalCam;
 	public GameObject[] FarCam;
 	public GameObject[] FPCam;
@@ -16,7 +14,6 @@ public class ViewModeManager : MonoBehaviour {
 
     public GameObject CamNumDisplay;
     public GameObject steerDisplaybox;
-    // Update is called once per frame
 
     void Start()
     {
@@ -25,6 +22,7 @@ public class ViewModeManager : MonoBehaviour {
         CamNum = 0;
         CamNum_last = 0;
     }
+
     void Update () {
 		if (Input.GetButtonDown ("ViewMode")) {
 			ViewMode += 1;
@@ -38,7 +36,6 @@ public class ViewModeManager : MonoBehaviour {
             CamNum = CamNum % PlayerNum;
 
             CamNumDisplay.GetComponent<TextMeshProUGUI>().text = "P" + (CamNum + 1).ToString();
-
             StartCoroutine(CamChange());
         }
     }
@@ -74,31 +71,22 @@ public class ViewModeManager : MonoBehaviour {
         
 		if (ViewMode == 0) {
 			NormalCam[CamNum].SetActive (true);
-			//FPCam[CamNum].SetActive (false);
-            //FarCam[CamNum].SetActive(false);
             OverlookCam[CamNum].SetActive(false);
             steerDisplaybox.SetActive(false);
         }
 		if (ViewMode == 1) {
 			FPCam[CamNum].SetActive (true);
-			//FarCam[CamNum].SetActive (false);
             NormalCam[CamNum].SetActive(false);
-            //OverlookCam[CamNum].SetActive(false);
             steerDisplaybox.SetActive(true);
         }
         if (ViewMode == 2) {
 			FarCam[CamNum].SetActive (true);
-			//NormalCam[CamNum].SetActive (false);
             FPCam[CamNum].SetActive(false);
-            //OverlookCam[CamNum].SetActive(false);
             steerDisplaybox.SetActive(false);
         }
-        if (ViewMode == 3)
-        {
+        if (ViewMode == 3){
             OverlookCam[CamNum].SetActive(true);
             FarCam[CamNum].SetActive(false);
-            //NormalCam[CamNum].SetActive(false);
-            //FPCam[CamNum].SetActive(false);
             steerDisplaybox.SetActive(false);
         }
     }
