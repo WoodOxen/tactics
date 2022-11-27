@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.41576624, g: 0.47803134, b: 0.50429916, a: 1}
+  m_IndirectSpecularColor: {r: 0.39303723, g: 0.45328045, b: 0.47913808, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1045,9 +1045,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1473316238}
-        m_TargetAssemblyTypeName: PlayerNumCarSelect, Assembly-CSharp
-        m_MethodName: ConsoleResultCM
+      - m_Target: {fileID: 1302360930}
+        m_TargetAssemblyTypeName: GameSetting, Assembly-CSharp
+        m_MethodName: SetPlayerNumofControlMethod
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2309,9 +2309,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1473316238}
-        m_TargetAssemblyTypeName: PlayerNumCarSelect, Assembly-CSharp
-        m_MethodName: ConsoleResultCM
+      - m_Target: {fileID: 1302360930}
+        m_TargetAssemblyTypeName: GameSetting, Assembly-CSharp
+        m_MethodName: SetPlayerNumofControlMethod
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5301,7 +5301,6 @@ RectTransform:
   - {fileID: 1807502980}
   - {fileID: 971633906}
   - {fileID: 1615232856}
-  - {fileID: 982313590}
   m_Father: {fileID: 1977238994}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7638,7 +7637,6 @@ RectTransform:
   - {fileID: 1314038025}
   - {fileID: 83790077}
   - {fileID: 183935974}
-  - {fileID: 1473316239}
   m_Father: {fileID: 1977238994}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8838,7 +8836,6 @@ GameObject:
   - component: {fileID: 710997258}
   - component: {fileID: 710997257}
   - component: {fileID: 710997256}
-  - component: {fileID: 710997255}
   m_Layer: 5
   m_Name: Dropdown4
   m_TagString: Untagged
@@ -8846,18 +8843,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &710997255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 710997254}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c995eeb0bda1a0349be1691d360697ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &710997256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8919,9 +8904,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1473316238}
-        m_TargetAssemblyTypeName: PlayerNumCarSelect, Assembly-CSharp
-        m_MethodName: ConsoleResultCM
+      - m_Target: {fileID: 1302360930}
+        m_TargetAssemblyTypeName: GameSetting, Assembly-CSharp
+        m_MethodName: SetPlayerNumofControlMethod
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12715,9 +12700,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 982313589}
-        m_TargetAssemblyTypeName: PlayerNumCarSelect, Assembly-CSharp
-        m_MethodName: ConsoleResultCS
+      - m_Target: {fileID: 1302360930}
+        m_TargetAssemblyTypeName: GameSetting, Assembly-CSharp
+        m_MethodName: SetPlayerNumofCarSelect
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12862,55 +12847,6 @@ RectTransform:
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: -20}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &982313588
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 982313590}
-  - component: {fileID: 982313589}
-  m_Layer: 5
-  m_Name: DropDownCSManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &982313589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 982313588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c995eeb0bda1a0349be1691d360697ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!224 &982313590
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 982313588}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 479471446}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &992903425
 GameObject:
@@ -14761,7 +14697,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1589070007}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.91496915
+  m_Size: 0.9150563
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -15375,7 +15311,6 @@ GameObject:
   - component: {fileID: 1159683084}
   - component: {fileID: 1159683083}
   - component: {fileID: 1159683082}
-  - component: {fileID: 1159683085}
   m_Layer: 5
   m_Name: Dropdown4
   m_TagString: Untagged
@@ -15467,9 +15402,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 982313589}
-        m_TargetAssemblyTypeName: PlayerNumCarSelect, Assembly-CSharp
-        m_MethodName: ConsoleResultCS
+      - m_Target: {fileID: 1302360930}
+        m_TargetAssemblyTypeName: GameSetting, Assembly-CSharp
+        m_MethodName: SetPlayerNumofCarSelect
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15518,18 +15453,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1159683080}
   m_CullTransparentMesh: 1
---- !u!114 &1159683085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1159683080}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c995eeb0bda1a0349be1691d360697ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1178574605
 GameObject:
   m_ObjectHideFlags: 0
@@ -17943,9 +17866,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1473316238}
-        m_TargetAssemblyTypeName: PlayerNumCarSelect, Assembly-CSharp
-        m_MethodName: ConsoleResultCM
+      - m_Target: {fileID: 1302360930}
+        m_TargetAssemblyTypeName: GameSetting, Assembly-CSharp
+        m_MethodName: SetPlayerNumofControlMethod
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19798,55 +19721,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1462334484}
   m_CullTransparentMesh: 1
---- !u!1 &1473316237
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1473316239}
-  - component: {fileID: 1473316238}
-  m_Layer: 5
-  m_Name: DropDownCMManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1473316238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1473316237}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c995eeb0bda1a0349be1691d360697ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!224 &1473316239
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1473316237}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 591863304}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 16.276184, y: -36.217163}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1473784249
 GameObject:
   m_ObjectHideFlags: 0
@@ -22322,9 +22196,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 982313589}
-        m_TargetAssemblyTypeName: PlayerNumCarSelect, Assembly-CSharp
-        m_MethodName: ConsoleResultCS
+      - m_Target: {fileID: 1302360930}
+        m_TargetAssemblyTypeName: GameSetting, Assembly-CSharp
+        m_MethodName: SetPlayerNumofCarSelect
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -25624,9 +25498,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 982313589}
-        m_TargetAssemblyTypeName: PlayerNumCarSelect, Assembly-CSharp
-        m_MethodName: ConsoleResultCS
+      - m_Target: {fileID: 1302360930}
+        m_TargetAssemblyTypeName: GameSetting, Assembly-CSharp
+        m_MethodName: SetPlayerNumofCarSelect
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -26007,8 +25881,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1982904856}
   m_HandleRect: {fileID: 1982904855}
   m_Direction: 2
-  m_Value: 0.9995481
-  m_Size: 0.2618869
+  m_Value: 0.999543
+  m_Size: 0.27013072
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

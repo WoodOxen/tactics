@@ -35,7 +35,44 @@ public class CarColorSetting : MonoBehaviour {
     private int PlayerNum;
 
 	// Use this for initialization
-	void Start () {
+	void Start () { 
+        if (!GameSetting.InitializeFlag)
+        {
+            //正常运行时GameSetting.InitializeFlag均为true
+            //在调试时可能直接在巡线场景开始运行，因此需要在这里进行部分初始化操作
+            Debug.Log("InitializeFlag=true");
+            GameSetting.InitializeFlag = true;
+            GameSetting.CarType = new int[5];
+            GameSetting.ControlMethod = new int[5];
+
+            //根据用户上次的设置，对部分参数进行初始化；如果没有用户上次设置的记录，则使用默认值
+            if (PlayerPrefs.HasKey("NumofPlayer")) GameSetting.NumofPlayer = PlayerPrefs.GetInt("NumofPlayer");
+            else GameSetting.NumofPlayer = 1;
+
+            if (PlayerPrefs.HasKey("SavedCarType0")) GameSetting.CarType[0] = PlayerPrefs.GetInt("SavedCarType0");
+            else GameSetting.CarType[0] = 0;
+            if (PlayerPrefs.HasKey("SavedCarType1")) GameSetting.CarType[1] = PlayerPrefs.GetInt("SavedCarType1");
+            else GameSetting.CarType[1] = 0;
+            if (PlayerPrefs.HasKey("SavedCarType2")) GameSetting.CarType[2] = PlayerPrefs.GetInt("SavedCarType2");
+            else GameSetting.CarType[2] = 0;
+            if (PlayerPrefs.HasKey("SavedCarType3")) GameSetting.CarType[3] = PlayerPrefs.GetInt("SavedCarType3");
+            else GameSetting.CarType[3] = 0;
+
+            if (PlayerPrefs.HasKey("SavedContorlMethod0")) GameSetting.ControlMethod[0] = PlayerPrefs.GetInt("SavedContorlMethod0");
+            else GameSetting.ControlMethod[0] = 1;
+            if (PlayerPrefs.HasKey("SavedContorlMethod1")) GameSetting.ControlMethod[1] = PlayerPrefs.GetInt("SavedContorlMethod1");
+            else GameSetting.ControlMethod[1] = 1;
+            if (PlayerPrefs.HasKey("SavedContorlMethod2")) GameSetting.ControlMethod[2] = PlayerPrefs.GetInt("SavedContorlMethod2");
+            else GameSetting.ControlMethod[2] = 1;
+            if (PlayerPrefs.HasKey("SavedContorlMethod3")) GameSetting.ControlMethod[3] = PlayerPrefs.GetInt("SavedContorlMethod3");
+            else GameSetting.ControlMethod[3] = 1;
+
+            if (PlayerPrefs.HasKey("SavedRaceMode")) GameSetting.RaceMode = PlayerPrefs.GetInt("SavedRaceMode");
+            else GameSetting.RaceMode = 1;
+            if (PlayerPrefs.HasKey("SavedTrackNum")) GameSetting.trackNum = PlayerPrefs.GetInt("SavedTrackNum");
+            else GameSetting.trackNum = 3;
+        }
+
         PlayerNum = GameSetting.NumofPlayer;
         //Set P1 CarColor
         CarImport = GameSetting.CarType[0];

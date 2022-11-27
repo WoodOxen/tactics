@@ -1,6 +1,8 @@
 using System;
 using UnityEngine;
+using System.Collections;
 using UnityStandardAssets.CrossPlatformInput;
+//using UnityStandardAssets.Vehicles.Car;
 
 namespace UnityStandardAssets.Vehicles.Car
 {
@@ -8,7 +10,6 @@ namespace UnityStandardAssets.Vehicles.Car
     public class CarUserControl : MonoBehaviour
     {
         [SerializeField] public int CarNum;
-
         private CarController m_Car; // the car controller we want to use
         public static float[] h = new float[4] { 0, 0, 0, 0 };
         public static float[] v = new float[4] { 0, 0, 0, 0 };
@@ -41,6 +42,7 @@ namespace UnityStandardAssets.Vehicles.Car
         {
             // pass the input to the car!
             //float h = CrossPlatformInputManager.GetAxis("Horizontal");
+
             h[CarNum] = CrossPlatformInputManager.GetAxis(Horizontal);
             v[CarNum] = CrossPlatformInputManager.GetAxis(Vertical);
 #if !MOBILE_INPUT

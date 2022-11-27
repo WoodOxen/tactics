@@ -6,6 +6,15 @@ using UnityEngine.SceneManagement;
 public class CompletePanelButton : MonoBehaviour
 {
     private int trackNum;
+    public GameObject SavePanel;
+    public GameObject CompletePanel;
+
+    public void SaveGame()
+    {
+        SavePanel.SetActive(true);
+        CompletePanel.SetActive(false);
+        SaveButton.WhoCalloutSavePanel = 1;
+    }
 
     public void MainMenu()
     {

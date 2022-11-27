@@ -47,7 +47,8 @@ public class RaceFinish : MonoBehaviour {
         {
             PlayerCar[i].GetComponent<CarAudio>().enabled = false;
             PlayerCar[i].GetComponent<CarController>().enabled = false;
-            PlayerCar[i].GetComponent<CarUserControl>().enabled = false;
+            PlayerCar[i].GetComponent<CarControlKeyBoard>().enabled = false;
+            PlayerCar[i].GetComponent<LoadControl>().enabled = false;
         }
         CallCppControl.SetActive(false);
 

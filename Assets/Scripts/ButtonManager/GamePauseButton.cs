@@ -24,6 +24,7 @@ public class GamePauseButton : MonoBehaviour
     {
         SavePanel.SetActive(true);
         pausePanel.SetActive(false);
+        SaveButton.WhoCalloutSavePanel = 2;
     }
     public void Retry()
     {

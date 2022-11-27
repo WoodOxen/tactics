@@ -16,33 +16,43 @@ public class carControlActive : MonoBehaviour {
     {
         PlayerNum = GameSetting.NumofPlayer;
 
-        if (GameSetting.ControlMethod[0] == 2)
-            CallCppControl.SetActive(true); 
-        else
-            CarControl1.GetComponent<CarUserControl>().enabled = true;
-
-        if (PlayerNum > 1)
+        if(LoadButton.LoadNum != 0)//此次运行为读档复现
         {
-            if (GameSetting.ControlMethod[1] == 2)
-                CallCppControl.SetActive(true);
-            else
-                CarControl2.GetComponent<CarUserControl>().enabled = true;
+            CarControl1.GetComponent<LoadControl>().enabled = true;
+            if (PlayerNum > 1) CarControl2.GetComponent<LoadControl>().enabled = true;
+            if (PlayerNum > 2) CarControl3.GetComponent<LoadControl>().enabled = true;
+            if (PlayerNum > 3) CarControl4.GetComponent<LoadControl>().enabled = true;
         }
-
-        if (PlayerNum > 2)
+        else//此次运行为正常运行
         {
-            if (GameSetting.ControlMethod[2] == 2)
+            if (GameSetting.ControlMethod[0] == 2)
                 CallCppControl.SetActive(true);
             else
-                CarControl3.GetComponent<CarUserControl>().enabled = true;
-        }
+                CarControl1.GetComponent<CarControlKeyBoard>().enabled = true;
 
-        if (PlayerNum > 3)
-        {
-            if (GameSetting.ControlMethod[3] == 2)
-                CallCppControl.SetActive(true);
-            else
-                CarControl4.GetComponent<CarUserControl>().enabled = true;
+            if (PlayerNum > 1)
+            {
+                if (GameSetting.ControlMethod[1] == 2)
+                    CallCppControl.SetActive(true);
+                else
+                    CarControl2.GetComponent<CarControlKeyBoard>().enabled = true;
+            }
+
+            if (PlayerNum > 2)
+            {
+                if (GameSetting.ControlMethod[2] == 2)
+                    CallCppControl.SetActive(true);
+                else
+                    CarControl3.GetComponent<CarControlKeyBoard>().enabled = true;
+            }
+
+            if (PlayerNum > 3)
+            {
+                if (GameSetting.ControlMethod[3] == 2)
+                    CallCppControl.SetActive(true);
+                else
+                    CarControl4.GetComponent<CarControlKeyBoard>().enabled = true;
+            }
         }
     }
 }

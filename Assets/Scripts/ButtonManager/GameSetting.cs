@@ -24,10 +24,12 @@ public class GameSetting : MonoBehaviour {
     public GameObject CMDropDown3;
     public GameObject CMDropDown4;//ControlMethod部分的四个DropDown
 
+    public static bool InitializeFlag = false;
 
     void Start()
     {
         //初始化
+        InitializeFlag = true;
         CarType = new int[5];
         ControlMethod = new int[5];
         PlayerNumofCarSelect = 0;
@@ -64,7 +66,7 @@ public class GameSetting : MonoBehaviour {
     {
         //根据用户选择的NumofPlayer，SetActive对应的DropDown
         //例如，当用户选择两辆车参与仿真（NumofPlayer=2），那么需要让用户可以分别设置两辆车的颜色和控制方式，
-        //因此在CarSelection和ControlMethod两处的DropDown需要提供Player1和Player2两个选项，需要SetActive对应的DropDown
+        //因此在CarSelection和ControlMethod两处的DropDown需要提供Player1和Player2两个选项，需要激活对应的DropDown
         if (NumofPlayer == 2)
         {
             CSDropDown1.SetActive(false);
@@ -137,6 +139,10 @@ public class GameSetting : MonoBehaviour {
 
     //CarSelection
     //记录用户的历史选择到"SavedCarType"
+    public void SetPlayerNumofCarSelect(int value)
+    {
+        PlayerNumofCarSelect = value;
+    }
     public void RedCar(){
         Debug.Log(PlayerNumofCarSelect.ToString() + ":1");
         CarType[PlayerNumofCarSelect] = 1;
@@ -221,6 +227,10 @@ public class GameSetting : MonoBehaviour {
 
     //ControlMethod
     //记录用户的历史选择到"SavedContorlMethod"
+    public void SetPlayerNumofControlMethod(int value)
+    {
+        PlayerNumofControlMethod = value;
+    }
     public void Keyboard()
     {
         ControlMethod[PlayerNumofControlMethod] = 1;
