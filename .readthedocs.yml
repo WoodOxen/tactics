@@ -2,10 +2,13 @@
 # Read the Docs configuration file
 # See https://docs.readthedocs.io/en/stable/config-file/v2.html for details
 
-# Required
 version: 2
 
-# Optionally declare the Python requirements required to build your docs
+mkdocs:
+  configuration: mkdocs.yml
+
+formats: all
+
 python:
     version: 3.7
     install:

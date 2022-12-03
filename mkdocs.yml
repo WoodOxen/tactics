@@ -8,8 +8,8 @@ theme: readthedocs
 
 nav:
 - Home: 'index.md'
-- Manual for Developers: "dev_index.md"
-  - APIs: "dev_apis.md"
+- Manual for Developers:
+  - 'APIs': "dev_apis.md"
 
 markdown_extensions:
   - admonition
