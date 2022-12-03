@@ -7,9 +7,9 @@ public class CruiseData : MonoBehaviour
 {
     private int lastClosestWP = -1;
     private int NumofWP;
-    public static float[] DistanceError = new float[4] { 0, 0, 0, 0 };
-    public static float[] Curvature = new float[4] { 0, 0, 0, 0 };
-    public static float[] AngleError = new float[4] { 0, 0, 0, 0 };
+    public static float[] DistanceError = new float[8] { 0, 0, 0, 0, 0, 0, 0, 0 };
+    public static float[] Curvature = new float[8] { 0, 0, 0, 0, 0, 0, 0, 0 };
+    public static float[] AngleError = new float[8] { 0, 0, 0, 0, 0, 0, 0, 0 };
 
     [SerializeField] public int CarNum;
 

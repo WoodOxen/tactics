@@ -20,23 +20,14 @@ public class HalfPointTrigger : MonoBehaviour {
             HalfFlag[0] = true;
             LapComplete.LapFlag[0] = false;
         }
-        if (collision.gameObject.tag == "Player2" && LapComplete.LapFlag[1])
+        for(int i = 1;i < GameSetting.NumofPlayer; i++)
         {
-            //Debug.Log(2);
-            HalfFlag[1] = true;
-            LapComplete.LapFlag[1] = false;
-        }
-        if (collision.gameObject.tag == "Player3" && LapComplete.LapFlag[2])
-        {
-            //Debug.Log(3);
-            HalfFlag[2] = true;
-            LapComplete.LapFlag[2] = false;
-        }
-        if (collision.gameObject.tag == "Player4" && LapComplete.LapFlag[3])
-        {
-            //Debug.Log(4);
-            HalfFlag[3] = true;
-            LapComplete.LapFlag[3] = false;
+            if (collision.gameObject.tag == "Player"+(i+1).ToString() && LapComplete.LapFlag[i])
+            {
+                //Debug.Log(i+1);
+                HalfFlag[i] = true;
+                LapComplete.LapFlag[i] = false;
+            }
         }
 
         //LapCompleteTrig.SetActive (true);

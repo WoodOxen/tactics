@@ -7,51 +7,37 @@ using TMPro;
 public class MonitorSetting : MonoBehaviour
 {
     public static int NumofMonitor = 0;
-    public static int Monitor1Object = 0;
-    public static int Monitor2Object = 0;
-    public static int Monitor3Object = 0;
-    public static int Monitor1Perspective = 0;
-    public static int Monitor2Perspective = 0;
-    public static int Monitor3Perspective = 0;
+    public static int[] MonitorObject = new int[3] { 0, 0, 0 };
+    public static int[] MonitorPerspective = new int[3] { 0, 0, 0 };
 
-    public GameObject dropdown1;
-    public GameObject dropdown2;
-    public GameObject dropdown3;
-    public GameObject dropdown4;
-    public GameObject dropdown5;
-    public GameObject dropdown6;
-    public GameObject dropdown7;
+    public GameObject DropdowmMonitorNum;
+    public GameObject[] DropdowmMonitorObject;
+    public GameObject[] DropdowmMonitorPerspective;
 
     void Start()
     {
+        //读取历史记录
         if (PlayerPrefs.HasKey("NumofMonitor")) NumofMonitor = PlayerPrefs.GetInt("NumofMonitor");
         else NumofMonitor = 0;
 
-        if (PlayerPrefs.HasKey("Monitor1Object")) Monitor1Object = PlayerPrefs.GetInt("Monitor1Object");
-        else Monitor1Object = 0;
+        for(int i = 1; i <= 3; i++)
+        {
+            if (PlayerPrefs.HasKey("Monitor"+i.ToString()+ "Object"))
+                MonitorObject[i-1] = PlayerPrefs.GetInt("Monitor" + i.ToString() + "Object");
+            else MonitorObject[i-1] = 0;
 
-        if (PlayerPrefs.HasKey("Monitor2Object"))Monitor2Object = PlayerPrefs.GetInt("Monitor2Object");
-        else Monitor2Object = 0;
+            if (PlayerPrefs.HasKey("Monitor" + i.ToString() +"Perspective"))
+                MonitorPerspective[i-1] = PlayerPrefs.GetInt("Monitor" + i.ToString() + "Perspective");
+            else MonitorPerspective[i-1] = 0;
+        }
 
-        if (PlayerPrefs.HasKey("Monitor3Object")) Monitor3Object = PlayerPrefs.GetInt("Monitor3Object");
-        else Monitor3Object = 0;
-
-        if (PlayerPrefs.HasKey("Monitor1Perspective"))Monitor1Perspective = PlayerPrefs.GetInt("Monitor1Perspective");
-        else  Monitor1Perspective = 0;
-
-        if (PlayerPrefs.HasKey("Monitor2Perspective")) Monitor2Perspective = PlayerPrefs.GetInt("Monitor2Perspective");
-        else Monitor2Perspective = 0;
-
-        if (PlayerPrefs.HasKey("Monitor3Perspective")) Monitor3Perspective = PlayerPrefs.GetInt("Monitor3Perspective");
-        else Monitor3Perspective = 0;
-
-        dropdown1.GetComponent<TMP_Dropdown>().value = NumofMonitor;
-        dropdown2.GetComponent<TMP_Dropdown>().value = Monitor1Object;
-        dropdown3.GetComponent<TMP_Dropdown>().value = Monitor2Object;
-        dropdown4.GetComponent<TMP_Dropdown>().value = Monitor3Object;
-        dropdown5.GetComponent<TMP_Dropdown>().value = Monitor1Perspective;
-        dropdown6.GetComponent<TMP_Dropdown>().value = Monitor2Perspective;
-        dropdown7.GetComponent<TMP_Dropdown>().value = Monitor3Perspective;
+        //默认按照历史记录设置监视器
+        DropdowmMonitorNum.GetComponent<TMP_Dropdown>().value = NumofMonitor;
+        for (int i = 0; i < 3; i++)
+        {
+            DropdowmMonitorObject[i].GetComponent<TMP_Dropdown>().value = MonitorObject[i];
+            DropdowmMonitorPerspective[i].GetComponent<TMP_Dropdown>().value = MonitorPerspective[i];
+        }
     }
 
     public void SetNumofMonitor(int value)
@@ -63,44 +49,44 @@ public class MonitorSetting : MonoBehaviour
 
     public void SetMonitor1Object(int value)
     {
-        Monitor1Object = value;
-        if (Monitor1Object > 3 || Monitor1Object < 0) Monitor1Object = 0;
-        PlayerPrefs.SetInt("Monitor1Object", Monitor1Object);
+        MonitorObject[0] = value;
+        if (MonitorObject[0] > 7 || MonitorObject[0] < 0) MonitorObject[0] = 0;
+        PlayerPrefs.SetInt("Monitor1Object", MonitorObject[0]);
     }
 
     public void SetMonitor2Object(int value)
     {
-        Monitor2Object = value;
-        if (Monitor2Object > 3 || Monitor2Object < 0) Monitor2Object = 0;
-        PlayerPrefs.SetInt("Monitor2Object", Monitor2Object);
+        MonitorObject[1] = value;
+        if (MonitorObject[1] > 7 || MonitorObject[1] < 0) MonitorObject[1] = 0;
+        PlayerPrefs.SetInt("Monitor2Object", MonitorObject[1]);
     }
 
     public void SetMonitor3Object(int value)
     {
-        Monitor3Object = value;
-        if (Monitor3Object > 3 || Monitor3Object < 0) Monitor3Object = 0;
-        PlayerPrefs.SetInt("Monitor3Object", Monitor3Object);
+        MonitorObject[2] = value;
+        if (MonitorObject[2] > 7 || MonitorObject[2] < 0) MonitorObject[2] = 0;
+        PlayerPrefs.SetInt("Monitor3Object", MonitorObject[2]);
     }
 
     public void SetMonitor1Perspective(int value)
     {
-        Monitor1Perspective = value;
-        if (Monitor1Perspective != 0 && Monitor1Perspective != 1) Monitor1Perspective = 0;
-        PlayerPrefs.SetInt("Monitor1Perspective", Monitor1Perspective);
+        MonitorPerspective[0] = value;
+        if (MonitorPerspective[0] != 0 && MonitorPerspective[0] != 1) MonitorPerspective[0] = 0;
+        PlayerPrefs.SetInt("Monitor1Perspective", MonitorPerspective[0]);
     }
 
     public void SetMonitor2Perspective(int value)
     {
-        Monitor2Perspective = value;
-        if (Monitor2Perspective != 0 && Monitor2Perspective != 1) Monitor2Perspective = 0;
-        PlayerPrefs.SetInt("Monitor2Perspective", Monitor2Perspective);
+        MonitorPerspective[1] = value;
+        if (MonitorPerspective[1] != 0 && MonitorPerspective[1] != 1) MonitorPerspective[1] = 0;
+        PlayerPrefs.SetInt("Monitor2Perspective", MonitorPerspective[1]);
     }
 
     public void SetMonitor3Perspective(int value)
     {
-        Monitor3Perspective = value;
-        if (Monitor3Perspective != 0 && Monitor3Perspective != 1) Monitor3Perspective = 0;
-        PlayerPrefs.SetInt("Monitor3Perspective", Monitor3Perspective);
+        MonitorPerspective[2] = value;
+        if (MonitorPerspective[2] != 0 && MonitorPerspective[2] != 1) MonitorPerspective[2] = 0;
+        PlayerPrefs.SetInt("Monitor3Perspective", MonitorPerspective[2]);
     }
 
 }

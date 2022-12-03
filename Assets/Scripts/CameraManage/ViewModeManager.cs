@@ -18,6 +18,7 @@ public class ViewModeManager : MonoBehaviour {
     void Start()
     {
         PlayerNum = GameSetting.NumofPlayer;
+        if (PlayerNum > 8) PlayerNum = 8;
         ViewMode = 0;
         CamNum = 0;
         CamNum_last = 0;

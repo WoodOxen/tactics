@@ -19,7 +19,7 @@ public class RaceFinish : MonoBehaviour {
     public GameObject CompletePanel;
     public GameObject ScoreModeLabel;
     public GameObject TimeModeLabel;
-    public GameObject ScoreDisplay;
+    public GameObject ScoreDisplayBox;
     public GameObject TimeDisplay;
     public GameObject CollisionNumDisplay;
     public GameObject TotalDamageDisplay;
@@ -47,8 +47,8 @@ public class RaceFinish : MonoBehaviour {
         {
             PlayerCar[i].GetComponent<CarAudio>().enabled = false;
             PlayerCar[i].GetComponent<CarController>().enabled = false;
-            PlayerCar[i].GetComponent<CarControlKeyBoard>().enabled = false;
             PlayerCar[i].GetComponent<LoadControl>().enabled = false;
+            if (i < 4) PlayerCar[i].GetComponent<CarControlKeyBoard>().enabled = false;
         }
         CallCppControl.SetActive(false);
 
@@ -73,8 +73,8 @@ public class RaceFinish : MonoBehaviour {
             //若为ScoreMode，额外显示车辆所得分数
             //暂时只显示第一辆车的分数
             ScoreModeLabel.SetActive(true);
-            ScoreDisplay.SetActive(true);
-            ScoreDisplay.GetComponent<TextMeshProUGUI>().text = "" + CurrentScore.Score[0];
+            ScoreDisplayBox.SetActive(true);
+            ScoreDisplayBox.GetComponent<TextMeshProUGUI>().text = "" + ScoreDisplay.Score[0];
         }
         else
         {

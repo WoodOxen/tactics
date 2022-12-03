@@ -14,7 +14,7 @@ public class SpeedDisplay : MonoBehaviour
 
     void Start()
     {
-        speed = new float[4] { 0, 0, 0, 0 };
+        speed = new float[8] { 0, 0, 0, 0, 0, 0, 0, 0 };
         //accelDebug = new float[4] { 0, 0, 0, 0 };
     }
 

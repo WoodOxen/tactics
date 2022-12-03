@@ -69,7 +69,14 @@ public class SaveButton : MonoBehaviour
 
         save.GameMode = GameSetting.RaceMode;
         save.TrackNum = GameSetting.trackNum;
-        
+        //ÊÍ·ÅÄÚ´æ
+        for (int i = 0; i < 8; i++)
+        {
+            RecordControllerOutput.steer[i] = null;
+            RecordControllerOutput.accel[i] = null;
+            RecordControllerOutput.footbrake[i] = null;
+            RecordControllerOutput.handbrake[i] = null;
+        }
         /*
         if (save.GameMode == 2)
         {

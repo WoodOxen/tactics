@@ -32,9 +32,9 @@ public class StartManager : MonoBehaviour {
     {
         //cpp接口初始化
         CppControl.InitSpeedDelegate(CppControl.CallbackSpeedFromCpp);
-        CppControl.InitPositionXDelegate(CppControl.CallbackPositionXFromCpp);
-        CppControl.InitPositionYDelegate(CppControl.CallbackPositionYFromCpp);
-        CppControl.InitPositionZDelegate(CppControl.CallbackPositionZFromCpp);
+        //CppControl.InitPositionXDelegate(CppControl.CallbackPositionXFromCpp);
+        //CppControl.InitPositionYDelegate(CppControl.CallbackPositionYFromCpp);
+        //CppControl.InitPositionZDelegate(CppControl.CallbackPositionZFromCpp);
         CppControl.InitCruiseErrorDelegate(CppControl.CallbackCruiseErrorFromCpp);
         CppControl.InitAngleErrorDelegate(CppControl.CallbackAngleErrorFromCpp);
         CppControl.InitCurvatureDelegate(CppControl.CallbackCurvatureFromCpp);
@@ -55,7 +55,7 @@ public class StartManager : MonoBehaviour {
         {
             for (int i = 0; i < 4; i++)
             {
-                CurrentScore.Score[i] = 0;
+                ScoreDisplay.Score[i] = 0;
             }
         }
 

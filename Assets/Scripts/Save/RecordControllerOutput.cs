@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class RecordControllerOutput : MonoBehaviour
 {
-    public static ArrayList[] steer = new ArrayList[4];
-    public static ArrayList[] accel = new ArrayList[4];
-    public static ArrayList[] footbrake = new ArrayList[4];
-    public static ArrayList[] handbrake = new ArrayList[4];
+    public static ArrayList[] steer = new ArrayList[8];
+    public static ArrayList[] accel = new ArrayList[8];
+    public static ArrayList[] footbrake = new ArrayList[8];
+    public static ArrayList[] handbrake = new ArrayList[8];
 
     void Start()
     {
-        for(int i =0;i < 4; i++)
+        for(int i =0;i < GameSetting.NumofPlayer; i++)
         {
             steer[i] = new ArrayList(10000);
             accel[i] = new ArrayList(10000);
