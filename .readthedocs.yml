@@ -7,6 +7,6 @@ version: 2
 
 # Optionally declare the Python requirements required to build your docs
 python:
-    version: 3.9
+    version: 3.7
     install:
         - requirements: Docs/requirements.txt
