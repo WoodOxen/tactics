@@ -8,20 +8,36 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tactics \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-03 20:29+0800\n"
+"POT-Creation-Date: 2022-12-03 22:55+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.11.0\n"
 
-#: ../../source/index.md:1 ea3d64328a71465ca833fe6cbe9918ed
-msgid "TACTICS Documentation"
+#: ../../source/index.rst:9
+msgid "Contents:"
 msgstr ""
 
-#: ../../source/index.md:3 cf7a4c1324314beea902dd69ac1462fc
-msgid "Welcome to the TACTICS documentation."
+#: ../../source/index.rst:7 297d883773e64d7987c0f4de389db69e
+msgid "Welcome to TACTICS's documentation!"
+msgstr ""
+
+#: ../../source/index.rst:16 529138ff27f0407b92395edc782a859b
+msgid "Indices and tables"
+msgstr ""
+
+#: ../../source/index.rst:18 3309090792d54d3688b96e6e4b908c68
+msgid ":ref:`genindex`"
+msgstr ""
+
+#: ../../source/index.rst:19 aa27e2636aac48d98154fe6dc0ae3082
+msgid ":ref:`modindex`"
+msgstr ""
+
+#: ../../source/index.rst:20 c782265498f8408abff651613a8a3b0b
+msgid ":ref:`search`"
 msgstr ""
 

@@ -8,14 +8,20 @@ import sphinx_rtd_theme
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'tactics'
-copyright = '2022, Yueyuan Li'
-author = 'Yueyuan Li'
+project = 'TACTICS'
+copyright = '2022, WoodOxen'
+author = 'WoodOxen'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ["myst_parser"]
+extensions = [
+    # "recommonmark",
+    "myst_parser",
+    "sphinx.ext.viewcode",
+    "sphinx.ext.autodoc",
+    # "sphinx.ext.mathjax"
+    ]
 
 templates_path = ['_templates']
 source_suffix = ['.rst', '.md']
