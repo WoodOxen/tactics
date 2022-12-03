@@ -2,7 +2,14 @@
 # Read the Docs configuration file
 # See https://docs.readthedocs.io/en/stable/config-file/v2.html for details
 
+# Required
 version: 2
+
+# Set the version of Python and other tools you might need
+build:
+  os: ubuntu-18.04
+  tools:
+    python: "3.7"
 
 mkdocs:
   configuration: mkdocs.yml
@@ -10,7 +17,5 @@ mkdocs:
 formats: all
 
 python:
-    version: 3.7
-    install:
-        - method: pip
-        - requirements: Docs/requirements.txt
+  install: 
+      - requirements: Docs/requirements.txt
