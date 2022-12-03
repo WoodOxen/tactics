@@ -16,7 +16,6 @@ author = 'WoodOxen'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-    # "recommonmark",
     "myst_parser",
     "sphinx.ext.viewcode",
     "sphinx.ext.autodoc",
