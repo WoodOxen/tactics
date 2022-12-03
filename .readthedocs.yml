@@ -7,9 +7,12 @@ version: 2
 mkdocs:
   configuration: mkdocs.yml
 
-formats: all
+formats:
+    - pdf
+    - epub
 
 python:
     version: 3.7
     install:
+        - method: pip
         - requirements: Docs/requirements.txt
