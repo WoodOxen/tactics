@@ -10,25 +10,18 @@ public class RedScore : MonoBehaviour {
 
     void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")//触碰该宝石的是否是1号车辆（tag为“Player”,这个是Unity自带的不能改）
         {
-            CurrentScore.Score[0] += 100;
+            ScoreDisplay.Score[0] += 100;
             gameObject.SetActive(false);
         }
-        else if (collision.gameObject.tag == "Player2")
+        for (int i = 2; i <= GameSetting.NumofPlayer; i++)//触碰该宝石的是否是2~8号车辆
         {
-            CurrentScore.Score[1] += 100;
-            gameObject.SetActive(false);
-        }
-        else if (collision.gameObject.tag == "Player3")
-        {
-            CurrentScore.Score[2] += 100;
-            gameObject.SetActive(false);
-        }
-        else if (collision.gameObject.tag == "Player4")
-        {
-            CurrentScore.Score[3] += 100;
-            gameObject.SetActive(false);
+            if (collision.gameObject.tag == "Player" + i.ToString())
+            {
+                ScoreDisplay.Score[i - 1] += 100;
+                gameObject.SetActive(false);
+            }
         }
     }
 }

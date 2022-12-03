@@ -20,44 +20,45 @@ public class ButtonManager : MonoBehaviour {
         if (PlayerPrefs.HasKey("NumofPlayer")) GameSetting.NumofPlayer = PlayerPrefs.GetInt("NumofPlayer");
         else GameSetting.NumofPlayer = 1;
 
-        if (PlayerPrefs.HasKey("SavedCarType0")) GameSetting.CarType[0] = PlayerPrefs.GetInt("SavedCarType0");
-        else GameSetting.CarType[0] = 0;
-        if (PlayerPrefs.HasKey("SavedCarType1")) GameSetting.CarType[1] = PlayerPrefs.GetInt("SavedCarType1");
-        else GameSetting.CarType[1] = 0;
-        if (PlayerPrefs.HasKey("SavedCarType2")) GameSetting.CarType[2] = PlayerPrefs.GetInt("SavedCarType2");
-        else GameSetting.CarType[2] = 0;
-        if (PlayerPrefs.HasKey("SavedCarType3")) GameSetting.CarType[3] = PlayerPrefs.GetInt("SavedCarType3");
-        else GameSetting.CarType[3] = 0;
+        for(int i = 0; i < 8; i++)
+        {
+            //读取历史的车辆颜色设置
+            if (PlayerPrefs.HasKey("SavedCarType"+i.ToString()))
+                GameSetting.CarType[i] = PlayerPrefs.GetInt("SavedCarType" + i.ToString());
+            else GameSetting.CarType[i] = 0;
 
-        if (PlayerPrefs.HasKey("SavedContorlMethod0")) GameSetting.ControlMethod[0] = PlayerPrefs.GetInt("SavedContorlMethod0");
-        else GameSetting.ControlMethod[0] = 1;
-        if (PlayerPrefs.HasKey("SavedContorlMethod1")) GameSetting.ControlMethod[1] = PlayerPrefs.GetInt("SavedContorlMethod1");
-        else GameSetting.ControlMethod[1] = 1;
-        if (PlayerPrefs.HasKey("SavedContorlMethod2")) GameSetting.ControlMethod[2] = PlayerPrefs.GetInt("SavedContorlMethod2");
-        else GameSetting.ControlMethod[2] = 1;
-        if (PlayerPrefs.HasKey("SavedContorlMethod3")) GameSetting.ControlMethod[3] = PlayerPrefs.GetInt("SavedContorlMethod3");
-        else GameSetting.ControlMethod[3] = 1;
+            //读取历史的车辆控制方法设置
+            if (i >= 4)
+            {
+                GameSetting.ControlMethod[i] = 2;//5~8号车只能代码控制
+            }
+            else
+            {
+                if (PlayerPrefs.HasKey("SavedContorlMethod" + i.ToString()))
+                    GameSetting.ControlMethod[i] = PlayerPrefs.GetInt("SavedContorlMethod" + i.ToString());
+                else GameSetting.ControlMethod[i] = 1;
+            }
+        }
 
+        //读取历史的赛道选择和模式选择
         if (PlayerPrefs.HasKey("SavedRaceMode")) GameSetting.RaceMode = PlayerPrefs.GetInt("SavedRaceMode");
         else GameSetting.RaceMode = 1;
         if (PlayerPrefs.HasKey("SavedTrackNum")) GameSetting.trackNum = PlayerPrefs.GetInt("SavedTrackNum");
         else GameSetting.trackNum = 3;
         trackNum = GameSetting.trackNum;
 
+        //读取历史的监视器设置
         if (PlayerPrefs.HasKey("NumofMonitor")) MonitorSetting.NumofMonitor = PlayerPrefs.GetInt("NumofMonitor");
         else MonitorSetting.NumofMonitor = 0;
-        if (PlayerPrefs.HasKey("Monitor1Object")) MonitorSetting.Monitor1Object = PlayerPrefs.GetInt("Monitor1Object");
-        else MonitorSetting.Monitor1Object = 0;
-        if (PlayerPrefs.HasKey("Monitor2Object")) MonitorSetting.Monitor2Object = PlayerPrefs.GetInt("Monitor2Object");
-        else MonitorSetting.Monitor2Object = 0;
-        if (PlayerPrefs.HasKey("Monitor3Object")) MonitorSetting.Monitor3Object = PlayerPrefs.GetInt("Monitor3Object");
-        else MonitorSetting.Monitor3Object = 0;
-        if (PlayerPrefs.HasKey("Monitor1Perspective")) MonitorSetting.Monitor1Perspective = PlayerPrefs.GetInt("Monitor1Perspective");
-        else MonitorSetting.Monitor1Perspective = 0;
-        if (PlayerPrefs.HasKey("Monitor2Perspective")) MonitorSetting.Monitor2Perspective = PlayerPrefs.GetInt("Monitor2Perspective");
-        else MonitorSetting.Monitor2Perspective = 0;
-        if (PlayerPrefs.HasKey("Monitor3Perspective")) MonitorSetting.Monitor3Perspective = PlayerPrefs.GetInt("Monitor3Perspective");
-        else MonitorSetting.Monitor3Perspective = 0;
+        for(int i = 1; i <= 3; i++)
+        {
+            if (PlayerPrefs.HasKey("Monitor" + i.ToString()+ "Object"))
+                MonitorSetting.MonitorObject[i-1] = PlayerPrefs.GetInt("Monitor" + i.ToString() + "Object");
+            else MonitorSetting.MonitorObject[i-1] = 0;
+            if (PlayerPrefs.HasKey("Monitor" + i.ToString() + "Perspective"))
+                MonitorSetting.MonitorPerspective[i-1] = PlayerPrefs.GetInt("Monitor" + i.ToString() + "Perspective");
+            else MonitorSetting.MonitorPerspective[i-1] = 0;
+        }
 
         if (trackNum == 1)
             SceneManager.LoadScene(2);

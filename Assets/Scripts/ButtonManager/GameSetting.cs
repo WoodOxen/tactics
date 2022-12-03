@@ -14,15 +14,9 @@ public class GameSetting : MonoBehaviour {
     public static int PlayerNumofCarSelect;//用户想要设置几号车辆的颜色
     public static int PlayerNumofControlMethod;//用户想要设置几号车辆的控制方式
 
-    public GameObject CSDropDown1;
-    public GameObject CSDropDown2;
-    public GameObject CSDropDown3;
-    public GameObject CSDropDown4;//CarSelection部分的四个DropDown
+    public GameObject Warning_CS;
+    public GameObject Warning_CM;
 
-    public GameObject CMDropDown1;
-    public GameObject CMDropDown2;
-    public GameObject CMDropDown3;
-    public GameObject CMDropDown4;//ControlMethod部分的四个DropDown
 
     public static bool InitializeFlag = false;
 
@@ -30,8 +24,8 @@ public class GameSetting : MonoBehaviour {
     {
         //初始化
         InitializeFlag = true;
-        CarType = new int[5];
-        ControlMethod = new int[5];
+        CarType = new int[8] { 0, 0, 0, 0, 0, 0, 0, 0 };
+        ControlMethod = new int[8] { 0, 0, 0, 0, 2, 2, 2, 2 };
         PlayerNumofCarSelect = 0;
         PlayerNumofControlMethod = 0;
 
@@ -39,78 +33,32 @@ public class GameSetting : MonoBehaviour {
         if (PlayerPrefs.HasKey("NumofPlayer")) NumofPlayer = PlayerPrefs.GetInt("NumofPlayer");
         else NumofPlayer = 1;
 
-        if (PlayerPrefs.HasKey("SavedCarType0")) CarType[0] = PlayerPrefs.GetInt("SavedCarType0");
-        else CarType[0] = 0;
-        if (PlayerPrefs.HasKey("SavedCarType1")) CarType[1] = PlayerPrefs.GetInt("SavedCarType1");
-        else CarType[1] = 0;
-        if (PlayerPrefs.HasKey("SavedCarType2")) CarType[2] = PlayerPrefs.GetInt("SavedCarType2");
-        else CarType[2] = 0;
-        if (PlayerPrefs.HasKey("SavedCarType3")) CarType[3] = PlayerPrefs.GetInt("SavedCarType3");
-        else CarType[3] = 0;
-
-        if (PlayerPrefs.HasKey("SavedContorlMethod0")) ControlMethod[0] = PlayerPrefs.GetInt("SavedContorlMethod0");
-        else ControlMethod[0] = 1;
-        if (PlayerPrefs.HasKey("SavedContorlMethod1")) ControlMethod[1] = PlayerPrefs.GetInt("SavedContorlMethod1");
-        else ControlMethod[1] = 1;
-        if (PlayerPrefs.HasKey("SavedContorlMethod2")) ControlMethod[2] = PlayerPrefs.GetInt("SavedContorlMethod2");
-        else ControlMethod[2] = 1;
-        if (PlayerPrefs.HasKey("SavedContorlMethod3")) ControlMethod[3] = PlayerPrefs.GetInt("SavedContorlMethod3");
-        else ControlMethod[3] = 1;
-
+        for(int i = 0;i < 8;i++)
+        {
+            if (PlayerPrefs.HasKey("SavedCarType"+i.ToString())) CarType[i] = PlayerPrefs.GetInt("SavedCarType" + i.ToString());
+            else CarType[i] = 0;
+        }
+        for (int i = 0; i < 4; i++)
+        {
+            if (PlayerPrefs.HasKey("SavedContorlMethod" + i.ToString())) ControlMethod[i] = PlayerPrefs.GetInt("SavedContorlMethod" + i.ToString());
+            else ControlMethod[i] = 1;
+        }
+        
         if (PlayerPrefs.HasKey("SavedRaceMode")) RaceMode = PlayerPrefs.GetInt("SavedRaceMode");
         else RaceMode = 1;
         if (PlayerPrefs.HasKey("SavedTrackNum")) trackNum = PlayerPrefs.GetInt("SavedTrackNum");
         else trackNum = 3;
     }
-    void Update()
+    void WhetherWarning()
     {
-        //根据用户选择的NumofPlayer，SetActive对应的DropDown
-        //例如，当用户选择两辆车参与仿真（NumofPlayer=2），那么需要让用户可以分别设置两辆车的颜色和控制方式，
-        //因此在CarSelection和ControlMethod两处的DropDown需要提供Player1和Player2两个选项，需要激活对应的DropDown
-        if (NumofPlayer == 2)
-        {
-            CSDropDown1.SetActive(false);
-            CSDropDown2.SetActive(true);
-            CSDropDown3.SetActive(false);
-            CSDropDown4.SetActive(false);
-            CMDropDown1.SetActive(false);
-            CMDropDown2.SetActive(true);
-            CMDropDown3.SetActive(false);
-            CMDropDown4.SetActive(false);
-        }
-        else if (NumofPlayer == 3)
-        {
-            CSDropDown1.SetActive(false);
-            CSDropDown2.SetActive(false);
-            CSDropDown3.SetActive(true);
-            CSDropDown4.SetActive(false);
-            CMDropDown1.SetActive(false);
-            CMDropDown2.SetActive(false);
-            CMDropDown3.SetActive(true);
-            CMDropDown4.SetActive(false);
-        }
-        else if (NumofPlayer == 4)
-        {
-            CSDropDown1.SetActive(false);
-            CSDropDown2.SetActive(false);
-            CSDropDown3.SetActive(false);
-            CSDropDown4.SetActive(true);
-            CMDropDown1.SetActive(false);
-            CMDropDown2.SetActive(false);
-            CMDropDown3.SetActive(false);
-            CMDropDown4.SetActive(true);
-        }
-        else
-        {
-            CSDropDown1.SetActive(true);
-            CSDropDown2.SetActive(false);
-            CSDropDown3.SetActive(false);
-            CSDropDown4.SetActive(false);
-            CMDropDown1.SetActive(true);
-            CMDropDown2.SetActive(false);
-            CMDropDown3.SetActive(false);
-            CMDropDown4.SetActive(false);
-        }
+        //若用户对CarColor和ControlMethod的设置超过了其选择的车辆数目，则提示用户该车不会存在
+        if (PlayerNumofControlMethod >= NumofPlayer)
+            Warning_CM.SetActive(true);
+        else Warning_CM.SetActive(false);
+
+        if (PlayerNumofCarSelect >= NumofPlayer)
+            Warning_CS.SetActive(true);
+        else Warning_CS.SetActive(false);
     }
 
     //回到主菜单
@@ -142,6 +90,7 @@ public class GameSetting : MonoBehaviour {
     public void SetPlayerNumofCarSelect(int value)
     {
         PlayerNumofCarSelect = value;
+        WhetherWarning();
     }
     public void RedCar(){
         Debug.Log(PlayerNumofCarSelect.ToString() + ":1");
@@ -193,21 +142,49 @@ public class GameSetting : MonoBehaviour {
     {
         NumofPlayer = 1;
         PlayerPrefs.SetInt("NumofPlayer", NumofPlayer);
+        WhetherWarning();
     }
     public void TwoPlayer()
     {
         NumofPlayer = 2;
         PlayerPrefs.SetInt("NumofPlayer", NumofPlayer);
+        WhetherWarning();
     }
     public void ThreePlayer()
     {
         NumofPlayer = 3;
         PlayerPrefs.SetInt("NumofPlayer", NumofPlayer);
+        WhetherWarning();
     }
     public void FourPlayer()
     {
         NumofPlayer = 4;
         PlayerPrefs.SetInt("NumofPlayer", NumofPlayer);
+        WhetherWarning();
+    }
+    public void FivePlayer()
+    {
+        NumofPlayer = 5;
+        PlayerPrefs.SetInt("NumofPlayer", NumofPlayer);
+        WhetherWarning();
+    }
+    public void SixPlayer()
+    {
+        NumofPlayer = 6;
+        PlayerPrefs.SetInt("NumofPlayer", NumofPlayer);
+        WhetherWarning();
+    }
+    public void SevenPlayer()
+    {
+        NumofPlayer = 7;
+        PlayerPrefs.SetInt("NumofPlayer", NumofPlayer);
+        WhetherWarning();
+    }
+    public void EightPlayer()
+    {
+        NumofPlayer = 8;
+        PlayerPrefs.SetInt("NumofPlayer", NumofPlayer);
+        WhetherWarning();
     }
 
     //Image Quality
@@ -230,6 +207,7 @@ public class GameSetting : MonoBehaviour {
     public void SetPlayerNumofControlMethod(int value)
     {
         PlayerNumofControlMethod = value;
+        WhetherWarning();
     }
     public void Keyboard()
     {

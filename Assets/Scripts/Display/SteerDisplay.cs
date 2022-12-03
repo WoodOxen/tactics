@@ -18,7 +18,7 @@ public class SteerDisplay : MonoBehaviour
         PlayerNum = ViewModeManager.CamNum;//当前视角跟随的车辆编号
         if(GameSetting.ControlMethod[PlayerNum] == 1)//Keyboard
         {
-            Steer = CarUserControl.h[PlayerNum];
+            Steer = CarControlKeyBoard.h[PlayerNum];
         }
         else//ScriptControl
         {

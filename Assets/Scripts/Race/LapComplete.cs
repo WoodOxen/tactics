@@ -22,11 +22,11 @@ public class LapComplete : MonoBehaviour {
 
     public int modeType;
 	public int flag_firstlyEnter;
-	public static int[] LapCount = new int[4] { 0, 0, 0, 0 };
+	public static int[] LapCount = new int[8] { 0, 0, 0, 0, 0, 0, 0, 0 };
 
     public float rawTime;
 
-    public static bool[] LapFlag = new bool[4] { true, true, true, true };
+    public static bool[] LapFlag = new bool[8] { true, true, true, true, true, true, true, true };
 
     void Start () {
 		flag_firstlyEnter = 1;
@@ -40,41 +40,27 @@ public class LapComplete : MonoBehaviour {
 }
 		
 	void OnTriggerEnter(Collider collision){
-		/*if (collision.gameObject.tag == "DreamCar01" || collision.gameObject.tag == "CarPosJudge") {
+        /*if (collision.gameObject.tag == "DreamCar01" || collision.gameObject.tag == "CarPosJudge") {
 			return;
 		}*/
-        //记录四辆人工控制车通过终点线的情况
-        if(collision.gameObject.tag == "Player2" && HalfPointTrigger.HalfFlag[1])
-        {
-            //Debug.Log(2);
-            LapFlag[1] = true;
-            HalfPointTrigger.HalfFlag[1] = false;
-            LapCount[1] += 1;
-        }
-        else if (collision.gameObject.tag == "Player3" && HalfPointTrigger.HalfFlag[2])
-        {
-            //Debug.Log(3);
-            LapFlag[2] = true;
-            HalfPointTrigger.HalfFlag[2] = false;
-            LapCount[2] += 1;
-        }
-        else if (collision.gameObject.tag == "Player4" && HalfPointTrigger.HalfFlag[3])
-        {
-            //Debug.Log(4);
-            LapFlag[3] = true;
-            HalfPointTrigger.HalfFlag[3] = false;
-            LapCount[3] += 1;
-        }
-        else if (collision.gameObject.tag == "Player" && HalfPointTrigger.HalfFlag[0])
+        //记录1号车通过终点线的情况
+        if (collision.gameObject.tag == "Player" && HalfPointTrigger.HalfFlag[0])
         {
             //Debug.Log(1);
             LapFlag[0] = true;
             HalfPointTrigger.HalfFlag[0] = false;
             LapCount[0] += 1;
         }
-        else//其他AI车通过重点线，不做记录
+        //记录2~8号车通过终点线的情况
+        for (int i = 1; i < GameSetting.NumofPlayer; i++)
         {
-            return;
+            if (collision.gameObject.tag == "Player"+(i+1).ToString() && HalfPointTrigger.HalfFlag[i])
+            {
+                //Debug.Log(i+1);
+                LapFlag[i] = true;
+                HalfPointTrigger.HalfFlag[i] = false;
+                LapCount[i] += 1;
+            }
         }
 
         //巡线结束条件

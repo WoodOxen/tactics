@@ -18,11 +18,27 @@ public class CompletePanelButton : MonoBehaviour
 
     public void MainMenu()
     {
+        //释放内存
+        for (int i = 0; i < 4; i++)
+        {
+            RecordControllerOutput.steer[i] = null;
+            RecordControllerOutput.accel[i] = null;
+            RecordControllerOutput.footbrake[i] = null;
+            RecordControllerOutput.handbrake[i] = null;
+        }
         SceneManager.LoadScene(0);
     }
     public void Retry()
     {
         trackNum = PlayerPrefs.GetInt("SavedTrackNum");
+        //释放内存
+        for (int i = 0; i < 4; i++)
+        {
+            RecordControllerOutput.steer[i] = null;
+            RecordControllerOutput.accel[i] = null;
+            RecordControllerOutput.footbrake[i] = null;
+            RecordControllerOutput.handbrake[i] = null;
+        }
         if (trackNum == 1)
             SceneManager.LoadScene(2);
         else if (trackNum == 2)

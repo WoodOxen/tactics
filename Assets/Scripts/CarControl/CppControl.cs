@@ -57,24 +57,6 @@ public class CppControl
     }
 
     [MonoPInvokeCallback(typeof(FloatDelegate))]
-    public static float CallbackPositionXFromCpp(int CarNum)
-    {
-        return MiniMap.CarPosition[CarNum].x;
-    }
-
-    [MonoPInvokeCallback(typeof(FloatDelegate))]
-    public static float CallbackPositionYFromCpp(int CarNum)
-    {
-        return MiniMap.CarPosition[CarNum].y;
-    }
-
-    [MonoPInvokeCallback(typeof(FloatDelegate))]
-    public static float CallbackPositionZFromCpp(int CarNum)
-    {
-        return MiniMap.CarPosition[CarNum].z;
-    }
-
-    [MonoPInvokeCallback(typeof(FloatDelegate))]
     public static float CallbackCruiseErrorFromCpp(int CarNum)
     {
         return CruiseData.DistanceError[CarNum];
