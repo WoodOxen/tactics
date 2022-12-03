@@ -11,8 +11,9 @@ build:
   tools:
     python: "3.9"
 
-mkdocs:
-  configuration: mkdocs.yml
+# Build documentation in the docs/ directory with Sphinx
+sphinx:
+   configuration: Docs/conf.py
 
 formats: all
 
