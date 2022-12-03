@@ -16,9 +16,14 @@ author = 'Yueyuan Li'
 extensions = ["myst_parser"]
 
 templates_path = ['_templates']
+source_suffix = ['.rst', '.md']
 exclude_patterns = []
 
-
+# multi-language docs
+language = 'en'
+locale_dirs = ['../locales/']  # path is example but recommended.
+gettext_compact = False  # optional.
+gettext_uuid = True  # optional.
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
