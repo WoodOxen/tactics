@@ -1,7 +1,7 @@
 site_name: TACTICS Simulator
 repo_url: https://github.com/WoodOxen/tactics
 docs_dir: Docs
-edit_uri: 'blob/review/Docs'
+edit_uri: 'blob/latest/Docs'
 theme: readthedocs
 
 nav:
