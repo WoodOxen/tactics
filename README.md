@@ -1,14 +1,21 @@
-Language : English | [中文](./README.zh-CN.md)
+Language : [English](./README.en.md) | 中文
 
-# tactics
+# TACTICS
 
-## About
+## 关于
 
-TACTICS (The ACademic TeachIng-Purpose Car Simulator)
+## 开发
 
-## Development
+### 版本
 
-Current version: v0.0.0
+当前版本：v0.0.0
 
-Unity version: 2021.3.6f1c1
+引擎版本：2021.3.6f1c1 (Unity)
 
+### 文档
+
+采用Doxygen生成
+
+[代码风格](https://learn.microsoft.com/zh-cn/dotnet/csharp/fundamentals/coding-style/coding-conventions)
+
+[文档首页 (需本地生成)](./Docs/html/index.html)
