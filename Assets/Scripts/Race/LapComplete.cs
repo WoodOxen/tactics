@@ -64,7 +64,7 @@ public class LapComplete : MonoBehaviour {
         }
 
         //巡线结束条件
-        if ((ModeSelection == 2 && LapCount[0] == 1)|| LapCount[0] == 1) {
+        if (((ModeSelection == 2) && (LapCount[0] == 1))|| LapCount[0] == 1) {
             RaceFinish.SetActive (true);
 		}
 

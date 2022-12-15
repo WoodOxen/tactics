@@ -11,6 +11,7 @@ public class CallCppControl : MonoBehaviour
     public static float[] accel = new float[8] { 0, 0, 0, 0 ,0, 0, 0, 0 };
     public static float[] footbrake = new float[8] { 0, 0, 0, 0, 0, 0, 0, 0 };
     public static float[] handbrake = new float[8] { 0, 0, 0, 0, 0, 0, 0, 0 };
+
     private int playNum;
     private CarController[] m_Car = new CarController[8];
     private int[] ControlMethod = new int[8] { 0, 0, 0, 0, 2, 2, 2, 2 };
@@ -24,18 +25,19 @@ public class CallCppControl : MonoBehaviour
         footbrake = new float[8] { 0, 0, 0, 0, 0, 0, 0, 0 };
         handbrake = new float[8] { 0, 0, 0, 0, 0, 0, 0, 0 };
         CppControl.InitializeCppControl();
+        ///*
         playNum = GameSetting.NumofPlayer;
         for(int i = 0;i < playNum;i++)
         {
             m_Car[i] = TheCar[i].GetComponent<CarController>();
             ControlMethod[i] = GameSetting.ControlMethod[i];
-        }
-        
+        }//*/
     }
 
     void FixedUpdate()
     {
         CppControl.CarControlCpp();
+        ///*
         for (int i = 0; i < playNum; i++)
         {
             if (ControlMethod[i] == 2)
@@ -47,5 +49,6 @@ public class CallCppControl : MonoBehaviour
                 RecordControllerOutput.handbrake[i].Add(handbrake[i]);
             }
         }
+        //*/
     }
 }

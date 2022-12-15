@@ -14,8 +14,8 @@ public class ButtonManager : MonoBehaviour {
 	public void QuickStart(){
         LoadButton.LoadNum = 0;
 
-        GameSetting.CarType = new int[5];
-        GameSetting.ControlMethod = new int[5];
+        GameSetting.CarType = new int[8];
+        GameSetting.ControlMethod = new int[8];
 
         if (PlayerPrefs.HasKey("NumofPlayer")) GameSetting.NumofPlayer = PlayerPrefs.GetInt("NumofPlayer");
         else GameSetting.NumofPlayer = 1;

@@ -5,8 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - DreamCar01
-  - CarPosJudge
-  - CarPos
   - Map_ground
   - Player2
   - Player3
@@ -22,7 +20,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - RaceScene
   - 
   - 
   - 

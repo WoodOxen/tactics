@@ -6,8 +6,18 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityStandardAssets.Vehicles.Car;
 
-public class CppControl
+public class CppControl : MonoBehaviour
 {
+    public GameObject[] TheCar;
+    private static CarController[] TheCarController = new CarController[8];
+
+    void Start()
+    {
+        for (int i = 0; i < GameSetting.NumofPlayer; i++)
+        {
+            TheCarController[i] = TheCar[i].GetComponent<CarController>();
+        }
+    }
 
     //CarControlCpp、InitializeCppControl函数在Cpp文件中编写
     [DllImport("CppControl")]
@@ -77,9 +87,20 @@ public class CppControl
     [MonoPInvokeCallback(typeof(FloatDelegate))]
     public static void GetCarMoveFromCpp(float steering, float accel, float footbrake, float handbrake, int CarNum)
     {
+        //记录传递进来的四个参数
         CallCppControl.steering[CarNum] = steering;
         CallCppControl.accel[CarNum] = accel;
         CallCppControl.footbrake[CarNum] = footbrake;
         CallCppControl.handbrake[CarNum] = handbrake;
+        //调用Move函数控制车辆移动
+        /*
+        if ((GameSetting.ControlMethod[CarNum] == 2) && (CarNum < GameSetting.NumofPlayer))
+        {
+            TheCarController[CarNum].Move(steering, accel, footbrake, handbrake);
+            RecordControllerOutput.steer[CarNum].Add(steering);
+            RecordControllerOutput.accel[CarNum].Add(accel);
+            RecordControllerOutput.footbrake[CarNum].Add(footbrake);
+            RecordControllerOutput.handbrake[CarNum].Add(handbrake);
+        }*/
     }
 }
