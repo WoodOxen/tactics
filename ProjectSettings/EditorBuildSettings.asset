@@ -9,17 +9,17 @@ EditorBuildSettings:
     path: Assets/Scene/Menu/Menu.unity
     guid: 95212277b6e88c8439fb76b58b217783
   - enabled: 1
-    path: Assets/Scene/ModeSelection/ModeSelection.unity
+    path: Assets/Scene/Mode/Mode.unity
     guid: a27aaccda7cb890429472636934f94b6
   - enabled: 1
     path: Assets/Scene/Settings/Settings.unity
     guid: 882769f1892d6704e9b2909bb589d245
-  - enabled: 1
-    path: Assets/Scene/Quit/Quit.unity
-    guid: 05e1f260a795a7e458b0ff058907b2a0
-  - enabled: 1
-    path: Assets/Scene/Menu/MainMenu.unity
-    guid: 7d779b538e846934285b0cb6152aced6
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scene/TrackSelect.unity
     guid: b3fc11c40900d304fa7a0fbfdc9f5d61
@@ -35,4 +35,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene/RaceArea03.unity
     guid: babd29920b137274f98ce607443a7612
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: f5ae668f725341d41b7075a5831570c5, type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: bd7bcb19e9a6cb34faaa9367fce4f7a1, type: 2}
