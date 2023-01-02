@@ -18,7 +18,6 @@ public class CompletePanelButton : MonoBehaviour
 
     public void MainMenu()
     {
-        //释放内存
         for (int i = 0; i < 4; i++)
         {
             RecordControllerOutput.steer[i] = null;
@@ -31,7 +30,6 @@ public class CompletePanelButton : MonoBehaviour
     public void Retry()
     {
         trackNum = PlayerPrefs.GetInt("SavedTrackNum");
-        //释放内存
         for (int i = 0; i < 4; i++)
         {
             RecordControllerOutput.steer[i] = null;

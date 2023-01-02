@@ -4,9 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class quitGame : MonoBehaviour {
 
-	void Update () {
-		if (Input.GetButtonDown ("Cancel")) {
-			Application.Quit ();
-		}
-	}
+    void Update () {
+        if (Input.GetButtonDown ("Cancel")) {
+            Application.Quit ();
+        }
+    }
 }

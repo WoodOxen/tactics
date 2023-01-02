@@ -13,7 +13,6 @@ public class GamePauseButton : MonoBehaviour
     public void BacktoMainMenu()
     {
         Time.timeScale = 1;
-        //释放内存
         for (int i = 0; i < 4; i++)
         {
             RecordControllerOutput.steer[i] = null;
@@ -38,7 +37,6 @@ public class GamePauseButton : MonoBehaviour
     {
         Time.timeScale = 1;
         trackNum = PlayerPrefs.GetInt("SavedTrackNum");
-        //释放内存
         for (int i = 0; i < 4; i++)
         {
             RecordControllerOutput.steer[i] = null;

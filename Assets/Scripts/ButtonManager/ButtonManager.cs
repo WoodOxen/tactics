@@ -6,12 +6,12 @@ public class ButtonManager : MonoBehaviour {
 
     private int trackNum;
 
-	public void GameSet(){
+    public void GameSet(){
         LoadButton.LoadNum = 0;
         SceneManager.LoadScene (1);
-	}
+    }
 
-	public void QuickStart(){
+    public void QuickStart(){
         LoadButton.LoadNum = 0;
 
         GameSetting.CarType = new int[5];
@@ -70,16 +70,16 @@ public class ButtonManager : MonoBehaviour {
             SceneManager.LoadScene(5);
     }
 
-	public void MainMenu(){
-		SceneManager.LoadScene (0);
-	}
+    public void MainMenu(){
+        SceneManager.LoadScene (0);
+    }
 
-	public void quit(){
-		Application.Quit ();
-	}
+    public void quit(){
+        Application.Quit ();
+    }
 
-	public void Credits(){
-		SceneManager.LoadScene (4);
-	}
+    public void Credits(){
+        SceneManager.LoadScene (4);
+    }
 
 }

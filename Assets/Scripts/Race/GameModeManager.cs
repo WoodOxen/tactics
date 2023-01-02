@@ -14,8 +14,8 @@ public class GameModeManager : MonoBehaviour {
 
     public GameObject[] ScoreModePanel;
 
-	public GameObject ScoreModeObject;
-	private int ModeSelection;
+    public GameObject ScoreModeObject;
+    private int ModeSelection;
 
     public GameObject LapRequireDisplay;
 
@@ -43,7 +43,7 @@ public class GameModeManager : MonoBehaviour {
         //CurrentScore = 0;
         ModeSelection = GameSetting.RaceMode;
 
-		if (ModeSelection == 2) { //Score Mode
+        if (ModeSelection == 2) { //Score Mode
             //开启部分SocreMode的对象
             ScoreModeObject.SetActive (true);
             if(PlayerNum <= 4)ScoreModePanel[PlayerNum-1].SetActive(true);
@@ -61,7 +61,7 @@ public class GameModeManager : MonoBehaviour {
                 CarMiniMap[i].SetActive(true);
             }
         }
-		else{ // Time Mode
+        else{ // Time Mode
             //开启部分RaceMode的UI
             TimeDisplayUI.SetActive(true);
             TimeModePanel[PlayerNum - 1].SetActive(true);

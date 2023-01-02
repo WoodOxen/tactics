@@ -5,32 +5,32 @@ using TMPro;
 
 public class LapComplete : MonoBehaviour {
 
-	public GameObject LapCompleteTrig;
-	public GameObject HalfLapTrig;
+    public GameObject LapCompleteTrig;
+    public GameObject HalfLapTrig;
 
-	public GameObject MinuteNow;
-	public GameObject SecondNow;
-	public GameObject MilliNow;
+    public GameObject MinuteNow;
+    public GameObject SecondNow;
+    public GameObject MilliNow;
 
-	public GameObject MinuteDisplay;
-	public GameObject SecondDisplay;
-	public GameObject MilliDisplay;
-	//public GameObject LapCountDisplay;
+    public GameObject MinuteDisplay;
+    public GameObject SecondDisplay;
+    public GameObject MilliDisplay;
+    //public GameObject LapCountDisplay;
 
-	public GameObject RaceFinish;
+    public GameObject RaceFinish;
     private int ModeSelection;
 
     public int modeType;
-	public int flag_firstlyEnter;
-	public static int[] LapCount = new int[8] { 0, 0, 0, 0, 0, 0, 0, 0 };
+    public int flag_firstlyEnter;
+    public static int[] LapCount = new int[8] { 0, 0, 0, 0, 0, 0, 0, 0 };
 
     public float rawTime;
 
     public static bool[] LapFlag = new bool[8] { true, true, true, true, true, true, true, true };
 
     void Start () {
-		flag_firstlyEnter = 1;
-		modeType = GameSetting.RaceMode;
+        flag_firstlyEnter = 1;
+        modeType = GameSetting.RaceMode;
         ModeSelection = GameSetting.RaceMode;
         for(int i = 0; i < 4; i++)
         {
@@ -38,11 +38,11 @@ public class LapComplete : MonoBehaviour {
             LapFlag[i] = true;
         }
 }
-		
-	void OnTriggerEnter(Collider collision){
+        
+    void OnTriggerEnter(Collider collision){
         /*if (collision.gameObject.tag == "DreamCar01" || collision.gameObject.tag == "CarPosJudge") {
-			return;
-		}*/
+            return;
+        }*/
         //记录1号车通过终点线的情况
         if (collision.gameObject.tag == "Player" && HalfPointTrigger.HalfFlag[0])
         {
@@ -66,7 +66,7 @@ public class LapComplete : MonoBehaviour {
         //巡线结束条件
         if ((ModeSelection == 2 && LapCount[0] == 1)|| LapCount[0] == 1) {
             RaceFinish.SetActive (true);
-		}
+        }
 
     }
 }

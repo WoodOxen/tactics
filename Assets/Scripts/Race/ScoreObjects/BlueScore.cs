@@ -2,12 +2,12 @@
 using System.Collections;
 
 public class BlueScore : MonoBehaviour {
-	void Update()
-	{
-		this.transform.Rotate(0, 1, 0, Space.Self);
-	}
+    void Update()
+    {
+        this.transform.Rotate(0, 1, 0, Space.Self);
+    }
 
-	void OnTriggerEnter(Collider collision)
+    void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == "Player")//触碰该宝石的是否是1号车辆（tag为“Player”,这个是Unity自带的不能改）
         {

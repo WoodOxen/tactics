@@ -3,10 +3,10 @@ using System.Collections;
 
 public class RedScore : MonoBehaviour {
 
-	void Update()
-	{
-		this.transform.Rotate(0, 1, 0, Space.Self);
-	}
+    void Update()
+    {
+        this.transform.Rotate(0, 1, 0, Space.Self);
+    }
 
     void OnTriggerEnter(Collider collision)
     {

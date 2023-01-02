@@ -16,7 +16,7 @@ public class MonitorSetting : MonoBehaviour
 
     void Start()
     {
-        //读取历史记录
+        //锟斤拷取锟斤拷史锟斤拷录
         if (PlayerPrefs.HasKey("NumofMonitor")) NumofMonitor = PlayerPrefs.GetInt("NumofMonitor");
         else NumofMonitor = 0;
 
@@ -31,7 +31,6 @@ public class MonitorSetting : MonoBehaviour
             else MonitorPerspective[i-1] = 0;
         }
 
-        //默认按照历史记录设置监视器
         DropdowmMonitorNum.GetComponent<TMP_Dropdown>().value = NumofMonitor;
         for (int i = 0; i < 3; i++)
         {
