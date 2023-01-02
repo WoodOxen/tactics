@@ -1,3 +1,14 @@
+/**
+  * @file MonitorManager.cs
+  * @brief 仿真时在屏幕上方添加小窗口显示监视器中的画面
+  * @details  
+  * 挂载该脚本的对象：RaceArea → Canvas → Monitors → MonitorManager \n
+  * 根据MonitorSetting.cs中保存的用户对监视器的设置添加监视器窗口
+  * @author 李雨航
+  * @date 2022-12-31
+  */
+
+
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;

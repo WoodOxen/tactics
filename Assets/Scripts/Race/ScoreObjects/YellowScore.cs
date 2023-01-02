@@ -1,4 +1,15 @@
-﻿using UnityEngine;
+﻿/**
+  * @file YellowScore.cs
+  * @brief 车辆触碰到黄色宝石后加分
+  * @details  
+  * 挂载该脚本的对象：RaceArea → ScoreObjects → YellowScore \n 
+  * 在ScoreMode仿真中，赛道上会有黄色宝石 \n
+  * Update函数功能：宝石会以一定的角速度自转 \n
+  * OnTriggerEnter函数功能：当车辆触碰到黄色宝石后，给该车辆加分
+  * @author 李雨航
+  * @date 2022-12-31
+  */
+using UnityEngine;
 using System.Collections;
 
 public class YellowScore : MonoBehaviour {

@@ -1,3 +1,12 @@
+/**
+  * @file GamePauseButton.cs
+  * @brief 在仿真结束界面中按下不同按钮所执行的函数。
+  * @details 
+  * 挂载该脚本的对象：RaceArea → Canvas → Panel complete → CompletePanelButtonManager \n
+  * @author 李雨航
+  * @date 2023-12-31
+  */
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +18,13 @@ public class CompletePanelButton : MonoBehaviour
     public GameObject SavePanel;
     public GameObject CompletePanel;
 
+    /**
+     * @fn SaveGame
+     * @brief 打开存档窗口，同时关闭结算窗口
+     * @details 需要记录用户是在结算界面呼出的存档窗口 \n
+     * 若用户退出存档界面，则应该再次打开结算窗口
+     * @return None
+     */
     public void SaveGame()
     {
         SavePanel.SetActive(true);
@@ -16,6 +32,12 @@ public class CompletePanelButton : MonoBehaviour
         SaveButton.WhoCalloutSavePanel = 1;
     }
 
+    /**
+     * @fn MainMenu
+     * @brief 返回主菜单
+     * @details 释放本次仿真过程中记录车辆运行指令所耗费的内存，参考RecordControllerOutput.cs
+     * @return None
+     */
     public void MainMenu()
     {
         //释放内存
@@ -28,6 +50,13 @@ public class CompletePanelButton : MonoBehaviour
         }
         SceneManager.LoadScene(0);
     }
+    /**
+     * @fn Retry
+     * @brief 重新仿真
+     * @details 释放本次仿真过程中记录车辆运行指令所耗费的内存，参考RecordControllerOutput.cs \n
+     * 重新载入仿真场景
+     * @return None
+     */
     public void Retry()
     {
         trackNum = PlayerPrefs.GetInt("SavedTrackNum");

@@ -1,3 +1,14 @@
+/**
+  * @file SpeedDisplay.cs
+  * @brief 获取每辆车的行驶速度，并显示在屏幕下方的UI上
+  * @details  
+  * 挂载该脚本的对象：RaceArea → Canvas → UIBottom → SpeedDisplay → SpeedDisplayManager \n
+  * Cpp代码获取速度值是从该脚本中的Speed数组中获取，为保证仿真确定性，速度值刷新采用FixedUpdate函数
+  * @param Speed 储存各车辆的行驶速度，但屏幕下方只显示当前视角跟随的车辆的速度值
+  * @author 李雨航
+  * @date 2023-01-01
+  */
+
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
