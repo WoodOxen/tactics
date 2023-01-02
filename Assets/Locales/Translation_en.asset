@@ -14,28 +14,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LocaleId:
     m_Code: en
-  m_SharedData: {fileID: 11400000, guid: 2dec29422c8565f46bb9443962a115cf, type: 2}
+  m_SharedData: {fileID: 11400000, guid: 6ca3211c6523eb93ba71aa6ad276ebe6, type: 2}
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 140053045248
+  - m_Id: 140679241728
     m_Localized: Quick Start
     m_Metadata:
       m_Items: []
-  - m_Id: 223452585984
-    m_Localized: Mode
+  - m_Id: 352827138048
+    m_Localized: Modes
     m_Metadata:
       m_Items: []
-  - m_Id: 278515408896
+  - m_Id: 453637234688
     m_Localized: Settings
     m_Metadata:
       m_Items: []
-  - m_Id: 360291753984
-    m_Localized: Quit
+  - m_Id: 575590817792
+    m_Localized: Exit
     m_Metadata:
       m_Items: []
-  - m_Id: 485084880896
-    m_Localized: About
+  - m_Id: 24243725328384
+    m_Localized: Credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26890972880896
+    m_Localized: Editors
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28639305588736
+    m_Localized: New Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28762408411136
+    m_Localized: Load Game
     m_Metadata:
       m_Items: []
   references:

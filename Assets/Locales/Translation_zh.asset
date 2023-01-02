@@ -10,32 +10,44 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
-  m_Name: Translation_zh-Hans
+  m_Name: Translation_zh
   m_EditorClassIdentifier: 
   m_LocaleId:
-    m_Code: zh-Hans
-  m_SharedData: {fileID: 11400000, guid: 2dec29422c8565f46bb9443962a115cf, type: 2}
+    m_Code: zh
+  m_SharedData: {fileID: 11400000, guid: 6ca3211c6523eb93ba71aa6ad276ebe6, type: 2}
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 140053045248
+  - m_Id: 140679241728
     m_Localized: "\u5FEB\u901F\u5F00\u59CB"
     m_Metadata:
       m_Items: []
-  - m_Id: 223452585984
+  - m_Id: 352827138048
     m_Localized: "\u6A21\u5F0F\u9009\u62E9"
     m_Metadata:
       m_Items: []
-  - m_Id: 278515408896
+  - m_Id: 453637234688
     m_Localized: "\u6E38\u620F\u8BBE\u7F6E"
     m_Metadata:
       m_Items: []
-  - m_Id: 360291753984
+  - m_Id: 575590817792
     m_Localized: "\u9000\u51FA\u6E38\u620F"
     m_Metadata:
       m_Items: []
-  - m_Id: 485084880896
-    m_Localized: "\u5173\u4E8E\u6211\u4EEC"
+  - m_Id: 24243725328384
+    m_Localized: "\u5236\u4F5C\u4EBA\u5458"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26890972880896
+    m_Localized: "\u7F16\u8F91\u5668"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28639305588736
+    m_Localized: "\u65B0\u6E38\u620F"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28762408411136
+    m_Localized: "\u8BFB\u53D6\u6E38\u620F"
     m_Metadata:
       m_Items: []
   references:

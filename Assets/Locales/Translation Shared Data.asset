@@ -13,40 +13,48 @@ MonoBehaviour:
   m_Name: Translation Shared Data
   m_EditorClassIdentifier: 
   m_TableCollectionName: Translation
-  m_TableCollectionNameGuidString: 2dec29422c8565f46bb9443962a115cf
+  m_TableCollectionNameGuidString: 6ca3211c6523eb93ba71aa6ad276ebe6
   m_Entries:
-  - m_Id: 485084880896
-    m_Key: About
+  - m_Id: 140679241728
+    m_Key: Start
     m_Metadata:
       m_Items: []
-  - m_Id: 223452585984
-    m_Key: Mode
-    m_Metadata:
-      m_Items: []
-  - m_Id: 581138636800
-    m_Key: New Entry
-    m_Metadata:
-      m_Items: []
-  - m_Id: 140053045248
-    m_Key: Quick Start
-    m_Metadata:
-      m_Items: []
-  - m_Id: 360291753984
-    m_Key: Quit
-    m_Metadata:
-      m_Items: []
-  - m_Id: 278515408896
+  - m_Id: 453637234688
     m_Key: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 575590817792
+    m_Key: Exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 352827138048
+    m_Key: Modes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24243725328384
+    m_Key: Credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26890972880896
+    m_Key: Editors
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28639305588736
+    m_Key: NewGame
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28762408411136
+    m_Key: LoadGame
     m_Metadata:
       m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
-    rid: 3188558982975586328
+    rid: 4811036321691729974
   references:
     version: 2
     RefIds:
-    - rid: 3188558982975586328
+    - rid: 4811036321691729974
       type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
       data:
-        m_CustomEpoch: 1671869265463
+        m_CustomEpoch: 1672632150446

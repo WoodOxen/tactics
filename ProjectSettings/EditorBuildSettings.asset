@@ -6,32 +6,32 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scene/Menu/Menu.unity
+    path: Assets/Scene/Menu/MainMenu.unity
     guid: 95212277b6e88c8439fb76b58b217783
   - enabled: 1
-    path: Assets/Scene/Mode/Mode.unity
+    path: Assets/Scene/Menu/NewGame.unity
     guid: a27aaccda7cb890429472636934f94b6
   - enabled: 1
-    path: Assets/Scene/Settings/Settings.unity
-    guid: 882769f1892d6704e9b2909bb589d245
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+    path: Assets/Scene/Menu/LoadGame.unity
+    guid: f2f9e4483277a0ec2819a63d05d01b5c
   - enabled: 1
-    path: Assets/Scene/TrackSelect.unity
+    path: Assets/Scene/Menu/Editors.unity
+    guid: b1d58321269e0c99ebe9edf9db83ff20
+  - enabled: 1
+    path: Assets/Scene/Menu/Settings.unity
+    guid: 882769f1892d6704e9b2909bb589d245
+  - enabled: 1
+    path: Assets/Scene/Credits.unity
+    guid: 8d61b8ca92321a442bcbd01451928d9a
+  - enabled: 1
+    path: Assets/Scene/Menu/RaceMenu.unity
     guid: b3fc11c40900d304fa7a0fbfdc9f5d61
   - enabled: 1
     path: Assets/Scene/RaceArea01.unity
     guid: 11e5ae38d8abcac4a88886a2457fa989
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scene/RaceArea02.unity
     guid: 75afd66b96245c9499463f7ac304484f
-  - enabled: 1
-    path: Assets/Scene/Credit.unity
-    guid: 8d61b8ca92321a442bcbd01451928d9a
   - enabled: 1
     path: Assets/Scene/RaceArea03.unity
     guid: babd29920b137274f98ce607443a7612
