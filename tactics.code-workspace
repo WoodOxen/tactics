@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"name": "tactics",
+			"path": "."
+		},
+		{
+			"name": "Tacktics2D",
+			"path": "../../MyWorkspace/Tacktics2D"
+		},
+		{
+			"name": "tactics-doc",
+			"path": "../tactics-doc"
+		},
+		{
+			"name": "untitled",
+			"path": "../../MyWorkspace/untitled"
+		}
+	],
+	"settings": {}
+}
