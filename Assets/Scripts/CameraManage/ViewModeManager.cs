@@ -4,10 +4,10 @@ using TMPro;
 
 public class ViewModeManager : MonoBehaviour {
     public GameObject[] NormalCam;
-	public GameObject[] FarCam;
-	public GameObject[] FPCam;
+    public GameObject[] FarCam;
+    public GameObject[] FPCam;
     public GameObject[] OverlookCam;
-	public static int ViewMode = 0;//显示模式
+    public static int ViewMode = 0;//显示模式
     public static int CamNum = 0;//相机跟随的车号
     private int CamNum_last = 0;//之前相机跟随的车号
     public static int PlayerNum = 1;
@@ -25,11 +25,11 @@ public class ViewModeManager : MonoBehaviour {
     }
 
     void Update () {
-		if (Input.GetButtonDown ("ViewMode")) {
-			ViewMode += 1;
-			ViewMode = ViewMode % 4;
-			StartCoroutine (ModeChange ());
-		}
+        if (Input.GetButtonDown ("ViewMode")) {
+            ViewMode += 1;
+            ViewMode = ViewMode % 4;
+            StartCoroutine (ModeChange ());
+        }
         if (Input.GetButtonDown("PlayerCamera"))
         {
             CamNum_last = CamNum;
@@ -68,20 +68,20 @@ public class ViewModeManager : MonoBehaviour {
 
 
     IEnumerator ModeChange(){
-		yield return new WaitForSeconds (0.01f);
+        yield return new WaitForSeconds (0.01f);
         
-		if (ViewMode == 0) {
-			NormalCam[CamNum].SetActive (true);
+        if (ViewMode == 0) {
+            NormalCam[CamNum].SetActive (true);
             OverlookCam[CamNum].SetActive(false);
             steerDisplaybox.SetActive(false);
         }
-		if (ViewMode == 1) {
-			FPCam[CamNum].SetActive (true);
+        if (ViewMode == 1) {
+            FPCam[CamNum].SetActive (true);
             NormalCam[CamNum].SetActive(false);
             steerDisplaybox.SetActive(true);
         }
         if (ViewMode == 2) {
-			FarCam[CamNum].SetActive (true);
+            FarCam[CamNum].SetActive (true);
             FPCam[CamNum].SetActive(false);
             steerDisplaybox.SetActive(false);
         }

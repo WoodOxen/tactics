@@ -8,12 +8,12 @@ using TMPro;
 //当巡线结束时，会调用该代码
 public class RaceFinish : MonoBehaviour {
 
-	public GameObject[] PlayerCar;
+    public GameObject[] PlayerCar;
 
-	public GameObject CompleteTrig;
-	public AudioSource FinishBGM;
-	public GameObject DrivingCam;
-	public GameObject levelBGM;
+    public GameObject CompleteTrig;
+    public AudioSource FinishBGM;
+    public GameObject DrivingCam;
+    public GameObject levelBGM;
     public GameObject TimeManager;
 
     public GameObject CompletePanel;
@@ -41,7 +41,7 @@ public class RaceFinish : MonoBehaviour {
         {
             PlayerCar[i].SetActive(false);
         }   
-		CompleteTrig.SetActive (false);
+        CompleteTrig.SetActive (false);
 
         for (int i = 0; i < PlayerNum; i++)
         {
@@ -58,7 +58,7 @@ public class RaceFinish : MonoBehaviour {
         }
 
         //关闭关卡音乐（如果有的话），播放巡线结束的提示音
-		levelBGM.SetActive (false);
+        levelBGM.SetActive (false);
         FinishBGM.Play ();
 
         //巡线完成的UI

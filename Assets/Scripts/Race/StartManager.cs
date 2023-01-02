@@ -6,13 +6,12 @@ using TMPro;
 
 public class StartManager : MonoBehaviour {
 
-	public GameObject CountDown;
-	public AudioSource GetReady;
-	public AudioSource GoAudio;
-	public AudioSource BGM01;
-	public GameObject CarControl;
-	public GameObject LapTimer;
-    
+    public GameObject CountDown;
+    public AudioSource GetReady;
+    public AudioSource GoAudio;
+    public AudioSource BGM01;
+    public GameObject CarControl;
+    public GameObject LapTimer;
     public GameObject ModeManager;
     public GameObject ViewModeManager;
     public GameObject LapCompleteTrigger;
@@ -141,24 +140,24 @@ public class StartManager : MonoBehaviour {
 
     //巡线开始时的倒数321程序，执行完成后调用loadAfter()函数
     IEnumerator CountdownStart(){
-		yield return new WaitForSeconds (0.5f);
-		CountDown.GetComponent<TextMeshProUGUI> ().text = "3";
-		GetReady.Play ();
-		CountDown.SetActive (true);
-		yield return new WaitForSeconds (1);
-		CountDown.SetActive (false);
-		CountDown.GetComponent<TextMeshProUGUI> ().text = "2";
-		GetReady.Play ();
-		CountDown.SetActive (true);
-		yield return new WaitForSeconds (1);
-		CountDown.SetActive (false);
-		CountDown.GetComponent<TextMeshProUGUI> ().text = "1";
-		GetReady.Play ();
-		CountDown.SetActive (true);
-		yield return new WaitForSeconds (1);
-		CountDown.SetActive (false);
-		GoAudio.Play ();
-		//BGM01.Play ();//若需要播放关卡BGM，则取消这行的注释
+        yield return new WaitForSeconds (0.5f);
+        CountDown.GetComponent<TextMeshProUGUI> ().text = "3";
+        GetReady.Play ();
+        CountDown.SetActive (true);
+        yield return new WaitForSeconds (1);
+        CountDown.SetActive (false);
+        CountDown.GetComponent<TextMeshProUGUI> ().text = "2";
+        GetReady.Play ();
+        CountDown.SetActive (true);
+        yield return new WaitForSeconds (1);
+        CountDown.SetActive (false);
+        CountDown.GetComponent<TextMeshProUGUI> ().text = "1";
+        GetReady.Play ();
+        CountDown.SetActive (true);
+        yield return new WaitForSeconds (1);
+        CountDown.SetActive (false);
+        GoAudio.Play ();
+        //BGM01.Play ();//若需要播放关卡BGM，则取消这行的注释
 
         //开启Speed、Steer、CruiseError的显示
         SpeedDisplayManager.SetActive(true);
@@ -169,5 +168,5 @@ public class StartManager : MonoBehaviour {
         CarControl.SetActive(true);
 
         //loadAfter();
-	}
+    }
 }

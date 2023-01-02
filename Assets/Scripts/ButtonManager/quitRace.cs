@@ -10,7 +10,7 @@ public class quitRace : MonoBehaviour {
     //public GameObject FPCam;
     //private int CamMode;
     void Update () {
-		if (Input.GetButtonDown ("Cancel")) {
+        if (Input.GetButtonDown ("Cancel")) {
             pausePanel.SetActive(true);
             Time.timeScale = 0;
         }

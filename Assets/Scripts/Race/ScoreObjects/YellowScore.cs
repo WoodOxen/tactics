@@ -4,10 +4,10 @@ using System.Collections;
 public class YellowScore : MonoBehaviour {
 
 
-	void Update()
+    void Update()
     {
-		this.transform.Rotate(0,1,0,Space.Self);
-	}
+        this.transform.Rotate(0,1,0,Space.Self);
+    }
 
     void OnTriggerEnter(Collider collision)
     {
