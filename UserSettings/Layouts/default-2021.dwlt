@@ -1432,7 +1432,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scene
+    - Assets/Scene/Menu
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
