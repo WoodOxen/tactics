@@ -47,6 +47,18 @@ MonoBehaviour:
     m_Key: LoadGame
     m_Metadata:
       m_Items: []
+  - m_Id: 486419917365248
+    m_Key: Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 486484195074048
+    m_Key: No
+    m_Metadata:
+      m_Items: []
+  - m_Id: 491908239646720
+    m_Key: OK
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
