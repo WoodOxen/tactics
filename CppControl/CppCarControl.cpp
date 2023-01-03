@@ -17,7 +17,7 @@ float handbrake[8] = { 0,0,0,0,0,0,0,0 };
 
 int PlayerNum;
 
-//Tactic在Race开始时会调用InitializeCppControl()函数，可以自此处做一些Cpp代码的初始化工作
+//Tactic在Race开始时会调用InitializeCppControl()函数，可以在此处做一些Cpp代码的初始化工作
 DLLForUnity_API void __stdcall InitializeCppControl() {
     PlayerNum = TacticAPI::PlayerNum();
     for (int i = 0; i < 8; i++) {
@@ -35,9 +35,14 @@ DLLForUnity_API void __stdcall InitializeCppControl() {
 //接口定义见CppCarControl.h文件
 DLLForUnity_API void __stdcall CarControlCpp()
 {
-    for (int i = 0; i < 8; i++) {
-        CarControli(i);
-    }
+    CarControli(0);
+    CarControli(1);
+    CarControli(2);
+    CarControli(3);
+    CarControli(4);
+    CarControli(5);
+    CarControli(6);
+    CarControli(7);
 }
 
 void CarControli(int i) {

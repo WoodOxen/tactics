@@ -3,9 +3,14 @@ using System.Collections;
 
 public class HalfPointTrigger : MonoBehaviour {
 
-    public GameObject LapCompleteTrig;
-    public GameObject HalfLapTrig;
-    public static bool[] HalfFlag = new bool[4] { false , false, false, false};
+	public GameObject LapCompleteTrig;
+	public GameObject HalfLapTrig;
+    public static bool[] HalfFlag = new bool[8] { false , false, false, false, false, false, false, false };
+
+    void Start()
+    {
+        HalfFlag = new bool[8] { false, false, false, false, false, false, false, false };
+    }
 
     void OnTriggerEnter(Collider collision)
     {

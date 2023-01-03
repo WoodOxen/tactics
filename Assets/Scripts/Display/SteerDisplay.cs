@@ -1,3 +1,15 @@
+/**
+  * @file SteerDisplay.cs
+  * @brief 获取每辆车的方向盘转角，并显示在屏幕下方的UI上
+  * @details  
+  * 挂载该脚本的对象：RaceArea → Canvas → UIBottom → SteerDisplay → SteerDisplayManager \n
+  * 在第一人称视角模式下，除了显示方向盘转角数值，还会显示方向盘的贴图。\n
+  * 和SpeedDisplay.cs不同（有一个Speed数组，分别储存每辆车的速度），只有一个steer参数储存当前视角所跟随车辆的方向盘转角。
+  * @param steer 当前视角所跟随车辆的方向盘转角
+  * @author 李雨航
+  * @date 2023-01-01
+  */
+
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
