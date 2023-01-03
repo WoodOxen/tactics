@@ -1,4 +1,25 @@
-﻿using UnityEngine;
+﻿/**
+  * @file ButtonManager.cs
+  * @brief MainMenu场景和Credit场景中按下不同按钮所执行的函数
+  * @details  
+  * 挂载该脚本的对象：MainMenu → Canvas → ButtonManager，Credit → ButtonManager \n
+  * - MainMenu场景中：  
+  *  - Start按钮：QuickStart()，沿用用户上次的设置（如果没有则用默认值）快速进行一次仿真；用户上次的设置通过PlayerPrefs类储存
+  *  - GameSettings按钮：GameSet()，进入TrackSelect场景
+  *  - Credits按钮：Credits()，进入Credit场景
+  *  - Quit按钮：quit()，退出游戏
+  *  - 主菜单中LoadGame按钮功能未在此文件中实现
+  *  .
+  * - Credit场景中:
+  *  - MainMenu按钮：MainMenu()，回到主菜单。
+  *  .
+  * .
+  * @author 李雨航
+  * @date 2022-12-31
+  */
+
+
+using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
@@ -6,16 +27,21 @@ public class ButtonManager : MonoBehaviour {
 
     private int trackNum;
 
+    /**
+     * @fn GameSet
+     * @brief 转到TrackSelect场景
+     * @return None
+     */
     public void GameSet(){
         LoadButton.LoadNum = 0;
         SceneManager.LoadScene (1);
     }
 
-    public void QuickStart(){
+	public void QuickStart(){
         LoadButton.LoadNum = 0;
 
-        GameSetting.CarType = new int[5];
-        GameSetting.ControlMethod = new int[5];
+        GameSetting.CarType = new int[8];
+        GameSetting.ControlMethod = new int[8];
 
         if (PlayerPrefs.HasKey("NumofPlayer")) GameSetting.NumofPlayer = PlayerPrefs.GetInt("NumofPlayer");
         else GameSetting.NumofPlayer = 1;
@@ -70,16 +96,16 @@ public class ButtonManager : MonoBehaviour {
             SceneManager.LoadScene(5);
     }
 
-    public void MainMenu(){
-        SceneManager.LoadScene (0);
-    }
+	public void MainMenu(){
+		SceneManager.LoadScene (0);
+	}
 
-    public void quit(){
-        Application.Quit ();
-    }
+	public void quit(){
+		Application.Quit ();
+	}
 
-    public void Credits(){
-        SceneManager.LoadScene (4);
-    }
+	public void Credits(){
+		SceneManager.LoadScene (4);
+	}
 
 }

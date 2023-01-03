@@ -1,3 +1,18 @@
+/**
+  * @file CarControlKeyBoard.cs
+  * @brief 实现车辆的键盘控制
+  * @details  
+  * 挂载该脚本的对象：RaceArea → Car \n
+  * 该代码是根据Unity自带的代码CarUserControl.cs修改的。
+  * @param CarNum表示该脚本控制的是几号车辆。若脚本为一号车辆的组件，则将该值设为0；若脚本为二号车辆的组件，则将该值设为1……以此类推。
+  * @param h 各个车辆水平方向的输入(方向盘转角）
+  * @param v 各个车辆垂直方向的输入(油门和脚刹）
+  * @param handbrake 各个车辆输入的手刹值
+  * @author 李雨航
+  * @date 2023-01-01
+  */
+
+
 using System;
 using UnityEngine;
 using System.Collections;
