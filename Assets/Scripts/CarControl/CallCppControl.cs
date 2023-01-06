@@ -1,18 +1,18 @@
-/**
+ï»¿/**
   * @file CallCppControl.cs
-  * @brief µ÷ÓÃÍâ²¿cpp´úÂë£¬¿ØÖÆ³µÁ¾ÔËĞĞ
+  * @brief è°ƒç”¨å¤–éƒ¨cppä»£ç ï¼Œæ§åˆ¶è½¦è¾†è¿è¡Œ
   * @details  
-  * ¹ÒÔØ¸Ã½Å±¾µÄ¶ÔÏó£ºRaceArea ¡ú CppControl \n
-  * Îª±£Ö¤·ÂÕæÈ·¶¨ĞÔ£¬²»Ê¹ÓÃUpdate()º¯Êı¶øÊ¹ÓÃFixedUpdate()º¯Êı¡£\n
-  * ·ÂÕæ¿ªÊ¼Ê±£¬ÔÚStart()ÄÚ»áµ÷ÓÃCppControl.InitializeCppControl()£¬½øĞĞ·ÂÕæ³õÊ¼»¯¡£\n
-  * Ã¿´ÎÔÚFixedUpdate()ÖĞµ÷ÓÃCppControl.CarControlCpp()º¯Êı¡£\n
-  * InitializeCppControl()º¯ÊıºÍCarControlCpp()º¯Êı¶¨ÒåÔÚCppControl.cs½Å±¾ÖĞ£¬µ«Êµ¼ÊÄÚÈİÔÚÍâ²¿cpp´úÂëÖĞÊµÏÖ¡£\n
-  * ÓÃ»§ÔÚCarControlCpp()ÖĞ±àĞ´´úÂë½øĞĞÔËËã£¬½«ÔËËãµÃµ½µÄ¿ØÖÆ²ÎÊı£¨¼´steering¡¢accel¡¢footbrake¡¢handbrake£©Í¨¹ıCarMoveº¯Êı´«µİµ½CppControl.cs½Å±¾ÖĞµÄsteering[]¡¢accel[]¡¢footbrake[]¡¢handbrake[]Êı×éÖĞ£¬ÔÙÔÚCppControl.cs½Å±¾ÖĞÊ¹ÓÃCarController.Moveº¯Êı¿ØÖÆ³µÁ¾ÔËĞĞ¡£
-  * @param steering ¸÷¸ö³µÁ¾ÊäÈëµÄ·½ÏòÅÌ×ª½Ç
-  * @param accel ¸÷¸ö³µÁ¾ÊäÈëµÄÓÍÃÅÖµ
-  * @param footbrake ¸÷¸ö³µÁ¾ÊäÈëµÄ½ÅÉ²Öµ
-  * @param handbrake ¸÷¸ö³µÁ¾ÊäÈëµÄÊÖÉ²Öµ
-  * @author ÀîÓêº½
+  * æŒ‚è½½è¯¥è„šæœ¬çš„å¯¹è±¡ï¼šRaceArea â†’ CppControl \n
+  * ä¸ºä¿è¯ä»¿çœŸç¡®å®šæ€§ï¼Œä¸ä½¿ç”¨Update()å‡½æ•°è€Œä½¿ç”¨FixedUpdate()å‡½æ•°ã€‚\n
+  * ä»¿çœŸå¼€å§‹æ—¶ï¼Œåœ¨Start()å†…ä¼šè°ƒç”¨CppControl.InitializeCppControl()ï¼Œè¿›è¡Œä»¿çœŸåˆå§‹åŒ–ã€‚\n
+  * æ¯æ¬¡åœ¨FixedUpdate()ä¸­è°ƒç”¨CppControl.CarControlCpp()å‡½æ•°ã€‚\n
+  * InitializeCppControl()å‡½æ•°å’ŒCarControlCpp()å‡½æ•°å®šä¹‰åœ¨CppControl.csè„šæœ¬ä¸­ï¼Œä½†å®é™…å†…å®¹åœ¨å¤–éƒ¨cppä»£ç ä¸­å®ç°ã€‚\n
+  * ç”¨æˆ·åœ¨CarControlCpp()ä¸­ç¼–å†™ä»£ç è¿›è¡Œè¿ç®—ï¼Œå°†è¿ç®—å¾—åˆ°çš„æ§åˆ¶å‚æ•°ï¼ˆå³steeringã€accelã€footbrakeã€handbrakeï¼‰é€šè¿‡CarMoveå‡½æ•°ä¼ é€’åˆ°CppControl.csè„šæœ¬ä¸­çš„steering[]ã€accel[]ã€footbrake[]ã€handbrake[]æ•°ç»„ä¸­ï¼Œå†åœ¨CppControl.csè„šæœ¬ä¸­ä½¿ç”¨CarController.Moveå‡½æ•°æ§åˆ¶è½¦è¾†è¿è¡Œã€‚
+  * @param steering å„ä¸ªè½¦è¾†è¾“å…¥çš„æ–¹å‘ç›˜è½¬è§’
+  * @param accel å„ä¸ªè½¦è¾†è¾“å…¥çš„æ²¹é—¨å€¼
+  * @param footbrake å„ä¸ªè½¦è¾†è¾“å…¥çš„è„šåˆ¹å€¼
+  * @param handbrake å„ä¸ªè½¦è¾†è¾“å…¥çš„æ‰‹åˆ¹å€¼
+  * @author æé›¨èˆª
   * @date 2022-12-31
   */
 
@@ -24,10 +24,15 @@ using UnityStandardAssets.Vehicles.Car;
 
 public class CallCppControl : MonoBehaviour
 {
+    /// å„è½¦è¾†
     public GameObject[] TheCar;
+    /// è¾“å…¥ç»™å„è½¦è¾†çš„steer
     public static float[] steering = new float[8] { 0, 0, 0, 0 ,0, 0, 0, 0 };
+    /// è¾“å…¥ç»™å„è½¦è¾†çš„accel
     public static float[] accel = new float[8] { 0, 0, 0, 0 ,0, 0, 0, 0 };
+    /// è¾“å…¥ç»™å„è½¦è¾†çš„footbrake
     public static float[] footbrake = new float[8] { 0, 0, 0, 0, 0, 0, 0, 0 };
+    /// è¾“å…¥ç»™å„è½¦è¾†çš„handbrake
     public static float[] handbrake = new float[8] { 0, 0, 0, 0, 0, 0, 0, 0 };
 
     private int playNum;

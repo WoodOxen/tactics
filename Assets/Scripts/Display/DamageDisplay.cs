@@ -1,12 +1,12 @@
-/**
+ï»¿/**
   * @file DamageDisplay.cs
-  * @brief ·ÂÕæ¹ı³ÌÖĞÔÚ´°¿Ú×óÉÏ½ÇÏÔÊ¾¸÷³µÁ¾µÄËğÉË³Ì¶È¡£
+  * @brief ä»¿çœŸè¿‡ç¨‹ä¸­åœ¨çª—å£å·¦ä¸Šè§’æ˜¾ç¤ºå„è½¦è¾†çš„æŸä¼¤ç¨‹åº¦ã€‚
   * @details  
-  * ¹ÒÔØ¸Ã½Å±¾µÄ¶ÔÏó£ºRaceArea ¡ú Canvas ¡ú UILeft ¡ú ¡­¡­DamageDisplay ¡ú DamageDisplayManager
-  * @param ExtentOfDamage ¸÷³µÁ¾µÄËğÉË³Ì¶È
-  * @param CollisionNum ¸÷³µÁ¾µÄÅö×²´ÎÊı¡£
-  * @param CarNum ¸Ã½Å±¾ÒªÏÔÊ¾¼¸ºÅ³µÁ¾µÄËğÉËÖµ¡£Èô½Å±¾ÊÇÏÔÊ¾Ò»ºÅ³µÁ¾ËğÉË³Ì¶ÈµÄUIµÄ×é¼ş£¬¸ÃÖµÔòÉèÎª0£»Èô½Å±¾ÊÇÏÔÊ¾¶şºÅ³µÁ¾ËğÉË³Ì¶ÈµÄUIµÄ×é¼ş£¬¸ÃÖµÔòÉèÎª1¡­¡­ÒÔ´ËÀàÍÆ¡£
-  * @author ÀîÓêº½
+  * æŒ‚è½½è¯¥è„šæœ¬çš„å¯¹è±¡ï¼šRaceArea â†’ Canvas â†’ UILeft â†’ â€¦â€¦DamageDisplay â†’ DamageDisplayManager
+  * @param ExtentOfDamage å„è½¦è¾†çš„æŸä¼¤ç¨‹åº¦
+  * @param CollisionNum å„è½¦è¾†çš„ç¢°æ’æ¬¡æ•°ã€‚
+  * @param CarNum è¯¥è„šæœ¬è¦æ˜¾ç¤ºå‡ å·è½¦è¾†çš„æŸä¼¤å€¼ã€‚è‹¥è„šæœ¬æ˜¯æ˜¾ç¤ºä¸€å·è½¦è¾†æŸä¼¤ç¨‹åº¦çš„UIçš„ç»„ä»¶ï¼Œè¯¥å€¼åˆ™è®¾ä¸º0ï¼›è‹¥è„šæœ¬æ˜¯æ˜¾ç¤ºäºŒå·è½¦è¾†æŸä¼¤ç¨‹åº¦çš„UIçš„ç»„ä»¶ï¼Œè¯¥å€¼åˆ™è®¾ä¸º1â€¦â€¦ä»¥æ­¤ç±»æ¨ã€‚
+  * @author æé›¨èˆª
   * @date 2023-01-01
   */
 
@@ -19,8 +19,11 @@ using UnityEngine.UI;
 public class DamageDisplay : MonoBehaviour
 {
     [SerializeField] public int CarNum;
+    /// damageæ˜¾ç¤ºUI
     public GameObject damageDisplay;
+    /// å„ä¸ªè½¦è¾†çš„æŸä¼¤ç¨‹åº¦
     static public float[] ExtentOfDamage = new float[8] { 0, 0, 0, 0, 0, 0, 0, 0 };
+    /// å„ä¸ªè½¦è¾†çš„ç¢°æ’æ¬¡æ•°
     static public int[] CollisionNum = new int[8] { 0, 0, 0, 0, 0, 0, 0, 0 };
     void Update()
     {

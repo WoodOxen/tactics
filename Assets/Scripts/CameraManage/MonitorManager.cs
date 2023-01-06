@@ -1,10 +1,10 @@
-/**
+ï»¿/**
   * @file MonitorManager.cs
-  * @brief ·ÂÕæÊ±ÔÚÆÁÄ»ÉÏ·½Ìí¼ÓĞ¡´°¿ÚÏÔÊ¾¼àÊÓÆ÷ÖĞµÄ»­Ãæ
+  * @brief ä»¿çœŸæ—¶åœ¨å±å¹•ä¸Šæ–¹æ·»åŠ å°çª—å£æ˜¾ç¤ºç›‘è§†å™¨ä¸­çš„ç”»é¢
   * @details  
-  * ¹ÒÔØ¸Ã½Å±¾µÄ¶ÔÏó£ºRaceArea ¡ú Canvas ¡ú Monitors ¡ú MonitorManager \n
-  * ¸ù¾İMonitorSetting.csÖĞ±£´æµÄÓÃ»§¶Ô¼àÊÓÆ÷µÄÉèÖÃÌí¼Ó¼àÊÓÆ÷´°¿Ú
-  * @author ÀîÓêº½
+  * æŒ‚è½½è¯¥è„šæœ¬çš„å¯¹è±¡ï¼šRaceArea â†’ Canvas â†’ Monitors â†’ MonitorManager \n
+  * æ ¹æ®MonitorSetting.csä¸­ä¿å­˜çš„ç”¨æˆ·å¯¹ç›‘è§†å™¨çš„è®¾ç½®æ·»åŠ ç›‘è§†å™¨çª—å£
+  * @author æé›¨èˆª
   * @date 2022-12-31
   */
 
@@ -17,17 +17,21 @@ using UnityEngine.UI;
 
 public class MonitorManager : MonoBehaviour
 {
-    //¼àÊÓÆ÷UI
+    /// ç›‘è§†å™¨çª—å£UI
     public GameObject[] MonitorPanel;
+    /// ç›‘è§†å™¨å›¾è±¡
     public GameObject[] MonitorImage;
+    /// ç›‘è§†å™¨æ–‡å­—UI
     public GameObject[] MonitorDisplay;
 
-    //¼àÊÓÆ÷ÉãÏñÍ·
+    /// ç›‘è§†å™¨æ‘„åƒå¤´(ä¸»è§†è§’)
     public GameObject[] Cam_MainView;
+    /// ç›‘è§†å™¨æ‘„åƒå¤´(ä¿¯è§†è§’)
     public GameObject[] Cam_LookDown;
 
-    //¼àÊÓÆ÷Í¼Ïó
+    /// ä¸»è§†è§’çš„ç›‘è§†å›¾è±¡
     public Material[] Mat_MainView;
+    /// ä¿¯è§†è§’çš„ç›‘è§†å›¾è±¡
     public Material[] Mat_LookDown;
 
     private int NumofMonitor = 0;
@@ -44,7 +48,7 @@ public class MonitorManager : MonoBehaviour
             MonitorDisplay[i].GetComponent<TextMeshProUGUI>().text = "P" + (MonitorObject[i] + 1).ToString();
         }
 
-        //ÒÀ¾İÓÃ»§ÉèÖÃµÄ¼àÊÓÆ÷ÊıÁ¿£¬¼¤»î¼àÊÓÆ÷UIºÍ¼àÊÓÉãÏñÍ·
+        //ä¾æ®ç”¨æˆ·è®¾ç½®çš„ç›‘è§†å™¨æ•°é‡ï¼Œæ¿€æ´»ç›‘è§†å™¨UIå’Œç›‘è§†æ‘„åƒå¤´
         for (int i = 0; i < NumofMonitor; i++)
         {
             SetActiveMonitor(i);

@@ -1,10 +1,10 @@
-/**
+ï»¿/**
   * @file MainMenuLoadButton.cs
-  * @brief Ö÷²Ëµ¥³¡¾°ÖĞ´æµµ´°¿ÚµÄ´ò¿ªºÍ¹Ø±Õ
+  * @brief ä¸»èœå•åœºæ™¯ä¸­å­˜æ¡£çª—å£çš„æ‰“å¼€å’Œå…³é—­
   * @details 
-  * ¹ÒÔØ¸Ã½Å±¾µÄ¶ÔÏó£ºMainMenu ¡ú Canvas ¡ú ButtonManager \n 
-  * Ö÷²Ëµ¥³¡¾°ÖĞ°´ÏÂLoad Game°´Å¥ºó£¬ºô³ö´æµµ´°¿Ú£»ÔÚ´æµµ´°¿Ú°´ÏÂBack°´Å¥ºó£¬¹Ø±Õ´æµµ´°¿Ú¡£
-  * @author ÀîÓêº½
+  * æŒ‚è½½è¯¥è„šæœ¬çš„å¯¹è±¡ï¼šMainMenu â†’ Canvas â†’ ButtonManager \n 
+  * ä¸»èœå•åœºæ™¯ä¸­æŒ‰ä¸‹Load GameæŒ‰é’®åï¼Œå‘¼å‡ºå­˜æ¡£çª—å£ï¼›åœ¨å­˜æ¡£çª—å£æŒ‰ä¸‹BackæŒ‰é’®åï¼Œå…³é—­å­˜æ¡£çª—å£ã€‚
+  * @author æé›¨èˆª
   * @date 2023-12-31
   */
 
@@ -14,11 +14,13 @@ using UnityEngine;
 
 public class MainMenuLoadButton : MonoBehaviour
 {
+    /// è¯»æ¡£çª—å£ 
     public GameObject loadPanel;
+    /// ä¸»èœå•é€‰é¡¹ 
     public GameObject mainMenu;
     /**
      * @fn MainloadGame
-     * @brief ´ò¿ª´æµµ´°¿Ú£¬¹Ø±ÕÖ÷²Ëµ¥Ñ¡Ïî
+     * @brief æ‰“å¼€å­˜æ¡£çª—å£ï¼Œå…³é—­ä¸»èœå•é€‰é¡¹
      */
     public void MainloadGame()
     {
@@ -27,7 +29,7 @@ public class MainMenuLoadButton : MonoBehaviour
     }
     /**
      * @fn Back
-     * @brief ¹Ø±Õ´æµµ´°¿Ú£¬´ò¿ªÖ÷²Ëµ¥Ñ¡Ïî
+     * @brief å…³é—­å­˜æ¡£çª—å£ï¼Œæ‰“å¼€ä¸»èœå•é€‰é¡¹
      */
     public void Back()
     {

@@ -24,17 +24,25 @@ using UnityEngine.SceneManagement;
 using TMPro;
 
 public class GameSetting : MonoBehaviour {
+    /// 车辆颜色1=red,2=blue,3=yellow,4=green 
+    public static int[] CarType;
+    /// 巡线模式1=time,2=score 
+    public static int RaceMode;
+    /// 赛道编号 
+    public static int trackNum;
+    /// 各车辆的控制方式 
+    public static int []ControlMethod;
+    /// 参与仿真的车辆数目 
+    public static int NumofPlayer;
+    
+    /// 用户想要设置几号车辆的颜色 
+    public static int PlayerNumofCarSelect;
+    /// 用户想要设置几号车辆的控制方式 
+    public static int PlayerNumofControlMethod;
 
-	public static int[] CarType;//车辆颜色1=red,2=blue,3=yellow,4=green
-    public static int RaceMode;//巡线模式1=time,2=score
-    public static int trackNum;//赛道编号
-    public static int []ControlMethod;//各车辆的控制方式
-    public static int NumofPlayer;//参与仿真的车辆数目
-
-    public static int PlayerNumofCarSelect;//用户想要设置几号车辆的颜色
-    public static int PlayerNumofControlMethod;//用户想要设置几号车辆的控制方式
-
+    /// 提示用户对CarColor的设置不合理的文字信息UI 
     public GameObject Warning_CS;
+    /// 提示用户对ControlMethod的设置不合理的文字信息UI 
     public GameObject Warning_CM;
 
 
@@ -149,7 +157,7 @@ public class GameSetting : MonoBehaviour {
         Debug.Log(PlayerNumofCarSelect.ToString() + ":1");
         CarType[PlayerNumofCarSelect] = 1;
         PlayerPrefs.SetInt("SavedCarType"+PlayerNumofCarSelect.ToString(), 1);
-	}
+    }
     /**
      * @fn BlueCar
      * @brief 设置车辆颜色为蓝色
@@ -210,17 +218,17 @@ public class GameSetting : MonoBehaviour {
      * @brief 设置仿真模式为竞速模式
      */
     public void TimeMode(){
-		RaceMode = 1;
+        RaceMode = 1;
         PlayerPrefs.SetInt("SavedRaceMode", RaceMode);
-	}
+    }
     /**
      * @fn ScoreMode
      * @brief 设置仿真模式为得分模式
      */
     public void ScoreMode(){
-		RaceMode = 2;
+        RaceMode = 2;
         PlayerPrefs.SetInt("SavedRaceMode", RaceMode);
-	}
+    }
 
     //Number of Players
     //记录用户的历史选择到"NumofPlayer"

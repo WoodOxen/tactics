@@ -1,12 +1,12 @@
-/**
+ï»¿/**
   * @file SteerDisplay.cs
-  * @brief »ñÈ¡Ã¿Á¾³µµÄ·½ÏòÅÌ×ª½Ç£¬²¢ÏÔÊ¾ÔÚÆÁÄ»ÏÂ·½µÄUIÉÏ
+  * @brief è·å–æ¯è¾†è½¦çš„æ–¹å‘ç›˜è½¬è§’ï¼Œå¹¶æ˜¾ç¤ºåœ¨å±å¹•ä¸‹æ–¹çš„UIä¸Š
   * @details  
-  * ¹ÒÔØ¸Ã½Å±¾µÄ¶ÔÏó£ºRaceArea ¡ú Canvas ¡ú UIBottom ¡ú SteerDisplay ¡ú SteerDisplayManager \n
-  * ÔÚµÚÒ»ÈË³ÆÊÓ½ÇÄ£Ê½ÏÂ£¬³ıÁËÏÔÊ¾·½ÏòÅÌ×ª½ÇÊıÖµ£¬»¹»áÏÔÊ¾·½ÏòÅÌµÄÌùÍ¼¡£\n
-  * ºÍSpeedDisplay.cs²»Í¬£¨ÓĞÒ»¸öSpeedÊı×é£¬·Ö±ğ´¢´æÃ¿Á¾³µµÄËÙ¶È£©£¬Ö»ÓĞÒ»¸östeer²ÎÊı´¢´æµ±Ç°ÊÓ½ÇËù¸úËæ³µÁ¾µÄ·½ÏòÅÌ×ª½Ç¡£
-  * @param steer µ±Ç°ÊÓ½ÇËù¸úËæ³µÁ¾µÄ·½ÏòÅÌ×ª½Ç
-  * @author ÀîÓêº½
+  * æŒ‚è½½è¯¥è„šæœ¬çš„å¯¹è±¡ï¼šRaceArea â†’ Canvas â†’ UIBottom â†’ SteerDisplay â†’ SteerDisplayManager \n
+  * åœ¨ç¬¬ä¸€äººç§°è§†è§’æ¨¡å¼ä¸‹ï¼Œé™¤äº†æ˜¾ç¤ºæ–¹å‘ç›˜è½¬è§’æ•°å€¼ï¼Œè¿˜ä¼šæ˜¾ç¤ºæ–¹å‘ç›˜çš„è´´å›¾ã€‚\n
+  * å’ŒSpeedDisplay.csä¸åŒï¼ˆæœ‰ä¸€ä¸ªSpeedæ•°ç»„ï¼Œåˆ†åˆ«å‚¨å­˜æ¯è¾†è½¦çš„é€Ÿåº¦ï¼‰ï¼Œåªæœ‰ä¸€ä¸ªsteerå‚æ•°å‚¨å­˜å½“å‰è§†è§’æ‰€è·Ÿéšè½¦è¾†çš„æ–¹å‘ç›˜è½¬è§’ã€‚
+  * @param steer å½“å‰è§†è§’æ‰€è·Ÿéšè½¦è¾†çš„æ–¹å‘ç›˜è½¬è§’
+  * @author æé›¨èˆª
   * @date 2023-01-01
   */
 
@@ -19,15 +19,16 @@ using UnityStandardAssets.Vehicles.Car;
 public class SteerDisplay : MonoBehaviour
 {
     private float Steer;
-    
+    /// æ–¹å‘ç›˜UI
     public GameObject SteerWheel;
+    /// æ˜¾ç¤ºæ–¹å‘ç›˜è½¬è§’UI
     public GameObject steerDisplaybox;
 
     private int PlayerNum;
 
     void FixedUpdate()
     {
-        PlayerNum = ViewModeManager.CamNum;//µ±Ç°ÊÓ½Ç¸úËæµÄ³µÁ¾±àºÅ
+        PlayerNum = ViewModeManager.CamNum;//å½“å‰è§†è§’è·Ÿéšçš„è½¦è¾†ç¼–å·
         if(GameSetting.ControlMethod[PlayerNum] == 1)//Keyboard
         {
             Steer = CarControlKeyBoard.h[PlayerNum];

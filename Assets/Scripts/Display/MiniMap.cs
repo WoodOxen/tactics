@@ -1,13 +1,13 @@
-/**
+ï»¿/**
   * @file MiniMap.cs
-  * @brief ¿ØÖÆĞ¡µØÍ¼µÄ³µÁ¾±êÊ¶Î»ÖÃºÍ·½Ïò
+  * @brief æ§åˆ¶å°åœ°å›¾çš„è½¦è¾†æ ‡è¯†ä½ç½®å’Œæ–¹å‘
   * @details  
-  * ¹ÒÔØ¸Ã½Å±¾µÄ¶ÔÏó£ºRaceArea ¡ú Canvas ¡ú UIRight ¡ú MiniMap ¡ú MarkPlayerCar \n
-  * @param CarNum ¸Ã½Å±¾¿ØÖÆµÄÊÇ¼¸ºÅ³µµÄĞ¡µØÍ¼±êÖ¾
-  * @param CarPosition ¼ÇÂ¼¸÷¸ö³µÁ¾µÄÎ»ÖÃ
-  * @param MarkX µÚCarNumºÅ³µÁ¾µÄĞ¡µØÍ¼±êÖ¾µÄX×ø±ê£¬¸ù¾İÎ»ÖÃ¹ØÏµµÈ±ÈÀıËõ·ÅµÃµ½
-  * @param MarkY µÚCarNumºÅ³µÁ¾µÄĞ¡µØÍ¼±êÖ¾µÄY×ø±ê£¬¸ù¾İÎ»ÖÃ¹ØÏµµÈ±ÈÀıËõ·ÅµÃµ½
-  * @author ÀîÓêº½
+  * æŒ‚è½½è¯¥è„šæœ¬çš„å¯¹è±¡ï¼šRaceArea â†’ Canvas â†’ UIRight â†’ MiniMap â†’ MarkPlayerCar \n
+  * @param CarNum è¯¥è„šæœ¬æ§åˆ¶çš„æ˜¯å‡ å·è½¦çš„å°åœ°å›¾æ ‡å¿—
+  * @param CarPosition è®°å½•å„ä¸ªè½¦è¾†çš„ä½ç½®
+  * @param MarkX ç¬¬CarNumå·è½¦è¾†çš„å°åœ°å›¾æ ‡å¿—çš„Xåæ ‡ï¼Œæ ¹æ®ä½ç½®å…³ç³»ç­‰æ¯”ä¾‹ç¼©æ”¾å¾—åˆ°
+  * @param MarkY ç¬¬CarNumå·è½¦è¾†çš„å°åœ°å›¾æ ‡å¿—çš„Yåæ ‡ï¼Œæ ¹æ®ä½ç½®å…³ç³»ç­‰æ¯”ä¾‹ç¼©æ”¾å¾—åˆ°
+  * @author æé›¨èˆª
   * @date 2023-01-01
   */
 
@@ -17,10 +17,13 @@ using UnityEngine;
 
 public class MiniMap : MonoBehaviour
 {
+    /// ç¬¬CarNumå·è½¦è¾†
     public GameObject TheCar;
+    /// å„ä¸ªè½¦è¾†çš„ä½ç½®
     public static Vector3[] CarPosition = new Vector3[4];
     private float MarkX;
     private float MarkY;
+    /// è¯¥è„šæœ¬æ§åˆ¶çš„æ˜¯å‡ å·è½¦çš„å°åœ°å›¾æ ‡å¿—
     [SerializeField] public int CarNum;
     void Update()
     {

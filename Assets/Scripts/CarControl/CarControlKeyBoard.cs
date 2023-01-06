@@ -1,14 +1,14 @@
-/**
+ï»¿/**
   * @file CarControlKeyBoard.cs
-  * @brief ÊµÏÖ³µÁ¾µÄ¼üÅÌ¿ØÖÆ
+  * @brief å®ç°è½¦è¾†çš„é”®ç›˜æ§åˆ¶
   * @details  
-  * ¹ÒÔØ¸Ã½Å±¾µÄ¶ÔÏó£ºRaceArea ¡ú Car \n
-  * ¸Ã´úÂëÊÇ¸ù¾İUnity×Ô´øµÄ´úÂëCarUserControl.csĞŞ¸ÄµÄ¡£
-  * @param CarNum±íÊ¾¸Ã½Å±¾¿ØÖÆµÄÊÇ¼¸ºÅ³µÁ¾¡£Èô½Å±¾ÎªÒ»ºÅ³µÁ¾µÄ×é¼ş£¬Ôò½«¸ÃÖµÉèÎª0£»Èô½Å±¾Îª¶şºÅ³µÁ¾µÄ×é¼ş£¬Ôò½«¸ÃÖµÉèÎª1¡­¡­ÒÔ´ËÀàÍÆ¡£
-  * @param h ¸÷¸ö³µÁ¾Ë®Æ½·½ÏòµÄÊäÈë(·½ÏòÅÌ×ª½Ç£©
-  * @param v ¸÷¸ö³µÁ¾´¹Ö±·½ÏòµÄÊäÈë(ÓÍÃÅºÍ½ÅÉ²£©
-  * @param handbrake ¸÷¸ö³µÁ¾ÊäÈëµÄÊÖÉ²Öµ
-  * @author ÀîÓêº½
+  * æŒ‚è½½è¯¥è„šæœ¬çš„å¯¹è±¡ï¼šRaceArea â†’ Car \n
+  * è¯¥ä»£ç æ˜¯æ ¹æ®Unityè‡ªå¸¦çš„ä»£ç CarUserControl.csä¿®æ”¹çš„ã€‚
+  * @param CarNum è¡¨ç¤ºè¯¥è„šæœ¬æ§åˆ¶çš„æ˜¯å‡ å·è½¦è¾†ã€‚è‹¥è„šæœ¬ä¸ºä¸€å·è½¦è¾†çš„ç»„ä»¶ï¼Œåˆ™å°†è¯¥å€¼è®¾ä¸º0ï¼›è‹¥è„šæœ¬ä¸ºäºŒå·è½¦è¾†çš„ç»„ä»¶ï¼Œåˆ™å°†è¯¥å€¼è®¾ä¸º1â€¦â€¦ä»¥æ­¤ç±»æ¨ã€‚
+  * @param h å„ä¸ªè½¦è¾†æ°´å¹³æ–¹å‘çš„è¾“å…¥(æ–¹å‘ç›˜è½¬è§’ï¼‰
+  * @param v å„ä¸ªè½¦è¾†å‚ç›´æ–¹å‘çš„è¾“å…¥(æ²¹é—¨å’Œè„šåˆ¹ï¼‰
+  * @param handbrake å„ä¸ªè½¦è¾†è¾“å…¥çš„æ‰‹åˆ¹å€¼
+  * @author æé›¨èˆª
   * @date 2023-01-01
   */
 
@@ -24,8 +24,11 @@ public class CarControlKeyBoard : MonoBehaviour
 {
     [SerializeField] public int CarNum;
     private CarController m_Car; // the car controller we want to use
+    /// å„ä¸ªè½¦è¾†æ°´å¹³æ–¹å‘çš„è¾“å…¥(æ–¹å‘ç›˜è½¬è§’ï¼‰
     public static float[] h = new float[4] { 0, 0, 0, 0 };
+    /// å„ä¸ªè½¦è¾†å‚ç›´æ–¹å‘çš„è¾“å…¥(æ²¹é—¨å’Œè„šåˆ¹ï¼‰
     public static float[] v = new float[4] { 0, 0, 0, 0 };
+    /// å„ä¸ªè½¦è¾†è¾“å…¥çš„æ‰‹åˆ¹å€¼
     public static float[] handbrake = new float[4] { 0, 0, 0, 0 };
     private string CarNum_Char;
     private string Horizontal;

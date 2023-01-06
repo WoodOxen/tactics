@@ -1,9 +1,20 @@
+﻿/**
+  * @file CollisionDamage.cs
+  * @brief 检测小车的碰撞和损伤
+  * @details
+  * 挂载该脚本的对象：RaceArea → Car\n
+  * 当小车收到碰撞时，获取小车抵消该碰撞所需的冲力，并记录小车碰撞次数和碰撞损伤程度。
+  * @author 李雨航
+  * @date 2022-01-06
+  */
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CollisionDamage : MonoBehaviour
 {
+    /// 该脚本获取的是几号车的碰撞损伤
     [SerializeField] public int CarNum;
     private Vector3 impulse;
     private float Impulse;

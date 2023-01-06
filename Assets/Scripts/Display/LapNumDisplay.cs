@@ -1,10 +1,10 @@
-/**
+ï»¿/**
   * @file LapNumDisplay.cs
-  * @brief Ñ²ÏßÊ±ÔÚ´°¿ÚÓÒÉÏ½ÇÏÔÊ¾µ±Ç°ÊÓ½Ç¶ÔÓ¦³µÁ¾µÄÒÑĞĞÊ»È¦Êı
+  * @brief å·¡çº¿æ—¶åœ¨çª—å£å³ä¸Šè§’æ˜¾ç¤ºå½“å‰è§†è§’å¯¹åº”è½¦è¾†çš„å·²è¡Œé©¶åœˆæ•°
   * @details  
-  * ¹ÒÔØ¸Ã½Å±¾µÄ¶ÔÏó£ºRaceArea ¡ú Canvas ¡ú UIRight ¡ú PanelRight ¡ú LapNumDisplayManager \n
-  * @param CarNum µ±Ç°¹Û²ìµÄ³µÁ¾±àºÅ
-  * @author ÀîÓêº½
+  * æŒ‚è½½è¯¥è„šæœ¬çš„å¯¹è±¡ï¼šRaceArea â†’ Canvas â†’ UIRight â†’ PanelRight â†’ LapNumDisplayManager \n
+  * @param CarNum å½“å‰è§‚å¯Ÿçš„è½¦è¾†ç¼–å·
+  * @author æé›¨èˆª
   * @date 2023-01-01
   */
 
@@ -15,6 +15,7 @@ using UnityEngine;
 
 public class LapNumDisplay : MonoBehaviour
 {
+    /// åœˆæ•°æ˜¾ç¤ºUI
     public GameObject LapCountDisplay;
     private int CarNum;
     void Start()

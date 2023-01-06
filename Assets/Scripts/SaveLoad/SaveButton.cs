@@ -1,3 +1,14 @@
+﻿/**
+  * @file SaveButton.cs
+  * @brief 实现存档功能
+  * @details  
+  * 挂载该脚本的对象：RaceArea → Canvas → Panel Save → PanelRoll → Panel → Save Savebutton \n
+  * 在存档窗口按下Save按钮后，储存本次仿真过程中对车辆输出的所有操作参数，用于在读档时复现。\n
+  * 将存档所需的内容储存为一个SaveTactic类对象，并将其转化为二进制文件储存在相应的文件夹中，并修改存档使用情况。
+  * @author 李雨航
+  * @date 2022-01-06
+  */
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,12 +21,19 @@ public class SaveButton : MonoBehaviour
 {
     public GameObject[] TheCar;
     //public GameObject LapCompleteTrigger;
-
+    /// 区分是在暂停界面呼出的存档窗口还是在结束界面呼出的存档窗口
     public static int WhoCalloutSavePanel;
+    /// 暂停窗口
     public GameObject pausePanel;
+    /// 结算窗口
     public GameObject completePanel;
+    /// 存档窗口
     public GameObject SavePanel;
-
+    /**
+    * @fn SaveGame
+    * @brief 储存游戏，将所需的数据存入save内
+    * @param[in] save 引用传递，将存档所需的数据储存在其中
+    */
     public void SaveGame(ref SaveTactic save)
     {
         
@@ -48,9 +66,9 @@ public class SaveButton : MonoBehaviour
                 save.handbrake[i,j] = handbrake_tmp[j];
             }
 
-            //��ʷ��������
-            //�浵�����ɡ��ڷ�����;�浵��������Ӹ�״̬�������С���Ϊ������ʱ���ִ浵�еķ������ݡ�
-            //������д�����ʱ����
+            //历史残留代码
+            //存档功能由“在仿真中途存档，读档后从该状态继续运行”改为“读档时复现存档中的仿真内容”
+            //因此下列代码暂时废弃
             //save.Angle[i, 0] = TheCar[i].GetComponent<Transform>().eulerAngles.x;
             //save.Angle[i, 1] = TheCar[i].GetComponent<Transform>().eulerAngles.y;
             //save.Angle[i, 2] = TheCar[i].GetComponent<Transform>().eulerAngles.z;
@@ -69,7 +87,7 @@ public class SaveButton : MonoBehaviour
 
         save.GameMode = GameSetting.RaceMode;
         save.TrackNum = GameSetting.trackNum;
-        //�ͷ��ڴ�
+        //释放内存
         for (int i = 0; i < 8; i++)
         {
             RecordControllerOutput.steer[i] = null;
@@ -93,7 +111,10 @@ public class SaveButton : MonoBehaviour
         }
         */
     }
-
+    /**
+    * @fn ResaveCondition
+    * @brief 刷新记录存档使用情况的文件
+    */
     public static void ResaveCondition()
     {
         SaveCondition saveCondition = new SaveCondition
@@ -110,6 +131,10 @@ public class SaveButton : MonoBehaviour
         fileStream.Close();
     }
 
+    /**
+    * @fn Save1
+    * @brief 一号档位的Save按钮
+    */
     public void Save1()
     {
         SaveTactic save = new SaveTactic();
@@ -122,6 +147,11 @@ public class SaveButton : MonoBehaviour
         SaveConditionManager.Save1Track = GameSetting.trackNum;
         ResaveCondition();
     }
+
+    /**
+    * @fn Save2
+    * @brief 二号档位的Save按钮
+    */
     public void Save2()
     {
         SaveTactic save = new SaveTactic();
@@ -134,6 +164,11 @@ public class SaveButton : MonoBehaviour
         SaveConditionManager.Save2Track = GameSetting.trackNum;
         ResaveCondition();
     }
+
+    /**
+    * @fn Save3
+    * @brief 三号档位的Save按钮
+    */
     public void Save3()
     {
         SaveTactic save = new SaveTactic();
@@ -146,6 +181,11 @@ public class SaveButton : MonoBehaviour
         SaveConditionManager.Save3Track = GameSetting.trackNum;
         ResaveCondition();
     }
+
+    /**
+    * @fn Save4
+    * @brief 四号档位的Save按钮
+    */
     public void Save4()
     {
         SaveTactic save = new SaveTactic();
@@ -158,6 +198,11 @@ public class SaveButton : MonoBehaviour
         SaveConditionManager.Save4Track = GameSetting.trackNum;
         ResaveCondition();
     }
+
+    /**
+    * @fn Back
+    * @brief 关闭存档窗口
+    */
     public void Back()
     {
         SavePanel.SetActive(false);

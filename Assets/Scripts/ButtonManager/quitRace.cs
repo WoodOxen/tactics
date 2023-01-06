@@ -23,5 +23,5 @@ public class quitRace : MonoBehaviour {
             pausePanel.SetActive(true);
             Time.timeScale = 0;
         }
-	}
+    }
 }

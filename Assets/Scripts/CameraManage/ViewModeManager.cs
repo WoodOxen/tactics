@@ -17,16 +17,26 @@ using System.Collections;
 using TMPro;
 
 public class ViewModeManager : MonoBehaviour {
+    /// 主视角摄像头
     public GameObject[] NormalCam;
+    /// 远视角摄像头
     public GameObject[] FarCam;
+    /// 第一人称视角摄像头
     public GameObject[] FPCam;
+    /// 俯视角摄像头
     public GameObject[] OverlookCam;
-    public static int ViewMode = 0;//显示模式
-    public static int CamNum = 0;//相机跟随的车号
-    private int CamNum_last = 0;//之前相机跟随的车号
+
+    /// 显示模式
+    public static int ViewMode = 0;
+    /// 相机跟随的车号
+    public static int CamNum = 0;
+    /// 之前相机跟随的车号
+    private int CamNum_last = 0;
     private static int PlayerNum = 1;
 
+    /// 显示相机跟随的车号的UI
     public GameObject CamNumDisplay;
+    /// 在第一人称视角下会显示的方向盘UI
     public GameObject steerDisplaybox;
 
     void Start()

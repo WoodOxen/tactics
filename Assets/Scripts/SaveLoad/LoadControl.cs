@@ -1,3 +1,12 @@
+﻿/**
+  * @file LoadControl.cs
+  * @brief 依照存档中的内容控制小车行驶
+  * @details  
+  * 挂载该脚本的对象：RaceArea → Car\n
+  * @author 李雨航
+  * @date 2022-01-06
+  */
+
 using System;
 using UnityEngine;
 using System.Collections;

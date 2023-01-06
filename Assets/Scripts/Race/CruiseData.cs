@@ -1,3 +1,28 @@
+ï»¿/**
+  * @file CruiseData.cs
+  * @brief è®¡ç®—å°è½¦è·ç¦»ä¸­å¿ƒçº¿çš„è·ç¦»ã€èµ›é“æ›²ç‡ç­‰
+  * @details
+  * æŒ‚è½½è¯¥è„šæœ¬çš„å¯¹è±¡ï¼šï¼šRaceArea â†’ Car\n
+  * WaypointsDataä¸ºå½“å‰èµ›é“ä¸­å¿ƒç‚¹çš„æ•°æ®ï¼Œæ•°æ®ä¸ºxmlæ ¼å¼ï¼Œæ˜¯é€šè¿‡CarWaypointsæ’ä»¶ç”Ÿæˆçš„ã€‚\n
+  * è¯¥æ’ä»¶å¯ä»¥å¾ˆæ–¹ä¾¿åœ°è·å–èµ›é“ä¸­å¿ƒè·¯æ ‡ç‚¹ã€‚\n
+  * ä½¿ç”¨è¯¥æ’ä»¶æ—¶ï¼Œéœ€è¦å°†Editoræ–‡ä»¶å¤¹ä¸­çš„CarWaypointsæ–‡ä»¶å¤¹ç§»åŠ¨åˆ°Editoræ–‡ä»¶å¤¹å¤–ï¼›\n
+  * è€Œä½¿ç”¨å®Œè¯¥æ’ä»¶åï¼Œéœ€è¦å°†CarWaypointsæ–‡ä»¶å¤¹æ”¾å›Editoræ–‡ä»¶å¤¹ã€‚\n
+  * è¯¥æ’ä»¶çš„ä½¿ç”¨æ•™ç¨‹å¯ä»¥åœ¨CarWaypointsæ–‡ä»¶å¤¹ä¸­æ‰¾åˆ°ã€‚\n
+  * è®¡ç®—å°è½¦è·ç¦»ä¸­å¿ƒçº¿çš„è·ç¦»çš„æ–¹æ³•ï¼š\n
+  * è·å–è·ç¦»å°è½¦æœ€è¿‘çš„ä¸¤ä¸ªè·¯æ ‡ç‚¹ï¼Œä»¥è¿™ä¸¤ç‚¹ä½œç›´çº¿ï¼Œæ±‚å°è½¦è·ç¦»è¯¥ç›´çº¿çš„è·ç¦»ã€‚\n
+  * è®¡ç®—å°è½¦å½“å‰ä½ç½®èµ›é“ä¸­å¿ƒçº¿æ›²ç‡çš„æ–¹æ³•ï¼š\n
+  * è·å–ç¦»å°è½¦æœ€è¿‘çš„ä¸€ä¸ªè·¯æ ‡ç‚¹ä»¥åŠä¹‹åçš„ç¬¬ä¸€ä¸ªã€ç¬¬ä¸‰ä¸ªè·¯æ ‡ç‚¹ï¼Œ\n
+  * è¿‡è¿™ä¸‰ä¸ªç‚¹åšåœ†ï¼Œè¯¥åœ†åŠå¾„çš„å€’æ•°å°±ä¸ºå½“å‰æ›²ç‡ã€‚\n
+  * @param CarNum å½“å‰å°è½¦çš„ç¼–å·ï¼Œä¸åŒCarä¸­CruiseDataç»„åˆ†çš„CarNumæ•°å€¼ä¸åŒ
+  * @param DistanceError å°è½¦è·ç¦»ä¸­å¿ƒçº¿çš„è·ç¦»
+  * @param Curvature å½“å‰ä½ç½®èµ›é“ä¸­å¿ƒçº¿æ›²ç‡
+  * @param AngleError å°è½¦æ–¹å‘å’Œèµ›é“ä¸­å¿ƒçº¿æ–¹å‘çš„å·®è·
+  * @param WaypointsData å½“å‰èµ›é“ä¸­å¿ƒç‚¹çš„æ•°æ®ï¼Œæ•°æ®ä¸ºxmlæ ¼å¼
+  * @author æé›¨èˆª
+  * @date 2022-01-06
+  */
+
+
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -7,41 +32,41 @@ public class CruiseData : MonoBehaviour
 {
     private int lastClosestWP = -1;
     private int NumofWP;
+    /// å„è½¦è¾†çš„å·¡çº¿è¯¯å·®
     public static float[] DistanceError = new float[8] { 0, 0, 0, 0, 0, 0, 0, 0 };
+    /// å„è½¦è¾†å‰æ–¹çš„èµ›é“æ›²ç‡
     public static float[] Curvature = new float[8] { 0, 0, 0, 0, 0, 0, 0, 0 };
+    /// å„è½¦è¾†çš„è§’åº¦è¯¯å·®
     public static float[] AngleError = new float[8] { 0, 0, 0, 0, 0, 0, 0, 0 };
-
+    /// è¯¥è„šæœ¬è®¡ç®—çš„æ˜¯å‡ å·è½¦çš„å·¡çº¿è¯¯å·®ã€èµ›é“æ›²ç‡ã€è§’åº¦è¯¯å·®
     [SerializeField] public int CarNum;
 
     //public GameObject ErrorDisplay;
     //public GameObject RadiusDisplay;
 
 
-    /// Â·±êµãÊı¾İÎÄ¼ş <summary>
-    /// Â·±êµãÊı¾İÎÄ¼ş
+    /// è·¯æ ‡ç‚¹æ•°æ®æ–‡ä»¶ <summary>
     /// </summary>
     public TextAsset waypointsData = null;
-    /// Â·±êµã×¨ÓÃXML²Ù×÷ <summary>
-    /// Â·±êµã×¨ÓÃXML²Ù×÷
+    /// è·¯æ ‡ç‚¹ä¸“ç”¨XMLæ“ä½œ <summary>
     /// </summary>
     private WaypointsXML _WaypointsXML = new WaypointsXML();
-    /// ËùÓĞÂ·±êµã <summary>
-    /// ËùÓĞÂ·±êµã
+    /// æ‰€æœ‰è·¯æ ‡ç‚¹ <summary>
     /// </summary>
     public List<WaypointsModel> WaypointsModelAll = new List<WaypointsModel>();
     void Start()
     {
-        //»ñÈ¡Â·±êµãÊı¾İ
+        //è·å–è·¯æ ‡ç‚¹æ•°æ®
         _WaypointsXML.GetXmlData(WaypointsModelAll, null, waypointsData.text);
         lastClosestWP = -1;
         NumofWP = WaypointsModelAll.Count;
-        //»ñÈ¡¾àÀë×î½üµÄÂ·±êµã
+        //è·å–è·ç¦»æœ€è¿‘çš„è·¯æ ‡ç‚¹
         //WaypointsModel ClosestWP = GetClosestWP(WaypointsModelAll, transform.position);
     }
 
     void FixedUpdate()
     {
-        //»ñÈ¡¾àÀë×î½üµÄÂ·±êµã
+        //è·å–è·ç¦»æœ€è¿‘çš„è·¯æ ‡ç‚¹
         WaypointsModel ClosestWP = GetClosestWP(WaypointsModelAll, transform.position);
         int tmpNum1 = lastClosestWP + 1;
         int tmpNum2 = lastClosestWP - 1;
@@ -49,16 +74,16 @@ public class CruiseData : MonoBehaviour
         if (tmpNum2 < 0) tmpNum2 = NumofWP - 1;
         float dist1 = Mathf.Pow(WaypointsModelAll[tmpNum1].Position.x - transform.position.x, 2)+ Mathf.Pow(WaypointsModelAll[tmpNum1].Position.z - transform.position.z, 2);
         float dist2 = Mathf.Pow(WaypointsModelAll[tmpNum2].Position.x - transform.position.x, 2)+ Mathf.Pow(WaypointsModelAll[tmpNum2].Position.z - transform.position.z, 2);
-        if (dist1 <= dist2)//¼´lastClosestWPºÍlastClosestWP+1ºÅÂ·±êµãÊÇÀë³µ×î½üµÄÁ½µã  
+        if (dist1 <= dist2)//å³lastClosestWPå’ŒlastClosestWP+1å·è·¯æ ‡ç‚¹æ˜¯ç¦»è½¦æœ€è¿‘çš„ä¸¤ç‚¹  
         {
             DistanceError[CarNum] = GetCruiseError(WaypointsModelAll[lastClosestWP].Position, WaypointsModelAll[tmpNum1].Position, transform.position);
         }
-        else//¼´lastClosestWP-1ºÍlastClosestWPºÅÂ·±êµãÊÇÀë³µ×î½üµÄÁ½µã  
+        else//å³lastClosestWP-1å’ŒlastClosestWPå·è·¯æ ‡ç‚¹æ˜¯ç¦»è½¦æœ€è¿‘çš„ä¸¤ç‚¹  
         {
             DistanceError[CarNum] = GetCruiseError(WaypointsModelAll[tmpNum2].Position, WaypointsModelAll[lastClosestWP].Position, transform.position);
         }
 
-        //È¡³öºóÁ½¸ö×ø±êµã£¬ÓÃÓÚ¼ÆËãÇúÂÊ
+        //å–å‡ºåä¸¤ä¸ªåæ ‡ç‚¹ï¼Œç”¨äºè®¡ç®—æ›²ç‡
         tmpNum1 = lastClosestWP;
         tmpNum2 = lastClosestWP + 1;
         int tmpNum3 = lastClosestWP + 3;
@@ -72,62 +97,71 @@ public class CruiseData : MonoBehaviour
         //ErrorDisplay.GetComponent<TextMeshProUGUI>().text = "" + DistanceError.ToString("#0.00");
 
     }
-
+    /**
+    * @fn GetCurvature
+    * @brief æ ¹æ®å‰æ–¹ä¸‰ä¸ªè·¯æ ‡ç‚¹è·å–å‰æ–¹é“è·¯æ›²ç‡
+    */
     private float GetCurvature(int WP1, int WP2, int WP3)
     {
         Vector2 pos1 = new Vector2(WaypointsModelAll[WP1].Position.x, WaypointsModelAll[WP1].Position.z);
         Vector2 pos2 = new Vector2(WaypointsModelAll[WP2].Position.x, WaypointsModelAll[WP2].Position.z);
         Vector2 pos3 = new Vector2(WaypointsModelAll[WP3].Position.x, WaypointsModelAll[WP3].Position.z);
-        //ÅĞ¶Ï¹²Ïß
+        //åˆ¤æ–­å…±çº¿
         if (Mathf.Abs(WaypointsModelAll[lastClosestWP].Rotation.y - WaypointsModelAll[WP2].Rotation.y)<0.01) return 0;
-        //²»¹²Ïß£º
-        float radius;//ÇúÂÊ°ë¾¶
-        float dis, dis1, dis2, dis3;//¾àÀë
-        float cosA;//abÈ·¶¨µÄ±ßËù¶ÔÓ¦µÄ½ÇAµÄcosÖµ
+        //ä¸å…±çº¿ï¼š
+        float radius;//æ›²ç‡åŠå¾„
+        float dis, dis1, dis2, dis3;//è·ç¦»
+        float cosA;//abç¡®å®šçš„è¾¹æ‰€å¯¹åº”çš„è§’Açš„coså€¼
         dis1 = Vector2.Distance(pos1, pos2);
         dis2 = Vector2.Distance(pos1, pos3);
         dis3 = Vector2.Distance(pos2, pos3);
         dis = dis1 * dis1 + dis3 * dis3 - dis2 * dis2;
-        cosA = dis / (2 * dis1 * dis3);//ÓàÏÒ¶¨Àí
+        cosA = dis / (2 * dis1 * dis3);//ä½™å¼¦å®šç†
         radius = dis2 / (Mathf.Sqrt(1-cosA*cosA)*2);
 
-        float cur = 10 / radius;
+        float cur = 1 / radius;
         return cur;
     }
-
-    //¼ÆËãmyPositonµ½Ö±Ïßpos1-pos2µÄ¾àÀë£¬·½·¨²Î¿¼https://zhuanlan.zhihu.com/p/176996694
+    /**
+    * @fn GetCruiseError
+    * @brief è®¡ç®—myPositonåˆ°ç›´çº¿pos1-pos2çš„è·ç¦»
+    * @details æ–¹æ³•å‚è€ƒhttps://zhuanlan.zhihu.com/p/176996694
+    * @param[in] myPositon è½¦è¾†å½“å‰ä½ç½®
+    * @param[in] pos1 è·¯æ ‡ç‚¹1
+    * @param[in] pos2 è·¯æ ‡ç‚¹2
+    */
     private float GetCruiseError(Vector3 pos1, Vector3 pos2, Vector3 myPosition)
     {
-        //y·ÖÁ¿Í³Ò»ÉèÎª0
+        //yåˆ†é‡ç»Ÿä¸€è®¾ä¸º0
         Vector3 vec1 = new Vector3(pos2.x - pos1.x,0,pos2.z - pos1.z);
         Vector3 vec2 = new Vector3(myPosition.x - pos1.x,0,myPosition.z - pos1.z);
-        //ÏòÁ¿²æ³Ëºóy·ÖÁ¿µÄÕı¸ºĞÔ¿ÉÒÔÅĞ¶ÏmypositionÔÚÏòÁ¿pos1~pos2µÄÄÄ²à
+        //å‘é‡å‰ä¹˜åyåˆ†é‡çš„æ­£è´Ÿæ€§å¯ä»¥åˆ¤æ–­mypositionåœ¨å‘é‡pos1~pos2çš„å“ªä¾§
         Vector3 tmp1 = Vector3.Cross(vec1, vec2);
         float WhichSide = Mathf.Sign(Vector3.Cross(vec1, vec2).y);
         float Area = tmp1.magnitude;
         float tmp2 = vec1.magnitude;
-        float CruiseError = -WhichSide * Area / tmp2;//Æ«×óÎªÕı£¬Æ«ÓÒÎª¸º£»
+        float CruiseError = -WhichSide * Area / tmp2;//åå·¦ä¸ºæ­£ï¼Œåå³ä¸ºè´Ÿï¼›
         return CruiseError;
     }
 
-    /// »ñÈ¡¾àÀë×î½üµÄÂ·¾¶µã <summary>
-    /// »ñÈ¡¾àÀë×î½üµÄÂ·¾¶µã
+    /// è·å–è·ç¦»æœ€è¿‘çš„è·¯å¾„ç‚¹ <summary>
+    /// è·å–è·ç¦»æœ€è¿‘çš„è·¯å¾„ç‚¹
     /// </summary>
-    /// <param name="DPs">Â·¾¶µã¼¯ºÏ</param>
-    /// <param name="myPosition">µ±Ç°×ø±ê</param>
-    /// <returns>·µ»Ø×î½ü¾àÀëµÄÂ·±êµã</returns>
+    /// <param name="DPs">è·¯å¾„ç‚¹é›†åˆ</param>
+    /// <param name="myPosition">å½“å‰åæ ‡</param>
+    /// <returns>è¿”å›æœ€è¿‘è·ç¦»çš„è·¯æ ‡ç‚¹</returns>
     /// 
     private WaypointsModel GetClosestWP(List<WaypointsModel> all, Vector3 myPosition)
     {
         WaypointsModel tMin = null;
-        float minDist = Mathf.Infinity;//ÕıÎŞÇî
+        float minDist = Mathf.Infinity;//æ­£æ— ç©·
         int thisClosestWPN = -1;
 
-        if (lastClosestWP == -1)//Ã»ÓĞÉÏÒ»´Îµ÷ÓÃµÄÊı¾İ
+        if (lastClosestWP == -1)//æ²¡æœ‰ä¸Šä¸€æ¬¡è°ƒç”¨çš„æ•°æ®
         {
             for (int i = 0; i < NumofWP; i++)
             {
-                //ºöÂÔyÖáÉÏµÄ¾àÀë£¨²»¿¼ÂÇ´¹Ö±µØÃæ·½ÏòµÄ²î±ğ£©
+                //å¿½ç•¥yè½´ä¸Šçš„è·ç¦»ï¼ˆä¸è€ƒè™‘å‚ç›´åœ°é¢æ–¹å‘çš„å·®åˆ«ï¼‰
                 float dist = Mathf.Pow((all[i].Position.x - myPosition.x), 2) + Mathf.Pow((all[i].Position.z - myPosition.z), 2);
                 //float dist = Vector3.Distance(all[i].Position, myPosition);
                 if (dist < minDist)
@@ -138,7 +172,7 @@ public class CruiseData : MonoBehaviour
                 }
             }
         }
-        else//ÓĞÉÏÒ»´Îµ÷ÓÃµÄÊı¾İ,Ö»´¦Àí×î½üµÄ10¸öÂ·±êµã
+        else//æœ‰ä¸Šä¸€æ¬¡è°ƒç”¨çš„æ•°æ®,åªå¤„ç†æœ€è¿‘çš„10ä¸ªè·¯æ ‡ç‚¹
         {
             int j;
             for(int i = lastClosestWP - 3; i < lastClosestWP + 3; i++)
