@@ -1,16 +1,16 @@
-/**
+ï»¿/**
   * @file MonitorSetting.cs
-  * @brief ÊµÏÖÓÃ»§Ìí¼Ó¼àÊÓÆ÷µÄ¹¦ÄÜ²¢´¢´æÓÃ»§¶Ô¼àÊÓÆ÷µÄÉèÖÃ
+  * @brief å®ç°ç”¨æˆ·æ·»åŠ ç›‘è§†å™¨çš„åŠŸèƒ½å¹¶å‚¨å­˜ç”¨æˆ·å¯¹ç›‘è§†å™¨çš„è®¾ç½®
   * @details 
-  * ¹ÒÔØ¸Ã½Å±¾µÄ¶ÔÏó£ºTrackSelect ¡ú Canvas ¡úButtonPanel ¡ú Panel ¡ú AddMonotors ¡ú MonitorDropDownManager \n
-  * ÓÃ»§¶Ô¼àÊÓÆ÷µÄÉèÖÃ°üÀ¨£º¼àÊÓÆ÷ÊıÄ¿£¨¡Ü3£©¡¢¼àÊÓÆ÷Ä¿±ê¡¢¼àÊÓÆ÷µÄ¼àÊÓ½Ç¶È¡£\n
-  * ÕâĞ©ÉèÖÃ¶¼ÊÇÍ¨¹ıDropDownÊµÏÖ£¬¶ø·ÇButton¡£\n
-  * ÓÃ»§ÔÚ½øÈëTrackSelect³¡¾°ºó£¬»áµ÷ÓÃ¸Ã½Å±¾µÄStart()º¯Êı£¬¸ù¾İÓÃ»§µÄ¹ıÍùÉèÖÃ³õÊ¼»¯Ïà¹ØµÄDropDown¡£\n
-  * Ö®ºóÔÚRaceArea³¡¾°ÖĞMonitorManager.cs½Å±¾¸ù¾İÓÃ»§µÄÉèÖÃ¶Ô¼àÊÓÆ÷½øĞĞ³õÊ¼»¯Ê±£¬ĞèÒª»ñÈ¡¸Ã½Å±¾ÖĞ´¢´æµÄ²ÎÊı¡£
-  * @param NumofMonitor ¼àÊÓÆ÷ÊıÁ¿
-  * @param MonitorObject ¼àÊÓ¶ÔÏó
-  * @param MonitorPerspective ¼àÊÓ½Ç¶È
-  * @author ÀîÓêº½
+  * æŒ‚è½½è¯¥è„šæœ¬çš„å¯¹è±¡ï¼šTrackSelect â†’ Canvas â†’ButtonPanel â†’ Panel â†’ AddMonotors â†’ MonitorDropDownManager \n
+  * ç”¨æˆ·å¯¹ç›‘è§†å™¨çš„è®¾ç½®åŒ…æ‹¬ï¼šç›‘è§†å™¨æ•°ç›®ï¼ˆâ‰¤3ï¼‰ã€ç›‘è§†å™¨ç›®æ ‡ã€ç›‘è§†å™¨çš„ç›‘è§†è§’åº¦ã€‚\n
+  * è¿™äº›è®¾ç½®éƒ½æ˜¯é€šè¿‡DropDownå®ç°ï¼Œè€ŒéButtonã€‚\n
+  * ç”¨æˆ·åœ¨è¿›å…¥TrackSelectåœºæ™¯åï¼Œä¼šè°ƒç”¨è¯¥è„šæœ¬çš„Start()å‡½æ•°ï¼Œæ ¹æ®ç”¨æˆ·çš„è¿‡å¾€è®¾ç½®åˆå§‹åŒ–ç›¸å…³çš„DropDownã€‚\n
+  * ä¹‹ååœ¨RaceAreaåœºæ™¯ä¸­MonitorManager.csè„šæœ¬æ ¹æ®ç”¨æˆ·çš„è®¾ç½®å¯¹ç›‘è§†å™¨è¿›è¡Œåˆå§‹åŒ–æ—¶ï¼Œéœ€è¦è·å–è¯¥è„šæœ¬ä¸­å‚¨å­˜çš„å‚æ•°ã€‚
+  * @param NumofMonitor ç›‘è§†å™¨æ•°é‡
+  * @param MonitorObject ç›‘è§†å¯¹è±¡
+  * @param MonitorPerspective ç›‘è§†è§’åº¦
+  * @author æé›¨èˆª
   * @date 2023-12-31
   */
 
@@ -22,17 +22,23 @@ using TMPro;
 
 public class MonitorSetting : MonoBehaviour
 {
+    /// ç›‘è§†å™¨æ•°ç›® 
     public static int NumofMonitor = 0;
+    /// ç›‘è§†å¯¹è±¡ 
     public static int[] MonitorObject = new int[3] { 0, 0, 0 };
+    /// ç›‘è§†è§’åº¦ 
     public static int[] MonitorPerspective = new int[3] { 0, 0, 0 };
 
+    /// ç”¨æˆ·è®¾ç½®ç›‘è§†å™¨æ•°ç›®çš„dropdown 
     public GameObject DropdowmMonitorNum;
+    /// ç”¨æˆ·è®¾ç½®ç›‘è§†å¯¹è±¡çš„dropdown 
     public GameObject[] DropdowmMonitorObject;
+    /// ç”¨æˆ·è®¾ç½®ç›‘è§†è§’åº¦çš„dropdown 
     public GameObject[] DropdowmMonitorPerspective;
 
     void Start()
     {
-        //ï¿½ï¿½È¡ï¿½ï¿½Ê·ï¿½ï¿½Â¼
+        //è¯»å–å†å²è®°å½•
         if (PlayerPrefs.HasKey("NumofMonitor")) NumofMonitor = PlayerPrefs.GetInt("NumofMonitor");
         else NumofMonitor = 0;
 
@@ -57,9 +63,9 @@ public class MonitorSetting : MonoBehaviour
 
     /**
      * @fn SetNumofMonitor
-     * @brief ÓÃ»§ÉèÖÃ¼àÊÓÆ÷ÊıÁ¿
-     * @param[in] value ÓÃ»§ÔÚÏàÓ¦µÄdropdownÖĞÑ¡ÔñµÄÑ¡Ïî±àºÅ¡£
-     * @details ÓÃ»§¿ÉÒÔÍ¨¹ıdropdown(ÏÂÀ­Ê½²Ëµ¥)ÉèÖÃ¼àÊÓÆ÷ÊıÁ¿£¬½«¸ÃÖµ´æÎªNumofMonitor²ÎÊı
+     * @brief ç”¨æˆ·è®¾ç½®ç›‘è§†å™¨æ•°é‡
+     * @param[in] value ç”¨æˆ·åœ¨ç›¸åº”çš„dropdownä¸­é€‰æ‹©çš„é€‰é¡¹ç¼–å·ã€‚
+     * @details ç”¨æˆ·å¯ä»¥é€šè¿‡dropdown(ä¸‹æ‹‰å¼èœå•)è®¾ç½®ç›‘è§†å™¨æ•°é‡ï¼Œå°†è¯¥å€¼å­˜ä¸ºNumofMonitorå‚æ•°
      */
     public void SetNumofMonitor(int value)
     {
@@ -69,9 +75,9 @@ public class MonitorSetting : MonoBehaviour
     }
     /**
      * @fn SetMonitor1Object
-     * @brief ÓÃ»§ÉèÖÃ1ºÅ¼àÊÓÆ÷µÄ¼àÊÓ¶ÔÏó
-     * @param[in] value ÓÃ»§ÔÚÏàÓ¦µÄdropdownÖĞÑ¡ÔñµÄÑ¡Ïî±àºÅ¡£
-     * @details ÓÃ»§¿ÉÒÔÍ¨¹ıdropdown(ÏÂÀ­Ê½²Ëµ¥)ÉèÖÃ1ºÅ¼àÊÓÆ÷µÄ¼àÊÓ¶ÔÏó£¬½«¸ÃÖµ´æÈëMonitorObject[0]
+     * @brief ç”¨æˆ·è®¾ç½®1å·ç›‘è§†å™¨çš„ç›‘è§†å¯¹è±¡
+     * @param[in] value ç”¨æˆ·åœ¨ç›¸åº”çš„dropdownä¸­é€‰æ‹©çš„é€‰é¡¹ç¼–å·ã€‚
+     * @details ç”¨æˆ·å¯ä»¥é€šè¿‡dropdown(ä¸‹æ‹‰å¼èœå•)è®¾ç½®1å·ç›‘è§†å™¨çš„ç›‘è§†å¯¹è±¡ï¼Œå°†è¯¥å€¼å­˜å…¥MonitorObject[0]
      */
     public void SetMonitor1Object(int value)
     {
@@ -81,9 +87,9 @@ public class MonitorSetting : MonoBehaviour
     }
     /**
      * @fn SetMonitor2Object
-     * @brief ÓÃ»§ÉèÖÃ2ºÅ¼àÊÓÆ÷µÄ¼àÊÓ¶ÔÏó
-     * @param[in] value ÓÃ»§ÔÚÏàÓ¦µÄdropdownÖĞÑ¡ÔñµÄÑ¡Ïî±àºÅ¡£
-     * @details ÓÃ»§¿ÉÒÔÍ¨¹ıdropdown(ÏÂÀ­Ê½²Ëµ¥)ÉèÖÃ2ºÅ¼àÊÓÆ÷µÄ¼àÊÓ¶ÔÏó£¬½«¸ÃÖµ´æÈëMonitorObject[1]
+     * @brief ç”¨æˆ·è®¾ç½®2å·ç›‘è§†å™¨çš„ç›‘è§†å¯¹è±¡
+     * @param[in] value ç”¨æˆ·åœ¨ç›¸åº”çš„dropdownä¸­é€‰æ‹©çš„é€‰é¡¹ç¼–å·ã€‚
+     * @details ç”¨æˆ·å¯ä»¥é€šè¿‡dropdown(ä¸‹æ‹‰å¼èœå•)è®¾ç½®2å·ç›‘è§†å™¨çš„ç›‘è§†å¯¹è±¡ï¼Œå°†è¯¥å€¼å­˜å…¥MonitorObject[1]
      */
     public void SetMonitor2Object(int value)
     {
@@ -93,9 +99,9 @@ public class MonitorSetting : MonoBehaviour
     }
     /**
      * @fn SetMonitor3Object
-     * @brief ÓÃ»§ÉèÖÃ3ºÅ¼àÊÓÆ÷µÄ¼àÊÓ¶ÔÏó
-     * @param[in] value ÓÃ»§ÔÚÏàÓ¦µÄdropdownÖĞÑ¡ÔñµÄÑ¡Ïî±àºÅ¡£
-     * @details ÓÃ»§¿ÉÒÔÍ¨¹ıdropdown(ÏÂÀ­Ê½²Ëµ¥)ÉèÖÃ3ºÅ¼àÊÓÆ÷µÄ¼àÊÓ¶ÔÏó£¬½«¸ÃÖµ´æÈëMonitorObject[2]
+     * @brief ç”¨æˆ·è®¾ç½®3å·ç›‘è§†å™¨çš„ç›‘è§†å¯¹è±¡
+     * @param[in] value ç”¨æˆ·åœ¨ç›¸åº”çš„dropdownä¸­é€‰æ‹©çš„é€‰é¡¹ç¼–å·ã€‚
+     * @details ç”¨æˆ·å¯ä»¥é€šè¿‡dropdown(ä¸‹æ‹‰å¼èœå•)è®¾ç½®3å·ç›‘è§†å™¨çš„ç›‘è§†å¯¹è±¡ï¼Œå°†è¯¥å€¼å­˜å…¥MonitorObject[2]
      */
     public void SetMonitor3Object(int value)
     {
@@ -105,9 +111,9 @@ public class MonitorSetting : MonoBehaviour
     }
     /**
      * @fn SetMonitor1Perspective
-     * @brief ÓÃ»§ÉèÖÃ1ºÅ¼àÊÓÆ÷µÄ¼àÊÓ½Ç¶È
-     * @param[in] value ÓÃ»§ÔÚÏàÓ¦µÄdropdownÖĞÑ¡ÔñµÄÑ¡Ïî±àºÅ¡£
-     * @details ÓÃ»§¿ÉÒÔÍ¨¹ıdropdown(ÏÂÀ­Ê½²Ëµ¥)ÉèÖÃ1ºÅ¼àÊÓÆ÷µÄ¼àÊÓ½Ç¶È£¬½«¸ÃÖµ´æÈëMonitorPerspective[0]
+     * @brief ç”¨æˆ·è®¾ç½®1å·ç›‘è§†å™¨çš„ç›‘è§†è§’åº¦
+     * @param[in] value ç”¨æˆ·åœ¨ç›¸åº”çš„dropdownä¸­é€‰æ‹©çš„é€‰é¡¹ç¼–å·ã€‚
+     * @details ç”¨æˆ·å¯ä»¥é€šè¿‡dropdown(ä¸‹æ‹‰å¼èœå•)è®¾ç½®1å·ç›‘è§†å™¨çš„ç›‘è§†è§’åº¦ï¼Œå°†è¯¥å€¼å­˜å…¥MonitorPerspective[0]
      */
     public void SetMonitor1Perspective(int value)
     {
@@ -117,9 +123,9 @@ public class MonitorSetting : MonoBehaviour
     }
     /**
      * @fn SetMonitor2Perspective
-     * @brief ÓÃ»§ÉèÖÃ2ºÅ¼àÊÓÆ÷µÄ¼àÊÓ½Ç¶È
-     * @param[in] value ÓÃ»§ÔÚÏàÓ¦µÄdropdownÖĞÑ¡ÔñµÄÑ¡Ïî±àºÅ¡£
-     * @details ÓÃ»§¿ÉÒÔÍ¨¹ıdropdown(ÏÂÀ­Ê½²Ëµ¥)ÉèÖÃ2ºÅ¼àÊÓÆ÷µÄ¼àÊÓ½Ç¶È£¬½«¸ÃÖµ´æÈëMonitorPerspective[1]
+     * @brief ç”¨æˆ·è®¾ç½®2å·ç›‘è§†å™¨çš„ç›‘è§†è§’åº¦
+     * @param[in] value ç”¨æˆ·åœ¨ç›¸åº”çš„dropdownä¸­é€‰æ‹©çš„é€‰é¡¹ç¼–å·ã€‚
+     * @details ç”¨æˆ·å¯ä»¥é€šè¿‡dropdown(ä¸‹æ‹‰å¼èœå•)è®¾ç½®2å·ç›‘è§†å™¨çš„ç›‘è§†è§’åº¦ï¼Œå°†è¯¥å€¼å­˜å…¥MonitorPerspective[1]
      */
     public void SetMonitor2Perspective(int value)
     {
@@ -129,9 +135,9 @@ public class MonitorSetting : MonoBehaviour
     }
     /**
      * @fn SetMonitor3Perspective
-     * @brief ÓÃ»§ÉèÖÃ3ºÅ¼àÊÓÆ÷µÄ¼àÊÓ½Ç¶È
-     * @param[in] value ÓÃ»§ÔÚÏàÓ¦µÄdropdownÖĞÑ¡ÔñµÄÑ¡Ïî±àºÅ¡£
-     * @details ÓÃ»§¿ÉÒÔÍ¨¹ıdropdown(ÏÂÀ­Ê½²Ëµ¥)ÉèÖÃ3ºÅ¼àÊÓÆ÷µÄ¼àÊÓ½Ç¶È£¬½«¸ÃÖµ´æÈëMonitorPerspective[2]
+     * @brief ç”¨æˆ·è®¾ç½®3å·ç›‘è§†å™¨çš„ç›‘è§†è§’åº¦
+     * @param[in] value ç”¨æˆ·åœ¨ç›¸åº”çš„dropdownä¸­é€‰æ‹©çš„é€‰é¡¹ç¼–å·ã€‚
+     * @details ç”¨æˆ·å¯ä»¥é€šè¿‡dropdown(ä¸‹æ‹‰å¼èœå•)è®¾ç½®3å·ç›‘è§†å™¨çš„ç›‘è§†è§’åº¦ï¼Œå°†è¯¥å€¼å­˜å…¥MonitorPerspective[2]
      */
     public void SetMonitor3Perspective(int value)
     {

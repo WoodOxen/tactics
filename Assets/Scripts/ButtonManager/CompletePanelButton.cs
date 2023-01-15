@@ -1,9 +1,9 @@
-/**
-  * @file GamePauseButton.cs
-  * @brief ÔÚ·ÂÕæ½áÊø½çÃæÖĞ°´ÏÂ²»Í¬°´Å¥ËùÖ´ĞĞµÄº¯Êı¡£
+ï»¿/**
+  * @file CompletePanelButton.cs
+  * @brief åœ¨ä»¿çœŸç»“æŸç•Œé¢ä¸­æŒ‰ä¸‹ä¸åŒæŒ‰é’®æ‰€æ‰§è¡Œçš„å‡½æ•°ã€‚
   * @details 
-  * ¹ÒÔØ¸Ã½Å±¾µÄ¶ÔÏó£ºRaceArea ¡ú Canvas ¡ú Panel complete ¡ú CompletePanelButtonManager \n
-  * @author ÀîÓêº½
+  * æŒ‚è½½è¯¥è„šæœ¬çš„å¯¹è±¡ï¼šRaceArea â†’ Canvas â†’ Panel complete â†’ CompletePanelButtonManager \n
+  * @author æé›¨èˆª
   * @date 2023-12-31
   */
 
@@ -15,14 +15,16 @@ using UnityEngine.SceneManagement;
 public class CompletePanelButton : MonoBehaviour
 {
     private int trackNum;
+    /// å­˜æ¡£çª—å£ 
     public GameObject SavePanel;
+    /// ä»¿çœŸç»“æŸçª—å£ 
     public GameObject CompletePanel;
 
     /**
      * @fn SaveGame
-     * @brief ´ò¿ª´æµµ´°¿Ú£¬Í¬Ê±¹Ø±Õ½áËã´°¿Ú
-     * @details ĞèÒª¼ÇÂ¼ÓÃ»§ÊÇÔÚ½áËã½çÃæºô³öµÄ´æµµ´°¿Ú \n
-     * ÈôÓÃ»§ÍË³ö´æµµ½çÃæ£¬ÔòÓ¦¸ÃÔÙ´Î´ò¿ª½áËã´°¿Ú
+     * @brief æ‰“å¼€å­˜æ¡£çª—å£ï¼ŒåŒæ—¶å…³é—­ç»“ç®—çª—å£
+     * @details éœ€è¦è®°å½•ç”¨æˆ·æ˜¯åœ¨ç»“ç®—ç•Œé¢å‘¼å‡ºçš„å­˜æ¡£çª—å£ \n
+     * è‹¥ç”¨æˆ·é€€å‡ºå­˜æ¡£ç•Œé¢ï¼Œåˆ™åº”è¯¥å†æ¬¡æ‰“å¼€ç»“ç®—çª—å£
      * @return None
      */
     public void SaveGame()
@@ -34,8 +36,8 @@ public class CompletePanelButton : MonoBehaviour
 
     /**
      * @fn MainMenu
-     * @brief ·µ»ØÖ÷²Ëµ¥
-     * @details ÊÍ·Å±¾´Î·ÂÕæ¹ı³ÌÖĞ¼ÇÂ¼³µÁ¾ÔËĞĞÖ¸ÁîËùºÄ·ÑµÄÄÚ´æ£¬²Î¿¼RecordControllerOutput.cs
+     * @brief è¿”å›ä¸»èœå•
+     * @details é‡Šæ”¾æœ¬æ¬¡ä»¿çœŸè¿‡ç¨‹ä¸­è®°å½•è½¦è¾†è¿è¡ŒæŒ‡ä»¤æ‰€è€—è´¹çš„å†…å­˜ï¼Œå‚è€ƒRecordControllerOutput.cs
      * @return None
      */
     public void MainMenu()
@@ -51,9 +53,9 @@ public class CompletePanelButton : MonoBehaviour
     }
     /**
      * @fn Retry
-     * @brief ÖØĞÂ·ÂÕæ
-     * @details ÊÍ·Å±¾´Î·ÂÕæ¹ı³ÌÖĞ¼ÇÂ¼³µÁ¾ÔËĞĞÖ¸ÁîËùºÄ·ÑµÄÄÚ´æ£¬²Î¿¼RecordControllerOutput.cs \n
-     * ÖØĞÂÔØÈë·ÂÕæ³¡¾°
+     * @brief é‡æ–°ä»¿çœŸ
+     * @details é‡Šæ”¾æœ¬æ¬¡ä»¿çœŸè¿‡ç¨‹ä¸­è®°å½•è½¦è¾†è¿è¡ŒæŒ‡ä»¤æ‰€è€—è´¹çš„å†…å­˜ï¼Œå‚è€ƒRecordControllerOutput.cs \n
+     * é‡æ–°è½½å…¥ä»¿çœŸåœºæ™¯
      * @return None
      */
     public void Retry()

@@ -1,11 +1,11 @@
-/**
+ï»¿/**
   * @file SpeedDisplay.cs
-  * @brief »ñÈ¡Ã¿Á¾³µµÄĞĞÊ»ËÙ¶È£¬²¢ÏÔÊ¾ÔÚÆÁÄ»ÏÂ·½µÄUIÉÏ
+  * @brief è·å–æ¯è¾†è½¦çš„è¡Œé©¶é€Ÿåº¦ï¼Œå¹¶æ˜¾ç¤ºåœ¨å±å¹•ä¸‹æ–¹çš„UIä¸Š
   * @details  
-  * ¹ÒÔØ¸Ã½Å±¾µÄ¶ÔÏó£ºRaceArea ¡ú Canvas ¡ú UIBottom ¡ú SpeedDisplay ¡ú SpeedDisplayManager \n
-  * Cpp´úÂë»ñÈ¡ËÙ¶ÈÖµÊÇ´Ó¸Ã½Å±¾ÖĞµÄSpeedÊı×éÖĞ»ñÈ¡£¬Îª±£Ö¤·ÂÕæÈ·¶¨ĞÔ£¬ËÙ¶ÈÖµË¢ĞÂ²ÉÓÃFixedUpdateº¯Êı
-  * @param Speed ´¢´æ¸÷³µÁ¾µÄĞĞÊ»ËÙ¶È£¬µ«ÆÁÄ»ÏÂ·½Ö»ÏÔÊ¾µ±Ç°ÊÓ½Ç¸úËæµÄ³µÁ¾µÄËÙ¶ÈÖµ
-  * @author ÀîÓêº½
+  * æŒ‚è½½è¯¥è„šæœ¬çš„å¯¹è±¡ï¼šRaceArea â†’ Canvas â†’ UIBottom â†’ SpeedDisplay â†’ SpeedDisplayManager \n
+  * Cppä»£ç è·å–é€Ÿåº¦å€¼æ˜¯ä»è¯¥è„šæœ¬ä¸­çš„Speedæ•°ç»„ä¸­è·å–ï¼Œä¸ºä¿è¯ä»¿çœŸç¡®å®šæ€§ï¼Œé€Ÿåº¦å€¼åˆ·æ–°é‡‡ç”¨FixedUpdateå‡½æ•°
+  * @param Speed å‚¨å­˜å„è½¦è¾†çš„è¡Œé©¶é€Ÿåº¦ï¼Œä½†å±å¹•ä¸‹æ–¹åªæ˜¾ç¤ºå½“å‰è§†è§’è·Ÿéšçš„è½¦è¾†çš„é€Ÿåº¦å€¼
+  * @author æé›¨èˆª
   * @date 2023-01-01
   */
 
@@ -16,11 +16,14 @@ using UnityEngine;
 
 public class SpeedDisplay : MonoBehaviour
 {
+    /// å„è½¦è¾†
     public GameObject[] TheCar;
+    /// å„è½¦è¾†é€Ÿåº¦
     public static float[] speed;
     private Vector3 velocity;
     private int PlayerNum;
     private int TotalPlayerNum;
+    /// é€Ÿåº¦æ˜¾ç¤ºUI
     public GameObject speedDisplaybox;
 
     void Start()
@@ -32,7 +35,7 @@ public class SpeedDisplay : MonoBehaviour
 
     void FixedUpdate()
     {
-        //PlayerNum£ºµ±Ç°Ïà»ú¸úËæµÄ³µÁ¾±àºÅ£»TotalPlayerNum£º×Ü³µÁ¾Êı
+        //PlayerNumï¼šå½“å‰ç›¸æœºè·Ÿéšçš„è½¦è¾†ç¼–å·ï¼›TotalPlayerNumï¼šæ€»è½¦è¾†æ•°
         PlayerNum = ViewModeManager.CamNum;
         TotalPlayerNum = GameSetting.NumofPlayer;
         for (int i = 0; i < TotalPlayerNum; i++)

@@ -1,10 +1,10 @@
-/**
+ï»¿/**
   * @file ScoreDisplay.cs
-  * @brief ScoreMode·ÂÕæ¹ı³ÌÖĞ£¬´¢´æ¸÷¸ö³µÁ¾µÄµÃ·Ö²¢ÔÚÔÚ´°¿Ú×óÉÏ½ÇÏÔÊ¾¸÷³µÁ¾µÄµÃ·Ö
+  * @brief ScoreModeä»¿çœŸè¿‡ç¨‹ä¸­ï¼Œå‚¨å­˜å„ä¸ªè½¦è¾†çš„å¾—åˆ†å¹¶åœ¨åœ¨çª—å£å·¦ä¸Šè§’æ˜¾ç¤ºå„è½¦è¾†çš„å¾—åˆ†
   * @details  
-  * ¹ÒÔØ¸Ã½Å±¾µÄ¶ÔÏó£ºRaceArea ¡ú Canvas ¡ú UILeft ¡ú ScoreModeDisplay ¡ú ScoreModeDisplay \n
-  * @param CarNum ±íÊ¾¸Ã½Å±¾ĞèÒªÏÔÊ¾¼¸ºÅ³µÁ¾µÄµÃ·Ö¡£Èô½Å±¾ÊÇÏÔÊ¾Ò»ºÅ³µÁ¾µÃ·ÖµÄUIµÄ×é¼ş£¬¸ÃÖµÔòÉèÎª0£»Èô½Å±¾ÊÇÏÔÊ¾¶şºÅ³µÁ¾µÃ·ÖµÄUIµÄ×é¼ş£¬¸ÃÖµÔòÉèÎª1¡­¡­ÒÔ´ËÀàÍÆ¡£
-  * @author ÀîÓêº½
+  * æŒ‚è½½è¯¥è„šæœ¬çš„å¯¹è±¡ï¼šRaceArea â†’ Canvas â†’ UILeft â†’ ScoreModeDisplay â†’ ScoreModeDisplay \n
+  * @param CarNum è¡¨ç¤ºè¯¥è„šæœ¬éœ€è¦æ˜¾ç¤ºå‡ å·è½¦è¾†çš„å¾—åˆ†ã€‚è‹¥è„šæœ¬æ˜¯æ˜¾ç¤ºä¸€å·è½¦è¾†å¾—åˆ†çš„UIçš„ç»„ä»¶ï¼Œè¯¥å€¼åˆ™è®¾ä¸º0ï¼›è‹¥è„šæœ¬æ˜¯æ˜¾ç¤ºäºŒå·è½¦è¾†å¾—åˆ†çš„UIçš„ç»„ä»¶ï¼Œè¯¥å€¼åˆ™è®¾ä¸º1â€¦â€¦ä»¥æ­¤ç±»æ¨ã€‚
+  * @author æé›¨èˆª
   * @date 2023-01-01
   */
 
@@ -15,8 +15,11 @@ using UnityEngine;
 
 public class ScoreDisplay : MonoBehaviour
 {
+    /// å„è½¦è¾†å¾—åˆ†
     public static int[] Score = new int[8] { 0, 0, 0, 0, 0, 0, 0, 0 };
+    /// åˆ†æ•°æ˜¾ç¤ºUI
     public GameObject CurrentScoreDisplay;
+    /// è¯¥è„šæœ¬æ§åˆ¶çš„æ˜¯å‡ å·è½¦çš„å¾—åˆ†æ˜¾ç¤ºUI
     [SerializeField] public int CarNum;
 
     void Update()

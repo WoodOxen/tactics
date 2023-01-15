@@ -52,7 +52,7 @@ void CarControli(int i) {
     float DreamSpeed;
 
     if (TacticAPI::Curvature(CarNum) == 0) DreamSpeed = 25;
-    else DreamSpeed = 3.5 / TacticAPI::Curvature(CarNum);
+    else DreamSpeed = 0.35 / TacticAPI::Curvature(CarNum);
     if (DreamSpeed > 25) DreamSpeed = 25;
     if (DreamSpeed < 10) DreamSpeed = 10;
     accel[CarNum] = 0.1 * (DreamSpeed - TacticAPI::Speed(CarNum));

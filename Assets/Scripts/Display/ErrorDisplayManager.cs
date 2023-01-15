@@ -1,12 +1,12 @@
-/**
+ï»¿/**
   * @file ErrorDisplayManager.cs
-  * @brief »ñÈ¡Ã¿Á¾³µ¾àÀëÈüµÀÖĞĞÄÏßµÄ¾àÀë£¬²¢ÏÔÊ¾ÔÚÆÁÄ»ÏÂ·½µÄUIÉÏ
+  * @brief è·å–æ¯è¾†è½¦è·ç¦»èµ›é“ä¸­å¿ƒçº¿çš„è·ç¦»ï¼Œå¹¶æ˜¾ç¤ºåœ¨å±å¹•ä¸‹æ–¹çš„UIä¸Š
   * @details  
-  * ¹ÒÔØ¸Ã½Å±¾µÄ¶ÔÏó£ºRaceArea ¡ú Canvas ¡ú UIBottom ¡ú ErrorDisplay ¡ú ErrorDisplayManager \n
-  * ºÍSpeedDisplay.cs²»Í¬£¨ÓĞÒ»¸öSpeedÊı×é£¬·Ö±ğ´¢´æÃ¿Á¾³µµÄËÙ¶È£©£¬Ö»ÓĞÒ»¸öCruiseError²ÎÊı´¢´æµ±Ç°ÊÓ½ÇËù¸úËæ³µÁ¾µÄÑ²ÏßÎó²î¡£
-  * @param CruiseError µ±Ç°ÊÓ½ÇËù¸úËæ³µÁ¾µÄÑ²ÏßÎó²î
-  * @param PlayerNum µ±Ç°¹Û²ìµÄ³µÁ¾±àºÅ
-  * @author ÀîÓêº½
+  * æŒ‚è½½è¯¥è„šæœ¬çš„å¯¹è±¡ï¼šRaceArea â†’ Canvas â†’ UIBottom â†’ ErrorDisplay â†’ ErrorDisplayManager \n
+  * å’ŒSpeedDisplay.csä¸åŒï¼ˆæœ‰ä¸€ä¸ªSpeedæ•°ç»„ï¼Œåˆ†åˆ«å‚¨å­˜æ¯è¾†è½¦çš„é€Ÿåº¦ï¼‰ï¼Œåªæœ‰ä¸€ä¸ªCruiseErrorå‚æ•°å‚¨å­˜å½“å‰è§†è§’æ‰€è·Ÿéšè½¦è¾†çš„å·¡çº¿è¯¯å·®ã€‚
+  * @param CruiseError å½“å‰è§†è§’æ‰€è·Ÿéšè½¦è¾†çš„å·¡çº¿è¯¯å·®
+  * @param PlayerNum å½“å‰è§‚å¯Ÿçš„è½¦è¾†ç¼–å·
+  * @author æé›¨èˆª
   * @date 2023-01-01
   */
 
@@ -17,6 +17,7 @@ using UnityEngine;
 
 public class ErrorDisplayManager : MonoBehaviour
 {
+    /// å·¡çº¿è¯¯å·®æ˜¾ç¤ºUI
     public GameObject ErrorDisplaybox;
     private int PlayerNum;
     private double CruiseError;

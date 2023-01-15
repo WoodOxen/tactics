@@ -1,10 +1,10 @@
-/**
+ï»¿/**
   * @file CppControl.cs
-  * @brief ÊµÏÖCpp´úÂëºÍUnityµÄ½Ó¿Ú
+  * @brief å®ç°Cppä»£ç å’ŒUnityçš„æ¥å£
   * @details  
-  * ¹ÒÔØ¸Ã½Å±¾µÄ¶ÔÏó£ºÎŞ \n
-  * APIµÄÏêÏ¸Çé¿öÇë²Î¿¼CppControl.csºÍCppCarControl.hÖĞµÄ¶¨Òå¡£
-  * @author ÀîÓêº½
+  * æŒ‚è½½è¯¥è„šæœ¬çš„å¯¹è±¡ï¼šæ—  \n
+  * APIçš„è¯¦ç»†æƒ…å†µè¯·å‚è€ƒCppControl.cså’ŒCppCarControl.hä¸­çš„å®šä¹‰ã€‚
+  * @author æé›¨èˆª
   * @date 2023-01-01
   */
 
@@ -30,80 +30,80 @@ public class CppControl : MonoBehaviour
         }
     }
 
-    //CarControlCpp¡¢InitializeCppControlº¯ÊıÔÚCppÎÄ¼şÖĞ±àĞ´
+    //CarControlCppã€InitializeCppControlå‡½æ•°åœ¨Cppæ–‡ä»¶ä¸­ç¼–å†™
     /**
      * @fn CarControlCpp
-     * @brief ¸Ãº¯ÊıÔÚCppÎÄ¼şÖĞ±àĞ´£¬Ã¿¸öÎïÀíÖ¡µ÷ÓÃÒ»´Î
+     * @brief è¯¥å‡½æ•°åœ¨Cppæ–‡ä»¶ä¸­ç¼–å†™ï¼Œæ¯ä¸ªç‰©ç†å¸§è°ƒç”¨ä¸€æ¬¡
      */
     [DllImport("CppControl")]
     public static extern void CarControlCpp();
     /**
      * @fn InitializeCppControl
-     * @brief ¸Ãº¯ÊıÔÚCppÎÄ¼şÖĞ±àĞ´£¬·ÂÕæ¿ªÊ¼Ê±µ÷ÓÃ£¬Íê³ÉÒ»Ğ©±ØÒªµÄ³õÊ¼»¯
+     * @brief è¯¥å‡½æ•°åœ¨Cppæ–‡ä»¶ä¸­ç¼–å†™ï¼Œä»¿çœŸå¼€å§‹æ—¶è°ƒç”¨ï¼Œå®Œæˆä¸€äº›å¿…è¦çš„åˆå§‹åŒ–
      */
     [DllImport("CppControl")]
     public static extern void InitializeCppControl();
 
-    //¶¨ÒåcallbackÀàĞÍ
+    //å®šä¹‰callbackç±»å‹
     public delegate float FloatDelegate(int CarNum);
     public delegate double doubleDelegate(int CarNum);
     public delegate int intDelegate();
 
     /**
      * @fn InitSpeedDelegate
-     * @brief ¸Ãº¯ÊıÔÚCppÎÄ¼şÖĞ±àĞ´£¬·ÂÕæ¿ªÊ¼Ê±ÔÚStartManager.csÖĞµ÷ÓÃ£¬³õÊ¼»¯»ñÈ¡³µÁ¾ËÙ¶ÈµÄapi
+     * @brief è¯¥å‡½æ•°åœ¨Cppæ–‡ä»¶ä¸­ç¼–å†™ï¼Œä»¿çœŸå¼€å§‹æ—¶åœ¨StartManager.csä¸­è°ƒç”¨ï¼Œåˆå§‹åŒ–è·å–è½¦è¾†é€Ÿåº¦çš„api
      */
     [DllImport("CppControl")]
     public static extern void InitSpeedDelegate(FloatDelegate callbackFloat);
     /**
      * @fn InitPositionXDelegate
-     * @brief ¸Ãº¯ÊıÔÚCppÎÄ¼şÖĞ±àĞ´£¬ÔİÊ±½ûÓÃ
+     * @brief è¯¥å‡½æ•°åœ¨Cppæ–‡ä»¶ä¸­ç¼–å†™ï¼Œæš‚æ—¶ç¦ç”¨
      */
     [DllImport("CppControl")]
     public static extern void InitPositionXDelegate(FloatDelegate callbackFloat);
     /**
      * @fn InitPositionYDelegate
-     * @brief ¸Ãº¯ÊıÔÚCppÎÄ¼şÖĞ±àĞ´£¬ÔİÊ±½ûÓÃ
+     * @brief è¯¥å‡½æ•°åœ¨Cppæ–‡ä»¶ä¸­ç¼–å†™ï¼Œæš‚æ—¶ç¦ç”¨
      */
     [DllImport("CppControl")]
     public static extern void InitPositionYDelegate(FloatDelegate callbackFloat);
     /**
      * @fn InitPositionZDelegate
-     * @brief ¸Ãº¯ÊıÔÚCppÎÄ¼şÖĞ±àĞ´£¬ÔİÊ±½ûÓÃ
+     * @brief è¯¥å‡½æ•°åœ¨Cppæ–‡ä»¶ä¸­ç¼–å†™ï¼Œæš‚æ—¶ç¦ç”¨
      */
     [DllImport("CppControl")]
     public static extern void InitPositionZDelegate(FloatDelegate callbackFloat);
     /**
      * @fn InitCruiseErrorDelegat
-     * @brief ¸Ãº¯ÊıÔÚCppÎÄ¼şÖĞ±àĞ´£¬·ÂÕæ¿ªÊ¼Ê±ÔÚStartManager.csÖĞµ÷ÓÃ£¬³õÊ¼»¯»ñÈ¡³µÁ¾¾àµÀÂ·ÖĞÏß¾àÀëµÄapi
+     * @brief è¯¥å‡½æ•°åœ¨Cppæ–‡ä»¶ä¸­ç¼–å†™ï¼Œä»¿çœŸå¼€å§‹æ—¶åœ¨StartManager.csä¸­è°ƒç”¨ï¼Œåˆå§‹åŒ–è·å–è½¦è¾†è·é“è·¯ä¸­çº¿è·ç¦»çš„api
      */
     [DllImport("CppControl")]
     public static extern void InitCruiseErrorDelegate(FloatDelegate callbackFloat);
     /**
      * @fn InitCurvatureDelegate
-     * @brief ¸Ãº¯ÊıÔÚCppÎÄ¼şÖĞ±àĞ´£¬·ÂÕæ¿ªÊ¼Ê±ÔÚStartManager.csÖĞµ÷ÓÃ£¬³õÊ¼»¯»ñÈ¡Ç°·½µÀÂ·ÇúÂÊµÄapi
+     * @brief è¯¥å‡½æ•°åœ¨Cppæ–‡ä»¶ä¸­ç¼–å†™ï¼Œä»¿çœŸå¼€å§‹æ—¶åœ¨StartManager.csä¸­è°ƒç”¨ï¼Œåˆå§‹åŒ–è·å–å‰æ–¹é“è·¯æ›²ç‡çš„api
      */
     [DllImport("CppControl")]
     public static extern void InitCurvatureDelegate(FloatDelegate callbackFloat);
     /**
      * @fn InitAngleErrorDelegate
-     * @brief ¸Ãº¯ÊıÔÚCppÎÄ¼şÖĞ±àĞ´£¬·ÂÕæ¿ªÊ¼Ê±ÔÚStartManager.csÖĞµ÷ÓÃ£¬³õÊ¼»¯»ñÈ¡³µÁ¾ºÍµÀÂ·ÖĞÏß½Ç¶ÈÆ«²îµÄapi
+     * @brief è¯¥å‡½æ•°åœ¨Cppæ–‡ä»¶ä¸­ç¼–å†™ï¼Œä»¿çœŸå¼€å§‹æ—¶åœ¨StartManager.csä¸­è°ƒç”¨ï¼Œåˆå§‹åŒ–è·å–è½¦è¾†å’Œé“è·¯ä¸­çº¿è§’åº¦åå·®çš„api
      */
     [DllImport("CppControl")]
     public static extern void InitAngleErrorDelegate(FloatDelegate callbackFloat);
     /**
      * @fn InitPlayerNumDelegate
-     * @brief ¸Ãº¯ÊıÔÚCppÎÄ¼şÖĞ±àĞ´£¬·ÂÕæ¿ªÊ¼Ê±ÔÚStartManager.csÖĞµ÷ÓÃ£¬³õÊ¼»¯»ñÈ¡³µÁ¾ÊıÄ¿µÄapi
+     * @brief è¯¥å‡½æ•°åœ¨Cppæ–‡ä»¶ä¸­ç¼–å†™ï¼Œä»¿çœŸå¼€å§‹æ—¶åœ¨StartManager.csä¸­è°ƒç”¨ï¼Œåˆå§‹åŒ–è·å–è½¦è¾†æ•°ç›®çš„api
      */
     [DllImport("CppControl")]
     public static extern void InitPlayerNumDelegate(intDelegate callbackint);
 
 
-    //¶¨ÒåcallbackÀàĞÍ
+    //å®šä¹‰callbackç±»å‹
     public delegate void CarMoveDelegate(float steering, float accel, float footbrake, float handbrake, int CarNum);
     /**
      * @fn InitCarMoveDelegate
-     * @brief ¸Ãº¯ÊıÔÚCppÎÄ¼şÖĞ±àĞ´£¬·ÂÕæ¿ªÊ¼Ê±ÔÚStartManager.csÖĞµ÷ÓÃ£¬³õÊ¼»¯´«Êä³µÁ¾¿ØÖÆ²ÎÊıµÄapi
+     * @brief è¯¥å‡½æ•°åœ¨Cppæ–‡ä»¶ä¸­ç¼–å†™ï¼Œä»¿çœŸå¼€å§‹æ—¶åœ¨StartManager.csä¸­è°ƒç”¨ï¼Œåˆå§‹åŒ–ä¼ è¾“è½¦è¾†æ§åˆ¶å‚æ•°çš„api
      */
     [DllImport("CppControl")]
     public static extern void InitCarMoveDelegate(CarMoveDelegate GetCarMove);
@@ -111,8 +111,8 @@ public class CppControl : MonoBehaviour
     //C# Function for C++'s call
     /**
      * @fn CallbackPlayerNumFromCpp
-     * @brief ÔÚcpp´úÂëÖĞ£¬Ê¹ÓÃTacticAPI::PlayerNum()¿Éµ÷ÓÃ¸Ãº¯Êı
-     * @return int ³µÁ¾ÊıÄ¿
+     * @brief åœ¨cppä»£ç ä¸­ï¼Œä½¿ç”¨TacticAPI::PlayerNum()å¯è°ƒç”¨è¯¥å‡½æ•°
+     * @return int è½¦è¾†æ•°ç›®
      */
     [MonoPInvokeCallback(typeof(FloatDelegate))]
     public static int CallbackPlayerNumFromCpp()
@@ -121,9 +121,9 @@ public class CppControl : MonoBehaviour
     }
     /**
     * @fn CallbackSpeedFromCpp
-    * @brief ÔÚcpp´úÂëÖĞ£¬Ê¹ÓÃTacticAPI::Speed(int CarNum)¿Éµ÷ÓÃ¸Ãº¯Êı
-    * @param[in] CarNum ³µÁ¾±àºÅ
-    * @return float µÚCarNumºÅ³µÁ¾µÄËÙ¶È
+    * @brief åœ¨cppä»£ç ä¸­ï¼Œä½¿ç”¨TacticAPI::Speed(int CarNum)å¯è°ƒç”¨è¯¥å‡½æ•°
+    * @param[in] CarNum è½¦è¾†ç¼–å·
+    * @return float ç¬¬CarNumå·è½¦è¾†çš„é€Ÿåº¦
     */
     [MonoPInvokeCallback(typeof(FloatDelegate))]
     public static float CallbackSpeedFromCpp(int CarNum)
@@ -132,9 +132,9 @@ public class CppControl : MonoBehaviour
     }
     /**
     * @fn CallbackCruiseErrorFromCpp
-    * @brief ÔÚcpp´úÂëÖĞ£¬Ê¹ÓÃTacticAPI::CruiseError(int CarNum)¿Éµ÷ÓÃ¸Ãº¯Êı
-    * @param[in] CarNum ³µÁ¾±àºÅ
-    * @return float µÚCarNumºÅ³µÁ¾¾àµÀÂ·ÖĞÏß¾àÀë
+    * @brief åœ¨cppä»£ç ä¸­ï¼Œä½¿ç”¨TacticAPI::CruiseError(int CarNum)å¯è°ƒç”¨è¯¥å‡½æ•°
+    * @param[in] CarNum è½¦è¾†ç¼–å·
+    * @return float ç¬¬CarNumå·è½¦è¾†è·é“è·¯ä¸­çº¿è·ç¦»
     */
     [MonoPInvokeCallback(typeof(FloatDelegate))]
     public static float CallbackCruiseErrorFromCpp(int CarNum)
@@ -143,9 +143,9 @@ public class CppControl : MonoBehaviour
     }
     /**
     * @fn CallbackCurvatureFromCpp
-    * @brief ÔÚcpp´úÂëÖĞ£¬Ê¹ÓÃTacticAPI::Curvature(int CarNum)¿Éµ÷ÓÃ¸Ãº¯Êı
-    * @param[in] CarNum ³µÁ¾±àºÅ
-    * @return float µÚCarNumºÅ³µÁ¾Ç°·½µÀÂ·µÄÇúÂÊ
+    * @brief åœ¨cppä»£ç ä¸­ï¼Œä½¿ç”¨TacticAPI::Curvature(int CarNum)å¯è°ƒç”¨è¯¥å‡½æ•°
+    * @param[in] CarNum è½¦è¾†ç¼–å·
+    * @return float ç¬¬CarNumå·è½¦è¾†å‰æ–¹é“è·¯çš„æ›²ç‡
     */
     [MonoPInvokeCallback(typeof(FloatDelegate))]
     public static float CallbackCurvatureFromCpp(int CarNum)
@@ -154,9 +154,9 @@ public class CppControl : MonoBehaviour
     }
     /**
     * @fn CallbackAngleErrorFromCpp
-    * @brief ÔÚcpp´úÂëÖĞ£¬Ê¹ÓÃTacticAPI::AngleError(int CarNum)¿Éµ÷ÓÃ¸Ãº¯Êı
-    * @param[in] CarNum ³µÁ¾±àºÅ
-    * @return float µÚCarNumºÅ³µÁ¾ÓëµÀÂ·ÖĞÏßµÄ½Ç¶ÈÆ«²î
+    * @brief åœ¨cppä»£ç ä¸­ï¼Œä½¿ç”¨TacticAPI::AngleError(int CarNum)å¯è°ƒç”¨è¯¥å‡½æ•°
+    * @param[in] CarNum è½¦è¾†ç¼–å·
+    * @return float ç¬¬CarNumå·è½¦è¾†ä¸é“è·¯ä¸­çº¿çš„è§’åº¦åå·®
     */
     [MonoPInvokeCallback(typeof(FloatDelegate))]
     public static float CallbackAngleErrorFromCpp(int CarNum)
@@ -165,24 +165,24 @@ public class CppControl : MonoBehaviour
     }
     /**
     * @fn GetCarMoveFromCpp
-    * @brief ÔÚcpp´úÂëÖĞ£¬Ê¹ÓÃTacticAPI::CarMove(float steering, float accel, float footbrake, float handbrake, int CarNum)¿Éµ÷ÓÃ¸Ãº¯Êı
-    * @details ½«ĞèÒªÊäÈë¸ø³µÁ¾µÄËÄ¸ö²ÎÊı´æÈëCallCppControl.cs£¬ÔÚCallCppControl.csÖĞÔÙµ÷ÓÃCarControllerµÄMoveº¯Êı¿ØÖÆ³µÁ¾ÒÆ¶¯
-    * @param[in] CarNum ³µÁ¾±àºÅ
-    * @param[in] steering ÊäÈëµÚCarNumºÅ³µÁ¾µÄ·½ÏòÅÌ×ª½Ç
-    * @param[in] accel ÊäÈëµÚCarNumºÅ³µÁ¾µÄÓÍÃÅÖµ
-    * @param[in] footbrake ÊäÈëµÚCarNumºÅ³µÁ¾µÄ½ÅÉ²Öµ
-    * @param[in] handbrake ÊäÈëµÚCarNumºÅ³µÁ¾µÄÊÖÉ²Öµ
+    * @brief åœ¨cppä»£ç ä¸­ï¼Œä½¿ç”¨TacticAPI::CarMove(float steering, float accel, float footbrake, float handbrake, int CarNum)å¯è°ƒç”¨è¯¥å‡½æ•°
+    * @details å°†éœ€è¦è¾“å…¥ç»™è½¦è¾†çš„å››ä¸ªå‚æ•°å­˜å…¥CallCppControl.csï¼Œåœ¨CallCppControl.csä¸­å†è°ƒç”¨CarControllerçš„Moveå‡½æ•°æ§åˆ¶è½¦è¾†ç§»åŠ¨
+    * @param[in] CarNum è½¦è¾†ç¼–å·
+    * @param[in] steering è¾“å…¥ç¬¬CarNumå·è½¦è¾†çš„æ–¹å‘ç›˜è½¬è§’
+    * @param[in] accel è¾“å…¥ç¬¬CarNumå·è½¦è¾†çš„æ²¹é—¨å€¼
+    * @param[in] footbrake è¾“å…¥ç¬¬CarNumå·è½¦è¾†çš„è„šåˆ¹å€¼
+    * @param[in] handbrake è¾“å…¥ç¬¬CarNumå·è½¦è¾†çš„æ‰‹åˆ¹å€¼
     * @return None
     */
     [MonoPInvokeCallback(typeof(FloatDelegate))]
     public static void GetCarMoveFromCpp(float steering, float accel, float footbrake, float handbrake, int CarNum)
     {
-        //¼ÇÂ¼´«µİ½øÀ´µÄËÄ¸ö²ÎÊı
+        //è®°å½•ä¼ é€’è¿›æ¥çš„å››ä¸ªå‚æ•°
         CallCppControl.steering[CarNum] = steering;
         CallCppControl.accel[CarNum] = accel;
         CallCppControl.footbrake[CarNum] = footbrake;
         CallCppControl.handbrake[CarNum] = handbrake;
-        //µ÷ÓÃMoveº¯Êı¿ØÖÆ³µÁ¾ÒÆ¶¯
+        //è°ƒç”¨Moveå‡½æ•°æ§åˆ¶è½¦è¾†ç§»åŠ¨
         /*
         if ((GameSetting.ControlMethod[CarNum] == 2) && (CarNum < GameSetting.NumofPlayer))
         {

@@ -1,28 +1,67 @@
-﻿using UnityEngine;
+﻿/**
+  * @file StartManager.cs
+  * @brief 控制巡线开始
+  * @details  
+  * 挂载该脚本的对象：RaceArea → StartManager\n
+  * 需要完成以下操作：\n
+  * - 初始化Cpp接口；
+  * - 判断本次运行是否需要读档
+  *  - 如果需要读档，则根据存档里的数据设置相应的参数；
+  *  - 如果不需要读档，则只需要进行一些初始化操作；
+  *  .
+  * - 开启设置车辆颜色的代码；（CarColor.SetActive(true)）
+  * - 开启设置不同巡线模式下UI的代码；（ModeManager.SetActive(true)）
+  * - 开启切换视角功能；（ViewModeManager.SetActive(true)）
+  * - 开启车辆控制的相关代码；（CarControl.SetActive (true);）
+  * - 开启计时；（LapTimer.SetActive (true)）
+  * - 开启车辆Speed、Steer、CruiseError的实时显示；
+  * - 巡线开始前的倒计时；
+  * .
+  * @author 李雨航
+  * @date 2022-01-06
+  */
+
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using UnityStandardAssets.Vehicles.Car;
 using TMPro;
 
 public class StartManager : MonoBehaviour {
-
+    /// 倒计时的UI 
     public GameObject CountDown;
+    /// 倒计时音效 
     public AudioSource GetReady;
+    /// 比赛开始音效 
     public AudioSource GoAudio;
+    /// 背景音乐(暂时禁用) 
     public AudioSource BGM01;
+
+    /// 开启各车辆控制代码的GameObject 
     public GameObject CarControl;
+    /// 开启巡线计时的GameObject 
     public GameObject LapTimer;
+    /// 根据仿真模式修改UI的GameObject 
     public GameObject ModeManager;
+    /// 实现更换观测视角功能的GameObject 
     public GameObject ViewModeManager;
+    /// 起点线触发器 
     public GameObject LapCompleteTrigger;
+    /// 半途检查点触发器 
     public GameObject LapHalf;
+    /// 修改各车辆颜色的GameObject 
     public GameObject CarColor;
 
+    /// 控制显示速度的GameObject 
     public GameObject SpeedDisplayManager;
+    /// 控制显示方向盘转角的GameObject 
     public GameObject SteerDisplayManager;
+    /// 控制显示巡线误差的GameObject 
     public GameObject ErrorDisplayManager;
+    /// 记录仿真过程中输入给车辆的控制参数的GameObject 
     public GameObject RecordOutputManager;
 
+    /// 各车辆 
     public GameObject[] TheCar;
 
     private int LoadNum;

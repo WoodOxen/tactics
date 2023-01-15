@@ -30,14 +30,16 @@ public class ButtonManager : MonoBehaviour {
     /**
      * @fn GameSet
      * @brief 转到TrackSelect场景
-     * @return None
      */
     public void GameSet(){
         LoadButton.LoadNum = 0;
         SceneManager.LoadScene (1);
     }
-
-	public void QuickStart(){
+    /**
+     * @fn QuickStart
+     * @brief 根据历史设置快速开始仿真
+     */
+    public void QuickStart(){
         LoadButton.LoadNum = 0;
 
         GameSetting.CarType = new int[8];
@@ -95,17 +97,26 @@ public class ButtonManager : MonoBehaviour {
         else
             SceneManager.LoadScene(5);
     }
-
-	public void MainMenu(){
-		SceneManager.LoadScene (0);
-	}
-
-	public void quit(){
-		Application.Quit ();
-	}
-
-	public void Credits(){
-		SceneManager.LoadScene (4);
-	}
+    /**
+     * @fn MainMenu
+    * @brief 转到MainMenu场景
+    */
+    public void MainMenu(){
+        SceneManager.LoadScene (0);
+    }
+    /**
+     * @fn quit
+    * @brief 退出仿真器
+    */
+    public void quit(){
+        Application.Quit ();
+    }
+    /**
+     * @fn Credits(
+    * @brief 转到Credits(场景
+    */
+    public void Credits(){
+        SceneManager.LoadScene (4);
+    }
 
 }

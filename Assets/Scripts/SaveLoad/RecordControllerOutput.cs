@@ -1,3 +1,12 @@
+﻿/**
+  * @file RecordControllerOutput.cs
+  * @brief 使用动态数组ArrayList储存对各个小车输出的控制参数
+  * @details  
+  * 挂载该脚本的对象：RaceArea → RecordOutputofController\n
+  * @author 李雨航
+  * @date 2022-01-06
+  */
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

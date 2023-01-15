@@ -1,4 +1,15 @@
-﻿using UnityEngine;
+﻿/**
+  * @file RaceFinish.cs
+  * @brief 巡线结束时执行的代码
+  * @details
+  * 挂载该脚本的对象：RaceArea → RaceFinish\n
+  * 主要功能为关闭车辆控制相关的代码，并呼出巡线结束的UI。\n
+  * 其中ScoreMode和TimeMode的结束UI不完全相同。
+  * @author 李雨航
+  * @date 2022-01-06
+  */
+
+using UnityEngine;
 using System.Collections;
 using UnityStandardAssets.Vehicles.Car;
 using UnityEngine.SceneManagement;
@@ -7,16 +18,22 @@ using TMPro;
 
 //当巡线结束时，会调用该代码
 public class RaceFinish : MonoBehaviour {
-
+    /// 各车辆
     public GameObject[] PlayerCar;
 
+    /// 终点触发器
     public GameObject CompleteTrig;
+    /// 结束音效
     public AudioSource FinishBGM;
-    public GameObject DrivingCam;
+
     public GameObject levelBGM;
+
+    /// 计时的GameObject
     public GameObject TimeManager;
 
+    /// 结束窗口UI
     public GameObject CompletePanel;
+
     public GameObject ScoreModeLabel;
     public GameObject TimeModeLabel;
     public GameObject ScoreDisplayBox;

@@ -1,14 +1,14 @@
-/**
+ï»¿/**
   * @file GamePauseButton.cs
-  * @brief ·ÂÕæÔİÍ£½çÃæÖĞ°´ÏÂ²»Í¬°´Å¥ËùÖ´ĞĞµÄº¯Êı¡£
+  * @brief ä»¿çœŸæš‚åœç•Œé¢ä¸­æŒ‰ä¸‹ä¸åŒæŒ‰é’®æ‰€æ‰§è¡Œçš„å‡½æ•°ã€‚
   * @details 
-  * ¹ÒÔØ¸Ã½Å±¾µÄ¶ÔÏó£ºRaceArea ¡ú Canvas ¡ú Panel Pause ¡ú PauseButtonManager \n
-  * - Continue°´Å¥£ºContinueRace()£¬¼ÌĞø·ÂÕæ¡£
-  * - Save and Load°´Å¥£ºSaveGame()£¬´ò¿ª´æµµ¶Áµµ´°¿Ú¡£
-  * - Retry°´Å¥£ºRetry()£¬ÖØĞÂ¿ªÊ¼¡£
-  * - MainMenu°´Å¥£ºBacktoMainMenu()£¬»Øµ½Ö÷²Ëµ¥½çÃæ¡£
+  * æŒ‚è½½è¯¥è„šæœ¬çš„å¯¹è±¡ï¼šRaceArea â†’ Canvas â†’ Panel Pause â†’ PauseButtonManager \n
+  * - ContinueæŒ‰é’®ï¼šContinueRace()ï¼Œç»§ç»­ä»¿çœŸã€‚
+  * - Save and LoadæŒ‰é’®ï¼šSaveGame()ï¼Œæ‰“å¼€å­˜æ¡£è¯»æ¡£çª—å£ã€‚
+  * - RetryæŒ‰é’®ï¼šRetry()ï¼Œé‡æ–°å¼€å§‹ã€‚
+  * - MainMenuæŒ‰é’®ï¼šBacktoMainMenu()ï¼Œå›åˆ°ä¸»èœå•ç•Œé¢ã€‚
   * .
-  * @author ÀîÓêº½
+  * @author æé›¨èˆª
   * @date 2023-12-31
   */
 
@@ -19,15 +19,17 @@ using UnityEngine.SceneManagement;
 
 public class GamePauseButton : MonoBehaviour
 {
+    /// ä»¿çœŸæš‚åœçª—å£ 
     public GameObject pausePanel;
+    /// å­˜æ¡£çª—å£ 
     public GameObject SavePanel;
     private int CamMode;
     private int trackNum;
 
     /**
      * @fn BacktoMainMenu
-     * @brief ·µ»ØÖ÷²Ëµ¥
-     * @details ÊÍ·Å±¾´Î·ÂÕæ¹ı³ÌÖĞ¼ÇÂ¼³µÁ¾ÔËĞĞÖ¸ÁîËùºÄ·ÑµÄÄÚ´æ£¬²Î¿¼RecordControllerOutput.cs
+     * @brief è¿”å›ä¸»èœå•
+     * @details é‡Šæ”¾æœ¬æ¬¡ä»¿çœŸè¿‡ç¨‹ä¸­è®°å½•è½¦è¾†è¿è¡ŒæŒ‡ä»¤æ‰€è€—è´¹çš„å†…å­˜ï¼Œå‚è€ƒRecordControllerOutput.cs
      * @return None
      */
     public void BacktoMainMenu()
@@ -44,7 +46,7 @@ public class GamePauseButton : MonoBehaviour
     }
     /**
      * @fn ContinueRace
-     * @brief ¼ÌĞø·ÂÕæ
+     * @brief ç»§ç»­ä»¿çœŸ
      * @return None
      */
     public void ContinueRace()
@@ -54,9 +56,9 @@ public class GamePauseButton : MonoBehaviour
     }
     /**
      * @fn SaveGame
-     * @brief ´ò¿ª´æµµ´°¿Ú£¬Í¬Ê±¹Ø±ÕÔİÍ£´°¿Ú
-     * @details ĞèÒª¼ÇÂ¼ÓÃ»§ÊÇÔÚÔİÍ£½çÃæºô³öµÄ´æµµ´°¿Ú \n
-     * ÈôÓÃ»§ÍË³ö´æµµ½çÃæ£¬ÔòÓ¦¸ÃÔÙ´Î´ò¿ªÔİÍ£´°¿Ú
+     * @brief æ‰“å¼€å­˜æ¡£çª—å£ï¼ŒåŒæ—¶å…³é—­æš‚åœçª—å£
+     * @details éœ€è¦è®°å½•ç”¨æˆ·æ˜¯åœ¨æš‚åœç•Œé¢å‘¼å‡ºçš„å­˜æ¡£çª—å£ \n
+     * è‹¥ç”¨æˆ·é€€å‡ºå­˜æ¡£ç•Œé¢ï¼Œåˆ™åº”è¯¥å†æ¬¡æ‰“å¼€æš‚åœçª—å£
      * @return None
      */
     public void SaveGame()
@@ -67,9 +69,9 @@ public class GamePauseButton : MonoBehaviour
     }
     /**
      * @fn Retry
-     * @brief ÖØĞÂ·ÂÕæ
-     * @details ÊÍ·Å±¾´Î·ÂÕæ¹ı³ÌÖĞ¼ÇÂ¼³µÁ¾ÔËĞĞÖ¸ÁîËùºÄ·ÑµÄÄÚ´æ£¬²Î¿¼RecordControllerOutput.cs \n
-     * ÖØĞÂÔØÈë·ÂÕæ³¡¾°
+     * @brief é‡æ–°ä»¿çœŸ
+     * @details é‡Šæ”¾æœ¬æ¬¡ä»¿çœŸè¿‡ç¨‹ä¸­è®°å½•è½¦è¾†è¿è¡ŒæŒ‡ä»¤æ‰€è€—è´¹çš„å†…å­˜ï¼Œå‚è€ƒRecordControllerOutput.cs \n
+     * é‡æ–°è½½å…¥ä»¿çœŸåœºæ™¯
      * @return None
      */
     public void Retry()

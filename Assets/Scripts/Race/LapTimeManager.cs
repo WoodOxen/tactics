@@ -1,17 +1,32 @@
-﻿using UnityEngine;
+﻿/**
+  * @file LapTimeManager.cs
+  * @brief 在TimeMode中巡线计时，并在窗口左上角显示巡线时间
+  * @details
+  * 挂载该脚本的对象：RaceArea → LapTimeManager\n
+  * @author 李雨航
+  * @date 2022-01-06
+  */
+
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using TMPro;
 
 public class LapTimeManager : MonoBehaviour {
-
+    /// 分
     public static int MinuteCount;
+    /// 秒U
     public static int SecondCount;
+    /// 毫秒
     public static float MilliCount;
+    /// 用于显示的毫秒
     public static string MilliDisplay;
 
+    /// 分UI
     public GameObject MinuteBox;
+    /// 秒UI
     public GameObject SecondBox;
+    /// 毫秒UI
     public GameObject MilliBox;
 
 

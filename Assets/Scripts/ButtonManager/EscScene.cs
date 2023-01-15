@@ -1,9 +1,9 @@
-/**
+ï»¿/**
   * @file EscScene.cs
-  * @brief ÔÚTrackSelect³¡¾°ºÍCredit³¡¾°Í¨¹ıEsc¼ü¿ìËÙ»Øµ½Ö÷²Ëµ¥
+  * @brief åœ¨TrackSelectåœºæ™¯å’ŒCreditåœºæ™¯é€šè¿‡Escé”®å¿«é€Ÿå›åˆ°ä¸»èœå•
   * @details 
-  * ¹ÒÔØ¸Ã½Å±¾µÄ¶ÔÏó£ºTrackSelect ¡ú Esc£¬ Credit ¡ú Esc \n
-  * @author ÀîÓêº½
+  * æŒ‚è½½è¯¥è„šæœ¬çš„å¯¹è±¡ï¼šTrackSelect â†’ Escï¼Œ Credit â†’ Esc \n
+  * @author æé›¨èˆª
   * @date 2023-12-31
   */
 
