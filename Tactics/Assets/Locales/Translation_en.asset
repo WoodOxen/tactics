@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Translation_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 0f643945bb6c711c59f16b242216aee0, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 29676986368
+    m_Localized: Quick Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68642070528
+    m_Localized: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 103391879168
+    m_Localized: Exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 151542489088
+    m_Localized: Modes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 207301566464
+    m_Localized: Credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 248103755776
+    m_Localized: Editors
+    m_Metadata:
+      m_Items: []
+  - m_Id: 306278752256
+    m_Localized: New Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 638228553728
+    m_Localized: Load Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 691223584768
+    m_Localized: Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 732986269696
+    m_Localized: No
+    m_Metadata:
+      m_Items: []
+  - m_Id: 768096788480
+    m_Localized: OK
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
