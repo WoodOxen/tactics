@@ -113,7 +113,7 @@ ALLOW_UNICODE_NAMES    = NO
 # Swedish, Turkish, Ukrainian and Vietnamese.
 # The default value is: English.
 
-OUTPUT_LANGUAGE        = Chinese
+OUTPUT_LANGUAGE        = English
 
 # If the BRIEF_MEMBER_DESC tag is set to YES, doxygen will include brief member
 # descriptions after the members that are listed in the file and class
@@ -917,7 +917,7 @@ WARN_LOGFILE           =
 # spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  = ./Assets/Scripts
+INPUT                  = ./Tactics/Assets/Scripts
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding. Doxygen uses
