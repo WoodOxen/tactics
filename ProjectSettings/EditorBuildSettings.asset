@@ -27,8 +27,8 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scene/RaceArea04.unity
-    guid: 158917fc9eeaeda4ea1133c1e271f71e
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: f5ae668f725341d41b7075a5831570c5, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: bd7bcb19e9a6cb34faaa9367fce4f7a1, type: 2}

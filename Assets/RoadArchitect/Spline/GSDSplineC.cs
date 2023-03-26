@@ -6,16 +6,13 @@ using GSD;
 #endif
 #endregion
 public class GSDSplineC : MonoBehaviour{
-	#if UNITY_EDITOR
-	public List<GSDSplineN> mNodes = new List<GSDSplineN>();
+    public trackData WayPoints = new trackData();
+    #if UNITY_EDITOR
+    public List<GSDSplineN> mNodes = new List<GSDSplineN>();
 	public GameObject mSplineRoot;
 	public GSDRoad tRoad;
 	public float distance = -1f;
 	public static Vector3[] CachedPoints;
-
-    //public List<Vector4> WayPoints = new List<Vector4>();
-    public trackData WayPoints = new trackData();
-
 
     private const float CachedPointsSeperation = 1f;
 	
