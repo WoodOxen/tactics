@@ -92,6 +92,6 @@ public class GamePauseButton : MonoBehaviour
         else if (trackNum == 3)
             SceneManager.LoadScene(5);
         else
-            SceneManager.LoadScene(5);
+            SceneManager.LoadScene(2);
     }
 }

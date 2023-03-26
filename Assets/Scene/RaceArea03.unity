@@ -620,7 +620,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.9765248, b: 0.495283, a: 1}
+  m_Color: {r: 1, g: 0.9788481, b: 0.5981132, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -678,14 +678,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5749734}
-  m_LocalRotation: {x: 0.30968624, y: -0.23550202, z: 0.07641446, w: 0.9180382}
-  m_LocalPosition: {x: -844.37695, y: 12.2671175, z: -48.766724}
+  m_LocalRotation: {x: 0.30788743, y: -0.2561099, z: 0.083366975, w: 0.9125037}
+  m_LocalPosition: {x: 0, y: 336.01, z: 0}
   m_LocalScale: {x: 1.1605599, y: 1.1605598, z: 1.1605599}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 282391532}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 37.2, y: -28.91, z: -0.4}
+  m_LocalEulerAnglesHint: {x: 37.2, y: -31.49, z: -0.4}
 --- !u!1 &14364436
 GameObject:
   m_ObjectHideFlags: 0
@@ -6640,16 +6640,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LapCompleteTrig: {fileID: 233772625}
   HalfLapTrig: {fileID: 1968348901}
-  MinuteNow: {fileID: 1161837494}
-  SecondNow: {fileID: 1528348326}
-  MilliNow: {fileID: 1924070390}
-  MinuteDisplay: {fileID: 36187667}
-  SecondDisplay: {fileID: 1207819345}
-  MilliDisplay: {fileID: 37978283}
   RaceFinish: {fileID: 650986459}
-  modeType: 0
-  flag_firstlyEnter: 0
-  rawTime: 0
 --- !u!23 &233772627
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11673,7 +11664,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh33316
+  m_Name: pb_Mesh379046
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15904,7 +15895,6 @@ MonoBehaviour:
   - {fileID: 1950643912}
   CompleteTrig: {fileID: 233772625}
   FinishBGM: {fileID: 1898932548}
-  DrivingCam: {fileID: 2661577}
   levelBGM: {fileID: 338816185}
   TimeManager: {fileID: 361897364}
   CompletePanel: {fileID: 326638584}
@@ -18677,7 +18667,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh33224
+  m_Name: pb_Mesh378954
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20843,7 +20833,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh33556
+  m_Name: pb_Mesh379278
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
