@@ -33,6 +33,7 @@ public class carControlActive : MonoBehaviour {
             CallCppControl.SetActive(true);
         else
             Car[i].GetComponent<CarControlKeyBoard>().enabled = true;
+            //Car[i].GetComponent<CarAIControl>().enabled = true;
     }
 
     void Start()

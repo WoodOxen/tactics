@@ -19,7 +19,7 @@ int PlayerNum;
 
 //Tactic在Race开始时会调用InitializeCppControl()函数，可以在此处做一些Cpp代码的初始化工作
 DLLForUnity_API void __stdcall InitializeCppControl() {
-    PlayerNum = TacticAPI::PlayerNum();
+    PlayerNum = TacticAPI::player_num();
     for (int i = 0; i < 8; i++) {
         CruiseError[i] = 0;
         Addup_CruiseError[i] = 0;
@@ -51,15 +51,15 @@ void CarControli(int i) {
     //speed control
     float DreamSpeed;
 
-    if (TacticAPI::Curvature(CarNum) == 0) DreamSpeed = 25;
-    else DreamSpeed = 0.35 / TacticAPI::Curvature(CarNum);
+    if (TacticAPI::curvature(CarNum) == 0) DreamSpeed = 25;
+    else DreamSpeed = 0.35 / TacticAPI::curvature(CarNum);
     if (DreamSpeed > 25) DreamSpeed = 25;
     if (DreamSpeed < 10) DreamSpeed = 10;
-    accel[CarNum] = 0.1 * (DreamSpeed - TacticAPI::Speed(CarNum));
-    footbrake[CarNum] = 0.1 * (DreamSpeed - TacticAPI::Speed(CarNum));
+    accel[CarNum] = 0.1 * (DreamSpeed - TacticAPI::speed(CarNum));
+    footbrake[CarNum] = 0.1 * (DreamSpeed - TacticAPI::speed(CarNum));
 
     //steering control
-    CruiseError[CarNum] = TacticAPI::CruiseError(CarNum);
+    CruiseError[CarNum] = TacticAPI::cruise_error(CarNum);
     Addup_CruiseError[CarNum] += CruiseError[CarNum] * 0.01;
     if (Addup_CruiseError[CarNum] > 200) Addup_CruiseError[CarNum] = 200;
     else if(Addup_CruiseError[CarNum] < -200) Addup_CruiseError[CarNum] = -200;
@@ -69,7 +69,7 @@ void CarControli(int i) {
 
     Last_CruiseError[CarNum] = CruiseError[CarNum];
 
-    TacticAPI::CarMove(steering[CarNum], accel[CarNum], footbrake[CarNum], handbrake[CarNum], CarNum);
+    TacticAPI::CarMove(CarNum, steering[CarNum], accel[CarNum], footbrake[CarNum], handbrake[CarNum]);
     //TacticAPI::CarMove(0,1,0,0, CarNum);
 }
 
@@ -77,25 +77,33 @@ void CarControli(int i) {
 
 
 //下为接口定义相关代码，无需阅读
-void(*TacticAPI::CarMove)(float steering, float accel, float footbrake, float handbrake,int CarNum);
+void(*TacticAPI::CarMove)(int CarNum, float steering, float accel, float footbrake, float handbrake);
 
-float(*TacticAPI::Speed)(int CarNum);
+float(*TacticAPI::speed)(int CarNum);
+float(*TacticAPI::acc)(int CarNum);
 //float(*TacticAPI::PositionX)(int CarNum);
 //float(*TacticAPI::PositionY)(int CarNum);
 //float(*TacticAPI::PositionZ)(int CarNum);
-float(*TacticAPI::CruiseError)(int CarNum);
-float(*TacticAPI::Curvature)(int CarNum);
-float(*TacticAPI::AngleError)(int CarNum);
-int(*TacticAPI::PlayerNum)();
+float(*TacticAPI::cruise_error)(int CarNum);
+float(*TacticAPI::curvature)(int CarNum);
+float(*TacticAPI::yaw)(int CarNum);
+float(*TacticAPI::yawrate)(int CarNum);
+float(*TacticAPI::midline)(int CarNum, float k, int index);
+int(*TacticAPI::player_num)();
+float(*TacticAPI::width)();
 
-void DLLForUnity_API InitCarMoveDelegate(void (*GetCarMove)(float steering, float accel, float footbrake, float handbrake,int CarNum))
+void DLLForUnity_API InitCarMoveDelegate(void (*GetCarMove)(int CarNum, float steering, float accel, float footbrake, float handbrake))
 {
     TacticAPI::CarMove = GetCarMove;
 }
 
 void DLLForUnity_API InitSpeedDelegate(float (*callbackFloat)(int CarNum))
 {
-    TacticAPI::Speed = callbackFloat;
+    TacticAPI::speed = callbackFloat;
+}
+void DLLForUnity_API InitAccDelegate(float (*callbackFloat)(int CarNum))
+{
+    TacticAPI::acc = callbackFloat;
 }
 /*
 void DLLForUnity_API InitPositionXDelegate(float (*callbackFloat)(int CarNum))
@@ -113,22 +121,33 @@ void DLLForUnity_API InitPositionZDelegate(float (*callbackFloat)(int CarNum))
 */
 void DLLForUnity_API InitCruiseErrorDelegate(float (*callbackFloat)(int CarNum))
 {
-    TacticAPI::CruiseError = callbackFloat;
+    TacticAPI::cruise_error = callbackFloat;
 }
 void DLLForUnity_API InitCurvatureDelegate(float (*callbackFloat)(int CarNum))
 {
-    TacticAPI::Curvature = callbackFloat;
+    TacticAPI::curvature = callbackFloat;
 }
 void DLLForUnity_API InitAngleErrorDelegate(float (*callbackFloat)(int CarNum))
 {
-    TacticAPI::AngleError = callbackFloat;
+    TacticAPI::yaw = callbackFloat;
 }
-
+void DLLForUnity_API InitYawrateDelegate(float (*callbackFloat)(int CarNum))
+{
+    TacticAPI::yawrate = callbackFloat;
+}
 void DLLForUnity_API InitPlayerNumDelegate(int (*callbackint)())
 {
-    TacticAPI::PlayerNum = callbackint;
+    TacticAPI::player_num = callbackint;
 }
 
+void DLLForUnity_API InitMidlineDelegate(float (*callbackfloat)(int CarNum, float k, int index))
+{
+    TacticAPI::midline = callbackfloat;
+}
+void DLLForUnity_API InitWidthDelegate(float (*callbackfloat)())
+{
+    TacticAPI::width = callbackfloat;
+}
 /*
 void(*Debug::Log)(char* message, int iSize);
 

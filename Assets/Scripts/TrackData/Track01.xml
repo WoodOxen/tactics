@@ -1219,9 +1219,4 @@
     <rotation>(0.09247, 0.04355, -0.43091, 0.89659)</rotation>
     <scale>(1.00,1,00,1,00)</scale>
   </waypoint>
-  <waypoint index="244">
-    <position>(285.06, 0.72, 152.61)</position>
-    <rotation>(0.03339, 0.00367, -0.23677, 0.97098)</rotation>
-    <scale>(1.00,1,00,1,00)</scale>
-  </waypoint>
 </waypoints>
