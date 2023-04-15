@@ -1,4 +1,4 @@
-Language : [English](./README.en.md) | 中文
+Language : English | [中文](./README.zh-cn.md)
 
 # TACTICS
 
