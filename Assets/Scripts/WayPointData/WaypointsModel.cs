@@ -1,7 +1,5 @@
 ﻿/// CarWaypoints v1.0 (赛车路标点插件) <summary>
 /// 作者：阿升哥哥
-/// 博客：http://www.cnblogs.com/shenggege
-/// 联系方式：6087537@qq.com
 /// 最后修改：2015/2/14 23:20
 /// </summary>
 

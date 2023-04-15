@@ -383,15 +383,15 @@ public class GameSetting : MonoBehaviour {
     public void Play(){
         trackNum = PlayerPrefs.GetInt("SavedTrackNum");
         if (trackNum == 1)
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(4);
         else if (trackNum == 2)
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(5);
         else if (trackNum == 3)
             SceneManager.LoadScene(5);
         else
         {
-            trackNum = 3;
-            SceneManager.LoadScene(5);
+            trackNum = 1;
+            SceneManager.LoadScene(4);
         }
             
     }

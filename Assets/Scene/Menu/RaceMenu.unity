@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.36504287, g: 0.42225125, b: 0.44827986, a: 1}
+  m_IndirectSpecularColor: {r: 0.42115578, g: 0.48430276, b: 0.5108402, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5942,7 +5942,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 567129070}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 747.4026}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5952,7 +5952,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 11801.064, y: 6128.3003}
+  m_AnchoredPosition: {x: 62, y: 27}
   m_SizeDelta: {x: 109.79999, y: 26.100006}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &567129072
@@ -11162,7 +11162,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1094781284}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 719.3269}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11173,7 +11173,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 10413.828, y: 5390.41}
+  m_AnchoredPosition: {x: 1, y: -30}
   m_SizeDelta: {x: -28.25, y: -156.0445}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1094781286
@@ -11778,8 +11778,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1589070009}
   m_HandleRect: {fileID: 1589070007}
   m_Direction: 0
-  m_Value: -0.0000128941465
-  m_Size: 0.9724584
+  m_Value: 0
+  m_Size: 0.91717947
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -12057,7 +12057,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Highlighted
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1153637380}
   m_OnClick:
     m_PersistentCalls:
@@ -20112,8 +20112,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1982904856}
   m_HandleRect: {fileID: 1982904855}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 1
+  m_Value: 1
+  m_Size: 0.24839702
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -20890,7 +20890,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -641.9778}
+  m_AnchoredPosition: {x: 0, y: -533.7333}
   m_SizeDelta: {x: 0, y: 1067.4666}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1977238995

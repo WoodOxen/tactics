@@ -17,33 +17,34 @@ using UnityEngine;
 public class SpeedDisplay : MonoBehaviour
 {
     /// 各车辆
-    public GameObject[] TheCar;
+    //public GameObject[] TheCar;
     /// 各车辆速度
-    public static float[] speed;
-    private Vector3 velocity;
+    //public static float[] speed;
+    //private Vector3 velocity;
     private int PlayerNum;
-    private int TotalPlayerNum;
+    //private int TotalPlayerNum;
     /// 速度显示UI
     public GameObject speedDisplaybox;
 
     void Start()
     {
-        speed = new float[8] { 0, 0, 0, 0, 0, 0, 0, 0 };
+        //speed = new float[8] { 0, 0, 0, 0, 0, 0, 0, 0 };
         //accelDebug = new float[4] { 0, 0, 0, 0 };
     }
 
 
-    void FixedUpdate()
+    void Update()
     {
         //PlayerNum：当前相机跟随的车辆编号；TotalPlayerNum：总车辆数
         PlayerNum = ViewModeManager.CamNum;
-        TotalPlayerNum = GameSetting.NumofPlayer;
+        //TotalPlayerNum = GameSetting.NumofPlayer;
+        /*
         for (int i = 0; i < TotalPlayerNum; i++)
         {
             velocity = TheCar[i].GetComponent<Rigidbody>().velocity;
             speed[i] = Mathf.Sqrt(Mathf.Pow(velocity.x, 2) + Mathf.Pow(velocity.y, 2) + Mathf.Pow(velocity.z, 2));
             //Debug.Log(string.Format("Speed {0} {1}: {2}", CallCppControl.a, i,speed[i]));
-        }
-        speedDisplaybox.GetComponent<TextMeshProUGUI>().text = "" + speed[PlayerNum].ToString("#0.00");
+        }*/
+        speedDisplaybox.GetComponent<TextMeshProUGUI>().text = "" + GetRaceData.speed[PlayerNum].ToString("#0.00");
     }
 }

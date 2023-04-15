@@ -86,12 +86,12 @@ public class GamePauseButton : MonoBehaviour
             RecordControllerOutput.handbrake[i] = null;
         }
         if (trackNum == 1)
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(4);
         else if (trackNum == 2)
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(5);
         else if (trackNum == 3)
             SceneManager.LoadScene(5);
         else
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(4);
     }
 }

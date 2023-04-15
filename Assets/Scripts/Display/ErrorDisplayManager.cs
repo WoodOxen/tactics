@@ -25,7 +25,8 @@ public class ErrorDisplayManager : MonoBehaviour
     void Update()
     {
         PlayerNum = ViewModeManager.CamNum;
-        CruiseError = CruiseData.DistanceError[PlayerNum];
+        //CruiseError = CruiseData.DistanceError[PlayerNum];
+        CruiseError = GetRaceData.distance_error[PlayerNum];
         ErrorDisplaybox.GetComponent<TextMeshProUGUI>().text = "" + CruiseError.ToString("#0.00");
     }
 }

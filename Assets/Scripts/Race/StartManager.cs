@@ -78,12 +78,15 @@ public class StartManager : MonoBehaviour {
         CppControl.InitCurvatureDelegate(CppControl.CallbackCurvatureFromCpp);
         CppControl.InitCarMoveDelegate(CppControl.GetCarMoveFromCpp);
         CppControl.InitPlayerNumDelegate(CppControl.CallbackPlayerNumFromCpp);
+        CppControl.InitYawrateDelegate(CppControl.CallbackYawrateFromCpp);
+        CppControl.InitMidlineDelegate(CppControl.CallbackMidlineFromCpp);
+        CppControl.InitWidthDelegate(CppControl.CallbackWidthFromCpp);
+        CppControl.InitAccDelegate(CppControl.CallbackAccFromCpp);
 
         if (!GameSetting.InitializeFlag)
         {
             //正常运行时GameSetting.InitializeFlag均为true
             //在调试时可能直接在巡线场景开始运行，因此需要在这里进行部分初始化操作
-            Debug.Log("InitializeFlag=true");
             GameSetting.InitializeFlag = true;
             GameSetting.CarType = new int[8] { 0, 0, 0, 0, 0, 0, 0, 0 };
             GameSetting.ControlMethod = new int[8] { 0, 0, 0, 0, 2, 2, 2, 2 };

@@ -33,7 +33,7 @@ public class ButtonManager : MonoBehaviour {
      */
     public void GameSet(){
         LoadButton.LoadNum = 0;
-        SceneManager.LoadScene (1);
+        SceneManager.LoadScene (3);
     }
     /**
      * @fn QuickStart
@@ -89,13 +89,13 @@ public class ButtonManager : MonoBehaviour {
         }
 
         if (trackNum == 1)
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(4);
         else if (trackNum == 2)
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(5);
         else if (trackNum == 3)
             SceneManager.LoadScene(5);
         else
-            SceneManager.LoadScene(5);
+            SceneManager.LoadScene(4);
     }
     /**
      * @fn MainMenu

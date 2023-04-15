@@ -9,16 +9,17 @@ EXTERN_C class TacticAPI
 //接口定义
 public:
 	//传递四个参数(steering、accel、footbrake，handbrake)控制小车移动
-	static void (*CarMove)(float steering, float accel, float footbrake, float handbrake, int CarNum);
+	static void (*CarMove)(int CarNum, float steering, float accel, float footbrake, float handbrake);
 
-	static float (*Speed)(int CarNum); //返回小车速度
-	//static float (*PositionX)(int CarNum); //返回小车X坐标
-	//static float (*PositionY)(int CarNum); //返回小车Y坐标
-	//static float (*PositionZ)(int CarNum); //返回小车Z坐标
-	static float (*CruiseError)(int CarNum); //返回小车距离赛道中心线的距离
-	static float (*Curvature)(int CarNum); //返回前方赛道中心线的曲率
-	static float (*AngleError)(int CarNum); //返回小车方向和赛道中心线方向的偏差
-	static int (*PlayerNum)(); //返回小车数量
+	static float (*speed)(int CarNum); //返回小车速度
+	static float (*acc)(int CarNum);//返回小车加速度
+	static float (*midline)(int CarNum, float k, int index); //返回小车沿中心线k米处的道路中心坐标
+	static float (*cruise_error)(int CarNum); //返回小车距离赛道中心线的距离
+	static float (*curvature)(int CarNum); //返回前方赛道中心线的曲率
+	static float (*yaw)(int CarNum); //返回小车方向和赛道中心线方向的偏差
+	static float (*yawrate)(int CarNum); //返回小车角速度
+	static int (*player_num)(); //返回小车数量
+	static float (*width)();//返回道路宽度
 };
 
 void CarControli(int i);
@@ -27,15 +28,18 @@ void CarControli(int i);
 //C# Call C++
 
 EXTERN_C void DLLForUnity_API InitSpeedDelegate(float (*callbackFloat)(int CarNum));
+EXTERN_C void DLLForUnity_API InitAccDelegate(float (*callbackFloat)(int CarNum));
 //EXTERN_C void DLLForUnity_API InitPositionXDelegate(float (*callbackFloat)(int CarNum));
 //EXTERN_C void DLLForUnity_API InitPositionYDelegate(float (*callbackFloat)(int CarNum));
 //EXTERN_C void DLLForUnity_API InitPositionZDelegate(float (*callbackFloat)(int CarNum));
 EXTERN_C void DLLForUnity_API InitCruiseErrorDelegate(float (*callbackFloat)(int CarNum));
 EXTERN_C void DLLForUnity_API InitCurvatureDelegate(float (*callbackFloat)(int CarNum));
 EXTERN_C void DLLForUnity_API InitAngleErrorDelegate(float (*callbackFloat)(int CarNum));
+EXTERN_C void DLLForUnity_API InitYawrateDelegate(float (*callbackFloat)(int CarNum));
 EXTERN_C void DLLForUnity_API InitPlayerNumDelegate(int (*callbackint)());
-
-EXTERN_C void DLLForUnity_API InitCarMoveDelegate(void (*GetCarMove)(float steering, float accel, float footbrake, float handbrake,int CarNum));
+EXTERN_C void DLLForUnity_API InitMidlineDelegate(float (*callbackfloat)(int CarNum, float k, int index));
+EXTERN_C void DLLForUnity_API InitWidthDelegate(float (*callbackfloat)());
+EXTERN_C void DLLForUnity_API InitCarMoveDelegate(void (*GetCarMove)(int CarNum, float steering, float accel, float footbrake, float handbrake));
 
 EXTERN_C DLLForUnity_API void __stdcall CarControlCpp();
 EXTERN_C DLLForUnity_API void __stdcall InitializeCppControl();

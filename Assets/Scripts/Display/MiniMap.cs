@@ -17,20 +17,45 @@ using UnityEngine;
 
 public class MiniMap : MonoBehaviour
 {
+    public GameObject MiniMapImage;
+    public GameObject RaceAreaTerrain;
     /// 第CarNum号车辆
-    public GameObject TheCar;
+    public GameObject[] TheCars;
+    public GameObject[] TheMarks;
     /// 各个车辆的位置
-    public static Vector3[] CarPosition = new Vector3[4];
     private float MarkX;
     private float MarkY;
-    /// 该脚本控制的是几号车的小地图标志
-    [SerializeField] public int CarNum;
+    private float length_minimap;
+    private float width_minimap;
+    private float length_terrain;
+    private float width_terrain;
+    private int car_num;
+
+    void Start()
+    {
+        car_num = GameSetting.NumofPlayer;
+        if (car_num > 4) car_num = 4;
+        length_minimap = MiniMapImage.GetComponent<RectTransform>().rect.height;
+        width_minimap = MiniMapImage.GetComponent<RectTransform>().rect.width;
+        length_terrain = RaceAreaTerrain.GetComponent<Terrain>().terrainData.size.z;
+        width_terrain = RaceAreaTerrain.GetComponent<Terrain>().terrainData.size.x;
+    }
+
     void Update()
     {
-        CarPosition[CarNum] = TheCar.GetComponent<Transform>().position;
-        MarkX = -50+(CarPosition[CarNum].z - 1)*100/563;
-        MarkY = 50-(CarPosition[CarNum].x - 411)*100/528;
-        transform.GetComponent<RectTransform>().localPosition = new Vector3(MarkX, MarkY, 0);
-        transform.GetComponent<RectTransform>().eulerAngles = new Vector3(0,0,-90-TheCar.transform.eulerAngles.y);
+        for(int i = 0;i < car_num; i++)
+        {
+            PosMarki(i);
+        }
+    }
+
+    void PosMarki(int i)
+    {
+        Vector3 CarPosition = TheCars[i].GetComponent<Transform>().position;
+        MarkY = -length_minimap/2 + (CarPosition.z) * length_minimap / length_terrain;
+        MarkX = -width_minimap/2 + (CarPosition.x) * width_minimap / width_terrain;
+        TheMarks[i].transform.GetComponent<RectTransform>().localPosition = new Vector3(MarkX, MarkY, 0);
+        TheMarks[i].transform.GetComponent<RectTransform>().eulerAngles = new Vector3(0, 0, -TheCars[i].transform.eulerAngles.y);
+
     }
 }
