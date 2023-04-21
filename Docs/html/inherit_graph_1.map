@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_game_data_manager.html" title="GameDataManager" alt="" coords="5,81,140,108"/>
+<area shape="rect" id="node2" href="$class_graph_settings.html" title="GraphSettings" alt="" coords="196,5,301,32"/>
+<area shape="rect" id="node3" href="$class_record_setting.html" title="RecordSetting" alt="" coords="196,56,301,83"/>
+<area shape="rect" id="node4" href="$class_return_main_menu.html" title="ReturnMainMenu" alt="" coords="188,107,309,133"/>
+<area shape="rect" id="node5" href="$class_settings_menu.html" title="SettingsMenu" alt="" coords="197,157,300,184"/>
+</map>
