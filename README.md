@@ -1,4 +1,6 @@
-Language : English | [中文](./README.zh-cn.md)
+Language : English | [中文](./README.zh.md)
+
+[![Read the Docs](https://img.shields.io/readthedocs/tactics)](https://tactics.readthedocs.io/en/latest/)
 
 # TACTICS
 
