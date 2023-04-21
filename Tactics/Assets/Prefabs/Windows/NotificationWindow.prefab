@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5355957791020868487}
   - component: {fileID: 5143705278800780737}
   - component: {fileID: 4611155549796439337}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5045909346874920249}
   - component: {fileID: 6064020399720821216}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,7 +223,7 @@ GameObject:
   - component: {fileID: 685685955492590268}
   - component: {fileID: 7519467361364992148}
   - component: {fileID: 521809633053576337}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: NoButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -312,7 +312,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5582426910062131380}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: NotificationWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -346,7 +346,7 @@ GameObject:
   - component: {fileID: 1468761870198144842}
   - component: {fileID: 5103037141012468871}
   - component: {fileID: 1236532138998922659}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: YesButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -438,7 +438,7 @@ GameObject:
   - component: {fileID: 8121862828470896440}
   - component: {fileID: 8174563510335289584}
   - component: {fileID: 7420274624393645225}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -601,7 +601,7 @@ GameObject:
   - component: {fileID: 6018402367260493091}
   - component: {fileID: 3952224559546663246}
   - component: {fileID: 7992032800141553695}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TextMessage
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -15,10 +15,6 @@ MonoBehaviour:
   m_TableCollectionName: Translation
   m_TableCollectionNameGuidString: 0f643945bb6c711c59f16b242216aee0
   m_Entries:
-  - m_Id: 29676986368
-    m_Key: Quick Start
-    m_Metadata:
-      m_Items: []
   - m_Id: 68642070528
     m_Key: Settings
     m_Metadata:
@@ -57,6 +53,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 768096788480
     m_Key: OK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34654484733026304
+    m_Key: Quick Start
     m_Metadata:
       m_Items: []
   m_Metadata:
