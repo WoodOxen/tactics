@@ -1,0 +1,37 @@
+# Check https://www.mkdocs.org/user-guide/configuration/
+# for more MkDocs configuration details
+
+site_name: Tactics-doc
+site_url: https://tactics.readthedocs.io/en/latest/
+site_description: The official documentation of Tactics.
+site_author: WoodOxen
+repo_url: https://github.com/WoodOxen/tactics
+
+docs_dir: Docs/MkDocs/
+nav:
+  - Home: "index.en.md"
+  - For Developers:
+    - Folder Structure: "developer/folder_structure.en.md"
+
+theme: "material"
+
+plugins:
+  - i18n:
+      default_language: en
+      languages:
+        en:
+          name: English
+          build: true
+        zh:
+          name: 中文
+          build: true
+      material_alternate: true
+      nav_translations:
+        zh:
+          Home: 首页
+          For Developers: 开发者须知
+          Folder Structure: 文件夹结构
+  - search
+
+markdown_extensions:
+  - admonition
