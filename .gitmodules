@@ -1,0 +1,3 @@
+[submodule "RoadArchitect"]
+	path = RoadArchitect
+	url = git@scp:WoodOxen/RoadArchitect.git
