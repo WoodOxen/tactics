@@ -1,3 +1,6 @@
 [submodule "RoadArchitect"]
 	path = RoadArchitect
 	url = git@scp:WoodOxen/RoadArchitect.git
+[submodule "Tactics/Assets/ThirdParty/RoadArchitect"]
+	path = Tactics/Assets/ThirdParty/RoadArchitect
+	url = git@scp:WoodOxen/RoadArchitect.git
