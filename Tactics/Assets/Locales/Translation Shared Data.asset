@@ -59,6 +59,26 @@ MonoBehaviour:
     m_Key: Quick Start
     m_Metadata:
       m_Items: []
+  - m_Id: 35180171390803968
+    m_Key: General
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35180268002402304
+    m_Key: Graphics
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35436582863560704
+    m_Key: Master Volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35436649896927232
+    m_Key: Music Volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35436675117277184
+    m_Key: Effects Volume
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

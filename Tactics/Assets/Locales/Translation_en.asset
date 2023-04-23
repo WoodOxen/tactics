@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 34654484733026304
-    m_Localized: "\u5FEB\u901F\u5F00\u59CB"
+    m_Localized: Quick Start
     m_Metadata:
       m_Items: []
   - m_Id: 68642070528
@@ -60,6 +60,26 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 768096788480
     m_Localized: OK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35180171390803968
+    m_Localized: General
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35180268002402304
+    m_Localized: Graphics
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35436582863560704
+    m_Localized: Master Volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35436649896927232
+    m_Localized: Music Volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35436675117277184
+    m_Localized: Effects Volume
     m_Metadata:
       m_Items: []
   references:

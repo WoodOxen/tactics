@@ -1,10 +1,21 @@
+/// <summary>
+/// This class generates a player at the given spawn point.
+/// </summary>
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerSpawnController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject[] playerSpawnArray;
+    private int randNumber;
+
+    void Awake()
+    {
+        playerSpawnArray = GameObject.FindGameObjectsWithTag("PlayerSpawn");
+
+    }
     void Start()
     {
         
@@ -14,5 +25,19 @@ public class PlayerSpawnController : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public GameObject GetRandomPlayerSpawn()
+    {
+        randNumber = Random.Range(0, playerSpawnArray.Length);
+
+        if (playerSpawnArray.Length > 0)
+        {
+            return playerSpawnArray[randNumber];
+        }
+        else
+        {
+            return null;
+        }
     }
 }
