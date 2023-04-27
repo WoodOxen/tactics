@@ -17,7 +17,7 @@ public class GraphicsSetting : MonoBehaviour
     [SerializeField] private Dropdown resolutionDropdown;
     [SerializeField] private Dropdown textureQualityDropdown;
     [SerializeField] private Dropdown fpsDropdown;
-    public List<ResolutionItem> resolutions = new List<ResolutionItem>();
+    public List<Resolution> resolutions = new List<Resolution>();
 
     void Start ()
     {
@@ -43,7 +43,7 @@ public class GraphicsSetting : MonoBehaviour
             SetVSync();
         }
 
-        
+        // Initialize the resolution
     }
 
     public void SetFullScreen ()
@@ -69,10 +69,12 @@ public class GraphicsSetting : MonoBehaviour
         vSyncToggle.isOn = PlayerPrefs.GetInt("VSync") == 1 ? true : false;
         QualitySettings.vSyncCount = PlayerPrefs.GetInt("VSync");
     }
+
+
 }
 
 [System.Serializable]
-public class ResolutionItem
+public class Resolution
 {
     public int horizontal;
     public int vertical;
