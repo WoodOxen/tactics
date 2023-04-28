@@ -11,27 +11,28 @@ using UnityEngine;
 
 public class Game : MonoBehaviour
 {
-    public int gameMode;
+    public int scenario;
+    
     public int mapName;
-    public int numPlayer;
-    public Player[] players;
+    public int numAgent;
+    public Agent[] agents;
 
     public void SaveGame ()
     {
-        SaveSystem.SaveGame(this);
+        SaveLoadSystem.SaveGame(this);
     }
 
     public void LoadGame (string fileName)
     {
-        GameData gameData = SaveSystem.LoadGame(fileName);
+        GameData gameData = SaveLoadSystem.LoadGame(fileName);
 
-        gameMode = gameData.gameMode;
+        scenario = gameData.scenario;
         mapName = gameData.mapName;
-        numPlayer = gameData.numPlayer;
-        players = new Player[numPlayer];
-        for (int i = 0; i < numPlayer; i++)
+        numAgent = gameData.numAgent;
+        agents = new Agent[numAgent];
+        for (int i = 0; i < numAgent; i++)
         {
-            players[i] = new Player(gameData.playersData[i]);
+            agents[i] = new Agent(gameData.agentsData[i]);
         }
     }
 }

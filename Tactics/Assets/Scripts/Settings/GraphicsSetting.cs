@@ -2,9 +2,10 @@
  * @file GraphicsSetting.cs
  * @brief Controls the volume of the music and effects mixer groups.
  * @author Yueyuan Li
- * @date 2023-04-23
+ * @date 2023-04-28
  */
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,7 +16,7 @@ public class GraphicsSetting : MonoBehaviour
 {
     [SerializeField] private Toggle fullScreenToggle;
     [SerializeField] private Toggle vSyncToggle;
-    [SerializeField] private TMP_Text resoluationLabel;
+    [SerializeField] private TMP_Text resolutionLabel;
     [SerializeField] private TMP_Text qualityLabel;
     [SerializeField] private TMP_Text fpsLabel;
     private List<Resolution> resolutionList = new List<Resolution>();
@@ -27,7 +28,8 @@ public class GraphicsSetting : MonoBehaviour
 
     void Start ()
     {
-        // Initialize the full screen option
+        // Initialize the full screen option from the player's preference.
+        // If the player has not set the option, set it to full screen.
         if (PlayerPrefs.HasKey("FullScreen"))
         {
             LoadFullScreen();
@@ -38,7 +40,8 @@ public class GraphicsSetting : MonoBehaviour
             SetFullScreen();
         }
 
-        // Initialize the vSync option
+        // Initialize the vSync option from the player's preference.
+        // If the player has not set the option, set it to vSync.
         if (PlayerPrefs.HasKey("VSync"))
         {
             LoadVSync();
@@ -49,9 +52,10 @@ public class GraphicsSetting : MonoBehaviour
             SetVSync();
         }
 
-        // Initialize the resolution
+        // Initialize the resolution option from the player's preference.
+        // If the player has not set the option, set it to the current resolution.
         GetResolutions();
-        if (PlayerPrefs.HasKey("ResolutionX") && PlayerPrefs.HasKey("ResolutionY"))
+        if (PlayerPrefs.HasKey("Resolution"))
         {
             LoadResolution();
             UpdateResolutionLabel();
@@ -62,7 +66,8 @@ public class GraphicsSetting : MonoBehaviour
             UpdateResolutionLabel();
         }
 
-        // Initialize the graphic quality
+        // Initialize the graphic quality option from the player's preference.
+        // If the player has not set the option, set it to high.
         if (PlayerPrefs.HasKey("Quality"))
         {
             LoadQuality();
@@ -74,7 +79,8 @@ public class GraphicsSetting : MonoBehaviour
             UpdateQualityLabel();
         }
 
-        // Initialize the fps
+        // Initialize the fps option from the player's preference.
+        // If the player has not set the option, set it to 60.
         if (PlayerPrefs.HasKey("FPS"))
         {
             LoadFPS();
@@ -87,24 +93,38 @@ public class GraphicsSetting : MonoBehaviour
         }
     }
 
+    /// @fn SetFullScreen
+    /// @brief Immediately sets the screen to full screen or windowed mode and updates 
+    /// the setting to the player's preference.
+    /// @details The corresponding key is "FullScreen".
     public void SetFullScreen ()
     {
+        Screen.fullScreenMode = fullScreenToggle.isOn ? FullScreenMode.FullScreenWindow : FullScreenMode.Windowed;
         PlayerPrefs.SetInt("FullScreen", fullScreenToggle.isOn ? 1 : 0);
-        Screen.fullScreen = PlayerPrefs.GetInt("FullScreen") == 1 ? true : false;
     }
 
+    /// @fn LoadFullScreen
+    /// @brief Load the player's preference for full screen mode. Update the toggle to
+    /// the corresponding status.
     private void LoadFullScreen ()
     {
         fullScreenToggle.isOn = PlayerPrefs.GetInt("FullScreen") == 1 ? true : false;
-        Screen.fullScreen = PlayerPrefs.GetInt("FullScreen") == 1 ? true : false;
+        Screen.fullScreenMode = fullScreenToggle.isOn ? FullScreenMode.FullScreenWindow : FullScreenMode.Windowed;
     }
 
+    /// @fn SetVSync
+    /// @brief Immediately sets the vSync option and updates the setting to the player's 
+    /// preference.
+    /// @details The corresponding key is "VSync".
     public void SetVSync ()
     {
-        PlayerPrefs.SetInt("VSync", vSyncToggle.isOn ? 1 : 0);
         QualitySettings.vSyncCount = PlayerPrefs.GetInt("VSync");
+        PlayerPrefs.SetInt("VSync", vSyncToggle.isOn ? 1 : 0);
     }
 
+    /// @fn LoadVSync
+    /// @brief Load the player's preference for vSync option. Update the toggle to the
+    /// corresponding status.
     private void LoadVSync ()
     {
         vSyncToggle.isOn = PlayerPrefs.GetInt("VSync") == 1 ? true : false;
@@ -112,30 +132,68 @@ public class GraphicsSetting : MonoBehaviour
     }
 
     /// @fn GetResolutions
-    /// @brief Get all the resolutions supported by the monitor.
+    /// @brief Generate a list of resolutions that are compatible with the screen.
+    /// @details This functions contains a list of default screen proportion and a list of 
+    /// default screen height. The first resolution option the player sees is the current
+    /// screen resolution. The rest of the options are determined by the following steps:
+    /// 
+    /// 1. Find the default screen proportion that is closest to the current screen proportion.
+    /// 2. Get all the default heights that are smaller than the current screen height.
+    /// 3. For each default height, calculate the width based on the screen proportion.
+    /// 4. If the width is not an integer, skip this height.
+    /// 5. Add the resolution to the list.
+    /// 6. If the list has more than 10 options, stop.
     private void GetResolutions ()
     {
         Resolution defaultResolution = new Resolution();
         defaultResolution.width = Screen.width;
         defaultResolution.height = Screen.height;
         resolutionList.Add(defaultResolution);
+
+        var proportionList = new List<(float, float)> {(3,2), (4,3), (5,4), (16, 9), (16, 10)};
+        float[] height = {1920, 1440, 900, 768, 480, 240};
+        float screenWidth = Convert.ToSingle(Screen.width);
+        float screenHeight = Convert.ToSingle(Screen.height);
+        float screenProportion = screenWidth / screenHeight;
+
+        proportionList.Sort(
+            (x, y) => (Math.Abs(x.Item1 / x.Item2 - screenProportion)).CompareTo(
+                Math.Abs(y.Item1 / y.Item2 - screenProportion)
+            )
+        );
+
+        foreach (var proportion in proportionList)
+        {
+            foreach (var h in height)
+            {
+                if (h <= screenHeight)
+                {
+                    float w = h * proportion.Item1 / proportion.Item2;
+                    if (w - Math.Floor(w) > 0.1)
+                    {
+                        continue;
+                    }
+                    Resolution resolution = new Resolution();
+                    resolution.width = Convert.ToInt32(w);
+                    resolution.height = Convert.ToInt32(h);
+                    resolutionList.Add(resolution);
+                }
+                if (resolutionList.Count >= 10)
+                {
+                    break;
+                }
+            }
+        }
     }
 
-    public void PreviousResolution ()
+    public void SwitchResolution (int switchDirection)
     {
-        resolutionIndex -- ;
+        resolutionIndex += switchDirection ;
         if (resolutionIndex < 0)
         {
             resolutionIndex = resolutionList.Count - 1;
         }
-        SetResolution();
-        UpdateResolutionLabel();
-    }
-
-    public void NextResolution ()
-    {
-        resolutionIndex ++ ;
-        if (resolutionIndex >= resolutionList.Count)
+        else if (resolutionIndex >= resolutionList.Count)
         {
             resolutionIndex = 0;
         }
@@ -143,6 +201,14 @@ public class GraphicsSetting : MonoBehaviour
         UpdateResolutionLabel();
     }
 
+    /// @fn SetResolution
+    /// @brief Immediately update the screen resolution and save it the the player's preference.
+    /// @details The corresponding keys are: 
+    /// {
+    ///     "ResolutionX": horizontal resolution,
+    ///     "ResolutionY": vertical resolution,
+    ///     "Resolution": index of the resolution in the generated resolution list
+    /// }
     private void SetResolution ()
     {
         Screen.SetResolution(
@@ -152,10 +218,14 @@ public class GraphicsSetting : MonoBehaviour
         );
         PlayerPrefs.SetInt("ResolutionX", resolutionList[resolutionIndex].width);
         PlayerPrefs.SetInt("ResolutionY", resolutionList[resolutionIndex].height);
+        PlayerPrefs.SetInt("Resolution", resolutionIndex);
     }
 
+    /// @fn LoadResolution
+    /// @brief Load the player's preference for screen resolution.
     private void LoadResolution ()
     {
+        resolutionIndex = PlayerPrefs.GetInt("ResolutionIndex");
         Screen.SetResolution(
             PlayerPrefs.GetInt("ResolutionX"), 
             PlayerPrefs.GetInt("ResolutionY"), 
@@ -163,26 +233,23 @@ public class GraphicsSetting : MonoBehaviour
         );
     }
 
+    /// @fn UpdateResolutionLabel
+    /// @brief Update the text displayed for the resolution option.
     private void UpdateResolutionLabel ()
     {
-        resoluationLabel.text = resolutionList[resolutionIndex].width + " x " + resolutionList[resolutionIndex].height;
+        resolutionLabel.text = (
+            resolutionList[resolutionIndex].width + " x " + resolutionList[resolutionIndex].height
+        );
     }
 
-    public void PreviousQuality ()
+    public void SwitchQuality (int switchDirection)
     {
-        qualityIndex -- ;
+        qualityIndex += switchDirection ;
         if (qualityIndex < 0)
         {
             qualityIndex = qualityList.Length - 1;
         }
-        SetQuality();
-        UpdateQualityLabel();
-    }
-
-    public void NextQuality ()
-    {
-        qualityIndex ++ ;
-        if (qualityIndex >= qualityList.Length)
+        else if (qualityIndex >= qualityList.Length)
         {
             qualityIndex = 0;
         }
@@ -190,37 +257,40 @@ public class GraphicsSetting : MonoBehaviour
         UpdateQualityLabel();
     }
 
+    /// @fn SetQuality
+    /// @brief Immediately update the graphic quality and save it the the player's preference.
+    /// @details The corresponding key is "Quality".
     private void SetQuality ()
     {
-        QualitySettings.SetQualityLevel(qualityIndex);
+        int qualityLevel = qualityIndex * 2 + 1;
+        QualitySettings.SetQualityLevel(qualityLevel, true);
         PlayerPrefs.SetInt("Quality", qualityIndex);
     }
 
+    /// @fn LoadQuality
+    /// @brief Load the player's preference for graphic quality.
     private void LoadQuality ()
     {
-        QualitySettings.SetQualityLevel(PlayerPrefs.GetInt("Quality"));
+        qualityIndex = PlayerPrefs.GetInt("Quality");
+        int qualityLevel = qualityIndex * 2 + 1;
+        QualitySettings.SetQualityLevel(qualityLevel, true);
     }
 
+    /// @fn UpdateQualityLabel
+    /// @brief Update the text displayed for the quality option.
     private void UpdateQualityLabel ()
     {
         qualityLabel.text = qualityList[qualityIndex];
     }
 
-    public void PreviousFPS ()
+    public void SwitchFPS (int switchDirection)
     {
-        fpsIndex -- ;
+        fpsIndex += switchDirection ;
         if (fpsIndex < 0)
         {
             fpsIndex = fpsList.Length - 1;
         }
-        SetFPS();
-        UpdateFPSLabel();
-    }
-
-    public void NextFPS ()
-    {
-        fpsIndex ++ ;
-        if (fpsIndex >= fpsList.Length)
+        else if (fpsIndex >= fpsList.Length)
         {
             fpsIndex = 0;
         }
@@ -228,17 +298,25 @@ public class GraphicsSetting : MonoBehaviour
         UpdateFPSLabel();
     }
 
+    /// @fn SetFPS
+    /// @brief Immediately update the FPS and save it the the player's preference.
+    /// @details The corresponding key is "FPS".
     private void SetFPS ()
     {
         Application.targetFrameRate = fpsList[fpsIndex];
-        PlayerPrefs.SetInt("FPS", fpsList[fpsIndex]);
+        PlayerPrefs.SetInt("FPS", fpsIndex);
     }
 
+    /// @fn LoadFPS
+    /// @brief Load the player's preference for FPS.
     private void LoadFPS ()
     {
-        Application.targetFrameRate = PlayerPrefs.GetInt("FPS");
+        fpsIndex = PlayerPrefs.GetInt("FPS");
+        Application.targetFrameRate = fpsList[fpsIndex];
     }
 
+    /// @fn UpdateFPSLabel
+    /// @brief Update the text displayed for the FPS option.
     private void UpdateFPSLabel ()
     {
         fpsLabel.text = fpsList[fpsIndex].ToString();

@@ -12,20 +12,21 @@ using UnityEngine;
 [System.Serializable]
 public class GameData
 {
-    public int gameMode = 0;
+    public int scenario = 0;
+    public int evaluationMode = 0;
     public int mapName = 0;
-    public int numPlayer = 1;
-    public PlayerData[] playersData;
+    public int numAgent = 1;
+    public AgentData[] agentsData;
 
     public GameData (Game game)
     {
-        gameMode = game.gameMode;
+        scenario = game.scenario;
         mapName = game.mapName;
-        numPlayer = game.numPlayer;
-        playersData = new PlayerData[numPlayer];
-        for (int i = 0; i < numPlayer; i++)
+        numAgent = game.numAgent;
+        agentsData = new AgentData[numAgent];
+        for (int i = 0; i < numAgent; i++)
         {
-            playersData[i] = new PlayerData(game.players[i]);
+            agentsData[i] = new AgentData(game.agents[i]);
         }
     }
 }

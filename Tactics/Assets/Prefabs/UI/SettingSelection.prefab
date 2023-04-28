@@ -641,7 +641,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6210362294038872004}
   m_Layer: 5
-  m_Name: SettingSelectionLong
+  m_Name: SettingSelection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
