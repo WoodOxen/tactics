@@ -15,18 +15,6 @@ MonoBehaviour:
   m_TableCollectionName: Translation
   m_TableCollectionNameGuidString: 0f643945bb6c711c59f16b242216aee0
   m_Entries:
-  - m_Id: 68642070528
-    m_Key: Settings
-    m_Metadata:
-      m_Items: []
-  - m_Id: 103391879168
-    m_Key: Exit
-    m_Metadata:
-      m_Items: []
-  - m_Id: 151542489088
-    m_Key: Modes
-    m_Metadata:
-      m_Items: []
   - m_Id: 207301566464
     m_Key: Credits
     m_Metadata:
@@ -35,16 +23,56 @@ MonoBehaviour:
     m_Key: Editors
     m_Metadata:
       m_Items: []
-  - m_Id: 306278752256
-    m_Key: New Game
+  - m_Id: 35436675117277184
+    m_Key: Effects Volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37546806512640000
+    m_Key: Evalution
+    m_Metadata:
+      m_Items: []
+  - m_Id: 103391879168
+    m_Key: Exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35180171390803968
+    m_Key: General
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35180268002402304
+    m_Key: Graphics
     m_Metadata:
       m_Items: []
   - m_Id: 638228553728
     m_Key: Load Game
     m_Metadata:
       m_Items: []
-  - m_Id: 691223584768
-    m_Key: Yes
+  - m_Id: 37546931473539072
+    m_Key: Map
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35436582863560704
+    m_Key: Master Volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 151542489088
+    m_Key: Modes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35436649896927232
+    m_Key: Music Volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37548928234872832
+    m_Key: Press 'ESC' to return
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37548935507795968
+    m_Key: Agent
+    m_Metadata:
+      m_Items: []
+  - m_Id: 306278752256
+    m_Key: New Game
     m_Metadata:
       m_Items: []
   - m_Id: 732986269696
@@ -59,24 +87,56 @@ MonoBehaviour:
     m_Key: Quick Start
     m_Metadata:
       m_Items: []
-  - m_Id: 35180171390803968
-    m_Key: General
+  - m_Id: 37546737960935424
+    m_Key: Scenario
     m_Metadata:
       m_Items: []
-  - m_Id: 35180268002402304
-    m_Key: Graphics
+  - m_Id: 37546615927660544
+    m_Key: Scene
     m_Metadata:
       m_Items: []
-  - m_Id: 35436582863560704
-    m_Key: Master Volume
+  - m_Id: 68642070528
+    m_Key: Settings
     m_Metadata:
       m_Items: []
-  - m_Id: 35436649896927232
-    m_Key: Music Volume
+  - m_Id: 691223584768
+    m_Key: Yes
     m_Metadata:
       m_Items: []
-  - m_Id: 35436675117277184
-    m_Key: Effects Volume
+  - m_Id: 37549285476327424
+    m_Key: Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37549539177193472
+    m_Key: Control
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37549902504583168
+    m_Key: Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37550416457818112
+    m_Key: In-game Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37551125391663104
+    m_Key: Full Screen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37551265787600896
+    m_Key: VSync
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37551379214163968
+    m_Key: Resolution
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37551532310454272
+    m_Key: Graphic Quality
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37551695875727360
+    m_Key: FPS
     m_Metadata:
       m_Items: []
   m_Metadata:

@@ -15,7 +15,7 @@ public class GameSetting : MonoBehaviour
     public GameData gameData;
     [SerializeField] private TMP_Text scenarioLabel;
     [SerializeField] private TMP_Text evaluationModeLabel;
-    private string[] scenario = {"Racing", "Parking", "Highway", "Intersection", "Roundabout", "Custom"};
+    private string[] scenarios = {"Racing", "Parking", "Highway", "Intersection", "Roundabout", "Custom"};
     private int scenarioIndex = 0;
     private string[] evaluationMode;
     private int evaluationModeIndex = 0;
@@ -38,9 +38,9 @@ public class GameSetting : MonoBehaviour
         scenarioIndex += switchDirection;
         if (scenarioIndex < 0)
         {
-            scenarioIndex = scenario.Length - 1;
+            scenarioIndex = scenarios.Length - 1;
         }
-        else if (scenarioIndex >= scenario.Length)
+        else if (scenarioIndex >= scenarios.Length)
         {
             scenarioIndex = 0;
         }
@@ -51,7 +51,7 @@ public class GameSetting : MonoBehaviour
 
     private void UpdateScenarioLabel ()
     {
-        scenarioLabel.text = scenario[scenarioIndex];
+        scenarioLabel.text = scenarios[scenarioIndex];
     }
 
     private void UpdateEvaluationMode ()

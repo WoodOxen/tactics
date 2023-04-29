@@ -82,6 +82,66 @@ MonoBehaviour:
     m_Localized: Effects Volume
     m_Metadata:
       m_Items: []
+  - m_Id: 37546615927660544
+    m_Localized: Scene
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37546737960935424
+    m_Localized: Scene
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37546806512640000
+    m_Localized: Evaluation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37546931473539072
+    m_Localized: Map
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37548928234872832
+    m_Localized: Press 'ESC' to return
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37549285476327424
+    m_Localized: Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37549539177193472
+    m_Localized: Control
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37549902504583168
+    m_Localized: Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37550416457818112
+    m_Localized: In-game Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37551125391663104
+    m_Localized: Full Screen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37551265787600896
+    m_Localized: VSync
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37551379214163968
+    m_Localized: Resolution
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37551532310454272
+    m_Localized: Graphic Quality
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37551695875727360
+    m_Localized: FPS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37548935507795968
+    m_Localized: Agent
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

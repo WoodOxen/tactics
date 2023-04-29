@@ -58,13 +58,13 @@ public class GraphicsSetting : MonoBehaviour
         if (PlayerPrefs.HasKey("Resolution"))
         {
             LoadResolution();
-            UpdateResolutionLabel();
+            
         }
         else
         {
             SetResolution();
-            UpdateResolutionLabel();
         }
+        UpdateResolutionLabel();
 
         // Initialize the graphic quality option from the player's preference.
         // If the player has not set the option, set it to high.
