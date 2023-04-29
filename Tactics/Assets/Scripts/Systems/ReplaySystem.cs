@@ -1,12 +1,17 @@
+/**
+ * @file FileName.cs
+ * @brief A brief description of the file.
+ * @author Contributor's name. One file can have multiple contributors.
+ * @date The last modified date
+ * @copyright GNU Public License
+ */
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RaceAgent : MonoBehaviour
+public class ReplaySystem : MonoBehaviour
 {
-    public int playerID;
-    public int vehicleID;
-    public 
     // Start is called before the first frame update
     void Start()
     {

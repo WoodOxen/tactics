@@ -3,6 +3,7 @@
  * @brief
  * @author Yueyuan Li
  * @date 2023-04-29
+ * @copyright GNU Public License
  */
 
 using System.Collections;
@@ -20,6 +21,7 @@ public class GeneralSetting : MonoBehaviour
     void Start()
     {
         LocalizationSettings.InitializationOperation.WaitForCompletion();
+
         if (PlayerPrefs.HasKey("Locale"))
         {
             LoadLocale();
@@ -31,15 +33,27 @@ public class GeneralSetting : MonoBehaviour
         UpdateLocaleLabel();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void SetLocale()
     {
+        LocalizationSettings.SelectedLocale = (
+            LocalizationSettings.AvailableLocales.Locales[localeIndex]
+        );
+        PlayerPrefs.SetInt("Locale", localeIndex);
     }
 
-    public void SwitchLocale (int switchDirection)
+    private void LoadLocale()
+    {
+        localeIndex = PlayerPrefs.GetInt("Locale");
+        LocalizationSettings.SelectedLocale = (
+            LocalizationSettings.AvailableLocales.Locales[localeIndex]
+        );
+    }
+
+    public void SwitchLocale(int switchDirection)
     {
         int localeCount = LocalizationSettings.AvailableLocales.Locales.Count;
         localeIndex += switchDirection;
+
         if (localeIndex < 0)
         {
             localeIndex = localeCount - 1;
@@ -48,24 +62,14 @@ public class GeneralSetting : MonoBehaviour
         {
             localeIndex = 0;
         }
+
         SetLocale();
         UpdateLocaleLabel();
     }
 
-    private void SetLocale ()
+    private void UpdateLocaleLabel()
     {
-        LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[localeIndex];
-        PlayerPrefs.SetInt("Locale", localeIndex);
-    }
-
-    private void LoadLocale ()
-    {
-        localeIndex = PlayerPrefs.GetInt("Locale");
-        LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[localeIndex];
-    }
-
-    private void UpdateLocaleLabel ()
-    {
-        localeLabel.text = LocalizationSettings.AvailableLocales.Locales[localeIndex].Identifier.CultureInfo.NativeName;
+        var locales = LocalizationSettings.AvailableLocales.Locales;
+        localeLabel.text = locales[localeIndex].Identifier.CultureInfo.NativeName;
     }
 }

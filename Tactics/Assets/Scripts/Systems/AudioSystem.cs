@@ -1,6 +1,11 @@
-/// <summary>
-/// 
-/// </summary>
+/**
+ * @file AudioSystem.cs
+ * @brief
+ * @author Yueyuan Li
+ * @author Yuhang Li
+ * @date 2023-04-29
+ * @copyright GNU Public License
+ */
 
 using System.Collections;
 using System.Collections.Generic;

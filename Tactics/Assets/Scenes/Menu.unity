@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 16930647}
   - component: {fileID: 16930648}
   m_Layer: 5
-  m_Name: New Game Panel
+  m_Name: New Scene Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -415,7 +415,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6148424319280514793, guid: d2309d3e244f355bf8a6ef62d7641167, type: 3}
       propertyPath: m_text
-      value: New Game
+      value: New Scene
       objectReference: {fileID: 0}
     - target: {fileID: 6148424319280514793, guid: d2309d3e244f355bf8a6ef62d7641167, type: 3}
       propertyPath: m_fontStyle
@@ -467,7 +467,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8745994711990237990, guid: d2309d3e244f355bf8a6ef62d7641167, type: 3}
       propertyPath: m_Name
-      value: New Game
+      value: New Scene
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2309d3e244f355bf8a6ef62d7641167, type: 3}
@@ -489,7 +489,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2745451391570084105, guid: 277fc06d8d850b21ca3c7a6ee51846b5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2745451391570084105, guid: 277fc06d8d850b21ca3c7a6ee51846b5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -501,11 +501,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2745451391570084105, guid: 277fc06d8d850b21ca3c7a6ee51846b5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PreviousInput
+      value: SwitchInput
       objectReference: {fileID: 0}
     - target: {fileID: 2745451391570084105, guid: 277fc06d8d850b21ca3c7a6ee51846b5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: ControlSetting, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2745451391570084105, guid: 277fc06d8d850b21ca3c7a6ee51846b5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 2745451391570084105, guid: 277fc06d8d850b21ca3c7a6ee51846b5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -569,7 +573,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7439717565191117395, guid: 277fc06d8d850b21ca3c7a6ee51846b5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7439717565191117395, guid: 277fc06d8d850b21ca3c7a6ee51846b5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -581,11 +585,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7439717565191117395, guid: 277fc06d8d850b21ca3c7a6ee51846b5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: NextInput
+      value: SwitchInput
       objectReference: {fileID: 0}
     - target: {fileID: 7439717565191117395, guid: 277fc06d8d850b21ca3c7a6ee51846b5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: ControlSetting, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439717565191117395, guid: 277fc06d8d850b21ca3c7a6ee51846b5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7439717565191117395, guid: 277fc06d8d850b21ca3c7a6ee51846b5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1349,7 +1357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a9797d7a25bd32a9b5eb2f08a33f576, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  languageLabel: {fileID: 390313055}
+  localeLabel: {fileID: 390313055}
 --- !u!4 &235167498
 Transform:
   m_ObjectHideFlags: 0
@@ -1377,12 +1385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2aebc3ab73079cd8929519d3b181b23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameData:
-    scenario: 0
-    evaluationMode: 0
-    mapName: 0
-    numAgent: 0
-    agentsData: []
+  scene: {fileID: 0}
   scenarioLabel: {fileID: 1752340476}
   evaluationModeLabel: {fileID: 1988950673}
 --- !u!1001 &236417473
@@ -2124,7 +2127,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6148424319280514793, guid: d2309d3e244f355bf8a6ef62d7641167, type: 3}
       propertyPath: m_text
-      value: Load Game
+      value: Load Scene
       objectReference: {fileID: 0}
     - target: {fileID: 8088511044584507018, guid: d2309d3e244f355bf8a6ef62d7641167, type: 3}
       propertyPath: m_RootOrder
@@ -2172,7 +2175,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8745994711990237990, guid: d2309d3e244f355bf8a6ef62d7641167, type: 3}
       propertyPath: m_Name
-      value: Load Game
+      value: Load Scene
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2309d3e244f355bf8a6ef62d7641167, type: 3}
@@ -2517,7 +2520,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2745451391570084105, guid: 277fc06d8d850b21ca3c7a6ee51846b5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SwitchLanguage
+      value: SwitchLocale
       objectReference: {fileID: 0}
     - target: {fileID: 2745451391570084105, guid: 277fc06d8d850b21ca3c7a6ee51846b5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -2605,7 +2608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7439717565191117395, guid: 277fc06d8d850b21ca3c7a6ee51846b5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SwitchLanguage
+      value: SwitchLocale
       objectReference: {fileID: 0}
     - target: {fileID: 7439717565191117395, guid: 277fc06d8d850b21ca3c7a6ee51846b5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -3474,6 +3477,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Agent Number
       objectReference: {fileID: 0}
+    - target: {fileID: 6808309712958339976, guid: c7a78b521124a2a7bbb60adc00d879d8, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 37618865963982848
+      objectReference: {fileID: 0}
+    - target: {fileID: 6808309712958339976, guid: c7a78b521124a2a7bbb60adc00d879d8, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:0f643945bb6c711c59f16b242216aee0
+      objectReference: {fileID: 0}
     - target: {fileID: 7276286373218790704, guid: c7a78b521124a2a7bbb60adc00d879d8, type: 3}
       propertyPath: m_text
       value: Agent Number
@@ -3521,6 +3532,22 @@ PrefabInstance:
     - target: {fileID: 8054221665735428227, guid: c7a78b521124a2a7bbb60adc00d879d8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8149406813351995189, guid: c7a78b521124a2a7bbb60adc00d879d8, type: 3}
+      propertyPath: m_Value
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8149406813351995189, guid: c7a78b521124a2a7bbb60adc00d879d8, type: 3}
+      propertyPath: m_MaxValue
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8149406813351995189, guid: c7a78b521124a2a7bbb60adc00d879d8, type: 3}
+      propertyPath: m_MinValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8149406813351995189, guid: c7a78b521124a2a7bbb60adc00d879d8, type: 3}
+      propertyPath: m_WholeNumbers
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8348129472047765085, guid: c7a78b521124a2a7bbb60adc00d879d8, type: 3}
       propertyPath: m_AnchorMax.x
@@ -6529,7 +6556,7 @@ GameObject:
   - component: {fileID: 2086658947}
   - component: {fileID: 2086658948}
   m_Layer: 5
-  m_Name: Load Game Panel
+  m_Name: Load Scene Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

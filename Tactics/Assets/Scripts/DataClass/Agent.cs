@@ -2,39 +2,41 @@
  * @file Agent.cs
  * @brief
  * @author Yueyuan Li
-  * @date 2023-04-23
+ * @date 2023-04-23
+ * @copyright GNU Public License
  */
 
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 public class Agent : MonoBehaviour
 {
+    public int AgentID;
+    public int VehicleID;
+    public float[] VehicleSize;
+    public string VehicleType;
+    public int ControlMethod;
+    public float[] State;
+    public float[] ControlCommand;
+    public int StartFrame;
+    public int EndFrame;
+
     [SerializeField] private TMP_Text agentName;
     [SerializeField] private TMP_Text currentSpeed;
     [SerializeField] private TMP_Text currentHeading;
     [SerializeField] private TMP_Text currentScore;
-    public int agentID;
-    public int vehicleID;
-    public float[] vehicleSize;
-    public string vehicleType;
-    public int controlMethod;
-    public float[] speed;
-    public float[] heading;
-    public float[,] location;
-    public float[] steer;
-    public float[,] brake;
-    public int numFrame;
-
-    public Agent (AgentData agentData)
+    
+    public Agent(AgentData agentData)
     {
-        agentID = agentData.agentID;
-        vehicleID = agentData.vehicleID;
-        controlMethod = agentData.controlMethod;
-        steer = agentData.steer;
-        brake = agentData.brake;
-        numFrame = agentData.numFrame;
+        AgentID = agentData.AgentID;
+        VehicleID = agentData.VehicleID;
+        VehicleSize = agentData.VehicleSize;
+        ControlMethod = agentData.ControlMethod;
+        State = agentData.State;
+        ControlCommand = agentData.ControlCommand;
+        StartFrame = agentData.StartFrame;
+        EndFrame = agentData.EndFrame;
     }
 }

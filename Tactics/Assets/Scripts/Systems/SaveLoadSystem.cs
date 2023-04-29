@@ -4,6 +4,7 @@
  * @author Yueyuan Li
  * @author Yuhang Li
  * @date 2023-04-23
+ * @copyright GNU Public License
  */
 
 using UnityEngine;
@@ -11,27 +12,22 @@ using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
-/**
- */
 public static class SaveLoadSystem
 {
-    /**
-     * @fn GetTimeStamp
-     * @brief Get the current time as a string in the format of "yyyy-MM-dd-HH-mm-ss".
-     */
+    /// @fn GetTimeStamp
+    /// @brief Get the current time as a string in the format of "yyyy-MM-dd-HH-mm-ss".
     private static string GetTimeStamp()
     {
         return System.DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss");
     }
 
-    /**
-     * @fn FindSavedFiles
-     * @brief Find all the saved game files in the GameSave folder.
-     * @return An array of file names. If the GameSave folder does not exist, return null.
-     */
+    /// @fn FindSavedFiles
+    /// @brief Find all the saved scene files in the SceneSave folder.
+    /// @return An array of file names. If the SceneSave folder does not exist, return null.
     private static string[] FindSavedFiles ()
     {
-        string path = Application.dataPath + "/GameSave/";
+        string path = Application.dataPath + "/SceneSave/";
+
         if (Directory.Exists(path))
         {
             string[] files = Directory.GetFiles(path, "*.bin");
@@ -43,15 +39,14 @@ public static class SaveLoadSystem
         }
     }
 
-    /**
-     * @fn DeleteSavedFile
-     * @brief Delete a saved game file.
-     * @param fileName The name of the file to be deleted.
-     * @details If the file does not exist, a warning will be printed.
-     */
+    /// @fn DeleteSavedFile
+    /// @brief Delete a saved file.
+    /// @param fileName The name of the file to be deleted.
+    /// @details If the file does not exist, a warning will be printed.
     private static void DeleteSavedFile (string fileName)
     {
-        string path = Application.dataPath + "/GameSave/" + fileName + ".bin";
+        string path = Application.dataPath + "/SceneSave/" + fileName + ".bin";
+
         if (File.Exists(path))
         {
             File.Delete(path);
@@ -62,15 +57,13 @@ public static class SaveLoadSystem
         }
     }
 
-    /**
-     * @fn AutoControlFileNumber
-     * @brief Automatically control the number of saved game files based on the 
-     * MaxFileNumber property in PlayerPrefs.
-     * @details When the number of saved game files is larger than the MaxFileNumber,
-     * the earlier game files will be automatically deleted. If the MaxFileNumber is undefined
-     * or invalid, the auto deletion will not be performed.
-     */
-    private static void AutoControlFileNumber ()
+    /// @fn ControlFileNumber
+    /// @brief Automatically control the number of saved files based on the 
+    /// MaxFileNumber property in PlayerPrefs.
+    /// @details When the number of saved files is larger than the MaxFileNumber,
+    /// the earlier files will be automatically deleted. If the MaxFileNumber is 
+    /// undefined or invalid, the auto deletion will not be performed.
+    private static void ControlFileNumber ()
     {
         if (PlayerPrefs.HasKey("MaxFileNumber") && PlayerPrefs.GetInt("MaxFileNumber") > 0)
         {
@@ -81,7 +74,7 @@ public static class SaveLoadSystem
             {
                 // Sort the files by their creation time.
                 DateTime[] createTimes = new DateTime[files.Length];
-                string path = Application.dataPath + "/GameSave/";
+                string path = Application.dataPath + "/SceneSave/";
                 for (int i = 0; i < files.Length; i++)
                 {
                     createTimes[i] = new FileInfo(path + files[i]).CreationTime;
@@ -98,51 +91,51 @@ public static class SaveLoadSystem
     }
 
     /**
-     * @fn SaveGame
-     * @brief Save a game.
-     * @param game The game to be saved.
+     * @fn SaveScene
+     * @brief Save a scene.
+     * @param scene The scene to be saved.
      * @param fileName The name of the file to be saved. If it is null, the file name will be the current time.
      */
-    public static void SaveGame (Game game, string fileName = null)
+    public static void SaveScene (Scene scene, string fileName = null)
     {
         BinaryFormatter binaryFormatter = new BinaryFormatter();
         string path = Application.dataPath;
         FileStream fileStream = new FileStream(path, FileMode.Create);
 
-        GameData gameData = new GameData(game);
+        SceneData sceneData = new SceneData(scene);
 
         if (fileName == null)
         {
-            path += "/GameSave/" + GetTimeStamp() + ".bin";
+            path += "/SceneSave/" + GetTimeStamp() + ".bin";
         }
         else
         {
-            path += "/GameSave/" + fileName + ".bin";
+            path += "/SceneSave/" + fileName + ".bin";
         }
 
-        binaryFormatter.Serialize(fileStream, gameData);
+        binaryFormatter.Serialize(fileStream, sceneData);
         fileStream.Close();
-        AutoControlFileNumber();
+        ControlFileNumber();
     }
 
     /**
-     * @fn LoadGame
-     * @brief Load a game.
+     * @fn LoadScene
+     * @brief Load a scene.
      * @param fileName The name of the file to be loaded.
-     * @return The loaded game. If the file does not exist, return null and print a warning.
+     * @return The loaded scene. If the file does not exist, return null and print a warning.
      */
-    public static GameData LoadGame (string fileName)
+    public static SceneData LoadScene (string fileName)
     {
-        string path = Application.dataPath + "/GameSave/" + fileName + ".bin";
+        string path = Application.dataPath + "/SceneSave/" + fileName + ".bin";
 
         if (File.Exists(path))
         {
             BinaryFormatter binaryFormatter = new BinaryFormatter();
             FileStream fileStream = new FileStream(path, FileMode.Open);
-            GameData gameData = binaryFormatter.Deserialize(fileStream) as GameData;
+            SceneData sceneData = binaryFormatter.Deserialize(fileStream) as SceneData;
             fileStream.Close();
 
-            return gameData;
+            return sceneData;
         }
         else
         {

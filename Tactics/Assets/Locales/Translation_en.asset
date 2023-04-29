@@ -43,11 +43,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 306278752256
-    m_Localized: New Game
+    m_Localized: New Scene
     m_Metadata:
       m_Items: []
   - m_Id: 638228553728
-    m_Localized: Load Game
+    m_Localized: Load Scene
     m_Metadata:
       m_Items: []
   - m_Id: 691223584768
@@ -87,7 +87,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 37546737960935424
-    m_Localized: Scene
+    m_Localized: Scenario
     m_Metadata:
       m_Items: []
   - m_Id: 37546806512640000
@@ -114,10 +114,6 @@ MonoBehaviour:
     m_Localized: Language
     m_Metadata:
       m_Items: []
-  - m_Id: 37550416457818112
-    m_Localized: In-game Settings
-    m_Metadata:
-      m_Items: []
   - m_Id: 37551125391663104
     m_Localized: Full Screen
     m_Metadata:
@@ -140,6 +136,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 37548935507795968
     m_Localized: Agent
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37618865963982848
+    m_Localized: Agent Number
     m_Metadata:
       m_Items: []
   references:

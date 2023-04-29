@@ -106,8 +106,8 @@ public class SampleClass
 在Unity项目中，经常会遇到以下几种变量类型：
 
 - `public`：既可以通过Unity编辑器访问，也可以被其他脚本调用；
+- `[HideInInspector] public`：不能通过Unity编辑器访问，但可以被其他脚本调用；
 - `[SerializeField] private`：可以通过Unity编辑器访问，但不能被其他脚本调用；
-- `[HiddenInspector] public`：不能通过Unity编辑器访问，但可以被其他脚本调用；
 - `private`：既不能通过Unity编辑器访问，也不能被其他脚本调用；
 
 类型成员的排列顺序自上而下依次为：

@@ -44,7 +44,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 638228553728
-    m_Key: Load Game
+    m_Key: Load Scene
     m_Metadata:
       m_Items: []
   - m_Id: 37546931473539072
@@ -72,7 +72,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 306278752256
-    m_Key: New Game
+    m_Key: New Scene
     m_Metadata:
       m_Items: []
   - m_Id: 732986269696
@@ -115,10 +115,6 @@ MonoBehaviour:
     m_Key: Language
     m_Metadata:
       m_Items: []
-  - m_Id: 37550416457818112
-    m_Key: In-game Settings
-    m_Metadata:
-      m_Items: []
   - m_Id: 37551125391663104
     m_Key: Full Screen
     m_Metadata:
@@ -137,6 +133,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 37551695875727360
     m_Key: FPS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37618865963982848
+    m_Key: Agent Number
     m_Metadata:
       m_Items: []
   m_Metadata:

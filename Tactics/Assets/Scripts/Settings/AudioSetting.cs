@@ -3,6 +3,7 @@
  * @brief Controls the volume of the music and effects mixer groups.
  * @author Yueyuan Li
  * @date 2023-04-23
+ * @copyright GNU Public License
  */
 
 using System.Collections;
@@ -11,19 +12,16 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
-
+/// @class AudioSetting
+/// @brief Controls the volume of the music and effects mixer groups.
 public class AudioSetting : MonoBehaviour
 {
-    /// The AudioMixer to control volumes in Tactics. The Mixer has two exposed parameters: MusicVolume and EffectsVolume
+    /// The AudioMixer to control volumes in Tactics. 
+    /// The Mixer has two exposed parameters: MusicVolume and EffectsVolume
     [SerializeField] private AudioMixer mainMixer;
     [SerializeField] private Slider musicSlider;
     [SerializeField] private Slider effectsSlider;
 
-    /**
-     * @fn Start
-     * @brief Initialize PlayerPrefs properties: MusicVolume and EffectsVolume.
-     * @details If the properties do not exist, they are created with a default value of 0.75f.
-     */
     void Start()
     {
         if (PlayerPrefs.HasKey("MusicVolume"))
@@ -47,10 +45,8 @@ public class AudioSetting : MonoBehaviour
         }
     }
 
-    /**
-     * @fn SetMusicVolume
-     * @brief Set the volume of the music mixer group to the value of the music slider.
-     */
+    /// @fn SetMusicVolume
+    /// @brief Set the volume of the music mixer group to the value of the music slider.
     public void SetMusicVolume()
     {
         float volume = musicSlider.value;
@@ -58,20 +54,16 @@ public class AudioSetting : MonoBehaviour
         PlayerPrefs.SetFloat("MusicVolume", volume);
     }
 
-    /**
-     * @fn LoadMusicVolume
-     * @brief Load the volume of the music mixer group from PlayerPrefs.
-     */
+    /// @fn LoadMusicVolume
+    /// @brief Load the volume of the music mixer group from PlayerPrefs.
     private void LoadMusicVolume()
     {
         musicSlider.value = PlayerPrefs.GetFloat("MusicVolume");
         SetMusicVolume();
     }
 
-    /**
-     * @fn SetEffectsVolume
-     * @brief Set the volume of the effects mixer group to the value of the effects slider.
-     */
+    /// @fn SetEffectsVolume
+    /// @brief Set the volume of the effects mixer group to the value of the effects slider.
     public void SetEffectsVolume()
     {
         float volume = effectsSlider.value;
@@ -79,10 +71,8 @@ public class AudioSetting : MonoBehaviour
         PlayerPrefs.SetFloat("EffectsVolume", volume);
     }
 
-    /**
-     * @fn LoadEffectsVolume
-     * @brief Load the volume of the effects mixer group from PlayerPrefs.
-     */
+    /// @fn LoadEffectsVolume
+    /// @brief Load the volume of the effects mixer group from PlayerPrefs.
     private void LoadEffectsVolume()
     {
         effectsSlider.value = PlayerPrefs.GetFloat("EffectsVolume");
