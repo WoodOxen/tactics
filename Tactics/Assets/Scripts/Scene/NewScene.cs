@@ -8,102 +8,132 @@
 
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
 
-public class NewScene : MonoBehaviour
+namespace Tactics.Scene
 {
-    [HideInInspector] public Scene scene;
-    [SerializeField] private TMP_Text scenarioLabel;
-    [SerializeField] private TMP_Text evaluationModeLabel;
-    private string[] scenarios = {"Racing", "Parking", "Highway", "Intersection", "Roundabout", "Custom"};
-    private int scenarioIndex = 0;
-    private string[] evaluationMode;
-    private int evaluationModeIndex = 0;
-    private int agentNumber = 0;
-
-    void Start()
+    public class NewScene : MonoBehaviour
     {
-        UpdateScenarioLabel();
-        UpdateEvaluationMode();
-        UpdateEvaluationModeLabel();
-    }
+        [SerializeField] private TMP_Text scenarioLabel;
+        [SerializeField] private TMP_Text evaluationModeLabel;
+        [SerializeField] private Slider agentNumberSlider;
+        private string[] _scenarios = {"Racing", "Parking", "Highway", "Intersection", "Roundabout", "Custom"};
+        private int _scenarioIndex = 0;
+        private string[] _evaluationMode;
+        private int _evaluationModeIndex = 0;
+        private int _agentNumber = 1;
+        private List<AgentData> _agentsData = new List<AgentData>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void SwitchScenario(int switchDirection)
-    {
-        scenarioIndex += switchDirection;
-        if (scenarioIndex < 0)
+        void Start()
         {
-            scenarioIndex = scenarios.Length - 1;
-        }
-        else if (scenarioIndex >= scenarios.Length)
-        {
-            scenarioIndex = 0;
-        }
-        UpdateScenarioLabel();
-        UpdateEvaluationMode();
-        UpdateEvaluationModeLabel();
-    }
-
-    private void UpdateScenarioLabel()
-    {
-        scenarioLabel.text = scenarios[scenarioIndex];
-    }
-
-    private void UpdateEvaluationMode()
-    {
-        switch (scenarioIndex)
-        {
-            case 0:
-                evaluationMode = new string[2] {"Lane following", "Speed racing"};
-                break;
-            default:
-                evaluationMode = new string[] {};
-                break;
-        }
-        evaluationModeIndex = 0;
-    }
-
-    public void SwitchEvaluationMode (int switchDirection)
-    {
-        if (evaluationMode.Length == 0) return;
-
-        evaluationModeIndex += switchDirection ;
-
-        if (evaluationModeIndex < 0)
-        {
-            evaluationModeIndex = evaluationMode.Length - 1;
-        }
-        else if (evaluationModeIndex >= evaluationMode.Length)
-        {
-            evaluationModeIndex = 0;
+            UpdateScenarioLabel();
+            GetEvaluationMode();
+            UpdateEvaluationModeLabel();
         }
 
-        UpdateEvaluationModeLabel();
-    }
-
-    private void UpdateEvaluationModeLabel ()
-    {
-        if (evaluationMode.Length == 0)
+        // Update is called once per frame
+        void Update()
         {
-            evaluationModeLabel.text = "Null";
+            
         }
-        else
+
+        /// @fn SwitchScenario
+        /// @brief Switch the scenario to the next or previous one.
+        /// @param switchDirection 1 for next, -1 for previous.
+        /// @details The evaluation mode will be reset to the first one once the scenario is
+        /// switched.
+        public void SwitchScenario(int switchDirection)
         {
-            evaluationModeLabel.text = evaluationMode[evaluationModeIndex];
+            _scenarioIndex += switchDirection;
+            if (_scenarioIndex < 0)
+            {
+                _scenarioIndex = _scenarios.Length - 1;
+            }
+            else if (_scenarioIndex >= _scenarios.Length)
+            {
+                _scenarioIndex = 0;
+            }
+            UpdateScenarioLabel();
+            GetEvaluationMode();
+            UpdateEvaluationModeLabel();
+        }
+
+        /// @fn UpdateScenarioLabel
+        /// @brief Update the scenario label.
+        private void UpdateScenarioLabel()
+        {
+            scenarioLabel.text = _scenarios[_scenarioIndex];
+        }
+
+        /// @fn GetEvaluationMode
+        /// @brief Update the evaluation mode array based on the scenario.
+        /// @todo Add more evaluation modes.
+        /// @todo Allow auto detect of custom evaluation modes.
+        private void GetEvaluationMode()
+        {
+            switch (_scenarioIndex)
+            {
+                case 0:
+                    _evaluationMode = new string[2] {"Lane following", "Speed racing"};
+                    break;
+                default:
+                    _evaluationMode = new string[] {};
+                    break;
+            }
+            _evaluationModeIndex = 0;
+        }
+
+        /// @fn SwitchEvaluationMode
+        /// @brief Switch the evaluation mode to the next or previous one.
+        public void SwitchEvaluationMode(int switchDirection)
+        {
+            if (_evaluationMode.Length == 0) return;
+
+            _evaluationModeIndex += switchDirection ;
+
+            if (_evaluationModeIndex < 0)
+            {
+                _evaluationModeIndex = _evaluationMode.Length - 1;
+            }
+            else if (_evaluationModeIndex >= _evaluationMode.Length)
+            {
+                _evaluationModeIndex = 0;
+            }
+
+            UpdateEvaluationModeLabel();
+        }
+
+        /// @fn UpdateEvaluationModeLabel
+        /// @brief Update the evaluation mode label.
+        private void UpdateEvaluationModeLabel()
+        {
+            if (_evaluationMode.Length == 0)
+            {
+                evaluationModeLabel.text = "Null";
+            }
+            else
+            {
+                evaluationModeLabel.text = _evaluationMode[_evaluationModeIndex];
+            }
+        }
+
+        /// @fn GetAgentNumber
+        /// @brief Get the number of agent from the slider.
+        public void GetAgentNumber()
+        {
+            _agentNumber = (int) agentNumberSlider.value;
+        }
+
+        public void ConfirmSceneConfiguration()
+        {
+
+        }
+
+        public void SkipSceneConfiguration()
+        {
+            
         }
     }
-
-    public void ConfirmScene ()
-    {
-        scene.ScenarioID = scenarioIndex;
-        scene.EvaluationMode = evaluationModeIndex;
-    }
-
 }

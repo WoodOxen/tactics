@@ -9,38 +9,40 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine.UI;
 
-public class ControlSetting : MonoBehaviour
-{
-    [SerializeField] private TMP_Text inputSourceLabel;
-    private string[] inputSource = {"Keyboard and mouse", "Joystick"};
-    private int inputSourceIndex = 0;
-
-    void Start()
+namespace Tactics.Settings{
+    public class ControlSetting : MonoBehaviour
     {
-        UpdateInputSourceLabel();
-    }
+        [SerializeField] private TMP_Text inputSourceLabel;
+        private string[] _inputSources = {"Keyboard and mouse", "Joystick"};
+        private int _inputSourceIndex = 0;
 
-    public void SwitchInput(int switchDirection)
-    {
-        inputSourceIndex += switchDirection;
-
-        if (inputSourceIndex < 0)
+        void Start()
         {
-            inputSourceIndex = inputSource.Length - 1;
-        }
-        else if (inputSourceIndex >= inputSource.Length)
-        {
-            inputSourceIndex = 0;
+            UpdateInputSourceLabel();
         }
 
-        UpdateInputSourceLabel();
-    }
+        public void SwitchInput(int switchDirection)
+        {
+            _inputSourceIndex += switchDirection;
 
-    private void UpdateInputSourceLabel ()
-    {
-        inputSourceLabel.text = inputSource[inputSourceIndex];
+            if (_inputSourceIndex < 0)
+            {
+                _inputSourceIndex = _inputSources.Length - 1;
+            }
+            else if (_inputSourceIndex >= _inputSources.Length)
+            {
+                _inputSourceIndex = 0;
+            }
+
+            UpdateInputSourceLabel();
+        }
+
+        private void UpdateInputSourceLabel ()
+        {
+            inputSourceLabel.text = _inputSources[_inputSourceIndex];
+        }
     }
 }

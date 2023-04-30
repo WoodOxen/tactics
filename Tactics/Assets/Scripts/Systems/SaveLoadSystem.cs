@@ -11,6 +11,7 @@ using UnityEngine;
 using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using Tactics.Scene;
 
 public static class SaveLoadSystem
 {
@@ -90,19 +91,15 @@ public static class SaveLoadSystem
         }
     }
 
-    /**
-     * @fn SaveScene
-     * @brief Save a scene.
-     * @param scene The scene to be saved.
-     * @param fileName The name of the file to be saved. If it is null, the file name will be the current time.
-     */
-    public static void SaveScene (Scene scene, string fileName = null)
+    /// @fn SaveScene
+    /// @brief Save a scene.
+    /// @param scene The scene to be saved.
+    /// @param fileName The name of the file to be saved. If it is null, the file name will be the current time.
+    public static void SaveScene (SceneData sceneData, string fileName = null)
     {
         BinaryFormatter binaryFormatter = new BinaryFormatter();
         string path = Application.dataPath;
         FileStream fileStream = new FileStream(path, FileMode.Create);
-
-        SceneData sceneData = new SceneData(scene);
 
         if (fileName == null)
         {

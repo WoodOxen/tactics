@@ -142,6 +142,14 @@ MonoBehaviour:
     m_Localized: Agent Number
     m_Metadata:
       m_Items: []
+  - m_Id: 38099952607617024
+    m_Localized: Save Path
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38100159219032064
+    m_Localized: Script Path
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
