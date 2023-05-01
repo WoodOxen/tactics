@@ -1,11 +1,10 @@
 /**
-  * @file ReturnMainMenu.cs
-  * @brief Return to the main menu by pressing the Esc button
-  * @details 
-  * Hanging to: Branch panels in the menu scene
-  * @author WoodOxen
-  * @date 2023-01-16
-  */
+ * @file ReturnMainMenu.cs
+ * @brief This script is used to return to the main menu when the player presses the escape key.
+ * @author Yueyuan Li
+ * @date 2023-01-16
+ * @copyright GNU Public License
+ */
 
 using System.Collections;
 using System.Collections.Generic;

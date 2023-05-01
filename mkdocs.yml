@@ -12,8 +12,13 @@ nav:
   - Home: "index.en.md"
   - For Developers:
     - Folder Structure: "developer/folder_structure.en.md"
+    - C# Coding Style: "developer/csharp_coding_style.en.md"
 
-theme: "material"
+theme: 
+  name: "material"
+  features:
+    - content.code.copy
+    - content.code.annotate 
 
 plugins:
   - i18n:
@@ -31,7 +36,12 @@ plugins:
           Home: 首页
           For Developers: 开发者须知
           Folder Structure: 文件夹结构
+          C# Coding Style: C# 编程风格
   - search
 
 markdown_extensions:
   - admonition
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences

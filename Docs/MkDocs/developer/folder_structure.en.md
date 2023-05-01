@@ -1,6 +1,8 @@
 # Folder Structure
 
-## Root Path Structure
+The Unity project of Tactics locates at `./Tactics`. You have to select this directory to import project into a Unity Editor.
+
+## Asset Path Structure
 
 ```shell
 Tactics/Assets
