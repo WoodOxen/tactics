@@ -150,6 +150,18 @@ MonoBehaviour:
     m_Localized: Script Path
     m_Metadata:
       m_Items: []
+  - m_Id: 38457423830376448
+    m_Localized: Skip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38458335156166656
+    m_Localized: Return
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38458392404221952
+    m_Localized: Confirm
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
