@@ -7,17 +7,14 @@ public class TreeNode : MonoBehaviour
     public bool IsLeaf;
     public bool Fold = true;
     public int Depth = 0;
-
     public bool NeedUpdate = true;
-
-
-    private GameObject _parent;
+    public GameObject MappedObject;
 
     private void ReassginSiblings(Transform t, int spareLine)
     {
         for (int i = t.GetSiblingIndex() + 1; i < t.parent.childCount; i++)
         {
-            t.parent.GetChild(i).transform.localPosition += Vector3.down * spareLine * 30 * (Fold ? -1 : 1);
+            t.parent.GetChild(i).transform.localPosition += Vector3.down * spareLine * TreeConstants.SeperateDist * (Fold ? -1 : 1);
         }
         if (t.parent.GetComponent<TreeNode>().Depth != 0)
         {
@@ -64,7 +61,7 @@ public class TreeNode : MonoBehaviour
         {
             foreach (Transform child in transform)
             {
-                if (child.name == "SampleNode" || child.name == "SampleText" || child.name == "text")
+                if (child.name == "SampleNode" || child.name == "Other" || child.name == "text")
                 {
                     continue;
                 }
@@ -75,7 +72,7 @@ public class TreeNode : MonoBehaviour
         {
             foreach (Transform child in transform)
             {
-                if (child.name == "SampleNode" || child.name == "SampleText" || child.name == "text")
+                if (child.name == "SampleNode" || child.name == "Other" || child.name == "text")
                 {
                     continue;
                 }
@@ -86,7 +83,6 @@ public class TreeNode : MonoBehaviour
 
     private void Awake()
     {
-        _parent = transform.parent.gameObject;
     }
     // Start is called before the first frame update
     void Start()
