@@ -1,0 +1,77 @@
+
+newmtl GSDRailing4
+Ka  0.6 0.6 0.6
+Kd  0.6 0.6 0.6
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  0.0
+illum 2
+map_Kd GSDRailing4_Diffuse.png
+
+
+
+newmtl GSDRoadBarrel
+Ka  0.6 0.6 0.6
+Kd  0.6 0.6 0.6
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  0.0
+illum 2
+map_Kd GSDRoadBarrel_Diffuse.png
+
+
+
+newmtl GSDCableBarrier
+Ka  0.6 0.6 0.6
+Kd  0.6 0.6 0.6
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  0.0
+illum 2
+map_Kd GSDCableBarrier_Diffuse.png
+
+
+
+newmtl Default-Material
+Ka  0.6 0.6 0.6
+Kd  0.6 0.6 0.6
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  0.0
+illum 2
+
+
+
+
+newmtl GSDRoad1
+Ka  0.6 0.6 0.6
+Kd  0.6 0.6 0.6
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  0.0
+illum 2
+map_Kd GSDRoad1_Diffuse.png
+
+
+
+newmtl GSDWhiteYellowDouble
+Ka  0.6 0.6 0.6
+Kd  0.6 0.6 0.6
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  0.0
+illum 2
+map_Kd GSDWhiteYellowDouble_Diffuse.png
+
+
+
+newmtl GSDShoulder1
+Ka  0.6 0.6 0.6
+Kd  0.6 0.6 0.6
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  0.0
+illum 2
+map_Kd GSDRoad1_Diffuse.png
+
+
