@@ -38,7 +38,7 @@ public class EditorManager : MonoBehaviour
         GameObject space = GameObject.Find("VehicleSpace");
         if (space.transform.childCount != 0)
         {
-            Destroy(space.transform.GetChild(0).gameObject);
+            DestroyImmediate(space.transform.GetChild(0).gameObject);
         }
     }
 

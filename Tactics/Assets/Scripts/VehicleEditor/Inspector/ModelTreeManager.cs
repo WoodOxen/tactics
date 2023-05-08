@@ -59,13 +59,9 @@ public class ModelTreeManager: MonoBehaviour
     }
     public void UpdateTree(int vehicleIndex = 0)
     {
-        foreach (Transform child in transform)
+        for (int i = transform.childCount-1; i > 1; i--) // ignore first two sample gameobject
         {
-            if (child.name == "SampleNode" || child.name == "SampleText")
-            {
-                continue;
-            }
-            Destroy(child.gameObject);
+            DestroyImmediate(transform.GetChild(i).gameObject);
         }
 
         if (GameObject.Find("VehicleSpace").transform.childCount != 0)

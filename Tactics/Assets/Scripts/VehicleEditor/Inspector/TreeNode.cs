@@ -13,12 +13,48 @@ public class TreeNode : MonoBehaviour
 
     private GameObject _parent;
 
+    private void ReassginSiblings(Transform t, int spareLine)
+    {
+        for (int i = t.GetSiblingIndex() + 1; i < t.parent.childCount; i++)
+        {
+            t.parent.GetChild(i).transform.localPosition += Vector3.down * spareLine * 30 * (Fold ? -1 : 1);
+        }
+        if (t.parent.GetComponent<TreeNode>().Depth != 0)
+        {
+            ReassginSiblings(t.parent, spareLine);
+        }
+    }
+
+    public int CountSpareLine(Transform root)
+    {
+        int count = 0;
+        foreach (Transform child in root)
+        {
+            TreeNode childTN = child.GetComponent<TreeNode>();
+            if (childTN && child.name != "SampleNode")
+            {
+                count++;
+                if (!childTN.IsLeaf && !childTN.Fold)
+                {
+                    count += CountSpareLine(child);
+                }
+            }
+        }
+        return count;
+    }
+
     public void ToggleFold()
     {
         if (!IsLeaf)
         {
             Fold = !Fold;
             NeedUpdate = true;
+            // when unfold, tell parent nodes to spare space
+            int spareLine = CountSpareLine(transform);
+            //move down siblings and siblings in parent
+            ReassginSiblings(transform,spareLine);
+            
+
         }
     }
 
