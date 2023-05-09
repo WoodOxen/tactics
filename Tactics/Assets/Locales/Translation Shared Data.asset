@@ -159,6 +159,10 @@ MonoBehaviour:
     m_Key: Confirm
     m_Metadata:
       m_Items: []
+  - m_Id: 40605387968663552
+    m_Key: Editor/UI/Inspector/Panel/Viewport/Content/bg/model/Button/Text (TMP)
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -14,15 +14,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TableCollectionName: Localization Asset
   m_TableCollectionNameGuidString: 6599fe3542df4414cbf197dab2264e18
-  m_Entries: []
+  m_Entries:
+  - m_Id: 3065220139765760
+    m_Key: Editor/UI/Inspector/Panel/Viewport/Content/bg/model/Button/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3065220148154368
+    m_Key: Editor/UI/Inspector/Panel/Viewport/Content/bg/model/Button/Text (TMP)
+      1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3065893631741952
+    m_Key: Editor/UI/Inspector/Panel/Viewport/Content/bg/model/Button
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items:
     - rid: 2192683031691526147
+    - rid: 446862578873008158
   m_KeyGenerator:
     rid: 2192683031691526146
   references:
     version: 2
     RefIds:
+    - rid: 446862578873008158
+      type: {class: AssetTypeMetadata, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries:
+        - m_KeyId: 3065220148154368
+          m_TableCodes:
+          - en
+          - zh
+        m_TypeString: UnityEngine.Material, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
     - rid: 2192683031691526146
       type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
       data:
@@ -32,6 +56,10 @@ MonoBehaviour:
       data:
         m_Entries:
         - m_KeyId: 59762728960
+          m_TableCodes:
+          - en
+          - zh
+        - m_KeyId: 3065220139765760
           m_TableCodes:
           - en
           - zh

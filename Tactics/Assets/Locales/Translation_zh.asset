@@ -162,6 +162,10 @@ MonoBehaviour:
     m_Localized: "\u786E\u5B9A"
     m_Metadata:
       m_Items: []
+  - m_Id: 40605387968663552
+    m_Localized: Sample node
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
