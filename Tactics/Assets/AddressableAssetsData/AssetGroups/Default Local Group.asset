@@ -16,7 +16,11 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 3e37cfbf91c1130e19d4e01c39ad6127
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 00401932eb16a164d8c8cf5024c81370
+    m_Address: Assets/ThirdParty/CartoonTracksPack/Meshes/Materials/BALOONS.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: ef585148e73a1cd748e9921bc8b8e691, type: 2}
   m_SchemaSet:
