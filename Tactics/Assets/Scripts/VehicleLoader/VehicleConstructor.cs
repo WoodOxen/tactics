@@ -144,12 +144,12 @@ public class VehicleConstructor : MonoBehaviour
         }
     }
 
-    public void Construct(Transform place, bool inEditor)
+    public void Construct(Transform place, bool inEditor, Vector3 position)
     {
         vehicle = new GameObject();
         vehicle.name = ("Vehicle (" + vehicle.GetInstanceID().ToString() + ")");
         vehicle.transform.SetParent(place);
-        vehicle.transform.localPosition = new Vector3(0,2,0);
+        vehicle.transform.localPosition = position;
 
         ConstructModel();
         if (inEditor)
@@ -184,7 +184,7 @@ public class VehicleConstructor : MonoBehaviour
                 //{
                 //    Debug.LogError("Failure: Construct data wrong");
                 //}
-                Construct(place, inEditor);
+                Construct(place, inEditor, new Vector3(0,1.1f,0));
 
             }
             else

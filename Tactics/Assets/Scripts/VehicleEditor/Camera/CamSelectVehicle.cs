@@ -19,9 +19,13 @@ public class CamSelectVehicle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!cameraController.target && GameObject.Find("VehicleSpace").transform.childCount != 0)
+        if (GameObject.Find("VehicleSpace").transform.childCount != 0)
         {
             cameraController.target = GameObject.Find("VehicleSpace").transform.GetChild(vehicleIndex);
+        }
+        else
+        {
+            cameraController.target = GameObject.Find("Platform").transform;
         }
     }
 }
