@@ -21,6 +21,15 @@ public class VehicleConstructor : MonoBehaviour
 
     public GameObject vehicle;
 
+    public void ChangeLayer(Transform trans, int layer)
+    {
+        trans.gameObject.layer = layer;
+        foreach (Transform child in trans)
+        {
+            ChangeLayer(child, layer);
+        }
+    }
+
     /// <summary>
     /// Find the wheel gameObject using the relative path string
     /// </summary>
@@ -162,6 +171,8 @@ public class VehicleConstructor : MonoBehaviour
             vehicle.AddComponent<WheelVisController>();
             vehicle.AddComponent<WheelController>();
         }
+
+        ChangeLayer(vehicle.transform, 7);
     }
 
     public void PlaceVehicle(Transform place, bool inEditor = false)

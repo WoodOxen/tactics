@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
 
-public class ReadSavesList : MonoBehaviour
+public class ReadFileList : MonoBehaviour
 {
     private TMPro.TMP_Dropdown _dropdown;
-    private void ReadSavesDir(string dir)
+    public void ReadDir(string dir)
     {
         string[] files = Directory.GetFiles(dir);
         _dropdown.ClearOptions();
@@ -21,7 +21,7 @@ public class ReadSavesList : MonoBehaviour
     {
         _dropdown = GetComponent<TMPro.TMP_Dropdown>();
 
-        ReadSavesDir(Application.streamingAssetsPath + "/Saves/");
+        ReadDir(Application.streamingAssetsPath + "/Saves/");
 
     }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class TreeNode : MonoBehaviour
 {
@@ -20,6 +21,11 @@ public class TreeNode : MonoBehaviour
         {
             ReassginSiblings(t.parent, spareLine);
         }
+    }
+
+    public void SelectNode()
+    {
+        Camera.main.gameObject.GetComponent<CamSelectVehicle>().SelectPart(MappedObject.transform);
     }
 
     public int CountSpareLine(Transform root)
@@ -57,27 +63,13 @@ public class TreeNode : MonoBehaviour
 
     public void UpdateVisible()
     {
-        if (Fold)
+        foreach (Transform child in transform)
         {
-            foreach (Transform child in transform)
+            if (child.name == "SampleNode" || child.name == "Other" || child.name == "text")
             {
-                if (child.name == "SampleNode" || child.name == "Other" || child.name == "text")
-                {
-                    continue;
-                }
-                child.gameObject.SetActive(false);
+                continue;
             }
-        }
-        else
-        {
-            foreach (Transform child in transform)
-            {
-                if (child.name == "SampleNode" || child.name == "Other" || child.name == "text")
-                {
-                    continue;
-                }
-                child.gameObject.SetActive(true);
-            }
+            child.gameObject.SetActive(Fold?false:true);
         }
     }
 
