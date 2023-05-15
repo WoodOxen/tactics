@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Siccity.GLTFUtility;
+using Assets.Scripts.VehicleEditor;
 
 public class WheelTag : MonoBehaviour
 {
@@ -21,12 +22,27 @@ public class VehicleConstructor : MonoBehaviour
 
     public GameObject vehicle;
 
-    public void ChangeLayer(Transform trans, int layer)
+    private Material _transparentMat;
+
+
+
+    private void AddMatArray(Transform t)
     {
-        trans.gameObject.layer = layer;
-        foreach (Transform child in trans)
+        MeshRenderer mr = t.GetComponent<MeshRenderer>();
+        if (mr)
         {
-            ChangeLayer(child, layer);
+            Material[] mats = new Material[mr.materials.Length+1];
+            mats[0] = mr.material;
+            for (int i = 0; i < mr.materials.Length; i++)
+            {
+                mats[i] = mr.materials[i];
+            }
+            mats[mr.materials.Length] = _transparentMat;
+            mr.materials = mats;
+        }
+        foreach (Transform child in t)
+        {
+            AddMatArray (child);
         }
     }
 
@@ -130,7 +146,7 @@ public class VehicleConstructor : MonoBehaviour
             tag.steeringMode.inverse = para.type.steering.inverse;
         }
     }
-    public void ConstructModel()
+    public void ConstructModel(bool addHightLight = false)
     {
         GameObject model = Importer.LoadFromFile(Application.streamingAssetsPath + "/Model/" + myReader.vehicle.model.carBody[0].dir);
         model.name = "Vis";
@@ -151,6 +167,11 @@ public class VehicleConstructor : MonoBehaviour
                 FindWheel(wheel.dir[i], model).transform.SetParent(wheelroot.transform);
             }
         }
+
+        if (addHightLight)
+        {
+            AddMatArray(model.transform);
+        }
     }
 
     public void Construct(Transform place, bool inEditor, Vector3 position)
@@ -160,7 +181,7 @@ public class VehicleConstructor : MonoBehaviour
         vehicle.transform.SetParent(place);
         vehicle.transform.localPosition = position;
 
-        ConstructModel();
+        ConstructModel(inEditor);
         if (inEditor)
         {
             ConstructPhysicsVis();
@@ -172,7 +193,7 @@ public class VehicleConstructor : MonoBehaviour
             vehicle.AddComponent<WheelController>();
         }
 
-        ChangeLayer(vehicle.transform, 7);
+        CommonTool.ChangeLayer(vehicle.transform, 7);
     }
 
     public void PlaceVehicle(Transform place, bool inEditor = false)
@@ -204,6 +225,10 @@ public class VehicleConstructor : MonoBehaviour
             }
         }
 
+    }
+    public void Awake()
+    {
+        _transparentMat = Resources.Load<Material>("Materials/Transparent");
     }
 
 }

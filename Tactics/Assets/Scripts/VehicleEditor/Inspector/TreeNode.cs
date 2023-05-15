@@ -1,3 +1,4 @@
+using Assets.Scripts.VehicleEditor;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,6 +27,16 @@ public class TreeNode : MonoBehaviour
     public void SelectNode()
     {
         Camera.main.gameObject.GetComponent<CamSelectVehicle>().SelectPart(MappedObject.transform);
+        GameObject space = GameObject.Find("PreviewSpace");
+        for (int i = space.transform.childCount-1; i >= 0; i--)
+        {
+            DestroyImmediate(space.transform.GetChild(i).gameObject);
+        }
+        GameObject previewObject = (GameObject)Instantiate(MappedObject, space.transform,true);
+        previewObject.transform.localPosition = Vector3.zero;
+        previewObject.transform.localScale = MappedObject.transform.lossyScale;
+        CommonTool.ChangeLayer(previewObject.transform, 8);
+        CommonTool.SetHightlight(previewObject.transform, false);
     }
 
     public int CountSpareLine(Transform root)

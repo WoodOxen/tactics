@@ -14,12 +14,19 @@ public class EditorCamController : MonoBehaviour
 
     private float x = 0.0f;
     private float y = 0.0f;
+    private Camera _cam;
+
+    public void ChangeOthographicSize(bool inc)
+    {
+        _cam.orthographicSize = Mathf.Clamp(_cam.orthographicSize + 0.3f * (inc?1:-1), 0.2f, 5f);
+    }
 
     void Start()
     {
         Vector3 angles = transform.eulerAngles;
         x = angles.y;
         y = angles.x;
+        _cam = GetComponent<Camera>();
     }
 
     void LateUpdate()
@@ -36,7 +43,6 @@ public class EditorCamController : MonoBehaviour
 
             distance -= Input.GetAxis("Mouse ScrollWheel") * scrollSpeed;
             distance = Mathf.Clamp(distance, 3, 10);
-            Camera.main.orthographicSize -= Input.GetAxis("Mouse ScrollWheel") * scrollSpeed;
 
             Quaternion rotation = Quaternion.Euler(y, x, 0);
             Vector3 position = rotation * new Vector3(0.0f, 0.0f, -distance) + target.position;

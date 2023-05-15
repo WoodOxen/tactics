@@ -1,3 +1,4 @@
+using Assets.Scripts.VehicleEditor;
 using System.Collections;
 using System.Collections.Generic;
 using System.Xml;
@@ -35,7 +36,9 @@ public class CamSelectVehicle : MonoBehaviour
         {
             if (target)
             {
+                CommonTool.SetHightlight(cameraController.target, false);
                 cameraController.target = target;
+                CommonTool.SetHightlight(cameraController.target, true);
             }
             else
             {

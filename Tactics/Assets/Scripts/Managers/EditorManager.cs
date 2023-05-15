@@ -92,6 +92,11 @@ public class EditorManager : MonoBehaviour
         {
             DestroyImmediate(space.transform.GetChild(0).gameObject);
         }
+        space = GameObject.Find("PreviewSpace");
+        if (space.transform.childCount != 0)
+        {
+            DestroyImmediate(space.transform.GetChild(0).gameObject);
+        }
     }
 
     public void ToggleOrthographic()
