@@ -18,11 +18,15 @@ public class WheelTag : MonoBehaviour
 
 public class VehicleConstructor : MonoBehaviour
 {
+    public GameObject BoxColVisPrefab;
+    public GameObject SphereColVisPrefab;
+
     public JsonReader myReader;
 
     public GameObject vehicle;
 
     private Material _transparentMat;
+
 
 
 
@@ -67,7 +71,30 @@ public class VehicleConstructor : MonoBehaviour
     /// </summary>
     public void ConstructPhysicsVis()
     {
+        GameObject bodyCollider = new GameObject("Col");
+        bodyCollider.transform.SetParent(vehicle.transform);
+        bodyCollider.transform.localPosition = Vector3.zero;
+        bodyCollider.transform.localRotation = Quaternion.identity;
+        foreach (JsonReader.BodyColliderPara para in myReader.vehicle.physics.collider)
+        {
+            GameObject col = new GameObject();
+            switch (para.type)
+            {
+                case "box":
+                    col = Instantiate(BoxColVisPrefab);
+                    break;
+                case "sphere":
+                    col = Instantiate(SphereColVisPrefab);
+                    break;
+                default:
+                    break;
+            }
+            col.transform.SetParent(bodyCollider.transform);
+            col.transform.localPosition = para.position;
+            col.transform.localEulerAngles = para.eulerRotation;
+            col.transform.localScale = para.scale;
 
+        }
     }
     public void ConstructPhysics()
     {
@@ -185,6 +212,8 @@ public class VehicleConstructor : MonoBehaviour
         if (inEditor)
         {
             ConstructPhysicsVis();
+            //vehicle.AddComponent<WheelVisController>();
+            //vehicle.AddComponent<WheelController>();
         }
         else
         {

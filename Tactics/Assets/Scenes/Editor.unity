@@ -428,6 +428,7 @@ GameObject:
   - component: {fileID: 38930593}
   - component: {fileID: 38930595}
   - component: {fileID: 38930594}
+  - component: {fileID: 38930596}
   m_Layer: 6
   m_Name: Cylinder
   m_TagString: Untagged
@@ -500,6 +501,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 38930592}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &38930596
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38930592}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 2, z: 1.0000002}
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &49023566
 GameObject:
   m_ObjectHideFlags: 0
@@ -2114,6 +2128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e4a429c1e92e6546b43998fd73cebf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BoxColVisPrefab: {fileID: 197675677674971341, guid: 86b14c2551c9cc741a20936ec388920b, type: 3}
+  SphereColVisPrefab: {fileID: 1465936947006573498, guid: 0be7db21bfb928f41914a7caf721082d, type: 3}
   myReader: {fileID: 0}
   vehicle: {fileID: 0}
 --- !u!114 &559698585
@@ -2152,7 +2168,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &576646069
 GameObject:
@@ -6343,7 +6359,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1767831771
 GameObject:
