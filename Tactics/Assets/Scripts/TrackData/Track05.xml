@@ -1,0 +1,2322 @@
+<waypoints>
+  <waypoint index="0">
+    <position>(742.46, 0.03, 955.00)</position>
+    <rotation>(0.67957, -0.26086, 0.24572, 0.64013)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="1">
+    <position>(750.19, 0.03, 958.48)</position>
+    <rotation>(0.66154, -0.24310, 0.24470, 0.66588)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="2">
+    <position>(759.36, 0.03, 962.62)</position>
+    <rotation>(0.64120, -0.22650, 0.24421, 0.69132)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="3">
+    <position>(768.64, 0.03, 966.87)</position>
+    <rotation>(0.62306, -0.21515, 0.24545, 0.71081)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="4">
+    <position>(777.85, 0.03, 971.18)</position>
+    <rotation>(0.60873, -0.20979, 0.24930, 0.72338)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="5">
+    <position>(786.96, 0.03, 975.57)</position>
+    <rotation>(0.59908, -0.21065, 0.25624, 0.72874)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="6">
+    <position>(795.99, 0.03, 980.10)</position>
+    <rotation>(0.59445, -0.21783, 0.26633, 0.72680)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="7">
+    <position>(804.92, 0.03, 984.78)</position>
+    <rotation>(0.59461, -0.23130, 0.27916, 0.71764)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="8">
+    <position>(813.76, 0.03, 989.63)</position>
+    <rotation>(0.59880, -0.25083, 0.29387, 0.70154)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="9">
+    <position>(822.60, 0.03, 994.71)</position>
+    <rotation>(0.60594, -0.27633, 0.30952, 0.67873)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="10">
+    <position>(831.25, 0.03, 999.84)</position>
+    <rotation>(0.63220, -0.32195, 0.31981, 0.62800)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="11">
+    <position>(839.93, 0.03, 1005.06)</position>
+    <rotation>(0.64990, -0.36054, 0.32457, 0.58506)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="12">
+    <position>(848.65, 0.03, 1010.37)</position>
+    <rotation>(0.65654, -0.38642, 0.32858, 0.55827)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="13">
+    <position>(857.19, 0.03, 1015.67)</position>
+    <rotation>(0.65543, -0.40050, 0.33387, 0.54639)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="14">
+    <position>(865.74, 0.03, 1021.08)</position>
+    <rotation>(0.64794, -0.40383, 0.34160, 0.54809)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="15">
+    <position>(874.26, 0.03, 1026.63)</position>
+    <rotation>(0.63382, -0.39601, 0.35206, 0.56347)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="16">
+    <position>(882.68, 0.03, 1032.31)</position>
+    <rotation>(0.61140, -0.37597, 0.36474, 0.59313)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="17">
+    <position>(890.99, 0.03, 1038.18)</position>
+    <rotation>(0.57669, -0.34154, 0.37818, 0.63856)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="18">
+    <position>(899.12, 0.03, 1044.33)</position>
+    <rotation>(0.52154, -0.28886, 0.38898, 0.70232)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="19">
+    <position>(906.85, 0.03, 1050.87)</position>
+    <rotation>(0.42875, -0.21185, 0.38904, 0.78736)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="20">
+    <position>(913.71, 0.03, 1058.18)</position>
+    <rotation>(0.28900, -0.12405, 0.37442, 0.87230)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="21">
+    <position>(918.94, 0.03, 1066.74)</position>
+    <rotation>(0.14600, -0.05653, 0.35661, 0.92104)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="22">
+    <position>(920.81, 0.03, 1076.57)</position>
+    <rotation>(-0.01802, 0.00598, 0.31502, 0.94890)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="23">
+    <position>(917.57, 0.03, 1086.01)</position>
+    <rotation>(-0.16647, 0.04459, 0.25487, 0.95149)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="24">
+    <position>(910.52, 0.03, 1093.09)</position>
+    <rotation>(-0.30042, 0.05985, 0.18599, 0.93358)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="25">
+    <position>(901.30, 0.03, 1096.96)</position>
+    <rotation>(-0.44920, 0.06289, 0.12357, 0.88261)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="26">
+    <position>(891.41, 0.03, 1099.28)</position>
+    <rotation>(-0.52612, 0.05548, 0.08899, 0.84392)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="27">
+    <position>(881.28, 0.03, 1100.91)</position>
+    <rotation>(-0.56401, 0.04774, 0.06953, 0.82145)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="28">
+    <position>(871.12, 0.03, 1102.22)</position>
+    <rotation>(-0.57377, 0.04251, 0.06043, 0.81568)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="29">
+    <position>(861.02, 0.03, 1103.43)</position>
+    <rotation>(-0.55825, 0.04055, 0.06004, 0.82650)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="30">
+    <position>(850.93, 0.03, 1104.77)</position>
+    <rotation>(-0.52817, 0.04363, 0.06981, 0.84514)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="31">
+    <position>(840.94, 0.03, 1106.33)</position>
+    <rotation>(-0.55635, 0.05344, 0.07928, 0.82543)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="32">
+    <position>(830.91, 0.03, 1107.93)</position>
+    <rotation>(-0.57070, 0.05403, 0.07722, 0.81573)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="33">
+    <position>(821.00, 0.03, 1109.36)</position>
+    <rotation>(-0.57315, 0.04578, 0.06515, 0.81557)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="34">
+    <position>(810.89, 0.03, 1110.46)</position>
+    <rotation>(-0.56349, 0.02871, 0.04202, 0.82456)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="35">
+    <position>(800.75, 0.03, 1110.98)</position>
+    <rotation>(-0.53917, 0.00334, 0.00521, 0.84217)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="36">
+    <position>(790.69, 0.03, 1110.53)</position>
+    <rotation>(-0.49526, -0.02876, -0.05033, 0.86681)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="37">
+    <position>(780.80, 0.03, 1108.37)</position>
+    <rotation>(-0.42471, -0.06764, -0.14200, 0.89156)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="38">
+    <position>(771.79, 0.03, 1103.90)</position>
+    <rotation>(-0.36555, -0.09107, -0.22393, 0.89885)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="39">
+    <position>(763.61, 0.03, 1097.95)</position>
+    <rotation>(-0.33645, -0.09950, -0.26558, 0.89798)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="40">
+    <position>(755.71, 0.03, 1091.52)</position>
+    <rotation>(-0.33985, -0.10020, -0.26446, 0.89695)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="41">
+    <position>(747.37, 0.03, 1085.60)</position>
+    <rotation>(-0.37575, -0.09261, -0.22066, 0.89529)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="42">
+    <position>(738.32, 0.03, 1081.19)</position>
+    <rotation>(-0.43065, -0.08307, -0.17021, 0.88242)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="43">
+    <position>(728.89, 0.03, 1077.31)</position>
+    <rotation>(-0.46122, -0.09143, -0.17161, 0.86572)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="44">
+    <position>(719.45, 0.03, 1073.72)</position>
+    <rotation>(-0.47802, -0.08720, -0.15685, 0.85982)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="45">
+    <position>(709.82, 0.03, 1070.61)</position>
+    <rotation>(-0.48300, -0.07083, -0.12663, 0.86352)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="46">
+    <position>(700.02, 0.03, 1068.30)</position>
+    <rotation>(-0.47461, -0.04256, -0.07852, 0.87566)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="47">
+    <position>(690.04, 0.03, 1067.26)</position>
+    <rotation>(-0.44812, -0.00301, -0.00600, 0.89395)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="48">
+    <position>(680.03, 0.03, 1068.25)</position>
+    <rotation>(-0.44062, 0.04024, 0.08156, 0.89308)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="49">
+    <position>(670.19, 0.03, 1070.99)</position>
+    <rotation>(-0.44323, 0.07410, 0.14730, 0.88111)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="50">
+    <position>(660.90, 0.03, 1074.98)</position>
+    <rotation>(-0.41768, 0.09569, 0.20178, 0.88072)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="51">
+    <position>(652.27, 0.03, 1080.14)</position>
+    <rotation>(-0.36479, 0.10238, 0.25006, 0.89102)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="52">
+    <position>(644.58, 0.03, 1086.71)</position>
+    <rotation>(-0.27675, 0.08936, 0.29400, 0.91049)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="53">
+    <position>(638.85, 0.03, 1094.96)</position>
+    <rotation>(-0.16242, 0.05986, 0.34058, 0.92414)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="54">
+    <position>(635.38, 0.03, 1104.51)</position>
+    <rotation>(-0.09444, 0.04177, 0.40234, 0.90965)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="55">
+    <position>(633.96, 0.03, 1114.50)</position>
+    <rotation>(-0.01623, 0.00801, 0.44242, 0.89662)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="56">
+    <position>(634.59, 0.03, 1124.58)</position>
+    <rotation>(0.07057, -0.03705, 0.46339, 0.88256)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="57">
+    <position>(637.22, 0.03, 1134.35)</position>
+    <rotation>(0.16348, -0.08814, 0.46631, 0.86490)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="58">
+    <position>(641.63, 0.03, 1143.39)</position>
+    <rotation>(0.25849, -0.13920, 0.45324, 0.84165)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="59">
+    <position>(647.60, 0.03, 1151.60)</position>
+    <rotation>(0.37183, -0.21812, 0.45655, 0.77828)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="60">
+    <position>(654.45, 0.03, 1159.06)</position>
+    <rotation>(0.44249, -0.27378, 0.44932, 0.72619)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="61">
+    <position>(661.80, 0.03, 1166.12)</position>
+    <rotation>(0.48794, -0.31045, 0.43793, 0.68830)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="62">
+    <position>(669.45, 0.03, 1172.91)</position>
+    <rotation>(0.51705, -0.33184, 0.42617, 0.66402)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="63">
+    <position>(677.17, 0.03, 1179.43)</position>
+    <rotation>(0.53402, -0.34008, 0.41580, 0.65290)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="64">
+    <position>(685.07, 0.03, 1185.86)</position>
+    <rotation>(0.54106, -0.33652, 0.40705, 0.65446)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="65">
+    <position>(693.02, 0.03, 1192.22)</position>
+    <rotation>(0.53790, -0.32120, 0.39960, 0.66919)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="66">
+    <position>(700.92, 0.03, 1198.49)</position>
+    <rotation>(0.52259, -0.29371, 0.39216, 0.69775)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="67">
+    <position>(708.76, 0.03, 1204.80)</position>
+    <rotation>(0.49007, -0.25226, 0.38187, 0.74187)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="68">
+    <position>(716.56, 0.03, 1211.20)</position>
+    <rotation>(0.48600, -0.24953, 0.38257, 0.74510)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="69">
+    <position>(724.47, 0.03, 1217.66)</position>
+    <rotation>(0.48903, -0.25015, 0.38055, 0.74395)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="70">
+    <position>(732.39, 0.03, 1224.04)</position>
+    <rotation>(0.48999, -0.24316, 0.37213, 0.74987)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="71">
+    <position>(740.33, 0.03, 1230.26)</position>
+    <rotation>(0.48852, -0.22845, 0.35673, 0.76283)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="72">
+    <position>(748.54, 0.03, 1236.40)</position>
+    <rotation>(0.48346, -0.20497, 0.33219, 0.78352)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="73">
+    <position>(756.85, 0.03, 1242.18)</position>
+    <rotation>(0.47289, -0.17230, 0.29582, 0.81190)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="74">
+    <position>(765.49, 0.03, 1247.51)</position>
+    <rotation>(0.45280, -0.12869, 0.24119, 0.84867)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="75">
+    <position>(774.62, 0.03, 1252.00)</position>
+    <rotation>(0.40461, -0.07335, 0.16261, 0.89692)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="76">
+    <position>(784.26, 0.03, 1255.39)</position>
+    <rotation>(0.31537, -0.02546, 0.07634, 0.94555)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="77">
+    <position>(794.31, 0.03, 1256.18)</position>
+    <rotation>(0.29233, 0.00904, -0.02955, 0.95582)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="78">
+    <position>(804.10, 0.03, 1253.94)</position>
+    <rotation>(0.36261, 0.04236, -0.10803, 0.92469)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="79">
+    <position>(813.67, 0.03, 1250.71)</position>
+    <rotation>(0.46608, 0.08478, -0.15761, 0.86645)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="80">
+    <position>(823.05, 0.03, 1246.72)</position>
+    <rotation>(0.53808, 0.15482, -0.22911, 0.79625)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="81">
+    <position>(832.11, 0.03, 1242.19)</position>
+    <rotation>(0.57027, 0.20210, -0.26596, 0.75047)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="82">
+    <position>(841.00, 0.03, 1237.37)</position>
+    <rotation>(0.58246, 0.23026, -0.28659, 0.72497)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="83">
+    <position>(849.85, 0.03, 1232.35)</position>
+    <rotation>(0.58148, 0.24114, -0.29765, 0.71774)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="84">
+    <position>(858.61, 0.03, 1227.23)</position>
+    <rotation>(0.56890, 0.23505, -0.30094, 0.72838)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="85">
+    <position>(867.23, 0.03, 1222.11)</position>
+    <rotation>(0.54279, 0.21158, -0.29520, 0.75728)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="86">
+    <position>(875.87, 0.03, 1216.94)</position>
+    <rotation>(0.49481, 0.16820, -0.27440, 0.80721)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="87">
+    <position>(884.60, 0.03, 1211.77)</position>
+    <rotation>(0.40752, 0.11360, -0.24330, 0.87283)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="88">
+    <position>(892.81, 0.03, 1205.86)</position>
+    <rotation>(0.32522, 0.09428, -0.26198, 0.90372)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="89">
+    <position>(900.41, 0.03, 1199.15)</position>
+    <rotation>(0.26605, 0.06922, -0.24210, 0.93049)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="90">
+    <position>(908.24, 0.03, 1192.74)</position>
+    <rotation>(0.24852, 0.04103, -0.15766, 0.95483)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="91">
+    <position>(917.87, 0.03, 1190.02)</position>
+    <rotation>(0.30105, -0.00769, 0.02434, 0.95327)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="92">
+    <position>(926.73, 0.03, 1194.61)</position>
+    <rotation>(0.28847, -0.07780, 0.24851, 0.92140)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="93">
+    <position>(933.75, 0.03, 1201.78)</position>
+    <rotation>(0.28223, -0.09983, 0.31819, 0.89952)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="94">
+    <position>(940.52, 0.03, 1209.26)</position>
+    <rotation>(0.28669, -0.09492, 0.29963, 0.90500)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="95">
+    <position>(948.19, 0.03, 1215.80)</position>
+    <rotation>(0.30185, -0.05759, 0.17834, 0.93475)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="96">
+    <position>(957.91, 0.03, 1217.96)</position>
+    <rotation>(0.30287, 0.00475, -0.01495, 0.95290)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="97">
+    <position>(967.68, 0.03, 1215.58)</position>
+    <rotation>(0.30120, 0.03850, -0.12079, 0.94509)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="98">
+    <position>(976.67, 0.03, 1210.95)</position>
+    <rotation>(0.31831, 0.06312, -0.18398, 0.92782)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="99">
+    <position>(985.34, 0.03, 1205.55)</position>
+    <rotation>(0.34866, 0.08273, -0.21553, 0.90837)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="100">
+    <position>(993.87, 0.03, 1200.13)</position>
+    <rotation>(0.39258, 0.11201, -0.25047, 0.87784)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="101">
+    <position>(1002.16, 0.03, 1194.38)</position>
+    <rotation>(0.42412, 0.14848, -0.29518, 0.84317)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="102">
+    <position>(1010.30, 0.03, 1188.32)</position>
+    <rotation>(0.43684, 0.17051, -0.32115, 0.82277)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="103">
+    <position>(1018.33, 0.03, 1182.08)</position>
+    <rotation>(0.43670, 0.17928, -0.33480, 0.81551)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="104">
+    <position>(1026.28, 0.03, 1175.68)</position>
+    <rotation>(0.42526, 0.17519, -0.33822, 0.82102)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="105">
+    <position>(1034.16, 0.03, 1169.14)</position>
+    <rotation>(0.40081, 0.15767, -0.33038, 0.83984)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="106">
+    <position>(1041.87, 0.03, 1162.56)</position>
+    <rotation>(0.35783, 0.12568, -0.30663, 0.87300)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="107">
+    <position>(1049.89, 0.03, 1156.17)</position>
+    <rotation>(0.36134, 0.10342, -0.25498, 0.89091)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="108">
+    <position>(1058.26, 0.03, 1150.34)</position>
+    <rotation>(0.34661, 0.08996, -0.23455, 0.90375)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="109">
+    <position>(1066.28, 0.03, 1144.29)</position>
+    <rotation>(0.30000, 0.08396, -0.25611, 0.91507)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="110">
+    <position>(1073.08, 0.03, 1136.85)</position>
+    <rotation>(0.21698, 0.07741, -0.32699, 0.91652)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="111">
+    <position>(1077.26, 0.03, 1127.62)</position>
+    <rotation>(0.10865, 0.05337, -0.43765, 0.89096)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="112">
+    <position>(1078.90, 0.03, 1117.71)</position>
+    <rotation>(0.04419, 0.02746, -0.52709, 0.84822)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="113">
+    <position>(1079.31, 0.03, 1107.69)</position>
+    <rotation>(-0.00411, -0.00293, -0.58111, 0.81381)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="114">
+    <position>(1078.80, 0.03, 1097.56)</position>
+    <rotation>(-0.04718, -0.03672, -0.61311, 0.78773)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="115">
+    <position>(1077.53, 0.03, 1087.60)</position>
+    <rotation>(-0.08709, -0.07102, -0.62799, 0.77007)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="116">
+    <position>(1075.53, 0.03, 1077.70)</position>
+    <rotation>(-0.12681, -0.10498, -0.62897, 0.75980)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="117">
+    <position>(1072.81, 0.03, 1067.95)</position>
+    <rotation>(-0.16815, -0.13722, -0.61719, 0.75629)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="118">
+    <position>(1069.33, 0.03, 1058.39)</position>
+    <rotation>(-0.21285, -0.16634, -0.59285, 0.75865)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="119">
+    <position>(1065.06, 0.03, 1049.22)</position>
+    <rotation>(-0.25628, -0.17610, -0.53825, 0.78332)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="120">
+    <position>(1059.94, 0.03, 1040.58)</position>
+    <rotation>(-0.29838, -0.17632, -0.47721, 0.80756)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="121">
+    <position>(1053.96, 0.03, 1032.39)</position>
+    <rotation>(-0.34422, -0.19296, -0.44931, 0.80150)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="122">
+    <position>(1047.50, 0.03, 1024.69)</position>
+    <rotation>(-0.38697, -0.22861, -0.45437, 0.76911)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="123">
+    <position>(1040.73, 0.03, 1017.09)</position>
+    <rotation>(-0.42071, -0.28278, -0.48086, 0.71541)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="124">
+    <position>(1033.96, 0.03, 1009.52)</position>
+    <rotation>(-0.43989, -0.35064, -0.51534, 0.64651)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="125">
+    <position>(1027.20, 0.03, 1001.79)</position>
+    <rotation>(-0.44202, -0.42802, -0.54837, 0.56631)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="126">
+    <position>(1020.62, 0.03, 994.02)</position>
+    <rotation>(-0.42634, -0.50829, -0.57328, 0.48085)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="127">
+    <position>(1014.18, 0.03, 986.13)</position>
+    <rotation>(-0.39346, -0.58783, -0.58741, 0.39318)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="128">
+    <position>(1007.89, 0.03, 978.13)</position>
+    <rotation>(-0.34500, -0.66310, -0.58929, 0.30660)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="129">
+    <position>(1001.72, 0.03, 970.16)</position>
+    <rotation>(-0.29401, -0.74147, -0.56068, 0.22232)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="130">
+    <position>(995.58, 0.03, 962.22)</position>
+    <rotation>(-0.24065, -0.80020, -0.52606, 0.15820)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="131">
+    <position>(989.38, 0.03, 954.22)</position>
+    <rotation>(-0.18803, -0.84443, -0.48958, 0.10902)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="132">
+    <position>(983.17, 0.03, 946.18)</position>
+    <rotation>(-0.13838, -0.87733, -0.45388, 0.07159)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="133">
+    <position>(977.00, 0.03, 938.20)</position>
+    <rotation>(-0.09332, -0.90129, -0.42081, 0.04357)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="134">
+    <position>(970.78, 0.03, 930.15)</position>
+    <rotation>(-0.05269, -0.91876, -0.39064, 0.02241)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="135">
+    <position>(964.55, 0.03, 922.08)</position>
+    <rotation>(-0.01707, -0.93119, -0.36407, 0.00667)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="136">
+    <position>(958.35, 0.03, 914.04)</position>
+    <rotation>(0.01331, -0.93980, -0.34143, -0.00484)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="137">
+    <position>(952.12, 0.03, 905.95)</position>
+    <rotation>(0.03873, -0.94564, -0.32262, -0.01321)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="138">
+    <position>(945.96, 0.03, 897.96)</position>
+    <rotation>(0.05887, -0.94940, -0.30792, -0.01910)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="139">
+    <position>(939.75, 0.03, 889.89)</position>
+    <rotation>(0.07435, -0.95172, -0.29693, -0.02320)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="140">
+    <position>(933.58, 0.03, 881.86)</position>
+    <rotation>(0.08495, -0.95295, -0.28983, -0.02584)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="141">
+    <position>(927.46, 0.03, 873.90)</position>
+    <rotation>(0.09081, -0.95337, -0.28651, -0.02729)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="142">
+    <position>(921.35, 0.03, 865.93)</position>
+    <rotation>(0.09209, -0.95313, -0.28688, -0.02772)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="143">
+    <position>(915.24, 0.03, 857.96)</position>
+    <rotation>(0.08879, -0.95223, -0.29093, -0.02713)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="144">
+    <position>(909.07, 0.03, 849.90)</position>
+    <rotation>(0.08079, -0.95055, -0.29879, -0.02540)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="145">
+    <position>(902.87, 0.03, 841.79)</position>
+    <rotation>(0.06793, -0.94786, -0.31057, -0.02226)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="146">
+    <position>(896.74, 0.03, 833.75)</position>
+    <rotation>(0.05039, -0.94384, -0.32609, -0.01741)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="147">
+    <position>(890.61, 0.03, 825.70)</position>
+    <rotation>(0.02795, -0.93795, -0.34550, -0.01030)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="148">
+    <position>(884.51, 0.03, 817.68)</position>
+    <rotation>(0.00067, -0.92954, -0.36873, -0.00026)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="149">
+    <position>(878.39, 0.03, 809.61)</position>
+    <rotation>(-0.03178, -0.91762, -0.39595, 0.01371)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="150">
+    <position>(872.28, 0.03, 801.54)</position>
+    <rotation>(-0.05926, -0.90601, -0.41819, 0.02735)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="151">
+    <position>(866.15, 0.03, 793.43)</position>
+    <rotation>(-0.06301, -0.90501, -0.41968, 0.02922)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="152">
+    <position>(860.02, 0.03, 785.34)</position>
+    <rotation>(-0.06636, -0.90395, -0.42133, 0.03093)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="153">
+    <position>(853.91, 0.03, 777.27)</position>
+    <rotation>(-0.06931, -0.90282, -0.42315, 0.03248)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="154">
+    <position>(847.81, 0.03, 769.22)</position>
+    <rotation>(-0.07185, -0.90164, -0.42513, 0.03388)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="155">
+    <position>(841.72, 0.03, 761.19)</position>
+    <rotation>(-0.07400, -0.90040, -0.42727, 0.03512)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="156">
+    <position>(835.64, 0.03, 753.16)</position>
+    <rotation>(-0.07575, -0.89912, -0.42958, 0.03619)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="157">
+    <position>(829.58, 0.03, 745.15)</position>
+    <rotation>(-0.07710, -0.89778, -0.43206, 0.03710)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="158">
+    <position>(823.54, 0.03, 737.14)</position>
+    <rotation>(-0.07805, -0.89639, -0.43470, 0.03785)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="159">
+    <position>(817.51, 0.03, 729.14)</position>
+    <rotation>(-0.07861, -0.89494, -0.43751, 0.03843)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="160">
+    <position>(811.50, 0.03, 721.14)</position>
+    <rotation>(-0.07877, -0.89345, -0.44049, 0.03883)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="161">
+    <position>(805.35, 0.03, 712.93)</position>
+    <rotation>(-0.07853, -0.89186, -0.44372, 0.03907)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="162">
+    <position>(799.22, 0.03, 704.72)</position>
+    <rotation>(-0.07787, -0.89022, -0.44713, 0.03911)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="163">
+    <position>(793.11, 0.03, 696.51)</position>
+    <rotation>(-0.07681, -0.88851, -0.45071, 0.03896)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="164">
+    <position>(787.03, 0.03, 688.29)</position>
+    <rotation>(-0.07534, -0.88674, -0.45446, 0.03861)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="165">
+    <position>(780.96, 0.03, 680.05)</position>
+    <rotation>(-0.07347, -0.88489, -0.45838, 0.03806)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="166">
+    <position>(774.93, 0.03, 671.81)</position>
+    <rotation>(-0.07119, -0.88298, -0.46248, 0.03729)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="167">
+    <position>(768.92, 0.03, 663.55)</position>
+    <rotation>(-0.06852, -0.88099, -0.46674, 0.03630)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="168">
+    <position>(762.93, 0.03, 655.28)</position>
+    <rotation>(-0.06545, -0.87891, -0.47117, 0.03509)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="169">
+    <position>(756.97, 0.03, 646.99)</position>
+    <rotation>(-0.06199, -0.87675, -0.47575, 0.03364)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="170">
+    <position>(751.04, 0.03, 638.67)</position>
+    <rotation>(-0.05815, -0.87448, -0.48050, 0.03195)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="171">
+    <position>(745.20, 0.03, 630.40)</position>
+    <rotation>(-0.04845, -0.87479, -0.48134, 0.02666)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="172">
+    <position>(739.36, 0.03, 622.08)</position>
+    <rotation>(-0.02821, -0.87983, -0.47420, 0.01520)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="173">
+    <position>(733.55, 0.03, 613.76)</position>
+    <rotation>(-0.01105, -0.88330, -0.46863, 0.00586)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="174">
+    <position>(727.79, 0.03, 605.45)</position>
+    <rotation>(0.00304, -0.88546, -0.46470, -0.00160)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="175">
+    <position>(722.02, 0.03, 597.06)</position>
+    <rotation>(0.01424, -0.88652, -0.46241, -0.00743)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="176">
+    <position>(716.23, 0.03, 588.62)</position>
+    <rotation>(0.02249, -0.88661, -0.46183, -0.01172)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="177">
+    <position>(710.45, 0.03, 580.13)</position>
+    <rotation>(0.02778, -0.88581, -0.46299, -0.01452)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="178">
+    <position>(704.84, 0.03, 571.86)</position>
+    <rotation>(0.03007, -0.88422, -0.46583, -0.01584)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="179">
+    <position>(699.09, 0.03, 563.34)</position>
+    <rotation>(0.02949, -0.88177, -0.47050, -0.01574)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="180">
+    <position>(693.37, 0.03, 554.84)</position>
+    <rotation>(0.02597, -0.87844, -0.47693, -0.01410)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="181">
+    <position>(687.70, 0.03, 546.37)</position>
+    <rotation>(0.01955, -0.87418, -0.48509, -0.01085)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="182">
+    <position>(682.09, 0.03, 537.95)</position>
+    <rotation>(0.01029, -0.86886, -0.49491, -0.00586)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="183">
+    <position>(676.54, 0.03, 529.59)</position>
+    <rotation>(-0.00171, -0.86235, -0.50631, 0.00100)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="184">
+    <position>(670.91, 0.03, 521.08)</position>
+    <rotation>(-0.01678, -0.85422, -0.51955, 0.01021)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="185">
+    <position>(665.38, 0.03, 512.69)</position>
+    <rotation>(-0.03447, -0.84440, -0.53416, 0.02181)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="186">
+    <position>(659.80, 0.03, 504.20)</position>
+    <rotation>(-0.05514, -0.83229, -0.55038, 0.03647)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="187">
+    <position>(654.28, 0.03, 495.77)</position>
+    <rotation>(-0.07840, -0.81763, -0.56777, 0.05444)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="188">
+    <position>(648.76, 0.03, 487.30)</position>
+    <rotation>(-0.10432, -0.79974, -0.58625, 0.07647)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="189">
+    <position>(643.26, 0.03, 478.84)</position>
+    <rotation>(-0.13258, -0.77802, -0.60537, 0.10316)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="190">
+    <position>(637.75, 0.03, 470.33)</position>
+    <rotation>(-0.16306, -0.75149, -0.62474, 0.13556)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="191">
+    <position>(632.27, 0.03, 461.83)</position>
+    <rotation>(-0.19510, -0.71932, -0.64347, 0.17452)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="192">
+    <position>(626.82, 0.03, 453.35)</position>
+    <rotation>(-0.21911, -0.68681, -0.66024, 0.21064)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="193">
+    <position>(621.36, 0.03, 444.73)</position>
+    <rotation>(-0.23554, -0.65661, -0.67443, 0.24193)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="194">
+    <position>(615.96, 0.03, 436.10)</position>
+    <rotation>(-0.24989, -0.62633, -0.68585, 0.27364)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="195">
+    <position>(610.63, 0.03, 427.46)</position>
+    <rotation>(-0.26224, -0.59635, -0.69450, 0.30540)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="196">
+    <position>(605.37, 0.03, 418.83)</position>
+    <rotation>(-0.27271, -0.56703, -0.70044, 0.33687)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="197">
+    <position>(600.10, 0.03, 410.09)</position>
+    <rotation>(-0.28159, -0.53837, -0.70381, 0.36812)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="198">
+    <position>(594.91, 0.03, 401.39)</position>
+    <rotation>(-0.28894, -0.51115, -0.70468, 0.39834)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="199">
+    <position>(589.78, 0.03, 392.72)</position>
+    <rotation>(-0.29505, -0.48570, -0.70324, 0.42720)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="200">
+    <position>(584.63, 0.03, 383.98)</position>
+    <rotation>(-0.30030, -0.46205, -0.69968, 0.45474)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="201">
+    <position>(579.54, 0.03, 375.28)</position>
+    <rotation>(-0.30496, -0.44084, -0.69427, 0.48026)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="202">
+    <position>(574.40, 0.03, 366.53)</position>
+    <rotation>(-0.30945, -0.42212, -0.68721, 0.50378)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="203">
+    <position>(569.27, 0.03, 357.81)</position>
+    <rotation>(-0.31412, -0.40640, -0.67886, 0.52471)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="204">
+    <position>(564.12, 0.03, 349.14)</position>
+    <rotation>(-0.31934, -0.39387, -0.66950, 0.54282)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="205">
+    <position>(558.90, 0.03, 340.48)</position>
+    <rotation>(-0.32549, -0.38472, -0.65940, 0.55788)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="206">
+    <position>(553.61, 0.03, 331.79)</position>
+    <rotation>(-0.32643, -0.36054, -0.64772, 0.58644)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="207">
+    <position>(548.36, 0.03, 323.16)</position>
+    <rotation>(-0.32507, -0.33391, -0.63397, 0.61719)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="208">
+    <position>(543.06, 0.03, 314.41)</position>
+    <rotation>(-0.32268, -0.30803, -0.61798, 0.64738)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="209">
+    <position>(537.84, 0.03, 305.82)</position>
+    <rotation>(-0.31960, -0.28394, -0.60042, 0.67582)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="210">
+    <position>(532.58, 0.03, 297.19)</position>
+    <rotation>(-0.31607, -0.26124, -0.58106, 0.70301)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="211">
+    <position>(527.27, 0.03, 288.55)</position>
+    <rotation>(-0.31248, -0.24026, -0.56018, 0.72858)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="212">
+    <position>(521.91, 0.03, 279.94)</position>
+    <rotation>(-0.30928, -0.22129, -0.53817, 0.75217)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="213">
+    <position>(516.48, 0.03, 271.40)</position>
+    <rotation>(-0.30701, -0.20459, -0.51543, 0.77345)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="214">
+    <position>(510.97, 0.03, 262.95)</position>
+    <rotation>(-0.30623, -0.19037, -0.49244, 0.79214)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="215">
+    <position>(505.37, 0.03, 254.42)</position>
+    <rotation>(-0.28451, -0.16746, -0.47881, 0.81348)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="216">
+    <position>(500.05, 0.03, 245.74)</position>
+    <rotation>(-0.25934, -0.14227, -0.45944, 0.83751)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="217">
+    <position>(494.85, 0.03, 237.06)</position>
+    <rotation>(-0.24703, -0.12170, -0.42485, 0.86236)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="218">
+    <position>(489.30, 0.03, 228.46)</position>
+    <rotation>(-0.25224, -0.10510, -0.36997, 0.88795)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="219">
+    <position>(482.94, 0.03, 220.63)</position>
+    <rotation>(-0.28219, -0.08986, -0.28981, 0.91011)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="220">
+    <position>(474.93, 0.03, 214.45)</position>
+    <rotation>(-0.34499, -0.06704, -0.17859, 0.91902)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="221">
+    <position>(465.35, 0.03, 211.59)</position>
+    <rotation>(-0.38875, -0.01577, -0.03733, 0.92045)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="222">
+    <position>(455.29, 0.03, 211.94)</position>
+    <rotation>(-0.41332, 0.02541, 0.05586, 0.90852)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="223">
+    <position>(445.47, 0.03, 213.98)</position>
+    <rotation>(-0.42794, 0.04823, 0.10108, 0.89684)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="224">
+    <position>(435.72, 0.03, 216.57)</position>
+    <rotation>(-0.43742, 0.05346, 0.10890, 0.89104)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="225">
+    <position>(425.80, 0.03, 218.95)</position>
+    <rotation>(-0.44317, 0.04106, 0.08261, 0.89168)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="226">
+    <position>(415.98, 0.03, 221.60)</position>
+    <rotation>(-0.44663, 0.07419, 0.14611, 0.87958)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="227">
+    <position>(406.47, 0.03, 225.34)</position>
+    <rotation>(-0.45285, 0.09216, 0.17685, 0.86900)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="228">
+    <position>(397.11, 0.03, 229.18)</position>
+    <rotation>(-0.46385, 0.09000, 0.16788, 0.86519)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="229">
+    <position>(387.50, 0.03, 232.44)</position>
+    <rotation>(-0.47945, 0.06732, 0.12166, 0.86648)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="230">
+    <position>(377.63, 0.03, 234.28)</position>
+    <rotation>(-0.49657, 0.02200, 0.03841, 0.86686)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="231">
+    <position>(367.61, 0.03, 233.90)</position>
+    <rotation>(-0.50866, -0.04550, -0.07660, 0.85634)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="232">
+    <position>(357.81, 0.03, 231.35)</position>
+    <rotation>(-0.51131, -0.09788, -0.16053, 0.83858)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="233">
+    <position>(348.48, 0.03, 227.51)</position>
+    <rotation>(-0.51227, -0.13795, -0.22042, 0.81851)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="234">
+    <position>(339.41, 0.03, 222.84)</position>
+    <rotation>(-0.51380, -0.16805, -0.26153, 0.79961)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="235">
+    <position>(330.62, 0.03, 217.74)</position>
+    <rotation>(-0.51713, -0.18928, -0.28691, 0.78386)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="236">
+    <position>(322.00, 0.03, 212.45)</position>
+    <rotation>(-0.52290, -0.20279, -0.29936, 0.77190)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="237">
+    <position>(313.44, 0.03, 207.14)</position>
+    <rotation>(-0.53146, -0.20925, -0.30071, 0.76377)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="238">
+    <position>(304.71, 0.03, 201.85)</position>
+    <rotation>(-0.54315, -0.20878, -0.29179, 0.75911)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="239">
+    <position>(296.09, 0.03, 196.60)</position>
+    <rotation>(-0.54018, -0.23689, -0.32432, 0.73953)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="240">
+    <position>(287.86, 0.03, 190.89)</position>
+    <rotation>(-0.53389, -0.26720, -0.35904, 0.71739)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="241">
+    <position>(279.71, 0.03, 184.82)</position>
+    <rotation>(-0.53268, -0.28657, -0.37727, 0.70128)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="242">
+    <position>(271.65, 0.03, 178.67)</position>
+    <rotation>(-0.53721, -0.29588, -0.38105, 0.69186)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="243">
+    <position>(263.57, 0.03, 172.59)</position>
+    <rotation>(-0.54768, -0.29557, -0.37175, 0.68883)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="244">
+    <position>(255.34, 0.03, 166.72)</position>
+    <rotation>(-0.56408, -0.28525, -0.34968, 0.69150)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="245">
+    <position>(246.83, 0.03, 161.22)</position>
+    <rotation>(-0.58615, -0.26358, -0.31421, 0.69873)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="246">
+    <position>(238.04, 0.03, 156.34)</position>
+    <rotation>(-0.61277, -0.22881, -0.26460, 0.70862)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="247">
+    <position>(228.81, 0.03, 152.30)</position>
+    <rotation>(-0.64225, -0.17809, -0.19921, 0.71841)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="248">
+    <position>(219.19, 0.03, 149.25)</position>
+    <rotation>(-0.67283, -0.15034, -0.15796, 0.70692)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="249">
+    <position>(209.45, 0.03, 146.64)</position>
+    <rotation>(-0.69835, -0.13856, -0.13667, 0.68879)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="250">
+    <position>(199.64, 0.03, 144.44)</position>
+    <rotation>(-0.71760, -0.11768, -0.11109, 0.67739)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="251">
+    <position>(189.61, 0.03, 142.71)</position>
+    <rotation>(-0.73095, -0.08768, -0.08060, 0.67196)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="252">
+    <position>(179.47, 0.03, 141.57)</position>
+    <rotation>(-0.73758, -0.04902, -0.04466, 0.67199)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="253">
+    <position>(169.34, 0.03, 141.13)</position>
+    <rotation>(-0.73633, -0.00258, -0.00237, 0.67661)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="254">
+    <position>(159.31, 0.03, 141.52)</position>
+    <rotation>(-0.72574, 0.05031, 0.04745, 0.68448)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="255">
+    <position>(149.23, 0.03, 142.91)</position>
+    <rotation>(-0.70350, 0.10925, 0.10776, 0.69393)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="256">
+    <position>(139.49, 0.03, 145.43)</position>
+    <rotation>(-0.66807, 0.17008, 0.17872, 0.70200)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="257">
+    <position>(130.21, 0.03, 149.19)</position>
+    <rotation>(-0.63655, 0.24101, 0.25941, 0.68515)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="258">
+    <position>(121.40, 0.03, 154.01)</position>
+    <rotation>(-0.62325, 0.31815, 0.32480, 0.63628)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="259">
+    <position>(112.93, 0.03, 159.63)</position>
+    <rotation>(-0.59881, 0.37575, 0.37593, 0.59910)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="260">
+    <position>(104.85, 0.03, 165.77)</position>
+    <rotation>(-0.56882, 0.41542, 0.41865, 0.57324)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="261">
+    <position>(97.09, 0.03, 172.38)</position>
+    <rotation>(-0.53596, 0.43931, 0.45703, 0.55757)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="262">
+    <position>(89.65, 0.03, 179.39)</position>
+    <rotation>(-0.50161, 0.44842, 0.49306, 0.55154)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="263">
+    <position>(82.53, 0.03, 186.77)</position>
+    <rotation>(-0.46608, 0.44311, 0.52765, 0.55499)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="264">
+    <position>(75.87, 0.03, 194.38)</position>
+    <rotation>(-0.42921, 0.42347, 0.56031, 0.56789)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="265">
+    <position>(69.62, 0.03, 202.34)</position>
+    <rotation>(-0.38886, 0.38859, 0.59046, 0.59087)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="266">
+    <position>(63.88, 0.03, 210.61)</position>
+    <rotation>(-0.34210, 0.33711, 0.61564, 0.62475)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="267">
+    <position>(58.74, 0.03, 219.36)</position>
+    <rotation>(-0.28254, 0.26583, 0.63159, 0.67127)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="268">
+    <position>(54.49, 0.03, 228.60)</position>
+    <rotation>(-0.21445, 0.19690, 0.64704, 0.70469)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="269">
+    <position>(51.25, 0.03, 238.14)</position>
+    <rotation>(-0.15410, 0.14523, 0.67030, 0.71124)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="270">
+    <position>(48.99, 0.03, 248.11)</position>
+    <rotation>(-0.09566, 0.09292, 0.69052, 0.71091)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="271">
+    <position>(47.75, 0.03, 258.15)</position>
+    <rotation>(-0.04201, 0.04218, 0.70733, 0.70438)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="272">
+    <position>(47.44, 0.03, 268.29)</position>
+    <rotation>(0.00650, -0.00676, 0.72123, 0.69263)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="273">
+    <position>(47.95, 0.03, 278.42)</position>
+    <rotation>(0.04912, -0.05317, 0.73257, 0.67683)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="274">
+    <position>(49.18, 0.03, 288.52)</position>
+    <rotation>(0.08599, -0.09696, 0.74185, 0.65792)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="275">
+    <position>(50.99, 0.03, 298.46)</position>
+    <rotation>(0.11694, -0.13757, 0.74940, 0.63702)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="276">
+    <position>(53.31, 0.03, 308.38)</position>
+    <rotation>(0.14278, -0.17557, 0.75571, 0.61456)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="277">
+    <position>(56.02, 0.03, 318.11)</position>
+    <rotation>(0.16817, -0.21824, 0.76145, 0.58676)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="278">
+    <position>(59.34, 0.03, 327.72)</position>
+    <rotation>(0.20689, -0.29319, 0.76264, 0.53816)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="279">
+    <position>(63.20, 0.03, 337.02)</position>
+    <rotation>(0.23309, -0.35376, 0.75639, 0.49839)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="280">
+    <position>(67.45, 0.03, 346.14)</position>
+    <rotation>(0.25147, -0.40219, 0.74645, 0.46672)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="281">
+    <position>(72.05, 0.03, 355.20)</position>
+    <rotation>(0.26500, -0.44040, 0.73500, 0.44227)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="282">
+    <position>(76.87, 0.03, 364.15)</position>
+    <rotation>(0.27536, -0.46902, 0.72366, 0.42486)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="283">
+    <position>(81.90, 0.03, 373.05)</position>
+    <rotation>(0.28380, -0.48903, 0.71338, 0.41400)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="284">
+    <position>(86.96, 0.03, 381.72)</position>
+    <rotation>(0.29090, -0.50073, 0.70493, 0.40953)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="285">
+    <position>(92.13, 0.03, 390.37)</position>
+    <rotation>(0.29722, -0.50488, 0.69837, 0.41113)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="286">
+    <position>(97.33, 0.03, 398.95)</position>
+    <rotation>(0.30278, -0.50155, 0.69380, 0.41884)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="287">
+    <position>(102.64, 0.03, 407.65)</position>
+    <rotation>(0.30743, -0.49034, 0.69094, 0.43320)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="288">
+    <position>(107.90, 0.03, 416.29)</position>
+    <rotation>(0.31047, -0.47095, 0.68940, 0.45447)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="289">
+    <position>(113.11, 0.03, 424.94)</position>
+    <rotation>(0.31087, -0.44266, 0.68830, 0.48338)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="290">
+    <position>(118.23, 0.03, 433.64)</position>
+    <rotation>(0.31043, -0.41535, 0.68490, 0.51188)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="291">
+    <position>(123.35, 0.03, 442.25)</position>
+    <rotation>(0.31836, -0.41774, 0.67682, 0.51581)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="292">
+    <position>(128.68, 0.03, 451.02)</position>
+    <rotation>(0.32579, -0.41841, 0.66895, 0.52086)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="293">
+    <position>(134.05, 0.03, 459.67)</position>
+    <rotation>(0.33244, -0.41732, 0.66153, 0.52697)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="294">
+    <position>(139.45, 0.03, 468.22)</position>
+    <rotation>(0.33828, -0.41450, 0.65454, 0.53417)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="295">
+    <position>(144.93, 0.03, 476.77)</position>
+    <rotation>(0.34330, -0.40990, 0.64785, 0.54260)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="296">
+    <position>(150.47, 0.03, 485.30)</position>
+    <rotation>(0.34742, -0.40349, 0.64145, 0.55231)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="297">
+    <position>(156.05, 0.03, 493.80)</position>
+    <rotation>(0.35050, -0.39523, 0.63526, 0.56337)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="298">
+    <position>(161.63, 0.03, 502.26)</position>
+    <rotation>(0.35241, -0.38510, 0.62923, 0.57582)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="299">
+    <position>(167.20, 0.03, 510.66)</position>
+    <rotation>(0.35299, -0.37308, 0.62326, 0.58971)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="300">
+    <position>(172.80, 0.03, 519.09)</position>
+    <rotation>(0.35203, -0.35895, 0.61716, 0.60526)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="301">
+    <position>(178.38, 0.03, 527.53)</position>
+    <rotation>(0.34926, -0.34266, 0.61077, 0.62254)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="302">
+    <position>(183.85, 0.03, 535.98)</position>
+    <rotation>(0.33717, -0.33662, 0.62118, 0.62220)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="303">
+    <position>(189.15, 0.03, 544.52)</position>
+    <rotation>(0.32620, -0.33258, 0.63173, 0.61960)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="304">
+    <position>(194.33, 0.03, 553.12)</position>
+    <rotation>(0.32016, -0.32559, 0.63436, 0.62376)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="305">
+    <position>(199.56, 0.03, 561.89)</position>
+    <rotation>(0.31886, -0.31557, 0.62868, 0.63522)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="306">
+    <position>(204.76, 0.03, 570.55)</position>
+    <rotation>(0.32231, -0.30250, 0.61385, 0.65406)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="307">
+    <position>(210.11, 0.03, 579.19)</position>
+    <rotation>(0.33061, -0.28554, 0.58797, 0.68078)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="308">
+    <position>(215.62, 0.03, 587.57)</position>
+    <rotation>(0.34372, -0.26380, 0.54873, 0.71496)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="309">
+    <position>(221.59, 0.03, 595.79)</position>
+    <rotation>(0.36229, -0.23445, 0.49011, 0.75735)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="310">
+    <position>(228.18, 0.03, 603.50)</position>
+    <rotation>(0.38641, -0.19365, 0.40403, 0.80619)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="311">
+    <position>(235.76, 0.03, 610.13)</position>
+    <rotation>(0.41418, -0.13952, 0.28714, 0.85237)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="312">
+    <position>(244.63, 0.03, 615.14)</position>
+    <rotation>(0.43261, -0.08478, 0.17261, 0.88083)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="313">
+    <position>(254.29, 0.03, 617.96)</position>
+    <rotation>(0.43597, -0.03334, 0.06857, 0.89673)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="314">
+    <position>(264.39, 0.03, 618.55)</position>
+    <rotation>(0.42437, 0.00811, -0.01729, 0.90529)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="315">
+    <position>(274.41, 0.03, 617.25)</position>
+    <rotation>(0.39973, 0.03434, -0.07841, 0.91263)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="316">
+    <position>(284.16, 0.03, 614.63)</position>
+    <rotation>(0.37067, 0.04792, -0.11892, 0.91987)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="317">
+    <position>(293.39, 0.03, 610.62)</position>
+    <rotation>(0.37333, 0.07904, -0.19146, 0.90428)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="318">
+    <position>(301.90, 0.03, 605.21)</position>
+    <rotation>(0.34775, 0.09929, -0.25596, 0.89649)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="319">
+    <position>(309.53, 0.03, 598.41)</position>
+    <rotation>(0.29717, 0.10553, -0.31757, 0.89426)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="320">
+    <position>(315.77, 0.03, 590.28)</position>
+    <rotation>(0.22246, 0.09378, -0.37695, 0.89422)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="321">
+    <position>(319.98, 0.03, 581.08)</position>
+    <rotation>(0.12614, 0.06102, -0.43120, 0.89131)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="322">
+    <position>(322.14, 0.03, 571.19)</position>
+    <rotation>(0.06478, 0.03785, -0.50299, 0.86103)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="323">
+    <position>(322.97, 0.03, 561.17)</position>
+    <rotation>(0.01456, 0.00962, -0.55139, 0.83407)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="324">
+    <position>(322.81, 0.03, 550.95)</position>
+    <rotation>(-0.02956, -0.02127, -0.58369, 0.81116)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="325">
+    <position>(321.84, 0.03, 540.86)</position>
+    <rotation>(-0.06886, -0.05233, -0.60280, 0.79319)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="326">
+    <position>(320.16, 0.03, 530.87)</position>
+    <rotation>(-0.10549, -0.08271, -0.61142, 0.77987)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="327">
+    <position>(317.84, 0.03, 521.01)</position>
+    <rotation>(-0.14086, -0.11163, -0.61099, 0.77096)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="328">
+    <position>(314.91, 0.03, 511.37)</position>
+    <rotation>(-0.17670, -0.13915, -0.60284, 0.76551)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="329">
+    <position>(311.19, 0.03, 501.98)</position>
+    <rotation>(-0.23291, -0.18978, -0.60249, 0.73942)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="330">
+    <position>(306.78, 0.03, 492.91)</position>
+    <rotation>(-0.27315, -0.22946, -0.60088, 0.71532)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="331">
+    <position>(301.94, 0.03, 484.11)</position>
+    <rotation>(-0.30079, -0.25973, -0.59972, 0.69455)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="332">
+    <position>(296.77, 0.03, 475.36)</position>
+    <rotation>(-0.31848, -0.28210, -0.60006, 0.67744)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="333">
+    <position>(291.44, 0.03, 466.70)</position>
+    <rotation>(-0.32753, -0.29704, -0.60255, 0.66440)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="334">
+    <position>(286.03, 0.03, 458.02)</position>
+    <rotation>(-0.32900, -0.30503, -0.60763, 0.65536)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="335">
+    <position>(280.75, 0.03, 449.45)</position>
+    <rotation>(-0.32361, -0.30622, -0.61533, 0.65029)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="336">
+    <position>(275.56, 0.03, 440.78)</position>
+    <rotation>(-0.31167, -0.30066, -0.62581, 0.64871)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="337">
+    <position>(270.59, 0.03, 431.99)</position>
+    <rotation>(-0.29322, -0.28807, -0.63887, 0.65030)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="338">
+    <position>(265.79, 0.03, 423.03)</position>
+    <rotation>(-0.29424, -0.31001, -0.65573, 0.62237)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="339">
+    <position>(260.92, 0.03, 414.24)</position>
+    <rotation>(-0.30424, -0.34772, -0.66745, 0.58399)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="340">
+    <position>(255.92, 0.03, 405.46)</position>
+    <rotation>(-0.30752, -0.37144, -0.67479, 0.55867)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="341">
+    <position>(250.91, 0.03, 396.72)</position>
+    <rotation>(-0.30658, -0.38230, -0.68004, 0.54535)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="342">
+    <position>(245.88, 0.03, 387.87)</position>
+    <rotation>(-0.30244, -0.38092, -0.68428, 0.54331)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="343">
+    <position>(240.95, 0.03, 379.03)</position>
+    <rotation>(-0.29515, -0.36728, -0.68754, 0.55252)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="344">
+    <position>(236.13, 0.03, 370.05)</position>
+    <rotation>(-0.28352, -0.34058, -0.68897, 0.57353)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="345">
+    <position>(231.52, 0.03, 360.95)</position>
+    <rotation>(-0.26502, -0.29957, -0.68645, 0.60730)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="346">
+    <position>(227.30, 0.03, 351.78)</position>
+    <rotation>(-0.23528, -0.24297, -0.67605, 0.65465)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="347">
+    <position>(223.63, 0.03, 342.35)</position>
+    <rotation>(-0.18513, -0.16770, -0.65008, 0.71763)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="348">
+    <position>(220.94, 0.03, 332.51)</position>
+    <rotation>(-0.09671, -0.07227, -0.59422, 0.79519)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="349">
+    <position>(219.72, 0.03, 322.51)</position>
+    <rotation>(-0.02656, -0.01871, -0.57562, 0.81707)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="350">
+    <position>(219.94, 0.03, 312.49)</position>
+    <rotation>(0.04809, 0.03079, -0.53828, 0.84083)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="351">
+    <position>(221.85, 0.03, 302.57)</position>
+    <rotation>(0.13041, 0.07195, -0.47769, 0.86581)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="352">
+    <position>(225.84, 0.03, 293.29)</position>
+    <rotation>(0.22169, 0.09694, -0.38876, 0.88900)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="353">
+    <position>(232.27, 0.03, 285.56)</position>
+    <rotation>(0.31978, 0.09476, -0.26786, 0.90389)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="354">
+    <position>(241.06, 0.03, 280.72)</position>
+    <rotation>(0.42305, 0.05476, -0.11610, 0.89697)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="355">
+    <position>(251.08, 0.03, 279.84)</position>
+    <rotation>(0.55259, -0.01695, 0.02555, 0.83289)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="356">
+    <position>(261.08, 0.03, 281.15)</position>
+    <rotation>(0.61769, -0.08097, 0.10166, 0.77560)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="357">
+    <position>(271.01, 0.03, 283.49)</position>
+    <rotation>(0.65107, -0.12937, 0.14576, 0.73357)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="358">
+    <position>(280.83, 0.03, 286.38)</position>
+    <rotation>(0.66605, -0.16141, 0.17152, 0.70775)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="359">
+    <position>(290.48, 0.03, 289.55)</position>
+    <rotation>(0.66882, -0.17764, 0.18531, 0.69770)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="360">
+    <position>(300.13, 0.03, 292.89)</position>
+    <rotation>(0.66170, -0.17875, 0.18990, 0.70295)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="361">
+    <position>(309.68, 0.03, 296.21)</position>
+    <rotation>(0.64411, -0.16457, 0.18492, 0.72377)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="362">
+    <position>(319.31, 0.03, 299.42)</position>
+    <rotation>(0.61948, -0.14054, 0.17087, 0.75319)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="363">
+    <position>(328.98, 0.03, 302.59)</position>
+    <rotation>(0.63160, -0.15069, 0.17649, 0.73974)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="364">
+    <position>(338.60, 0.03, 305.84)</position>
+    <rotation>(0.63714, -0.16072, 0.18437, 0.73091)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="365">
+    <position>(348.19, 0.03, 309.23)</position>
+    <rotation>(0.63666, -0.17059, 0.19464, 0.72641)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="366">
+    <position>(357.76, 0.03, 312.83)</position>
+    <rotation>(0.63033, -0.18021, 0.20757, 0.72603)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="367">
+    <position>(367.21, 0.03, 316.66)</position>
+    <rotation>(0.61809, -0.18924, 0.22337, 0.72956)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="368">
+    <position>(376.46, 0.03, 320.76)</position>
+    <rotation>(0.59983, -0.19726, 0.24225, 0.73662)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="369">
+    <position>(385.52, 0.03, 325.20)</position>
+    <rotation>(0.57502, -0.20380, 0.26469, 0.74683)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="370">
+    <position>(394.37, 0.03, 330.09)</position>
+    <rotation>(0.54274, -0.20814, 0.29136, 0.75975)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="371">
+    <position>(402.89, 0.03, 335.46)</position>
+    <rotation>(0.51116, -0.21091, 0.31780, 0.77021)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="372">
+    <position>(411.18, 0.03, 341.31)</position>
+    <rotation>(0.48460, -0.21358, 0.34211, 0.77621)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="373">
+    <position>(419.20, 0.03, 347.58)</position>
+    <rotation>(0.46109, -0.21614, 0.36529, 0.77926)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="374">
+    <position>(426.90, 0.03, 354.19)</position>
+    <rotation>(0.44113, -0.21892, 0.38690, 0.77961)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="375">
+    <position>(434.35, 0.03, 361.11)</position>
+    <rotation>(0.42474, -0.22224, 0.40687, 0.77760)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="376">
+    <position>(441.52, 0.03, 368.25)</position>
+    <rotation>(0.41208, -0.22636, 0.42493, 0.77355)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="377">
+    <position>(448.48, 0.03, 375.58)</position>
+    <rotation>(0.40299, -0.23151, 0.44107, 0.76776)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="378">
+    <position>(455.29, 0.03, 383.08)</position>
+    <rotation>(0.39729, -0.23787, 0.45530, 0.76045)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="379">
+    <position>(461.92, 0.03, 390.72)</position>
+    <rotation>(0.38988, -0.25490, 0.48422, 0.74064)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="380">
+    <position>(468.35, 0.03, 398.65)</position>
+    <rotation>(0.37984, -0.26839, 0.51085, 0.72299)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="381">
+    <position>(474.48, 0.03, 406.65)</position>
+    <rotation>(0.36912, -0.27454, 0.52990, 0.71245)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="382">
+    <position>(480.51, 0.03, 414.90)</position>
+    <rotation>(0.35769, -0.27406, 0.54295, 0.70863)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="383">
+    <position>(486.37, 0.03, 423.27)</position>
+    <rotation>(0.34560, -0.26710, 0.55010, 0.71177)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="384">
+    <position>(492.00, 0.03, 431.63)</position>
+    <rotation>(0.33260, -0.25392, 0.55114, 0.72191)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="385">
+    <position>(497.56, 0.03, 440.17)</position>
+    <rotation>(0.31753, -0.23404, 0.54521, 0.73969)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="386">
+    <position>(502.99, 0.03, 448.84)</position>
+    <rotation>(0.29898, -0.20703, 0.53030, 0.76585)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="387">
+    <position>(508.18, 0.03, 457.45)</position>
+    <rotation>(0.28009, -0.17829, 0.50652, 0.79573)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="388">
+    <position>(513.44, 0.03, 466.05)</position>
+    <rotation>(0.28933, -0.18178, 0.49998, 0.79578)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="389">
+    <position>(518.78, 0.03, 474.64)</position>
+    <rotation>(0.28304, -0.17356, 0.49309, 0.80413)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="390">
+    <position>(523.94, 0.03, 483.28)</position>
+    <rotation>(0.25940, -0.15327, 0.48505, 0.82094)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="391">
+    <position>(528.70, 0.03, 492.20)</position>
+    <rotation>(0.21312, -0.11928, 0.47359, 0.84620)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="392">
+    <position>(532.51, 0.03, 501.56)</position>
+    <rotation>(0.13386, -0.06921, 0.45407, 0.87813)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="393">
+    <position>(534.26, 0.03, 511.42)</position>
+    <rotation>(0.00309, -0.00142, 0.41709, 0.90886)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="394">
+    <position>(531.49, 0.03, 520.95)</position>
+    <rotation>(-0.21320, 0.06696, 0.29205, 0.92993)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="395">
+    <position>(523.65, 0.03, 527.40)</position>
+    <rotation>(-0.36730, 0.08482, 0.20840, 0.90248)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="396">
+    <position>(514.64, 0.03, 532.17)</position>
+    <rotation>(-0.42549, 0.10161, 0.20887, 0.87465)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="397">
+    <position>(505.77, 0.03, 537.24)</position>
+    <rotation>(-0.42155, 0.13017, 0.26479, 0.85746)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="398">
+    <position>(497.79, 0.03, 543.64)</position>
+    <rotation>(-0.36676, 0.16023, 0.36687, 0.83977)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="399">
+    <position>(491.61, 0.03, 551.55)</position>
+    <rotation>(-0.28740, 0.17713, 0.49387, 0.80132)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="400">
+    <position>(486.64, 0.03, 560.33)</position>
+    <rotation>(-0.26585, 0.20522, 0.57556, 0.74561)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="401">
+    <position>(482.20, 0.03, 569.40)</position>
+    <rotation>(-0.24803, 0.22244, 0.62952, 0.70193)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="402">
+    <position>(478.06, 0.03, 578.68)</position>
+    <rotation>(-0.23389, 0.23237, 0.66538, 0.66975)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="403">
+    <position>(474.18, 0.03, 587.96)</position>
+    <rotation>(-0.22346, 0.23677, 0.68764, 0.64897)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="404">
+    <position>(470.42, 0.03, 597.39)</position>
+    <rotation>(-0.21627, 0.23677, 0.69935, 0.63881)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="405">
+    <position>(466.71, 0.03, 606.92)</position>
+    <rotation>(-0.21220, 0.23275, 0.70137, 0.63943)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="406">
+    <position>(463.08, 0.03, 616.37)</position>
+    <rotation>(-0.21106, 0.22491, 0.69365, 0.65094)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="407">
+    <position>(459.44, 0.03, 625.82)</position>
+    <rotation>(-0.21255, 0.21295, 0.67499, 0.67370)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="408">
+    <position>(455.75, 0.03, 635.17)</position>
+    <rotation>(-0.21626, 0.19631, 0.64283, 0.70814)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="409">
+    <position>(451.95, 0.03, 644.61)</position>
+    <rotation>(-0.21340, 0.18824, 0.63418, 0.71892)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="410">
+    <position>(448.21, 0.03, 654.07)</position>
+    <rotation>(-0.20894, 0.18266, 0.63231, 0.72330)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="411">
+    <position>(444.57, 0.03, 663.46)</position>
+    <rotation>(-0.20472, 0.17674, 0.62913, 0.72873)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="412">
+    <position>(440.93, 0.03, 673.01)</position>
+    <rotation>(-0.20060, 0.17034, 0.62446, 0.73538)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="413">
+    <position>(437.39, 0.03, 682.43)</position>
+    <rotation>(-0.19665, 0.16364, 0.61835, 0.74310)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="414">
+    <position>(433.86, 0.03, 691.95)</position>
+    <rotation>(-0.19275, 0.15647, 0.61052, 0.75208)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="415">
+    <position>(430.36, 0.03, 701.53)</position>
+    <rotation>(-0.18887, 0.14884, 0.60080, 0.76237)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="416">
+    <position>(426.93, 0.03, 711.00)</position>
+    <rotation>(-0.18502, 0.14087, 0.58917, 0.77383)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="417">
+    <position>(423.46, 0.03, 720.56)</position>
+    <rotation>(-0.18993, 0.14065, 0.57827, 0.78086)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="418">
+    <position>(419.83, 0.03, 729.95)</position>
+    <rotation>(-0.19994, 0.14550, 0.57014, 0.78345)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="419">
+    <position>(416.01, 0.03, 739.44)</position>
+    <rotation>(-0.20098, 0.14257, 0.56076, 0.79046)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="420">
+    <position>(412.25, 0.03, 748.86)</position>
+    <rotation>(-0.19213, 0.13177, 0.55002, 0.80200)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="421">
+    <position>(408.72, 0.03, 758.24)</position>
+    <rotation>(-0.17209, 0.11300, 0.53713, 0.81799)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="422">
+    <position>(405.57, 0.03, 767.87)</position>
+    <rotation>(-0.13753, 0.08533, 0.52028, 0.83852)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="423">
+    <position>(403.18, 0.03, 777.69)</position>
+    <rotation>(-0.08389, 0.04834, 0.49697, 0.86235)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="424">
+    <position>(402.01, 0.03, 787.76)</position>
+    <rotation>(-0.03071, 0.01626, 0.46749, 0.88332)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="425">
+    <position>(401.66, 0.03, 797.87)</position>
+    <rotation>(0.00528, -0.00258, 0.43880, 0.89857)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="426">
+    <position>(402.49, 0.03, 807.90)</position>
+    <rotation>(0.06357, -0.02834, 0.40616, 0.91115)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="427">
+    <position>(405.21, 0.03, 817.59)</position>
+    <rotation>(0.14728, -0.05923, 0.36840, 0.91601)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="428">
+    <position>(410.39, 0.03, 826.39)</position>
+    <rotation>(0.25319, -0.09105, 0.32593, 0.90630)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="429">
+    <position>(417.63, 0.03, 833.47)</position>
+    <rotation>(0.37174, -0.11471, 0.27162, 0.88027)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="430">
+    <position>(426.23, 0.03, 838.68)</position>
+    <rotation>(0.46865, -0.12133, 0.21931, 0.84709)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="431">
+    <position>(435.51, 0.03, 842.75)</position>
+    <rotation>(0.53361, -0.12235, 0.18702, 0.81567)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="432">
+    <position>(444.97, 0.03, 846.14)</position>
+    <rotation>(0.57554, -0.12327, 0.16932, 0.79050)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="433">
+    <position>(454.52, 0.03, 849.22)</position>
+    <rotation>(0.60083, -0.12633, 0.16241, 0.77244)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="434">
+    <position>(464.28, 0.03, 852.26)</position>
+    <rotation>(0.61275, -0.13246, 0.16462, 0.76151)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="435">
+    <position>(473.90, 0.03, 855.37)</position>
+    <rotation>(0.61224, -0.14161, 0.17530, 0.75788)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="436">
+    <position>(483.50, 0.03, 858.74)</position>
+    <rotation>(0.61280, -0.15426, 0.18920, 0.75158)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="437">
+    <position>(493.08, 0.03, 862.12)</position>
+    <rotation>(0.64785, -0.16752, 0.18604, 0.71945)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="438">
+    <position>(502.60, 0.03, 865.35)</position>
+    <rotation>(0.67103, -0.17645, 0.18313, 0.69646)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="439">
+    <position>(512.21, 0.03, 868.54)</position>
+    <rotation>(0.68537, -0.18181, 0.18080, 0.68156)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="440">
+    <position>(521.88, 0.03, 871.70)</position>
+    <rotation>(0.69206, -0.18388, 0.17924, 0.67462)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="441">
+    <position>(531.61, 0.03, 874.86)</position>
+    <rotation>(0.69160, -0.18276, 0.17853, 0.67558)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="442">
+    <position>(541.26, 0.03, 877.99)</position>
+    <rotation>(0.68395, -0.17849, 0.17861, 0.68444)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="443">
+    <position>(550.94, 0.03, 881.16)</position>
+    <rotation>(0.66827, -0.17085, 0.17934, 0.70147)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="444">
+    <position>(560.61, 0.03, 884.37)</position>
+    <rotation>(0.64290, -0.15950, 0.18039, 0.72711)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="445">
+    <position>(570.17, 0.03, 887.63)</position>
+    <rotation>(0.60375, -0.14165, 0.17918, 0.76375)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="446">
+    <position>(579.73, 0.03, 890.91)</position>
+    <rotation>(0.55678, -0.11716, 0.16933, 0.80473)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="447">
+    <position>(589.31, 0.03, 894.19)</position>
+    <rotation>(0.52342, -0.10259, 0.16270, 0.83008)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="448">
+    <position>(598.86, 0.03, 897.51)</position>
+    <rotation>(0.51158, -0.09935, 0.16270, 0.83782)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="449">
+    <position>(608.43, 0.03, 900.90)</position>
+    <rotation>(0.52430, -0.10802, 0.17043, 0.82728)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="450">
+    <position>(617.94, 0.03, 904.37)</position>
+    <rotation>(0.55752, -0.12809, 0.18366, 0.79939)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="451">
+    <position>(627.43, 0.03, 907.94)</position>
+    <rotation>(0.60316, -0.15828, 0.19843, 0.75616)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="452">
+    <position>(636.97, 0.03, 911.62)</position>
+    <rotation>(0.65347, -0.19700, 0.21096, 0.69976)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="453">
+    <position>(646.38, 0.03, 915.31)</position>
+    <rotation>(0.69779, -0.23527, 0.21615, 0.64110)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="454">
+    <position>(655.87, 0.03, 919.05)</position>
+    <rotation>(0.72693, -0.26543, 0.21722, 0.59492)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="455">
+    <position>(665.30, 0.03, 922.79)</position>
+    <rotation>(0.74541, -0.28829, 0.21680, 0.56057)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="456">
+    <position>(674.71, 0.03, 926.56)</position>
+    <rotation>(0.75650, -0.30496, 0.21630, 0.53658)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="457">
+    <position>(684.09, 0.03, 930.34)</position>
+    <rotation>(0.76198, -0.31601, 0.21654, 0.52214)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="458">
+    <position>(693.43, 0.03, 934.14)</position>
+    <rotation>(0.76284, -0.32184, 0.21799, 0.51670)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="459">
+    <position>(702.78, 0.03, 937.99)</position>
+    <rotation>(0.75940, -0.32257, 0.22090, 0.52006)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="460">
+    <position>(712.16, 0.03, 941.90)</position>
+    <rotation>(0.75145, -0.31805, 0.22531, 0.53235)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="461">
+    <position>(721.45, 0.03, 945.83)</position>
+    <rotation>(0.73834, -0.30801, 0.23100, 0.55374)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="462">
+    <position>(730.78, 0.03, 949.84)</position>
+    <rotation>(0.71841, -0.29172, 0.23759, 0.58510)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+  <waypoint index="463">
+    <position>(740.08, 0.03, 953.93)</position>
+    <rotation>(0.68910, -0.26823, 0.24419, 0.62734)</rotation>
+    <scale>(1.00,1,00,1,00)</scale>
+  </waypoint>
+</waypoints>
