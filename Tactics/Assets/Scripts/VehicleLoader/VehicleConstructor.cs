@@ -211,9 +211,10 @@ public class VehicleConstructor : MonoBehaviour
         ConstructModel(inEditor);
         if (inEditor)
         {
-            ConstructPhysicsVis();
-            //vehicle.AddComponent<WheelVisController>();
-            //vehicle.AddComponent<WheelController>();
+            //ConstructPhysicsVis();
+            ConstructPhysics();
+            vehicle.AddComponent<WheelVisController>();
+            vehicle.AddComponent<WheelController>();
         }
         else
         {
