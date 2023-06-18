@@ -12,6 +12,8 @@ public class TreeNode : MonoBehaviour
     public bool NeedUpdate = true;
     public GameObject MappedObject;
 
+    public bool isPhysics = false;
+
     private void ReassginSiblings(Transform t, int spareLine)
     {
         for (int i = t.GetSiblingIndex() + 1; i < t.parent.childCount; i++)
@@ -36,7 +38,14 @@ public class TreeNode : MonoBehaviour
         previewObject.transform.localPosition = Vector3.zero;
         previewObject.transform.localScale = MappedObject.transform.lossyScale;
         CommonTool.ChangeLayer(previewObject.transform, 8);
-        CommonTool.SetHightlight(previewObject.transform, false);
+        if (isPhysics)
+        {
+            CommonTool.SetHightlight(previewObject.transform, true);
+        }
+        else
+        {
+            CommonTool.SetHightlight(previewObject.transform, false);
+        }
     }
 
     public int CountSpareLine(Transform root)
@@ -63,7 +72,7 @@ public class TreeNode : MonoBehaviour
         {
             Fold = !Fold;
             NeedUpdate = true;
-            // when unfold, tell parent nodes to spare space
+            // when unfold, tell sibling and parent nodes to spare space
             int spareLine = CountSpareLine(transform);
             //move down siblings and siblings in parent
             ReassginSiblings(transform,spareLine);

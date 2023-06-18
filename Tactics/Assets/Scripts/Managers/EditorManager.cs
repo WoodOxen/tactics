@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
+using UnityEditor.Localization.Plugins.Google.Columns;
+using TMPro;
+using VehiclePhysics;
+using UnityEditor;
 
 public class EditorManager : MonoBehaviour
 {
@@ -35,10 +39,40 @@ public class EditorManager : MonoBehaviour
                 break;
         }
     }
-
+    
     public void UnSelectButton()
     {
         EventSystem.current.SetSelectedGameObject(null);
+    }
+    public void TogglePlayVehicle(GameObject textObject)
+    {
+        TextMeshProUGUI text = textObject.GetComponent<TextMeshProUGUI>();
+        try
+        {
+            GameObject vehicle = GameObject.Find("VehicleSpace").transform.GetChild(0).gameObject;
+            if (text.text == "Play")
+            {
+                try
+                {
+                    vehicle.GetComponent<Rigidbody>().isKinematic = false;
+                    vehicle.GetComponent<VPStandardInput>().enabled = true;
+                    text.text = "Stop";
+                }
+                catch { }
+            }
+            else
+            {
+                try
+                {
+                    DeleteVehicle();
+                    Load();
+                    text.text = "Play";
+                }
+                catch { }
+            }
+        }
+        catch { return; }
+        
     }
     public void SelectObject(GameObject button)
     {

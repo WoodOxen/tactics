@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Siccity.GLTFUtility;
 using Assets.Scripts.VehicleEditor;
+using VehiclePhysics;
 
 public class WheelTag : MonoBehaviour
 {
@@ -71,8 +72,12 @@ public class VehicleConstructor : MonoBehaviour
     /// </summary>
     public void ConstructPhysicsVis()
     {
-        GameObject bodyCollider = new GameObject("Col");
-        bodyCollider.transform.SetParent(vehicle.transform);
+        GameObject bodyPhysics = new GameObject("PhysicsVis");
+        bodyPhysics.transform.SetParent(vehicle.transform);
+        bodyPhysics.transform.localPosition = Vector3.zero;
+        bodyPhysics.transform.localRotation = Quaternion.identity;
+        GameObject bodyCollider = new GameObject("Collider");
+        bodyCollider.transform.SetParent(bodyPhysics.transform);
         bodyCollider.transform.localPosition = Vector3.zero;
         bodyCollider.transform.localRotation = Quaternion.identity;
         foreach (JsonReader.BodyColliderPara para in myReader.vehicle.physics.collider)
@@ -101,6 +106,15 @@ public class VehicleConstructor : MonoBehaviour
         Rigidbody carRigid = vehicle.AddComponent<Rigidbody>();
         carRigid.mass = myReader.vehicle.physics.bodyMass;
         carRigid.centerOfMass = myReader.vehicle.physics.centerOfMass;
+        carRigid.drag = 0.1f;
+        carRigid.isKinematic = true;
+        vehicle.SetActive(false);
+
+        VPVehicleController controller = vehicle.AddComponent<VPVehicleController>();
+        VPStandardInput input = vehicle.AddComponent<VPStandardInput>();
+        input.enabled = false;
+        controller.enabled = true;
+        
 
         GameObject bodyCollider = new GameObject("Col");
         bodyCollider.transform.SetParent(vehicle.transform);
@@ -138,40 +152,49 @@ public class VehicleConstructor : MonoBehaviour
             col.transform.localPosition = para.position;
             col.transform.localEulerAngles = Vector3.zero;
             col.transform.localScale = Vector3.one;
-            WheelCollider wc = col.AddComponent<WheelCollider>();
+            VPWheelCollider wc = col.AddComponent<VPWheelCollider>();
             wc.mass = para.mass;
             wc.radius = para.radius;
             wc.suspensionDistance = para.suspension.distance;
-            wc.forceAppPointDistance = para.radius/2f;
 
-            JointSpring sj = new JointSpring();
-            sj.spring = para.suspension.spring;
-            sj.damper = para.suspension.damper;
-            sj.targetPosition = para.suspension.initialPosition;
-            wc.suspensionSpring = sj;
+            wc.springRate = para.suspension.spring;
+            wc.damperRate = para.suspension.damper;
 
-            WheelFrictionCurve forwardWFC = new WheelFrictionCurve();
-            forwardWFC.extremumSlip = para.forwardFriction.extremumSlip;
-            forwardWFC.extremumValue = para.forwardFriction.extremumValue;
-            forwardWFC.asymptoteSlip = para.forwardFriction.AsymptoteSlip;
-            forwardWFC.asymptoteValue = para.forwardFriction.AsymptoteValue;
-            forwardWFC.stiffness = 1;
+            //WheelFrictionCurve forwardWFC = new WheelFrictionCurve();
+            //forwardWFC.extremumSlip = para.forwardFriction.extremumSlip;
+            //forwardWFC.extremumValue = para.forwardFriction.extremumValue;
+            //forwardWFC.asymptoteSlip = para.forwardFriction.AsymptoteSlip;
+            //forwardWFC.asymptoteValue = para.forwardFriction.AsymptoteValue;
+            //forwardWFC.stiffness = 1;
 
-            wc.forwardFriction = forwardWFC;
+            Transform wheelVis = vehicle.transform.Find("Vis").Find("Wheel").GetChild(0);
+            GameObject modifiedWheelVis = new GameObject("Wheel"+col.transform.GetSiblingIndex());
+            modifiedWheelVis.transform.parent = wheelVis.parent.transform;
+            modifiedWheelVis.transform.localPosition = para.position;
+            modifiedWheelVis.transform.eulerAngles = Vector3.zero;
+            modifiedWheelVis.transform.localScale = Vector3.one;
+            wheelVis.SetParent(modifiedWheelVis.transform);
+            wheelVis.transform.localPosition = Vector3.zero;
 
-            WheelFrictionCurve sidewayWFC = new WheelFrictionCurve();
-            sidewayWFC.extremumSlip = para.sidewayFriction.extremumSlip;
-            sidewayWFC.extremumValue = para.sidewayFriction.extremumValue;
-            sidewayWFC.asymptoteSlip = para.sidewayFriction.AsymptoteSlip;
-            sidewayWFC.asymptoteValue = para.sidewayFriction.AsymptoteValue;
-            sidewayWFC.stiffness = 1;
+            wc.wheelTransform = modifiedWheelVis.transform;
 
-            wc.sidewaysFriction = sidewayWFC;
-            WheelTag tag = col.AddComponent<WheelTag>();
-            tag.powered = para.type.powered;
-            tag.steeringMode.active = para.type.steering.use;
-            tag.steeringMode.inverse = para.type.steering.inverse;
         }
+
+        // assign wheel collider
+        VPAxle[] axles = new VPAxle[2];
+        axles[0] = new VPAxle();
+        axles[1] = new VPAxle();
+        axles[0].leftWheel = vehicle.transform.Find("wheel").GetChild(0).gameObject.GetComponent<VPWheelCollider>();
+        axles[0].rightWheel = vehicle.transform.Find("wheel").GetChild(1).gameObject.GetComponent<VPWheelCollider>();
+        axles[0].steeringMode = Steering.SteeringMode.Steerable;
+        axles[0].brakeCircuit = Brakes.BrakeCircuit.Front;
+        axles[1].leftWheel = vehicle.transform.Find("wheel").GetChild(2).gameObject.GetComponent<VPWheelCollider>();
+        axles[1].rightWheel = vehicle.transform.Find("wheel").GetChild(3).gameObject.GetComponent<VPWheelCollider>();
+        axles[1].steeringMode = Steering.SteeringMode.Disabled;
+        axles[1].brakeCircuit = Brakes.BrakeCircuit.Rear;
+        controller.axles = axles;
+        vehicle.SetActive(true);
+
     }
     public void ConstructModel(bool addHightLight = false)
     {
@@ -211,15 +234,17 @@ public class VehicleConstructor : MonoBehaviour
         ConstructModel(inEditor);
         if (inEditor)
         {
-            //ConstructPhysicsVis();
+
+            ConstructPhysicsVis();
             ConstructPhysics();
-            vehicle.AddComponent<WheelVisController>();
-            vehicle.AddComponent<WheelController>();
+
+            
+            
         }
         else
         {
             ConstructPhysics();
-            vehicle.AddComponent<WheelVisController>();
+            //vehicle.AddComponent<WheelVisController>();
             vehicle.AddComponent<WheelController>();
         }
 

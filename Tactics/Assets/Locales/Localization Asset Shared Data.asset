@@ -28,6 +28,10 @@ MonoBehaviour:
     m_Key: Editor/UI/Inspector/Panel/Viewport/Content/bg/model/Button
     m_Metadata:
       m_Items: []
+  - m_Id: 18282553166712832
+    m_Key: Editor/UI/Bar/Load
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items:
     - rid: 2192683031691526147

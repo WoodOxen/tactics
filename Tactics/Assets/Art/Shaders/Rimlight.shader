@@ -46,7 +46,7 @@ Shader "Custom/Rimlight"
 			{
 				float3 normal = normalize(i.normal);
 				float3 viewDir = normalize(i.viewDir);
-				float rim = 1 - dot(normal, viewDir);
+				float rim = 1 - 0.6 * dot(normal, viewDir);
 				return fixed4(_OccluColor.rgb * rim, rim * 0.5);
 			}
 			#pragma vertex vert  

@@ -13,10 +13,16 @@ static class TreeConstants
 
 public class ModelTreeManager: MonoBehaviour
 {
-    private Transform _targetVis;
+    protected Transform _targetVis;
 
 
     public TreeNode MyRoot;
+    public bool isPhysics = false;
+
+    public virtual void SetTargetVis(int vehicleIndex = 0)
+    {
+        _targetVis = GameObject.Find("VehicleSpace").transform.GetChild(vehicleIndex).Find("Vis");
+    }
 
     public void FindNode(Transform root, Transform mirrorRoot, int depth = 0)
     {
@@ -31,6 +37,7 @@ public class ModelTreeManager: MonoBehaviour
             tn.IsLeaf = false;
             tn.Depth = depth + 1;
             tn.MappedObject = node.gameObject;
+            tn.isPhysics = isPhysics;
 
             TMPro.TextMeshProUGUI mirrorNodeTMP = mirrorNode.transform.Find("text").gameObject.GetComponent<TMPro.TextMeshProUGUI>();
             mirrorNodeTMP.text = node.name;
@@ -39,7 +46,7 @@ public class ModelTreeManager: MonoBehaviour
             int width = node.name.Length * TreeConstants.CharWidth + TreeConstants.textHeadMargin;
             mirrorNode.GetComponent<RectTransform>().sizeDelta = new Vector2(width, TreeConstants.FrameHeight);
 
-            int parentWdith = root.name.Length * TreeConstants.CharWidth + TreeConstants.textHeadMargin;
+            int parentWdith = depth == 0? 0 : root.name.Length * TreeConstants.CharWidth + TreeConstants.textHeadMargin;
 
             mirrorNode.transform.localPosition = new Vector3(TreeConstants.TabDist - parentWdith / 2 + width / 2f,
                                                             -TreeConstants.SeperateDist * nodeIndex - TreeConstants.SeperateDist,
@@ -67,7 +74,7 @@ public class ModelTreeManager: MonoBehaviour
 
         if (GameObject.Find("VehicleSpace").transform.childCount != 0)
         {
-            _targetVis = GameObject.Find("VehicleSpace").transform.GetChild(vehicleIndex).Find("Vis");
+            SetTargetVis(vehicleIndex);
             FindNode(_targetVis, transform);
         }
 

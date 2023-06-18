@@ -9,6 +9,9 @@ public class InspectorContentManager : MonoBehaviour
 
     public GameObject ModelTab;
     public GameObject PhysicsTab;
+
+    public GameObject ModelContent;
+    public GameObject PhysicsContent;
     
     public void SwitchTab(int status)
     {
@@ -16,24 +19,38 @@ public class InspectorContentManager : MonoBehaviour
         {
             return;
         }
-        _tabStatus = status;
-        switch (status)
+        if (status != -1) {
+            _tabStatus = status;
+        }
+        switch (_tabStatus)
         {
             case 0:
                 ModelTab.GetComponent<Image>().color = new Color(1, 1, 1, 0.04f);
                 PhysicsTab.GetComponent<Image>().color = new Color(0, 0, 0, 0.4f);
                 ModelTab.transform.Find("text").GetComponent<TMPro.TextMeshProUGUI>().fontStyle = TMPro.FontStyles.Underline | TMPro.FontStyles.SmallCaps;
                 PhysicsTab.transform.Find("text").GetComponent<TMPro.TextMeshProUGUI>().fontStyle = TMPro.FontStyles.SmallCaps;
+
+                ModelContent.SetActive(true);
+                PhysicsContent.SetActive(false);
+
                 break;
             case 1:
                 ModelTab.GetComponent<Image>().color = new Color(0, 0, 0, 0.4f);
                 PhysicsTab.GetComponent<Image>().color = new Color(1, 1, 1, 0.04f);
                 PhysicsTab.transform.Find("text").GetComponent<TMPro.TextMeshProUGUI>().fontStyle = TMPro.FontStyles.Underline | TMPro.FontStyles.SmallCaps;
                 ModelTab.transform.Find("text").GetComponent<TMPro.TextMeshProUGUI>().fontStyle = TMPro.FontStyles.SmallCaps;
+
+                ModelContent.SetActive(false);
+                PhysicsContent.SetActive(true);
                 break;
             default:
                 break;
         }
+    }
+
+    public void UpdateTab()
+    {
+        SwitchTab(-1);
     }
 
     // Start is called before the first frame update

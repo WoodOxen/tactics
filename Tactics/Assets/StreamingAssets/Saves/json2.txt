@@ -66,8 +66,8 @@
                 "radius":0.31,
                 "position":{"x":-0.7,"y":-0.55,"z":1.22},
                 "suspension":{
-                    "spring":70000,
-                    "damper":2000,
+                    "spring":90000,
+                    "damper":1000,
                     "distance":0.3,
                     "initialPosition":0.4
                 },
@@ -90,8 +90,8 @@
                 "radius":0.31,
                 "position":{"x":0.7,"y":-0.55,"z":1.22},
                 "suspension":{
-                    "spring":70000,
-                    "damper":2000,
+                    "spring":90000,
+                    "damper":1000,
                     "distance":0.3,
                     "initialPosition":0.4
                 },
@@ -114,8 +114,8 @@
                 "radius":0.31,
                 "position":{"x":-0.7,"y":-0.55,"z":-1.18},
                 "suspension":{
-                    "spring":60000,
-                    "damper":3000,
+                    "spring":80000,
+                    "damper":800,
                     "distance":0.3,
                     "initialPosition":0.4
                 },
@@ -138,8 +138,8 @@
                 "radius":0.31,
                 "position":{"x":0.7,"y":-0.55,"z":-1.18},
                 "suspension":{
-                    "spring":60000,
-                    "damper":3000,
+                    "spring":80000,
+                    "damper":800,
                     "distance":0.3,
                     "initialPosition":0.4
                 },
