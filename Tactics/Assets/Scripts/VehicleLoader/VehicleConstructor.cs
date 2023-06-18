@@ -87,6 +87,7 @@ public class VehicleConstructor : MonoBehaviour
             {
                 case "box":
                     col = Instantiate(BoxColVisPrefab);
+
                     break;
                 case "sphere":
                     col = Instantiate(SphereColVisPrefab);

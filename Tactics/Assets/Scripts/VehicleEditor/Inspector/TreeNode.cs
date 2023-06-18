@@ -4,6 +4,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+
+public class PropertyAssembly
+{
+    public bool Transform;
+    public bool Mass;
+    public bool Wheel;
+    public bool BindWheel;
+
+    public PropertyAssembly(bool transform = false, bool mass = false, bool wheel = false, bool bindWheel = false)
+    {
+        Transform = transform;
+        Mass = mass;
+        Wheel = wheel;
+        BindWheel = bindWheel;
+    }
+
+}
+
 public class TreeNode : MonoBehaviour
 {
     public bool IsLeaf;
@@ -12,7 +30,8 @@ public class TreeNode : MonoBehaviour
     public bool NeedUpdate = true;
     public GameObject MappedObject;
 
-    public bool isPhysics = false;
+    public bool isVisible = false;
+    public PropertyAssembly PAss = new PropertyAssembly();
 
     private void ReassginSiblings(Transform t, int spareLine)
     {
@@ -38,7 +57,7 @@ public class TreeNode : MonoBehaviour
         previewObject.transform.localPosition = Vector3.zero;
         previewObject.transform.localScale = MappedObject.transform.lossyScale;
         CommonTool.ChangeLayer(previewObject.transform, 8);
-        if (isPhysics)
+        if (isVisible)
         {
             CommonTool.SetHightlight(previewObject.transform, true);
         }

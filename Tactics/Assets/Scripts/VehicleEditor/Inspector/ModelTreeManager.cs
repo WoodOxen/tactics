@@ -37,7 +37,15 @@ public class ModelTreeManager: MonoBehaviour
             tn.IsLeaf = false;
             tn.Depth = depth + 1;
             tn.MappedObject = node.gameObject;
-            tn.isPhysics = isPhysics;
+            tn.isVisible = isPhysics;
+            if (isPhysics)
+            {
+                tn.PAss = new PropertyAssembly(true, false, false, false);
+            }
+            else
+            {
+                tn.PAss = new PropertyAssembly(false, false, false, true);
+            }
 
             TMPro.TextMeshProUGUI mirrorNodeTMP = mirrorNode.transform.Find("text").gameObject.GetComponent<TMPro.TextMeshProUGUI>();
             mirrorNodeTMP.text = node.name;
