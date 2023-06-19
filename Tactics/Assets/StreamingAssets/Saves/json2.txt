@@ -57,8 +57,8 @@
                 "scale":{"x":1,"y":1,"z":1}
             }
         ],
-        "centerOfMass":{"x":0,"y":-0.4,"z":0.2},
-        "bodyMass":700,
+        "centerOfMass":{"x":0,"y":-0.4,"z":0.3},
+        "bodyMass":1000,
         "wheel":[
             {
                 "type":{"powered":false,"steering":{"use":true,"inverse":false}},
@@ -66,8 +66,8 @@
                 "radius":0.31,
                 "position":{"x":-0.7,"y":-0.55,"z":1.22},
                 "suspension":{
-                    "spring":90000,
-                    "damper":1000,
+                    "spring":60000,
+                    "damper":2000,
                     "distance":0.3,
                     "initialPosition":0.4
                 },
@@ -90,8 +90,8 @@
                 "radius":0.31,
                 "position":{"x":0.7,"y":-0.55,"z":1.22},
                 "suspension":{
-                    "spring":90000,
-                    "damper":1000,
+                    "spring":60000,
+                    "damper":2000,
                     "distance":0.3,
                     "initialPosition":0.4
                 },
@@ -114,8 +114,8 @@
                 "radius":0.31,
                 "position":{"x":-0.7,"y":-0.55,"z":-1.18},
                 "suspension":{
-                    "spring":80000,
-                    "damper":800,
+                    "spring":40000,
+                    "damper":1800,
                     "distance":0.3,
                     "initialPosition":0.4
                 },
@@ -138,8 +138,8 @@
                 "radius":0.31,
                 "position":{"x":0.7,"y":-0.55,"z":-1.18},
                 "suspension":{
-                    "spring":80000,
-                    "damper":800,
+                    "spring":40000,
+                    "damper":1800,
                     "distance":0.3,
                     "initialPosition":0.4
                 },
