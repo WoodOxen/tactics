@@ -163,6 +163,10 @@ MonoBehaviour:
     m_Key: Editor/UI/Inspector/Panel/Viewport/Content/bg/model/Button/Text (TMP)
     m_Metadata:
       m_Items: []
+  - m_Id: 55822702184157184
+    m_Key: Editor/UI/Bar/Load
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

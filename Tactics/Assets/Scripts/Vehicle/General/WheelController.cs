@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class WheelController : MonoBehaviour
 {
     public float moveSpeed = 300;
@@ -13,11 +14,11 @@ public class WheelController : MonoBehaviour
     public class wheelData
     {
         public WheelTag tag;
-        public WheelCollider wc;
+        public VehiclePhysics.VPWheelCollider wc;
         public wheelData(GameObject go)
         {
             tag = go.GetComponent<WheelTag>();
-            wc = go.GetComponent<WheelCollider>();
+            wc = go.GetComponent<VehiclePhysics.VPWheelCollider>();
         }
     }
 
@@ -43,7 +44,7 @@ public class WheelController : MonoBehaviour
         {
             if (wheel.tag.powered)
             {
-                wheel.wc.motorTorque = v * moveSpeed;
+                //wheel.wc.motorTorque = v * moveSpeed;
             }
         }
         
