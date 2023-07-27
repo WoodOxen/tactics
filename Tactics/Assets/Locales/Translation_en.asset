@@ -162,6 +162,10 @@ MonoBehaviour:
     m_Localized: Confirm
     m_Metadata:
       m_Items: []
+  - m_Id: 40605387968663552
+    m_Localized: Button
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

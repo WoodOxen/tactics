@@ -1,6 +1,6 @@
-[submodule "RoadArchitect"]
-	path = RoadArchitect
-	url = git@scp:WoodOxen/RoadArchitect.git
+[submodule "Tactics/Assets/ThirdParty/GLTFUtility"]
+	path = Tactics/Assets/ThirdParty/GLTFUtility
+	url = https://github.com/Siccity/GLTFUtility.git
 [submodule "Tactics/Assets/ThirdParty/RoadArchitect"]
 	path = Tactics/Assets/ThirdParty/RoadArchitect
-	url = git@scp:WoodOxen/RoadArchitect.git
+	url = https://github.com/WoodOxen/RoadArchitect.git
