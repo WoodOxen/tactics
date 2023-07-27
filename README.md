@@ -1,8 +1,8 @@
+# TACTICS
+
 Language : English | [中文](./README.zh.md)
 
 [![Read the Docs](https://readthedocs.org/projects/tactics/badge/?version=latest)](https://tactics.readthedocs.io/en/latest)
-
-# TACTICS
 
 - [TACTICS](#tactics)
   - [About](#about)
@@ -12,7 +12,7 @@ Language : English | [中文](./README.zh.md)
 
 ## About
 
-Tactics is a comprehensive simulator tailored for autonomous driving research. The primary goal of this project is to provide academia with a collection of Out-Of-The-Box (OOTB) functionalities, facilitating quick exploration of tasks related to perception and decision-making. The potential applications of Tactics encompass:
+Tactics is a open-source simulator tailored for autonomous driving research. The primary goal of this project is to provide academia with a collection of Out-Of-The-Box (OOTB) functionalities, facilitating quick exploration of tasks related to perception and decision-making. The potential applications of Tactics encompass:
 
 :construction: controlling: realistic vehicle dynamics for different types of vehicles
 

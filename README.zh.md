@@ -1,7 +1,8 @@
+# TACTICS
+
 Language : [English](./README.md) | 中文
 
 [![Read the Docs](https://readthedocs.org/projects/tactics/badge/?version=latest)](https://tactics.readthedocs.io/en/latest)
-# TACTICS
 
 - [TACTICS](#tactics)
   - [关于](#关于)
@@ -11,7 +12,7 @@ Language : [English](./README.md) | 中文
 
 ## 关于
 
-Tactics是一款专为自动驾驶研究量身定制的综合模拟器。该项目的主要目标是为学术界提供一系列即开即用（OOTB）功能，以便快速探索与感知和决策相关的任务。Tactics可能的应用包括：
+Tactics是一款专为自动驾驶研究量身定制的开源模拟器。该项目的主要目标是为学术界提供一系列即开即用的工具，以便快速探索与感知和决策相关的任务。Tactics可能的应用包括：
 
 :construction: 车辆控制：不同类型车辆的真实动力学控制
 
@@ -19,7 +20,7 @@ Tactics是一款专为自动驾驶研究量身定制的综合模拟器。该项�
 | --- | --- | --- |
 | 轿车| :construction: | |
 | SUV | :construction: | |
-| 拖车 | :construction:	| |
+| 拖车 | :construction: | |
 
 :construction: 感知：合成原始传感器数据，包括恶劣天气中的数据
 
