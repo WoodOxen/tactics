@@ -1,0 +1,6 @@
+[submodule "Tactics/Assets/ThirdParty/GLTFUtility"]
+	path = Tactics/Assets/ThirdParty/GLTFUtility
+	url = https://github.com/Siccity/GLTFUtility.git
+[submodule "Tactics/Assets/ThirdParty/RoadArchitect"]
+	path = Tactics/Assets/ThirdParty/RoadArchitect
+	url = https://github.com/WoodOxen/RoadArchitect.git
