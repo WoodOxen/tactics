@@ -1,6 +1,6 @@
 Language : English | [中文](./README.zh.md)
 
-[![Read the Docs](https://img.shields.io/readthedocs/tactics)](https://tactics.readthedocs.io/en/latest/)
+[![Read the Docs](https://readthedocs.org/projects/tactics/badge/?version=latest)](https://tactics.readthedocs.io/en/latest)
 
 # TACTICS
 
@@ -35,7 +35,7 @@ Tactics is a comprehensive simulator tailored for autonomous driving research. T
 
 :beginner: V2X: vehicle-to-vehicle communication and vehicle-to-road communication
 
-You can access the detailed user documentation for Tactics here. Currently, the document is available in both English and Chinese. We also encourage and welcome translations into other languages.
+You can access the detailed user documentation for Tactics [here](https://tactics.readthedocs.io/en/latest/). Currently, the document is available in both English and Chinese. We also encourage and welcome translations into other languages.
 
 ## Development
 
@@ -45,8 +45,8 @@ Tactics v0.0.0 is built upon Unity 2021.3.24f1 and is currently under developmen
 
 To support the developer community, we have prepared a dedicated documentation that helps developers quickly access all the necessary information about Tactics development. We welcome and encourage developers to provide feedback and suggestions while using Tactics. Together, we aim to build a stronger and more developer-friendly community, driving continuous improvement and development of Tactics.
 
-- [Folder structure](https://tacitcs-doc.readthedocs.io/en/latest/developer/folder_structure/)
-- [Code style](https://tacitcs-doc.readthedocs.io/en/latest/developer/csharp_coding_style/)
-- [Github submission](https://tacitcs-doc.readthedocs.io/en/latest/developer/github_submission/)
+- [Folder structure](https://tactics.readthedocs.io/en/latest/developer/folder_structure/)
+- [Code style](https://tactics.readthedocs.io/en/latest/developer/csharp_coding_style/)
+- [Github submission](https://tactics.readthedocs.io/en/latest/developer/github_submission/)
 
 ### Development Plan

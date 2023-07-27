@@ -1,7 +1,6 @@
 Language : [English](./README.md) | 中文
 
-[![Read the Docs](https://img.shields.io/readthedocs/tactics)](https://tactics.readthedocs.io/en/latest/)
-
+[![Read the Docs](https://readthedocs.org/projects/tactics/badge/?version=latest)](https://tactics.readthedocs.io/en/latest)
 # TACTICS
 
 - [TACTICS](#tactics)
@@ -17,6 +16,7 @@ Tactics是一款专为自动驾驶研究量身定制的综合模拟器。该项�
 :construction: 车辆控制：不同类型车辆的真实动力学控制
 
 | 车辆类型 | 开发状态 | 实车测试 |
+| --- | --- | --- |
 | 轿车| :construction: | |
 | SUV | :construction: | |
 | 拖车 | :construction:	| |
@@ -34,7 +34,7 @@ Tactics是一款专为自动驾驶研究量身定制的综合模拟器。该项�
 
 :beginner: V2X通信：车辆对车辆通信和车辆对路边设施通信
 
-您可以通过[此处](https://tacitcs-doc.readthedocs.io/en/latest/zh/developer/csharp_coding_style/)访问Tactics的详细用户文档。目前，该文档提供英文和中文版本。我们也欢迎您将其翻译成其他语言。
+您可以通过[此处](https://tactics.readthedocs.io/en/latest/zh/)访问Tactics的详细用户文档。目前，该文档提供英文和中文版本。我们也欢迎您将其翻译成其他语言。
 
 ## 开发
 
@@ -46,9 +46,8 @@ Tactics v0.0.0是基于Unity 2021.3.24f1构建的，目前正在开发中。由�
 
 为了支持开发者社区，我们专门为开发者提供了一份文档，帮助开发者迅速获取有关Tactics开发的必要信息。我们欢迎并鼓励开发者提供反馈和意见。通过共同努力，打造一个更强大、更友好的开发者社区，共同推动Tactics的不断完善和发展。
 
-- [项目文件结构](https://tacitcs-doc.readthedocs.io/en/latest/zh/developer/folder_structure/)
-- [代码风格规范](https://tacitcs-doc.readthedocs.io/en/latest/zh/developer/csharp_coding_style/)
-- [Github提交规范](https://tacitcs-doc.readthedocs.io/en/latest/developer/github_submission/)
+- [项目文件结构](https://tactics.readthedocs.io/en/latest/zh/developer/folder_structure/)
+- [代码风格规范](https://tactics.readthedocs.io/en/latest/zh/developer/csharp_coding_style/)
+- [Github提交规范](https://tactics.readthedocs.io/en/latest/zh/developer/github_submission/)
 
 ### 开发计划
-
